@@ -222,6 +222,7 @@ Partial Class MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Scanning.My.Resources.Resources.background2
         Me.ClientSize = New System.Drawing.Size(596, 498)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.SubMenu3)
