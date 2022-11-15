@@ -118,6 +118,12 @@
     <Compile Include="TopMenu.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UserApartment.Designer.vb">
+      <DependentUpon>UserApartment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserApartment.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TopMenu.resx">
       <DependentUpon>TopMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserApartment.resx">
+      <DependentUpon>UserApartment.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +210,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bed %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\kitchen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\bathroomFloor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\woodFloor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\livingRoom.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\kitchenFloor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\toilet.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
