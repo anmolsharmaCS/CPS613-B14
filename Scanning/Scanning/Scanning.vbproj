@@ -71,6 +71,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bathroom.Designer.vb">
+      <DependentUpon>Bathroom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bathroom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bedroom.Designer.vb">
+      <DependentUpon>Bedroom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Bedroom.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
@@ -81,6 +93,12 @@
       <DependentUpon>Form2.vb</DependentUpon>
     </Compile>
     <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kitchen.Designer.vb">
+      <DependentUpon>Kitchen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kitchen.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.vb">

@@ -10,9 +10,8 @@
 
 #Region "Variables"
 
-    Private innerOptions As Integer
     Private Options As SubOptions()
-    Private activebutton As Integer
+    Private activeOption As Integer
     Private originalColor As Color
 
 #End Region
@@ -42,6 +41,42 @@
 
 #Region "Inner Scanning"
 
+    Public Sub StartInnerScanning(givenOptions As SubOptions())
+        Options = givenOptions
+        activeOption = 0
+        For i = 1 To Options.Length - 1
+            Options(i).BackColor = originalColor
+        Next
+        GiveFocusToButton(activeOption)
+    End Sub
+
+    Public Sub InnerScanningNext()
+        TakeFocusFromButton(activeOption)
+        activeOption = (activeOption + 1) Mod (Options.Length + 1)
+        GiveFocusToButton(activeOption)
+    End Sub
+
+    ' You can customize the look and feel of the inner scanning in these two routines
+    Private Sub TakeFocusFromButton(index As Integer)
+        If index = 0 Then
+            For i = 0 To Options.Length - 1
+                Options(i).BackColor = originalColor
+            Next
+        Else
+            Options(index - 1).BackColor = originalColor
+        End If
+
+    End Sub
+
+    Private Sub GiveFocusToButton(index As Integer)
+        If index = 0 Then
+            For i = 0 To Options.Length - 1
+                Options(i).BackColor = Color.LemonChiffon
+            Next
+        Else
+            Options(index - 1).BackColor = Color.LemonChiffon
+        End If
+    End Sub
 
 #End Region
 

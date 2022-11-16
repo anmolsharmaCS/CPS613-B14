@@ -4,6 +4,11 @@
     Private Windows(5) As SubOptions
     Private Doors(4) As SubOptions
 
+    Private ent As New Form1()
+    Private bedroomForm As New Bedroom()
+    Private kitchenForm As New Kitchen()
+    Private bathroomForm As New Bathroom()
+
     Public Sub New()
 
         ' This call is required by the designer.
@@ -16,27 +21,25 @@
         TopOptions(3) = Bathroom
         TopOptions(4) = LivingroomWindow1
         TopOptions(5) = FrontDoor
-
-        For i = 0 To 5
-            TopOptions(i).Initialize()
-        Next
-
         Windows(0) = LivingroomWindow1
         Windows(1) = LivingroomWindow2
         Windows(2) = BedroomWindow1
         Windows(3) = BedroomWindow2
         Windows(4) = BedroomWindow3
         Windows(5) = BathroomWindow
+        Doors(0) = FrontDoor
+        Doors(1) = KitchenDoor
+        Doors(2) = LivingroomDoor
+        Doors(3) = BedroomDoor
+        Doors(4) = BathroomDoor
+
+        For i = 0 To 5
+            TopOptions(i).Initialize()
+        Next
 
         For i = 0 To 5
             Windows(i).Initialize()
         Next
-
-        Doors(0) = FrontDoor
-        Doors(1) = LivingroomDoor
-        Doors(2) = BedroomDoor
-        Doors(3) = KitchenDoor
-        Doors(4) = BathroomDoor
 
         For i = 0 To 4
             Doors(i).Initialize()
@@ -95,49 +98,64 @@
             TopOptions(focusIsOn).LoseFocus()
             focusIsOn = (focusIsOn + 1) Mod 6
             TopOptions(focusIsOn).ReceiveFocus()
-            'Else
-            'TopOptions(focusIsOn).InnerScanningNext()
+        Else
+            TopOptions(focusIsOn).InnerScanningNext()
         End If
     End Sub
 
-    ' When the user selects a submenu, start scanning within that submenu
-    'Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
-    'scanninglevel = 1
-    'TopOptions(focusIsOn).StartInnerScanning()
-    'End Sub
-
     Private Sub LivingroomWindow1_ColorChanged(sender As Object, e As EventArgs) Handles LivingroomWindow1.BackColorChanged, FrontDoor.BackColorChanged
-        If scanninglevel = 0 Then
+        If scanninglevel = 0 And ScanningTimer.Enabled Then
             If LivingroomWindow1.BackColor.Equals(Color.LemonChiffon) Then
-                LivingroomWindow2.ReceiveFocus()
-                BedroomWindow1.ReceiveFocus()
-                BedroomWindow2.ReceiveFocus()
-                BedroomWindow3.ReceiveFocus()
-                BathroomWindow.ReceiveFocus()
+                For i = 1 To Windows.Length - 1
+                    Windows(i).ReceiveFocus()
+                Next
             Else
-                LivingroomWindow2.LoseFocus()
-                BedroomWindow1.LoseFocus()
-                BedroomWindow2.LoseFocus()
-                BedroomWindow3.LoseFocus()
-                BathroomWindow.LoseFocus()
+                For i = 1 To Windows.Length - 1
+                    Windows(i).LoseFocus()
+                Next
             End If
 
             If FrontDoor.BackColor.Equals(Color.LemonChiffon) Then
-                LivingroomDoor.ReceiveFocus()
-                BedroomDoor.ReceiveFocus()
-                KitchenDoor.ReceiveFocus()
-                BathroomDoor.ReceiveFocus()
+                For i = 1 To Doors.Length - 1
+                    Doors(i).ReceiveFocus()
+                Next
             Else
-                LivingroomDoor.LoseFocus()
-                BedroomDoor.LoseFocus()
-                KitchenDoor.LoseFocus()
-                BathroomDoor.LoseFocus()
+                For i = 1 To Doors.Length - 1
+                    Doors(i).LoseFocus()
+                Next
             End If
 
+        End If
+    End Sub
+
+
+
+#End Region
+
+#Region "Other events"
+
+    ' When the user selects a submenu, start scanning within that submenu
+    Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
+        scanninglevel = 1
+        If focusIsOn = 0 Then
+            StopScanning()
+            ent.Show()
+        ElseIf focusIsOn = 1 Then
+            StopScanning()
+            bedroomForm.Show()
+        ElseIf focusIsOn = 2 Then
+            StopScanning()
+            kitchenForm.Show()
+        ElseIf focusIsOn = 3 Then
+            StopScanning()
+            bathroomForm.Show()
+        ElseIf focusIsOn = 4 Then
+            TopOptions(focusIsOn).StartInnerScanning(Windows)
+        ElseIf focusIsOn = 5 Then
+            TopOptions(focusIsOn).StartInnerScanning(Doors)
         End If
     End Sub
 
 #End Region
-
 
 End Class
