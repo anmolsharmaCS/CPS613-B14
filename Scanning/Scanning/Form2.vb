@@ -24,4 +24,10 @@
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
         TopMenu1.StartScanning()
     End Sub
+
+    Private Sub Button15_Click(sender As Object, e As EventArgs) Handles Button15.Click
+        Dim home As MainForm = New MainForm()
+        home.Show()
+        Me.Hide()
+    End Sub
 End Class
