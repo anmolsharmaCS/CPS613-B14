@@ -34,8 +34,9 @@
         End If
 
 
-        TopMenu.ResumeScanning()
-
+        'TopMenu.ResumeScanning()
+         Me.Hide()
+ Me.Hide()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
