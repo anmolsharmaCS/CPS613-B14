@@ -23,7 +23,8 @@
         ' Play Music
         TopMenu1.StopScanning()
 
-        ' Having trouble with adding mutiple submenues
+        ' checkpoint
+        ' Having trouble adding mutiple submenues
         ' I currently have them side by side
         SubMenu4.Visible = False'
         SubMenu4.Enabled = False'
@@ -65,7 +66,8 @@
         ' Listen to program
         TopMenu1.StopScanning()
         
-        ' Having trouble with adding mutiple submenues
+        ' checkpoint
+        ' Having trouble adding mutiple submenues
         ' I currently have them side by side
         SubMenu2.Visible = False'
         SubMenu2.Enabled = False'
