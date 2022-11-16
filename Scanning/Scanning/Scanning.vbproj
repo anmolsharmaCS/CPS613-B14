@@ -112,6 +112,12 @@
     <Compile Include="SubMenu.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="SubOptions.Designer.vb">
+      <DependentUpon>SubOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubOptions.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TopMenu.Designer.vb">
       <DependentUpon>TopMenu.vb</DependentUpon>
     </Compile>

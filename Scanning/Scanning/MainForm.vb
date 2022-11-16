@@ -16,7 +16,7 @@
     End Sub
 
 
-    Private Sub Button_Click(sender As Object, e As EventArgs) Handles help.Click, Button2.Click, Button3.Click, ent.Click, Button5.Click, Button6.Click, Button7.Click, Button8.Click, Button9.Click, Button10.Click, Button11.Click, Button12.Click
+    Private Sub Button_Click(sender As Object, e As EventArgs) Handles help.Click, Button3.Click, ent.Click, Button5.Click, Button6.Click, Button7.Click, Button8.Click, Button9.Click, Button10.Click, Button11.Click, Button12.Click
         TopMenu.StopScanning()
         Dim b As Button = sender
         MsgBox(b.ToString() & " was selected")
@@ -36,6 +36,12 @@
 
         TopMenu.ResumeScanning()
 
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        TopMenu.StopScanning()
+        Dim userApt As UserApartment = New UserApartment()
+        userApt.Show()
     End Sub
 
 End Class

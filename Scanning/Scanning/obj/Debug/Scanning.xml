@@ -32,11 +32,6 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.bathroomFloor">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:Scanning.My.Resources.Resources.bed__1_">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -72,6 +67,11 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.livingRoom">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.movie__1_">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -92,6 +92,11 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.toilet">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.toilet__1_">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -108,11 +113,6 @@ Scanning
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.volumecontrol">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Scanning.My.Resources.Resources.woodFloor">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
