@@ -1,6 +1,8 @@
 ﻿Public Class UserApartment
 
     Private TopOptions(5) As SubOptions
+    Private Windows(5) As SubOptions
+    Private Doors(4) As SubOptions
 
     Public Sub New()
 
@@ -17,6 +19,27 @@
 
         For i = 0 To 5
             TopOptions(i).Initialize()
+        Next
+
+        Windows(0) = LivingroomWindow1
+        Windows(1) = LivingroomWindow2
+        Windows(2) = BedroomWindow1
+        Windows(3) = BedroomWindow2
+        Windows(4) = BedroomWindow3
+        Windows(5) = BathroomWindow
+
+        For i = 0 To 5
+            Windows(i).Initialize()
+        Next
+
+        Doors(0) = FrontDoor
+        Doors(1) = LivingroomDoor
+        Doors(2) = BedroomDoor
+        Doors(3) = KitchenDoor
+        Doors(4) = BathroomDoor
+
+        For i = 0 To 4
+            Doors(i).Initialize()
         Next
 
     End Sub
@@ -82,6 +105,37 @@
     'scanninglevel = 1
     'TopOptions(focusIsOn).StartInnerScanning()
     'End Sub
+
+    Private Sub LivingroomWindow1_ColorChanged(sender As Object, e As EventArgs) Handles LivingroomWindow1.BackColorChanged, FrontDoor.BackColorChanged
+        If scanninglevel = 0 Then
+            If LivingroomWindow1.BackColor.Equals(Color.LemonChiffon) Then
+                LivingroomWindow2.ReceiveFocus()
+                BedroomWindow1.ReceiveFocus()
+                BedroomWindow2.ReceiveFocus()
+                BedroomWindow3.ReceiveFocus()
+                BathroomWindow.ReceiveFocus()
+            Else
+                LivingroomWindow2.LoseFocus()
+                BedroomWindow1.LoseFocus()
+                BedroomWindow2.LoseFocus()
+                BedroomWindow3.LoseFocus()
+                BathroomWindow.LoseFocus()
+            End If
+
+            If FrontDoor.BackColor.Equals(Color.LemonChiffon) Then
+                LivingroomDoor.ReceiveFocus()
+                BedroomDoor.ReceiveFocus()
+                KitchenDoor.ReceiveFocus()
+                BathroomDoor.ReceiveFocus()
+            Else
+                LivingroomDoor.LoseFocus()
+                BedroomDoor.LoseFocus()
+                KitchenDoor.LoseFocus()
+                BathroomDoor.LoseFocus()
+            End If
+
+        End If
+    End Sub
 
 #End Region
 
