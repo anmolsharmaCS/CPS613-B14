@@ -23,9 +23,15 @@
         ' Play Music
         TopMenu1.StopScanning()
 
-        SubMenu4.Visible = False
-        SubMenu4.Enabled = False
+        ' Having trouble with adding mutiple submenues
+        ' I currently have them side by side
+        SubMenu4.Visible = False'
+        SubMenu4.Enabled = False'
 
+        SubMenu4.Hide()' 
+        SubMenu4.SendToBack()'
+        SubMenu2.BringToFront()'
+        
         SubMenu2.Visible = True
         SubMenu2.Enabled = True
 
@@ -58,10 +64,16 @@
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         ' Listen to program
         TopMenu1.StopScanning()
+        
+        ' Having trouble with adding mutiple submenues
+        ' I currently have them side by side
+        SubMenu2.Visible = False'
+        SubMenu2.Enabled = False'
 
-        SubMenu2.Visible = False
-        SubMenu2.Enabled = False
-
+        SubMenu2.Hide()'
+        SubMenu2.SendToBack()'
+        SubMenu4.BringToFront()'
+        
         SubMenu4.Visible = True
         SubMenu4.Enabled = True
 
