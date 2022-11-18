@@ -22,256 +22,492 @@ Partial Class MainForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.SubMenu3 = New Scanning.SubMenu()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.SubMenu2 = New Scanning.SubMenu()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.SubMenu1 = New Scanning.SubMenu()
-        Me.ent = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.help = New System.Windows.Forms.Button()
-        Me.TopMenu = New Scanning.TopMenu()
-        Me.SubMenu3.SuspendLayout()
-        Me.SubMenu2.SuspendLayout()
-        Me.SubMenu1.SuspendLayout()
+        Me.components = New System.ComponentModel.Container()
+        Me.Floor1 = New Scanning.SubOptions()
+        Me.Floor2 = New Scanning.SubOptions()
+        Me.Floor3 = New Scanning.SubOptions()
+        Me.Floor4 = New Scanning.SubOptions()
+        Me.FoundationDecoration = New System.Windows.Forms.PictureBox()
+        Me.WalkwayDecoration = New System.Windows.Forms.PictureBox()
+        Me.GrassDecoration = New System.Windows.Forms.PictureBox()
+        Me.SkyDecoration = New System.Windows.Forms.PictureBox()
+        Me.MainEntrance = New Scanning.SubOptions()
+        Me.DoorSeparatorDecoration = New System.Windows.Forms.PictureBox()
+        Me.WindowDecoration1 = New System.Windows.Forms.Panel()
+        Me.VerticalWindowDecoration1 = New System.Windows.Forms.PictureBox()
+        Me.HorizontalWindowDecoration1 = New System.Windows.Forms.PictureBox()
+        Me.WindowDecoration2 = New System.Windows.Forms.Panel()
+        Me.HorizontalDecoration2 = New System.Windows.Forms.PictureBox()
+        Me.VerticalDecoration2 = New System.Windows.Forms.PictureBox()
+        Me.WindowDecoration4 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.WindowDecoration3 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.WindowDecoration6 = New System.Windows.Forms.Panel()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.WindowDecoration5 = New System.Windows.Forms.Panel()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.WindowDecoration8 = New System.Windows.Forms.Panel()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.WindowDecoration7 = New System.Windows.Forms.Panel()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
+        CType(Me.Floor1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Floor2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Floor3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Floor4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FoundationDecoration, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.WalkwayDecoration, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GrassDecoration, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SkyDecoration, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MainEntrance, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DoorSeparatorDecoration, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.WindowDecoration1.SuspendLayout()
+        CType(Me.VerticalWindowDecoration1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HorizontalWindowDecoration1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.WindowDecoration2.SuspendLayout()
+        CType(Me.HorizontalDecoration2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.VerticalDecoration2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.WindowDecoration4.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.WindowDecoration3.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.WindowDecoration6.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.WindowDecoration5.SuspendLayout()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.WindowDecoration8.SuspendLayout()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.WindowDecoration7.SuspendLayout()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
+        'Floor1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(41, 34)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(451, 25)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Press the space bar to select the highlighted option"
+        Me.Floor1.BackColor = System.Drawing.Color.Gray
+        Me.Floor1.Location = New System.Drawing.Point(130, 396)
+        Me.Floor1.Name = "Floor1"
+        Me.Floor1.Size = New System.Drawing.Size(749, 130)
+        Me.Floor1.TabIndex = 0
+        Me.Floor1.TabStop = False
         '
-        'SubMenu3
+        'Floor2
         '
-        Me.SubMenu3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.SubMenu3.Controls.Add(Me.Button12)
-        Me.SubMenu3.Controls.Add(Me.Button11)
-        Me.SubMenu3.Controls.Add(Me.Button10)
-        Me.SubMenu3.Controls.Add(Me.Button9)
-        Me.SubMenu3.Controls.Add(Me.Button8)
-        Me.SubMenu3.Location = New System.Drawing.Point(41, 431)
-        Me.SubMenu3.Margin = New System.Windows.Forms.Padding(4)
-        Me.SubMenu3.Name = "SubMenu3"
-        Me.SubMenu3.Size = New System.Drawing.Size(719, 132)
-        Me.SubMenu3.TabIndex = 6
+        Me.Floor2.BackColor = System.Drawing.Color.Gray
+        Me.Floor2.Location = New System.Drawing.Point(130, 268)
+        Me.Floor2.Name = "Floor2"
+        Me.Floor2.Size = New System.Drawing.Size(749, 130)
+        Me.Floor2.TabIndex = 1
+        Me.Floor2.TabStop = False
         '
-        'Button12
+        'Floor3
         '
-        Me.Button12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button12.Location = New System.Drawing.Point(553, 23)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(117, 79)
-        Me.Button12.TabIndex = 4
-        Me.Button12.Text = "Button12"
-        Me.Button12.UseVisualStyleBackColor = True
+        Me.Floor3.BackColor = System.Drawing.Color.Gray
+        Me.Floor3.Location = New System.Drawing.Point(130, 140)
+        Me.Floor3.Name = "Floor3"
+        Me.Floor3.Size = New System.Drawing.Size(749, 130)
+        Me.Floor3.TabIndex = 2
+        Me.Floor3.TabStop = False
         '
-        'Button11
+        'Floor4
         '
-        Me.Button11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.Location = New System.Drawing.Point(423, 23)
-        Me.Button11.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(115, 78)
-        Me.Button11.TabIndex = 3
-        Me.Button11.Text = "Button11"
-        Me.Button11.UseVisualStyleBackColor = True
+        Me.Floor4.BackColor = System.Drawing.Color.Gray
+        Me.Floor4.Location = New System.Drawing.Point(130, -2)
+        Me.Floor4.Name = "Floor4"
+        Me.Floor4.Size = New System.Drawing.Size(749, 144)
+        Me.Floor4.TabIndex = 3
+        Me.Floor4.TabStop = False
         '
-        'Button10
+        'FoundationDecoration
         '
-        Me.Button10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Location = New System.Drawing.Point(297, 23)
-        Me.Button10.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(111, 78)
-        Me.Button10.TabIndex = 2
-        Me.Button10.Text = "Button10"
-        Me.Button10.UseVisualStyleBackColor = True
+        Me.FoundationDecoration.BackColor = System.Drawing.Color.LightGray
+        Me.FoundationDecoration.Location = New System.Drawing.Point(108, 355)
+        Me.FoundationDecoration.Name = "FoundationDecoration"
+        Me.FoundationDecoration.Size = New System.Drawing.Size(792, 200)
+        Me.FoundationDecoration.TabIndex = 4
+        Me.FoundationDecoration.TabStop = False
         '
-        'Button9
+        'WalkwayDecoration
         '
-        Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(168, 23)
-        Me.Button9.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(108, 79)
-        Me.Button9.TabIndex = 1
-        Me.Button9.Text = "Button9"
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.WalkwayDecoration.BackColor = System.Drawing.Color.LightGray
+        Me.WalkwayDecoration.Location = New System.Drawing.Point(386, 549)
+        Me.WalkwayDecoration.Name = "WalkwayDecoration"
+        Me.WalkwayDecoration.Size = New System.Drawing.Size(237, 190)
+        Me.WalkwayDecoration.TabIndex = 5
+        Me.WalkwayDecoration.TabStop = False
         '
-        'Button8
+        'GrassDecoration
         '
-        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Location = New System.Drawing.Point(43, 23)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(105, 79)
-        Me.Button8.TabIndex = 0
-        Me.Button8.Text = "Button8"
-        Me.Button8.UseVisualStyleBackColor = True
+        Me.GrassDecoration.BackColor = System.Drawing.Color.DarkOliveGreen
+        Me.GrassDecoration.Location = New System.Drawing.Point(-13, 318)
+        Me.GrassDecoration.Name = "GrassDecoration"
+        Me.GrassDecoration.Size = New System.Drawing.Size(1033, 421)
+        Me.GrassDecoration.TabIndex = 6
+        Me.GrassDecoration.TabStop = False
         '
-        'SubMenu2
+        'SkyDecoration
         '
-        Me.SubMenu2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.SubMenu2.Controls.Add(Me.Button7)
-        Me.SubMenu2.Controls.Add(Me.Button6)
-        Me.SubMenu2.Controls.Add(Me.Button5)
-        Me.SubMenu2.Location = New System.Drawing.Point(41, 262)
-        Me.SubMenu2.Margin = New System.Windows.Forms.Padding(4)
-        Me.SubMenu2.Name = "SubMenu2"
-        Me.SubMenu2.Size = New System.Drawing.Size(461, 137)
-        Me.SubMenu2.TabIndex = 5
+        Me.SkyDecoration.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.SkyDecoration.Location = New System.Drawing.Point(-13, -16)
+        Me.SkyDecoration.Name = "SkyDecoration"
+        Me.SkyDecoration.Size = New System.Drawing.Size(1033, 350)
+        Me.SkyDecoration.TabIndex = 7
+        Me.SkyDecoration.TabStop = False
         '
-        'Button7
+        'MainEntrance
         '
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(297, 31)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(112, 78)
-        Me.Button7.TabIndex = 2
-        Me.Button7.Text = "Button7"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.MainEntrance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.MainEntrance.Location = New System.Drawing.Point(445, 441)
+        Me.MainEntrance.Name = "MainEntrance"
+        Me.MainEntrance.Size = New System.Drawing.Size(118, 85)
+        Me.MainEntrance.TabIndex = 8
+        Me.MainEntrance.TabStop = False
         '
-        'Button6
+        'DoorSeparatorDecoration
         '
-        Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(168, 31)
-        Me.Button6.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(108, 78)
-        Me.Button6.TabIndex = 1
-        Me.Button6.Text = "Button6"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.DoorSeparatorDecoration.BackColor = System.Drawing.Color.Black
+        Me.DoorSeparatorDecoration.Location = New System.Drawing.Point(504, 441)
+        Me.DoorSeparatorDecoration.Name = "DoorSeparatorDecoration"
+        Me.DoorSeparatorDecoration.Size = New System.Drawing.Size(1, 85)
+        Me.DoorSeparatorDecoration.TabIndex = 9
+        Me.DoorSeparatorDecoration.TabStop = False
         '
-        'Button5
+        'WindowDecoration1
         '
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(43, 30)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(107, 79)
-        Me.Button5.TabIndex = 0
-        Me.Button5.Text = "Button5"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.WindowDecoration1.BackColor = System.Drawing.Color.GhostWhite
+        Me.WindowDecoration1.Controls.Add(Me.HorizontalWindowDecoration1)
+        Me.WindowDecoration1.Controls.Add(Me.VerticalWindowDecoration1)
+        Me.WindowDecoration1.Location = New System.Drawing.Point(207, 424)
+        Me.WindowDecoration1.Name = "WindowDecoration1"
+        Me.WindowDecoration1.Size = New System.Drawing.Size(150, 72)
+        Me.WindowDecoration1.TabIndex = 10
         '
-        'SubMenu1
+        'VerticalWindowDecoration1
         '
-        Me.SubMenu1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.SubMenu1.Controls.Add(Me.ent)
-        Me.SubMenu1.Controls.Add(Me.Button3)
-        Me.SubMenu1.Controls.Add(Me.Button2)
-        Me.SubMenu1.Controls.Add(Me.help)
-        Me.SubMenu1.Location = New System.Drawing.Point(41, 100)
-        Me.SubMenu1.Margin = New System.Windows.Forms.Padding(4)
-        Me.SubMenu1.Name = "SubMenu1"
-        Me.SubMenu1.Size = New System.Drawing.Size(589, 137)
-        Me.SubMenu1.TabIndex = 4
+        Me.VerticalWindowDecoration1.BackColor = System.Drawing.Color.Black
+        Me.VerticalWindowDecoration1.Location = New System.Drawing.Point(75, 0)
+        Me.VerticalWindowDecoration1.Name = "VerticalWindowDecoration1"
+        Me.VerticalWindowDecoration1.Size = New System.Drawing.Size(1, 76)
+        Me.VerticalWindowDecoration1.TabIndex = 11
+        Me.VerticalWindowDecoration1.TabStop = False
         '
-        'ent
+        'HorizontalWindowDecoration1
         '
-        Me.ent.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ent.Image = Global.Scanning.My.Resources.Resources.ent
-        Me.ent.Location = New System.Drawing.Point(423, 30)
-        Me.ent.Margin = New System.Windows.Forms.Padding(4)
-        Me.ent.Name = "ent"
-        Me.ent.Size = New System.Drawing.Size(115, 79)
-        Me.ent.TabIndex = 3
-        Me.ent.Tag = "Ent"
-        Me.ent.UseVisualStyleBackColor = True
+        Me.HorizontalWindowDecoration1.BackColor = System.Drawing.Color.Black
+        Me.HorizontalWindowDecoration1.Location = New System.Drawing.Point(0, 36)
+        Me.HorizontalWindowDecoration1.Name = "HorizontalWindowDecoration1"
+        Me.HorizontalWindowDecoration1.Size = New System.Drawing.Size(150, 1)
+        Me.HorizontalWindowDecoration1.TabIndex = 12
+        Me.HorizontalWindowDecoration1.TabStop = False
         '
-        'Button3
+        'WindowDecoration2
         '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(293, 30)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(115, 79)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.WindowDecoration2.BackColor = System.Drawing.Color.GhostWhite
+        Me.WindowDecoration2.Controls.Add(Me.HorizontalDecoration2)
+        Me.WindowDecoration2.Controls.Add(Me.VerticalDecoration2)
+        Me.WindowDecoration2.Location = New System.Drawing.Point(651, 424)
+        Me.WindowDecoration2.Name = "WindowDecoration2"
+        Me.WindowDecoration2.Size = New System.Drawing.Size(150, 72)
+        Me.WindowDecoration2.TabIndex = 13
         '
-        'Button2
+        'HorizontalDecoration2
         '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(164, 30)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(112, 80)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "User Apartment"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.HorizontalDecoration2.BackColor = System.Drawing.Color.Black
+        Me.HorizontalDecoration2.Location = New System.Drawing.Point(0, 36)
+        Me.HorizontalDecoration2.Name = "HorizontalDecoration2"
+        Me.HorizontalDecoration2.Size = New System.Drawing.Size(150, 1)
+        Me.HorizontalDecoration2.TabIndex = 12
+        Me.HorizontalDecoration2.TabStop = False
         '
-        'help
+        'VerticalDecoration2
         '
-        Me.help.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.help.Image = Global.Scanning.My.Resources.Resources.help
-        Me.help.Location = New System.Drawing.Point(43, 30)
-        Me.help.Margin = New System.Windows.Forms.Padding(4)
-        Me.help.Name = "help"
-        Me.help.Size = New System.Drawing.Size(111, 79)
-        Me.help.TabIndex = 0
-        Me.help.UseVisualStyleBackColor = True
+        Me.VerticalDecoration2.BackColor = System.Drawing.Color.Black
+        Me.VerticalDecoration2.Location = New System.Drawing.Point(75, 0)
+        Me.VerticalDecoration2.Name = "VerticalDecoration2"
+        Me.VerticalDecoration2.Size = New System.Drawing.Size(1, 76)
+        Me.VerticalDecoration2.TabIndex = 11
+        Me.VerticalDecoration2.TabStop = False
         '
-        'TopMenu
+        'WindowDecoration4
         '
-        Me.TopMenu.Location = New System.Drawing.Point(771, 15)
-        Me.TopMenu.Margin = New System.Windows.Forms.Padding(5)
-        Me.TopMenu.Name = "TopMenu"
-        Me.TopMenu.ScanningInterval = 1000
-        Me.TopMenu.Size = New System.Drawing.Size(33, 37)
-        Me.TopMenu.TabIndex = 3
+        Me.WindowDecoration4.BackColor = System.Drawing.Color.GhostWhite
+        Me.WindowDecoration4.Controls.Add(Me.PictureBox1)
+        Me.WindowDecoration4.Controls.Add(Me.PictureBox2)
+        Me.WindowDecoration4.Location = New System.Drawing.Point(651, 299)
+        Me.WindowDecoration4.Name = "WindowDecoration4"
+        Me.WindowDecoration4.Size = New System.Drawing.Size(150, 72)
+        Me.WindowDecoration4.TabIndex = 15
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Black
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 36)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(150, 1)
+        Me.PictureBox1.TabIndex = 12
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Black
+        Me.PictureBox2.Location = New System.Drawing.Point(75, 0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(1, 76)
+        Me.PictureBox2.TabIndex = 11
+        Me.PictureBox2.TabStop = False
+        '
+        'WindowDecoration3
+        '
+        Me.WindowDecoration3.BackColor = System.Drawing.Color.GhostWhite
+        Me.WindowDecoration3.Controls.Add(Me.PictureBox3)
+        Me.WindowDecoration3.Controls.Add(Me.PictureBox4)
+        Me.WindowDecoration3.Location = New System.Drawing.Point(207, 299)
+        Me.WindowDecoration3.Name = "WindowDecoration3"
+        Me.WindowDecoration3.Size = New System.Drawing.Size(150, 72)
+        Me.WindowDecoration3.TabIndex = 14
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Black
+        Me.PictureBox3.Location = New System.Drawing.Point(0, 36)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(150, 1)
+        Me.PictureBox3.TabIndex = 12
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.Black
+        Me.PictureBox4.Location = New System.Drawing.Point(75, 0)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(1, 76)
+        Me.PictureBox4.TabIndex = 11
+        Me.PictureBox4.TabStop = False
+        '
+        'WindowDecoration6
+        '
+        Me.WindowDecoration6.BackColor = System.Drawing.Color.GhostWhite
+        Me.WindowDecoration6.Controls.Add(Me.PictureBox5)
+        Me.WindowDecoration6.Controls.Add(Me.PictureBox6)
+        Me.WindowDecoration6.Location = New System.Drawing.Point(651, 169)
+        Me.WindowDecoration6.Name = "WindowDecoration6"
+        Me.WindowDecoration6.Size = New System.Drawing.Size(150, 72)
+        Me.WindowDecoration6.TabIndex = 17
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.Black
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 36)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(150, 1)
+        Me.PictureBox5.TabIndex = 12
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.BackColor = System.Drawing.Color.Black
+        Me.PictureBox6.Location = New System.Drawing.Point(75, 0)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(1, 76)
+        Me.PictureBox6.TabIndex = 11
+        Me.PictureBox6.TabStop = False
+        '
+        'WindowDecoration5
+        '
+        Me.WindowDecoration5.BackColor = System.Drawing.Color.GhostWhite
+        Me.WindowDecoration5.Controls.Add(Me.PictureBox7)
+        Me.WindowDecoration5.Controls.Add(Me.PictureBox8)
+        Me.WindowDecoration5.Location = New System.Drawing.Point(207, 169)
+        Me.WindowDecoration5.Name = "WindowDecoration5"
+        Me.WindowDecoration5.Size = New System.Drawing.Size(150, 72)
+        Me.WindowDecoration5.TabIndex = 16
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.BackColor = System.Drawing.Color.Black
+        Me.PictureBox7.Location = New System.Drawing.Point(0, 36)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(150, 1)
+        Me.PictureBox7.TabIndex = 12
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.BackColor = System.Drawing.Color.Black
+        Me.PictureBox8.Location = New System.Drawing.Point(75, 0)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(1, 76)
+        Me.PictureBox8.TabIndex = 11
+        Me.PictureBox8.TabStop = False
+        '
+        'WindowDecoration8
+        '
+        Me.WindowDecoration8.BackColor = System.Drawing.Color.GhostWhite
+        Me.WindowDecoration8.Controls.Add(Me.PictureBox9)
+        Me.WindowDecoration8.Controls.Add(Me.PictureBox10)
+        Me.WindowDecoration8.Location = New System.Drawing.Point(651, 36)
+        Me.WindowDecoration8.Name = "WindowDecoration8"
+        Me.WindowDecoration8.Size = New System.Drawing.Size(150, 72)
+        Me.WindowDecoration8.TabIndex = 17
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.BackColor = System.Drawing.Color.Black
+        Me.PictureBox9.Location = New System.Drawing.Point(0, 36)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(150, 1)
+        Me.PictureBox9.TabIndex = 12
+        Me.PictureBox9.TabStop = False
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.BackColor = System.Drawing.Color.Black
+        Me.PictureBox10.Location = New System.Drawing.Point(75, 0)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(1, 76)
+        Me.PictureBox10.TabIndex = 11
+        Me.PictureBox10.TabStop = False
+        '
+        'WindowDecoration7
+        '
+        Me.WindowDecoration7.BackColor = System.Drawing.Color.GhostWhite
+        Me.WindowDecoration7.Controls.Add(Me.PictureBox11)
+        Me.WindowDecoration7.Controls.Add(Me.PictureBox12)
+        Me.WindowDecoration7.Location = New System.Drawing.Point(207, 36)
+        Me.WindowDecoration7.Name = "WindowDecoration7"
+        Me.WindowDecoration7.Size = New System.Drawing.Size(150, 72)
+        Me.WindowDecoration7.TabIndex = 16
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.BackColor = System.Drawing.Color.Black
+        Me.PictureBox11.Location = New System.Drawing.Point(0, 36)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(150, 1)
+        Me.PictureBox11.TabIndex = 12
+        Me.PictureBox11.TabStop = False
+        '
+        'PictureBox12
+        '
+        Me.PictureBox12.BackColor = System.Drawing.Color.Black
+        Me.PictureBox12.Location = New System.Drawing.Point(75, 0)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(1, 76)
+        Me.PictureBox12.TabIndex = 11
+        Me.PictureBox12.TabStop = False
+        '
+        'ScanningTimer
+        '
+        Me.ScanningTimer.Interval = 1000
         '
         'MainForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Scanning.My.Resources.Resources.background2
-        Me.ClientSize = New System.Drawing.Size(795, 613)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.SubMenu3)
-        Me.Controls.Add(Me.SubMenu2)
-        Me.Controls.Add(Me.SubMenu1)
-        Me.Controls.Add(Me.TopMenu)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.WindowDecoration8)
+        Me.Controls.Add(Me.WindowDecoration7)
+        Me.Controls.Add(Me.WindowDecoration6)
+        Me.Controls.Add(Me.WindowDecoration5)
+        Me.Controls.Add(Me.WindowDecoration4)
+        Me.Controls.Add(Me.WindowDecoration3)
+        Me.Controls.Add(Me.WindowDecoration2)
+        Me.Controls.Add(Me.WindowDecoration1)
+        Me.Controls.Add(Me.DoorSeparatorDecoration)
+        Me.Controls.Add(Me.MainEntrance)
+        Me.Controls.Add(Me.Floor4)
+        Me.Controls.Add(Me.Floor3)
+        Me.Controls.Add(Me.Floor2)
+        Me.Controls.Add(Me.Floor1)
+        Me.Controls.Add(Me.FoundationDecoration)
+        Me.Controls.Add(Me.WalkwayDecoration)
+        Me.Controls.Add(Me.GrassDecoration)
+        Me.Controls.Add(Me.SkyDecoration)
         Me.Name = "MainForm"
         Me.Text = "CPS613 Scanning Example"
-        Me.SubMenu3.ResumeLayout(False)
-        Me.SubMenu2.ResumeLayout(False)
-        Me.SubMenu1.ResumeLayout(False)
+        CType(Me.Floor1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Floor2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Floor3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Floor4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FoundationDecoration, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.WalkwayDecoration, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GrassDecoration, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SkyDecoration, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MainEntrance, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DoorSeparatorDecoration, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.WindowDecoration1.ResumeLayout(False)
+        CType(Me.VerticalWindowDecoration1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HorizontalWindowDecoration1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.WindowDecoration2.ResumeLayout(False)
+        CType(Me.HorizontalDecoration2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.VerticalDecoration2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.WindowDecoration4.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.WindowDecoration3.ResumeLayout(False)
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.WindowDecoration6.ResumeLayout(False)
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.WindowDecoration5.ResumeLayout(False)
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.WindowDecoration8.ResumeLayout(False)
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.WindowDecoration7.ResumeLayout(False)
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TopMenu As Scanning.TopMenu
-    Friend WithEvents SubMenu1 As Scanning.SubMenu
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents help As System.Windows.Forms.Button
-    Friend WithEvents ent As System.Windows.Forms.Button
-    Friend WithEvents SubMenu2 As Scanning.SubMenu
-    Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents SubMenu3 As Scanning.SubMenu
-    Friend WithEvents Button12 As System.Windows.Forms.Button
-    Friend WithEvents Button11 As System.Windows.Forms.Button
-    Friend WithEvents Button10 As System.Windows.Forms.Button
-    Friend WithEvents Button9 As System.Windows.Forms.Button
-    Friend WithEvents Button8 As System.Windows.Forms.Button
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+
+    Friend WithEvents Floor1 As SubOptions
+    Friend WithEvents Floor2 As SubOptions
+    Friend WithEvents Floor3 As SubOptions
+    Friend WithEvents Floor4 As SubOptions
+    Friend WithEvents FoundationDecoration As PictureBox
+    Friend WithEvents WalkwayDecoration As PictureBox
+    Friend WithEvents GrassDecoration As PictureBox
+    Friend WithEvents SkyDecoration As PictureBox
+    Friend WithEvents MainEntrance As SubOptions
+    Friend WithEvents DoorSeparatorDecoration As PictureBox
+    Friend WithEvents WindowDecoration1 As Panel
+    Friend WithEvents HorizontalWindowDecoration1 As PictureBox
+    Friend WithEvents VerticalWindowDecoration1 As PictureBox
+    Friend WithEvents WindowDecoration2 As Panel
+    Friend WithEvents HorizontalDecoration2 As PictureBox
+    Friend WithEvents VerticalDecoration2 As PictureBox
+    Friend WithEvents WindowDecoration4 As Panel
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents WindowDecoration3 As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents WindowDecoration6 As Panel
+    Friend WithEvents PictureBox5 As PictureBox
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents WindowDecoration5 As Panel
+    Friend WithEvents PictureBox7 As PictureBox
+    Friend WithEvents PictureBox8 As PictureBox
+    Friend WithEvents WindowDecoration8 As Panel
+    Friend WithEvents PictureBox9 As PictureBox
+    Friend WithEvents PictureBox10 As PictureBox
+    Friend WithEvents WindowDecoration7 As Panel
+    Friend WithEvents PictureBox11 As PictureBox
+    Friend WithEvents PictureBox12 As PictureBox
+    Friend WithEvents ScanningTimer As Timer
 End Class
