@@ -40,6 +40,7 @@ Partial Class Form2
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button15 = New System.Windows.Forms.Button()
         Me.SubMenu1.SuspendLayout()
         Me.SubMenu2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,19 +57,20 @@ Partial Class Form2
         'SubMenu1
         '
         Me.SubMenu1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.SubMenu1.Controls.Add(Me.Button15)
         Me.SubMenu1.Controls.Add(Me.Button11)
         Me.SubMenu1.Controls.Add(Me.Button10)
         Me.SubMenu1.Controls.Add(Me.Button9)
         Me.SubMenu1.Controls.Add(Me.Button8)
-        Me.SubMenu1.Location = New System.Drawing.Point(227, 33)
+        Me.SubMenu1.Location = New System.Drawing.Point(227, 102)
         Me.SubMenu1.Name = "SubMenu1"
-        Me.SubMenu1.Size = New System.Drawing.Size(448, 98)
+        Me.SubMenu1.Size = New System.Drawing.Size(357, 190)
         Me.SubMenu1.TabIndex = 1
         '
         'Button11
         '
         Me.Button11.Image = Global.Scanning.My.Resources.Resources.cancel
-        Me.Button11.Location = New System.Drawing.Point(345, 4)
+        Me.Button11.Location = New System.Drawing.Point(3, 95)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(96, 86)
         Me.Button11.TabIndex = 3
@@ -107,9 +109,9 @@ Partial Class Form2
         Me.SubMenu2.Controls.Add(Me.Button12)
         Me.SubMenu2.Controls.Add(Me.Button13)
         Me.SubMenu2.Controls.Add(Me.Button14)
-        Me.SubMenu2.Location = New System.Drawing.Point(227, 137)
+        Me.SubMenu2.Location = New System.Drawing.Point(227, 298)
         Me.SubMenu2.Name = "SubMenu2"
-        Me.SubMenu2.Size = New System.Drawing.Size(448, 92)
+        Me.SubMenu2.Size = New System.Drawing.Size(357, 101)
         Me.SubMenu2.TabIndex = 3
         '
         'Button12
@@ -142,9 +144,9 @@ Partial Class Form2
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Scanning.My.Resources.Resources.assisstant
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 30)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 99)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(209, 308)
+        Me.PictureBox1.Size = New System.Drawing.Size(209, 300)
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
@@ -214,12 +216,21 @@ Partial Class Form2
         Me.Button5.TabIndex = 4
         Me.Button5.UseVisualStyleBackColor = False
         '
+        'Button15
+        '
+        Me.Button15.Image = Global.Scanning.My.Resources.Resources.home
+        Me.Button15.Location = New System.Drawing.Point(119, 95)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(96, 86)
+        Me.Button15.TabIndex = 4
+        Me.Button15.UseVisualStyleBackColor = True
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Scanning.My.Resources.Resources.background2
-        Me.ClientSize = New System.Drawing.Size(696, 348)
+        Me.ClientSize = New System.Drawing.Size(596, 498)
         Me.Controls.Add(Me.SubMenu1)
         Me.Controls.Add(Me.SubMenu2)
         Me.Controls.Add(Me.PictureBox1)
@@ -251,4 +262,5 @@ Partial Class Form2
     Friend WithEvents Button12 As Button
     Friend WithEvents Button13 As Button
     Friend WithEvents Button14 As Button
+    Friend WithEvents Button15 As Button
 End Class
