@@ -23,6 +23,7 @@ Partial Class UserApartment
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Me.apartment = New System.Windows.Forms.PictureBox()
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
         Me.LivingroomDoor = New Scanning.SubOptions()
         Me.BathroomDoor = New Scanning.SubOptions()
@@ -39,7 +40,7 @@ Partial Class UserApartment
         Me.Bedroom = New Scanning.SubOptions()
         Me.LivingRoom = New Scanning.SubOptions()
         Me.Kitchen = New Scanning.SubOptions()
-        Me.apartment = New System.Windows.Forms.PictureBox()
+        CType(Me.apartment, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BathroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KitchenDoor, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,8 +56,17 @@ Partial Class UserApartment
         CType(Me.Bedroom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingRoom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Kitchen, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.apartment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'apartment
+        '
+        Me.apartment.BackColor = System.Drawing.Color.SandyBrown
+        Me.apartment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.apartment.Location = New System.Drawing.Point(16, 15)
+        Me.apartment.Name = "apartment"
+        Me.apartment.Size = New System.Drawing.Size(738, 417)
+        Me.apartment.TabIndex = 5
+        Me.apartment.TabStop = False
         '
         'ScanningTimer
         '
@@ -66,7 +76,7 @@ Partial Class UserApartment
         '
         Me.LivingroomDoor.BackColor = System.Drawing.Color.SaddleBrown
         Me.LivingroomDoor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LivingroomDoor.Location = New System.Drawing.Point(342, 189)
+        Me.LivingroomDoor.Location = New System.Drawing.Point(331, 189)
         Me.LivingroomDoor.Name = "LivingroomDoor"
         Me.LivingroomDoor.Size = New System.Drawing.Size(15, 64)
         Me.LivingroomDoor.TabIndex = 33
@@ -76,7 +86,7 @@ Partial Class UserApartment
         '
         Me.BathroomDoor.BackColor = System.Drawing.Color.SaddleBrown
         Me.BathroomDoor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BathroomDoor.Location = New System.Drawing.Point(416, 320)
+        Me.BathroomDoor.Location = New System.Drawing.Point(405, 320)
         Me.BathroomDoor.Name = "BathroomDoor"
         Me.BathroomDoor.Size = New System.Drawing.Size(15, 64)
         Me.BathroomDoor.TabIndex = 32
@@ -86,7 +96,7 @@ Partial Class UserApartment
         '
         Me.KitchenDoor.BackColor = System.Drawing.Color.SaddleBrown
         Me.KitchenDoor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.KitchenDoor.Location = New System.Drawing.Point(342, 320)
+        Me.KitchenDoor.Location = New System.Drawing.Point(331, 320)
         Me.KitchenDoor.Name = "KitchenDoor"
         Me.KitchenDoor.Size = New System.Drawing.Size(15, 64)
         Me.KitchenDoor.TabIndex = 31
@@ -96,7 +106,7 @@ Partial Class UserApartment
         '
         Me.BedroomDoor.BackColor = System.Drawing.Color.SaddleBrown
         Me.BedroomDoor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BedroomDoor.Location = New System.Drawing.Point(518, 189)
+        Me.BedroomDoor.Location = New System.Drawing.Point(507, 189)
         Me.BedroomDoor.Name = "BedroomDoor"
         Me.BedroomDoor.Size = New System.Drawing.Size(64, 15)
         Me.BedroomDoor.TabIndex = 30
@@ -106,7 +116,7 @@ Partial Class UserApartment
         '
         Me.BathroomWindow.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.BathroomWindow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BathroomWindow.Location = New System.Drawing.Point(759, 300)
+        Me.BathroomWindow.Location = New System.Drawing.Point(748, 300)
         Me.BathroomWindow.Name = "BathroomWindow"
         Me.BathroomWindow.Size = New System.Drawing.Size(15, 98)
         Me.BathroomWindow.TabIndex = 29
@@ -117,7 +127,7 @@ Partial Class UserApartment
         '
         Me.LivingroomWindow2.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.LivingroomWindow2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LivingroomWindow2.Location = New System.Drawing.Point(207, 12)
+        Me.LivingroomWindow2.Location = New System.Drawing.Point(196, 12)
         Me.LivingroomWindow2.Name = "LivingroomWindow2"
         Me.LivingroomWindow2.Size = New System.Drawing.Size(98, 15)
         Me.LivingroomWindow2.TabIndex = 28
@@ -128,7 +138,7 @@ Partial Class UserApartment
         '
         Me.BedroomWindow1.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.BedroomWindow1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BedroomWindow1.Location = New System.Drawing.Point(378, 12)
+        Me.BedroomWindow1.Location = New System.Drawing.Point(367, 12)
         Me.BedroomWindow1.Name = "BedroomWindow1"
         Me.BedroomWindow1.Size = New System.Drawing.Size(98, 15)
         Me.BedroomWindow1.TabIndex = 27
@@ -139,7 +149,7 @@ Partial Class UserApartment
         '
         Me.BedroomWindow2.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.BedroomWindow2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BedroomWindow2.Location = New System.Drawing.Point(619, 12)
+        Me.BedroomWindow2.Location = New System.Drawing.Point(608, 12)
         Me.BedroomWindow2.Name = "BedroomWindow2"
         Me.BedroomWindow2.Size = New System.Drawing.Size(98, 15)
         Me.BedroomWindow2.TabIndex = 26
@@ -150,7 +160,7 @@ Partial Class UserApartment
         '
         Me.BedroomWindow3.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.BedroomWindow3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BedroomWindow3.Location = New System.Drawing.Point(759, 50)
+        Me.BedroomWindow3.Location = New System.Drawing.Point(748, 50)
         Me.BedroomWindow3.Name = "BedroomWindow3"
         Me.BedroomWindow3.Size = New System.Drawing.Size(15, 98)
         Me.BedroomWindow3.TabIndex = 24
@@ -161,7 +171,7 @@ Partial Class UserApartment
         '
         Me.FrontDoor.BackColor = System.Drawing.Color.SaddleBrown
         Me.FrontDoor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.FrontDoor.Location = New System.Drawing.Point(349, 427)
+        Me.FrontDoor.Location = New System.Drawing.Point(338, 427)
         Me.FrontDoor.Name = "FrontDoor"
         Me.FrontDoor.Size = New System.Drawing.Size(64, 15)
         Me.FrontDoor.TabIndex = 23
@@ -171,7 +181,7 @@ Partial Class UserApartment
         '
         Me.LivingroomWindow1.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.LivingroomWindow1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LivingroomWindow1.Location = New System.Drawing.Point(50, 12)
+        Me.LivingroomWindow1.Location = New System.Drawing.Point(39, 12)
         Me.LivingroomWindow1.Name = "LivingroomWindow1"
         Me.LivingroomWindow1.Size = New System.Drawing.Size(98, 15)
         Me.LivingroomWindow1.TabIndex = 22
@@ -183,7 +193,7 @@ Partial Class UserApartment
         Me.Bathroom.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.Bathroom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Bathroom.Image = Global.Scanning.My.Resources.Resources.toilet
-        Me.Bathroom.Location = New System.Drawing.Point(426, 260)
+        Me.Bathroom.Location = New System.Drawing.Point(415, 260)
         Me.Bathroom.Name = "Bathroom"
         Me.Bathroom.Size = New System.Drawing.Size(339, 172)
         Me.Bathroom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -196,7 +206,7 @@ Partial Class UserApartment
         Me.Bedroom.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.Bedroom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Bedroom.Image = Global.Scanning.My.Resources.Resources.bed__1_
-        Me.Bedroom.Location = New System.Drawing.Point(342, 15)
+        Me.Bedroom.Location = New System.Drawing.Point(331, 15)
         Me.Bedroom.Name = "Bedroom"
         Me.Bedroom.Size = New System.Drawing.Size(423, 174)
         Me.Bedroom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -209,7 +219,7 @@ Partial Class UserApartment
         Me.LivingRoom.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.LivingRoom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LivingRoom.Image = Global.Scanning.My.Resources.Resources.livingRoom
-        Me.LivingRoom.Location = New System.Drawing.Point(27, 15)
+        Me.LivingRoom.Location = New System.Drawing.Point(16, 15)
         Me.LivingRoom.Name = "LivingRoom"
         Me.LivingRoom.Size = New System.Drawing.Size(316, 239)
         Me.LivingRoom.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
@@ -222,23 +232,13 @@ Partial Class UserApartment
         Me.Kitchen.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.Kitchen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Kitchen.Image = Global.Scanning.My.Resources.Resources.kitchen
-        Me.Kitchen.Location = New System.Drawing.Point(27, 253)
+        Me.Kitchen.Location = New System.Drawing.Point(16, 253)
         Me.Kitchen.Name = "Kitchen"
         Me.Kitchen.Size = New System.Drawing.Size(316, 179)
         Me.Kitchen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.Kitchen.TabIndex = 18
         Me.Kitchen.TabStop = False
         Me.Kitchen.Tag = "0"
-        '
-        'apartment
-        '
-        Me.apartment.BackColor = System.Drawing.Color.SandyBrown
-        Me.apartment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.apartment.Location = New System.Drawing.Point(27, 15)
-        Me.apartment.Name = "apartment"
-        Me.apartment.Size = New System.Drawing.Size(738, 417)
-        Me.apartment.TabIndex = 5
-        Me.apartment.TabStop = False
         '
         'UserApartment
         '
@@ -263,6 +263,7 @@ Partial Class UserApartment
         Me.Controls.Add(Me.apartment)
         Me.Name = "UserApartment"
         Me.Text = "UserApartment"
+        CType(Me.apartment, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BathroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KitchenDoor, System.ComponentModel.ISupportInitialize).EndInit()
@@ -278,7 +279,6 @@ Partial Class UserApartment
         CType(Me.Bedroom, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingRoom, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Kitchen, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.apartment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
