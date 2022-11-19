@@ -1,5 +1,8 @@
 ﻿Public Class MainForm
 
+    Private Options(4) As SubOptions
+
+    Private Apartment As New UserApartment()
 
     Public Sub New()
 
@@ -7,42 +10,115 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        TopMenu.Initialize(SubMenu1, SubMenu2, SubMenu3)
+        Me.Options(0) = Me.MainEntrance
+        Me.Options(1) = Me.Floor1
+        Me.Options(2) = Me.Floor2
+        Me.Options(3) = Me.Floor3
+        Me.Options(4) = Me.Floor4
+
+        For i = 0 To 4
+            Me.Options(i).Initialize()
+        Next
 
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
-        TopMenu.StartScanning()
+        Me.StartScanning()
     End Sub
 
+#Region "Timer Properties and methods"
 
-    Private Sub Button_Click(sender As Object, e As EventArgs) Handles help.Click, Button3.Click, ent.Click, Button5.Click, Button6.Click, Button7.Click, Button8.Click, Button9.Click, Button10.Click, Button11.Click, Button12.Click
-        TopMenu.StopScanning()
-        Dim b As Button = sender
-        MsgBox(b.ToString() & " was selected")
-        'TopMenu.ResumeScanning()
+    ' Make the Scanningtimer interval accessible 
+    Public Property ScanningInterval As Integer
+        Get
+            Return Me.ScanningTimer.Interval
+        End Get
+        Set(value As Integer)
+            Me.ScanningTimer.Interval = value
+        End Set
+    End Property
+#End Region
 
-        If b.Name = "ent" Then
+#Region "Scanning functionality"
 
-            Dim ent As Form1 = New Form1()
-            ent.Show()
+    ' Scanning method will be changed in final version, this is temporary to show we have something working
+    Private scanninglevel As Integer
+    Private focusIsOn As Integer
 
-        ElseIf b.Name = "help" Then
+    ' Start scanning on the first submenu
+    Public Sub StartScanning()
+        Me.scanninglevel = 0
+        Me.focusIsOn = 0
+        Me.Options(Me.focusIsOn).ReceiveFocus()
+        Me.ScanningTimer.Start()
+    End Sub
 
-            Dim assistance As Form2 = New Form2()
-            assistance.Show()
+    ' Stop scanning
+    Public Sub StopScanning()
+        Me.ScanningTimer.Stop()
+        Me.Options(Me.focusIsOn).LoseFocus()
+        Me.Focus()
+    End Sub
+
+    ' Resume scanning on the same submenu where you stopped
+    ' to restrat scanning at the beginning, use StartScanning
+    Public Sub ResumeScanning()
+        Me.scanninglevel = 0
+        Me.Options(Me.focusIsOn).ReceiveFocus()
+        Me.ScanningTimer.Start()
+    End Sub
+
+    ' When the timer goes off, scan to next submenu
+    Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles ScanningTimer.Tick
+        If scanninglevel = 0 Then
+            Me.Options(Me.focusIsOn).LoseFocus()
+            Me.focusIsOn = (Me.focusIsOn + 1) Mod 5
+            Me.Options(Me.focusIsOn).ReceiveFocus()
+        Else
+            Me.Options(Me.focusIsOn).InnerScanningNext()
         End If
+<<<<<<< HEAD
+=======
 
 
         'TopMenu.ResumeScanning()
          Me.Hide()
  Me.Hide()
+>>>>>>> c2f50ece09a2a2c423787acf7ff2c0e4dd8806db
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        TopMenu.StopScanning()
-        Dim userApt As UserApartment = New UserApartment()
-        userApt.Show()
+#End Region
+
+#Region "Other events"
+
+    ' When the user selects a submenu, start scanning within that submenu
+    Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
+        ' Temporary example of selecting a suboption, will be changed in final version
+        ' scanninglevel = 1
+        If focusIsOn = 0 Then
+            StopScanning()
+            ' This is also temporary, will likely implement all screens in one form in final product rather than using separate forms
+            ' This will make the transition look better and it will make it easier to have some components which are present on all screens
+            ' In addition, this does not lead to the correct screen for the selected item, they all lead to a placeholder to show that it works
+            Me.Apartment.Show()
+        ElseIf focusIsOn = 1 Then
+            StopScanning()
+            Me.Apartment.Show()
+        ElseIf focusIsOn = 2 Then
+            StopScanning()
+            Me.Apartment.Show()
+        ElseIf focusIsOn = 3 Then
+            StopScanning()
+            Me.Apartment.Show()
+        ElseIf focusIsOn = 4 Then
+            StopScanning()
+            Me.Apartment.Show()
+        End If
     End Sub
 
+<<<<<<< HEAD
+#End Region
 End Class
+=======
+End Class
+>>>>>>> c2f50ece09a2a2c423787acf7ff2c0e4dd8806db

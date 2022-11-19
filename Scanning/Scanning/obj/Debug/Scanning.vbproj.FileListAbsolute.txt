@@ -118,3 +118,21 @@ C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\
 C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.exe
 C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.xml
 C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.pdb
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\bin\Debug\Scanning.exe.config
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\bin\Debug\Scanning.exe
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\bin\Debug\Scanning.pdb
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\bin\Debug\Scanning.xml
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.vbproj.AssemblyReference.cache
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.vbproj.SuggestedBindingRedirects.cache
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.Form1.resources
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.Form2.resources
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.MainForm.resources
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.Resources.resources
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.SubMenu.resources
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.TopMenu.resources
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.UserApartment.resources
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.vbproj.GenerateResource.cache
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.vbproj.CoreCompileInputs.cache
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.exe
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.xml
+H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.pdb
