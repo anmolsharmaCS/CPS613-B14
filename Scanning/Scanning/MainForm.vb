@@ -77,14 +77,12 @@
         Else
             Me.Options(Me.focusIsOn).InnerScanningNext()
         End If
-<<<<<<< HEAD
-=======
+
 
 
         'TopMenu.ResumeScanning()
-         Me.Hide()
- Me.Hide()
->>>>>>> c2f50ece09a2a2c423787acf7ff2c0e4dd8806db
+        Me.Hide()
+
     End Sub
 
 #End Region
@@ -116,9 +114,6 @@
         End If
     End Sub
 
-<<<<<<< HEAD
 #End Region
 End Class
-=======
-End Class
->>>>>>> c2f50ece09a2a2c423787acf7ff2c0e4dd8806db
+
