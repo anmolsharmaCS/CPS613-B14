@@ -1,4 +1,6 @@
-﻿Public Class UserApartment
+﻿Imports System.ComponentModel
+
+Public Class UserApartment
 
     Private TopOptions(5) As SubOptions
     Private Windows(5) As SubOptions
@@ -9,7 +11,9 @@
     Private kitchenForm As New Kitchen()
     Private bathroomForm As New Bathroom()
 
-    Public Sub New()
+    Private MyParent As FloorHallways
+
+    Public Sub New(parentForm)
 
         ' This call is required by the designer.
         InitializeComponent()
@@ -44,6 +48,8 @@
         For i = 0 To 4
             Doors(i).Initialize()
         Next
+
+        MyParent = parentForm
 
     End Sub
 
@@ -154,6 +160,10 @@
         ElseIf focusIsOn = 5 Then
             TopOptions(focusIsOn).StartInnerScanning(Doors)
         End If
+    End Sub
+
+    Private Sub UserApartment_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        MyParent.ResumeScanning()
     End Sub
 
 #End Region

@@ -76,8 +76,6 @@
             Me.Options(Me.focusIsOn).InnerScanningNext()
         End If
 
-        Me.Hide()
-
     End Sub
 
 #End Region
@@ -86,20 +84,20 @@
 
     ' When the user selects a submenu, start scanning within that submenu
     Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
-        ' Temporary example of selecting a suboption, will be changed in final version
-        ' scanninglevel = 1
-        Dim Floor As New FloorHallways(focusIsOn)
+
+        Dim FLoor As New FloorHallways(focusIsOn, Me)
         If focusIsOn = 0 Then
             StopScanning()
             ' This is also temporary, will likely implement all screens in one form in final product rather than using separate forms
             ' This will make the transition look better and it will make it easier to have some components which are present on all screens
             ' In addition, this does not lead to the correct screen for the selected item, they all lead to a placeholder to show that it works
-            Floor.Show()
+            FLoor.Show()
         Else
             StopScanning()
-            Floor.Show()
+            FLoor.Show()
         End If
     End Sub
 
 #End Region
 End Class
+

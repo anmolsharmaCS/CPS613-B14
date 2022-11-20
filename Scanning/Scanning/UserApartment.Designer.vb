@@ -262,6 +262,7 @@ Partial Class UserApartment
         Me.Controls.Add(Me.Kitchen)
         Me.Controls.Add(Me.apartment)
         Me.Name = "UserApartment"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "UserApartment"
         CType(Me.apartment, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
