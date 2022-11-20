@@ -1,4 +1,6 @@
-﻿Public Class SubOptions
+﻿Imports System.Reflection
+
+Public Class SubOptions
 
     Inherits PictureBox
 
@@ -40,41 +42,72 @@
 #End Region
 
 #Region "Inner Scanning"
-
+    Public MenuBar As Boolean = False
     Public Sub StartInnerScanning(givenOptions As SubOptions())
         Options = givenOptions
         activeOption = 0
-        For i = 1 To Options.Length - 1
-            Options(i).BackColor = originalColor
-        Next
+        If MenuBar Then
+            For i = 0 To Options.Length - 1
+                Options(i).BackColor = originalColor
+            Next
+        Else
+            For i = 1 To Options.Length - 1
+                Options(i).BackColor = originalColor
+            Next
+        End If
         GiveFocusToButton(activeOption)
     End Sub
 
     Public Sub InnerScanningNext()
         TakeFocusFromButton(activeOption)
-        activeOption = (activeOption + 1) Mod (Options.Length + 1)
+        If MenuBar Then
+            activeOption = (activeOption + 1) Mod (Options.Length)
+        Else
+            activeOption = (activeOption + 1) Mod (Options.Length + 1)
+        End If
         GiveFocusToButton(activeOption)
     End Sub
 
     ' You can customize the look and feel of the inner scanning in these two routines
     Private Sub TakeFocusFromButton(index As Integer)
-        If index = 0 Then
-            For i = 0 To Options.Length - 1
-                Options(i).BackColor = originalColor
-            Next
-        Else
-            Options(index - 1).BackColor = originalColor
-        End If
 
+        If MenuBar Then
+            Options(index).BackColor = Options(index).originalColor
+        Else
+            If index = 0 Then
+                For i = 0 To Options.Length - 1
+                    Options(i).BackColor = originalColor
+                Next
+            Else
+                Options(index - 1).BackColor = originalColor
+            End If
+        End If
     End Sub
 
     Private Sub GiveFocusToButton(index As Integer)
-        If index = 0 Then
+
+        If MenuBar Then
+            Options(index).BackColor = Color.LemonChiffon
+        Else
+            If index = 0 Then
+                For i = 0 To Options.Length - 1
+                    Options(i).BackColor = Color.LemonChiffon
+                Next
+            Else
+                Options(index - 1).BackColor = Color.LemonChiffon
+            End If
+        End If
+    End Sub
+
+    Public Sub StopInnerScanning()
+        If MenuBar Then
             For i = 0 To Options.Length - 1
-                Options(i).BackColor = Color.LemonChiffon
+                Options(i).BackColor = Options(i).originalColor
             Next
         Else
-            Options(index - 1).BackColor = Color.LemonChiffon
+            For i = 1 To Options.Length - 1
+                Options(i).BackColor = originalColor
+            Next
         End If
     End Sub
 

@@ -324,6 +324,7 @@ Partial Class FloorHallways
         Me.Controls.Add(Me.Apartment02)
         Me.Controls.Add(Me.Apartment01)
         Me.Controls.Add(Me.Floor)
+        Me.KeyPreview = True
         Me.Name = "FloorHallways"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FloorHallways"

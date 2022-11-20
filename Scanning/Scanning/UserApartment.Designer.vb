@@ -270,6 +270,7 @@ Partial Class UserApartment
         Me.Controls.Add(Me.LivingRoom)
         Me.Controls.Add(Me.Kitchen)
         Me.Controls.Add(Me.apartment)
+        Me.KeyPreview = True
         Me.Name = "UserApartment"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "UserApartment"
