@@ -286,6 +286,75 @@
   <ItemGroup>
     <None Include="My Project\communication.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\hellboy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\canada.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\forward %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Rewind %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\resume %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\pause %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Skip-next.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Skip-prev.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\live %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\volume-down %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\volume-mute %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\volume-up %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\streamed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\mp4 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\apple-podcast %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Apple-Voice-Memos_Logo-1024x575 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\radio %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\playOnce %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\repeat %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\shuffb %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\background3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\wideP %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\wideA %281%29.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

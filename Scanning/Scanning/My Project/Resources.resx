@@ -199,4 +199,73 @@
   <data name="bulb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bulb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="apple_podcast__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>apple-podcast (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Apple_Voice_Memos_Logo_1024x575__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Apple-Voice-Memos_Logo-1024x575 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>background3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="canada" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>canada.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="forward__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>forward (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hellboy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>hellboy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="live__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>live (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mp4__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>mp4 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pause__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>pause (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="playOnce__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>playOnce (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="radio__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>radio (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="repeat__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>repeat (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resume__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>resume (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rewind__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Rewind (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shuffb__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>shuffb (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skip_next" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Skip-next.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skip_prev" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Skip-prev.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="streamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>streamed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="volume_down__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>volume-down (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="volume_mute__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>volume-mute (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="volume_up__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>volume-up (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wideA__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>wideA (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wideP__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>wideP (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
