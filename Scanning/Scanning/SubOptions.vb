@@ -48,7 +48,7 @@ Public Class SubOptions
         activeOption = 0
         If MenuBar Then
             For i = 0 To Options.Length - 1
-                Options(i).BackColor = originalColor
+                Options(i).BackColor = Options(i).originalColor
             Next
         Else
             For i = 1 To Options.Length - 1

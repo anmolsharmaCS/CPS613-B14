@@ -124,6 +124,11 @@ Public Class FloorHallways
             If MainTaskBar.Back.BackColor = Color.LemonChiffon Then
                 MainTaskBar.MenuBarOption.StopInnerScanning()
                 scanninglevel = 0
+            ElseIf MainTaskBar.Assistance.BackColor = Color.LemonChiffon Then
+                Dim Assistance As New Form2(Me)
+                StopScanning()
+                MainTaskBar.MenuBarOption.StopInnerScanning()
+                Assistance.Show()
             End If
         End If
 

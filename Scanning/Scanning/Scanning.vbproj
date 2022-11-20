@@ -355,6 +355,12 @@
   <ItemGroup>
     <None Include="My Project\wideA %281%29.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\assistant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\assisstant.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
