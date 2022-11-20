@@ -73,7 +73,7 @@ Partial Class Form1
         '
         'Button30
         '
-        Me.Button30.Image = Global.Scanning.My.Resources.Resources.forward__1_
+        'Me.Button30.Image = Global.Scanning.My.Resources.Resources.forward__1_
         Me.Button30.Location = New System.Drawing.Point(184, 136)
         Me.Button30.Name = "Button30"
         Me.Button30.Size = New System.Drawing.Size(47, 56)
@@ -83,7 +83,7 @@ Partial Class Form1
         '
         'Button29
         '
-        Me.Button29.Image = Global.Scanning.My.Resources.Resources.resume__1_
+        'Me.Button29.Image = Global.Scanning.My.Resources.Resources.resume__1_
         Me.Button29.Location = New System.Drawing.Point(125, 136)
         Me.Button29.Name = "Button29"
         Me.Button29.Size = New System.Drawing.Size(47, 56)
@@ -93,7 +93,7 @@ Partial Class Form1
         '
         'Button28
         '
-        Me.Button28.Image = Global.Scanning.My.Resources.Resources.pause__1_
+        'Me.Button28.Image = Global.Scanning.My.Resources.Resources.pause__1_
         Me.Button28.Location = New System.Drawing.Point(66, 136)
         Me.Button28.Name = "Button28"
         Me.Button28.Size = New System.Drawing.Size(47, 56)
@@ -103,7 +103,7 @@ Partial Class Form1
         '
         'Button27
         '
-        Me.Button27.Image = Global.Scanning.My.Resources.Resources.Rewind__1_
+        'Me.Button27.Image = Global.Scanning.My.Resources.Resources.Rewind__1_
         Me.Button27.Location = New System.Drawing.Point(7, 136)
         Me.Button27.Name = "Button27"
         Me.Button27.Size = New System.Drawing.Size(47, 56)
@@ -114,7 +114,7 @@ Partial Class Form1
         'Button26
         '
         Me.Button26.Enabled = False
-        Me.Button26.Image = Global.Scanning.My.Resources.Resources.Apple_Voice_Memos_Logo_1024x575__1_
+        'Me.Button26.Image = Global.Scanning.My.Resources.Resources.Apple_Voice_Memos_Logo_1024x575__1_
         Me.Button26.Location = New System.Drawing.Point(62, 74)
         Me.Button26.Name = "Button26"
         Me.Button26.Size = New System.Drawing.Size(108, 56)
@@ -125,7 +125,7 @@ Partial Class Form1
         'Button25
         '
         Me.Button25.Enabled = False
-        Me.Button25.Image = Global.Scanning.My.Resources.Resources.apple_podcast__1_
+        'Me.Button25.Image = Global.Scanning.My.Resources.Resources.apple_podcast__1_
         Me.Button25.Location = New System.Drawing.Point(121, 12)
         Me.Button25.Name = "Button25"
         Me.Button25.Size = New System.Drawing.Size(108, 56)
@@ -136,7 +136,7 @@ Partial Class Form1
         'Button24
         '
         Me.Button24.Enabled = False
-        Me.Button24.Image = Global.Scanning.My.Resources.Resources.radio__1_
+        'Me.Button24.Image = Global.Scanning.My.Resources.Resources.radio__1_
         Me.Button24.Location = New System.Drawing.Point(7, 12)
         Me.Button24.Name = "Button24"
         Me.Button24.Size = New System.Drawing.Size(108, 56)
@@ -165,7 +165,7 @@ Partial Class Form1
         '
         'Button16
         '
-        Me.Button16.Image = Global.Scanning.My.Resources.Resources.forward__1_
+        'Me.Button16.Image = Global.Scanning.My.Resources.Resources.forward__1_
         Me.Button16.Location = New System.Drawing.Point(166, 193)
         Me.Button16.Name = "Button16"
         Me.Button16.Size = New System.Drawing.Size(47, 56)
@@ -175,7 +175,7 @@ Partial Class Form1
         '
         'Button14
         '
-        Me.Button14.Image = Global.Scanning.My.Resources.Resources.pause__1_
+        'Me.Button14.Image = Global.Scanning.My.Resources.Resources.pause__1_
         Me.Button14.Location = New System.Drawing.Point(67, 193)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(47, 56)
@@ -185,7 +185,7 @@ Partial Class Form1
         '
         'Button13
         '
-        Me.Button13.Image = Global.Scanning.My.Resources.Resources.resume__1_
+        'Me.Button13.Image = Global.Scanning.My.Resources.Resources.resume__1_
         Me.Button13.Location = New System.Drawing.Point(117, 193)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(47, 56)
@@ -195,7 +195,7 @@ Partial Class Form1
         '
         'Button15
         '
-        Me.Button15.Image = Global.Scanning.My.Resources.Resources.Rewind__1_
+        'Me.Button15.Image = Global.Scanning.My.Resources.Resources.Rewind__1_
         Me.Button15.Location = New System.Drawing.Point(17, 193)
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(47, 56)
@@ -205,7 +205,7 @@ Partial Class Form1
         '
         'Button12
         '
-        Me.Button12.Image = Global.Scanning.My.Resources.Resources.playOnce__1_
+        'Me.Button12.Image = Global.Scanning.My.Resources.Resources.playOnce__1_
         Me.Button12.Location = New System.Drawing.Point(88, 135)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(56, 52)
@@ -215,7 +215,7 @@ Partial Class Form1
         'Button11
         '
         Me.Button11.Enabled = False
-        Me.Button11.Image = Global.Scanning.My.Resources.Resources.repeat__1_
+        'Me.Button11.Image = Global.Scanning.My.Resources.Resources.repeat__1_
         Me.Button11.Location = New System.Drawing.Point(159, 135)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(56, 52)
@@ -225,7 +225,7 @@ Partial Class Form1
         'Button10
         '
         Me.Button10.Enabled = False
-        Me.Button10.Image = Global.Scanning.My.Resources.Resources.shuffb__1_
+        'Me.Button10.Image = Global.Scanning.My.Resources.Resources.shuffb__1_
         Me.Button10.Location = New System.Drawing.Point(17, 135)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(56, 52)
@@ -235,7 +235,7 @@ Partial Class Form1
         'Button9
         '
         Me.Button9.Enabled = False
-        Me.Button9.Image = Global.Scanning.My.Resources.Resources.wideA__1_
+        'Me.Button9.Image = Global.Scanning.My.Resources.Resources.wideA__1_
         Me.Button9.Location = New System.Drawing.Point(17, 72)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(198, 44)
@@ -245,7 +245,7 @@ Partial Class Form1
         'Button8
         '
         Me.Button8.Enabled = False
-        Me.Button8.Image = Global.Scanning.My.Resources.Resources.wideP__1_
+        'Me.Button8.Image = Global.Scanning.My.Resources.Resources.wideP__1_
         Me.Button8.Location = New System.Drawing.Point(17, 22)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(198, 44)

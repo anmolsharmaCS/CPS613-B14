@@ -83,6 +83,12 @@
     <Compile Include="Bedroom.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FloorHallways.Designer.vb">
+      <DependentUpon>FloorHallways.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FloorHallways.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
@@ -150,6 +156,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FloorHallways.resx">
+      <DependentUpon>FloorHallways.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>

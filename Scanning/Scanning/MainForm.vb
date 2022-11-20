@@ -2,8 +2,6 @@
 
     Private Options(4) As SubOptions
 
-    Private Apartment As New UserApartment()
-
     Public Sub New()
 
         ' This call is required by the designer.
@@ -77,14 +75,9 @@
         Else
             Me.Options(Me.focusIsOn).InnerScanningNext()
         End If
-<<<<<<< HEAD
-=======
 
+        Me.Hide()
 
-        'TopMenu.ResumeScanning()
-         Me.Hide()
- Me.Hide()
->>>>>>> c2f50ece09a2a2c423787acf7ff2c0e4dd8806db
     End Sub
 
 #End Region
@@ -95,30 +88,18 @@
     Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
         ' Temporary example of selecting a suboption, will be changed in final version
         ' scanninglevel = 1
+        Dim Floor As New FloorHallways(focusIsOn)
         If focusIsOn = 0 Then
             StopScanning()
             ' This is also temporary, will likely implement all screens in one form in final product rather than using separate forms
             ' This will make the transition look better and it will make it easier to have some components which are present on all screens
             ' In addition, this does not lead to the correct screen for the selected item, they all lead to a placeholder to show that it works
-            Me.Apartment.Show()
-        ElseIf focusIsOn = 1 Then
+            Floor.Show()
+        Else
             StopScanning()
-            Me.Apartment.Show()
-        ElseIf focusIsOn = 2 Then
-            StopScanning()
-            Me.Apartment.Show()
-        ElseIf focusIsOn = 3 Then
-            StopScanning()
-            Me.Apartment.Show()
-        ElseIf focusIsOn = 4 Then
-            StopScanning()
-            Me.Apartment.Show()
+            Floor.Show()
         End If
     End Sub
 
-<<<<<<< HEAD
 #End Region
 End Class
-=======
-End Class
->>>>>>> c2f50ece09a2a2c423787acf7ff2c0e4dd8806db
