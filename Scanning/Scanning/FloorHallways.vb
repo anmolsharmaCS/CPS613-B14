@@ -104,7 +104,11 @@ Public Class FloorHallways
     ' When the user selects a submenu, start scanning within that submenu
     Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
 
-        If focusIsOn = 2 And Label2.Text = "402" Then
+        If focusIsOn = 0 Then
+
+            Close()
+
+        ElseIf focusIsOn = 2 And Label2.Text = "402" Then
             Dim Apartment As New UserApartment(Me)
             StopScanning()
             Apartment.Show()

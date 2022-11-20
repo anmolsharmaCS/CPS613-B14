@@ -27,6 +27,11 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.back_button">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.background2">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -43,6 +48,11 @@ Scanning
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.cancel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.communication">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -88,6 +98,11 @@ Scanning
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.musicnote">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.navigation">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

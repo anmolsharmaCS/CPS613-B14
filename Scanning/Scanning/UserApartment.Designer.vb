@@ -23,8 +23,8 @@ Partial Class UserApartment
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.apartment = New System.Windows.Forms.PictureBox()
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.apartment = New System.Windows.Forms.PictureBox()
         Me.LivingroomDoor = New Scanning.SubOptions()
         Me.BathroomDoor = New Scanning.SubOptions()
         Me.KitchenDoor = New Scanning.SubOptions()
@@ -40,6 +40,7 @@ Partial Class UserApartment
         Me.Bedroom = New Scanning.SubOptions()
         Me.LivingRoom = New Scanning.SubOptions()
         Me.Kitchen = New Scanning.SubOptions()
+        Me.MainTaskBar = New Scanning.MainTaskBar()
         CType(Me.apartment, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BathroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,6 +59,10 @@ Partial Class UserApartment
         CType(Me.Kitchen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'ScanningTimer
+        '
+        Me.ScanningTimer.Interval = 1000
+        '
         'apartment
         '
         Me.apartment.BackColor = System.Drawing.Color.SandyBrown
@@ -67,10 +72,6 @@ Partial Class UserApartment
         Me.apartment.Size = New System.Drawing.Size(738, 417)
         Me.apartment.TabIndex = 5
         Me.apartment.TabStop = False
-        '
-        'ScanningTimer
-        '
-        Me.ScanningTimer.Interval = 1000
         '
         'LivingroomDoor
         '
@@ -240,11 +241,19 @@ Partial Class UserApartment
         Me.Kitchen.TabStop = False
         Me.Kitchen.Tag = "0"
         '
+        'MainTaskBar
+        '
+        Me.MainTaskBar.Location = New System.Drawing.Point(225, 448)
+        Me.MainTaskBar.Name = "MainTaskBar"
+        Me.MainTaskBar.Size = New System.Drawing.Size(540, 132)
+        Me.MainTaskBar.TabIndex = 34
+        '
         'UserApartment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 568)
+        Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.MainTaskBar)
         Me.Controls.Add(Me.LivingroomDoor)
         Me.Controls.Add(Me.BathroomDoor)
         Me.Controls.Add(Me.KitchenDoor)
@@ -300,4 +309,5 @@ Partial Class UserApartment
     Friend WithEvents KitchenDoor As SubOptions
     Friend WithEvents BathroomDoor As SubOptions
     Friend WithEvents LivingroomDoor As SubOptions
+    Friend WithEvents MainTaskBar As MainTaskBar
 End Class

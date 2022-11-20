@@ -137,3 +137,4 @@ H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.exe
 H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.xml
 H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.pdb
 C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.FloorHallways.resources
+C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.MainTaskBar.resources

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FloorHallways
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FloorHallways
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -29,6 +29,7 @@ Partial Class FloorHallways
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
         Me.Home = New System.Windows.Forms.PictureBox()
         Me.ElevatorDoorLine = New System.Windows.Forms.PictureBox()
         Me.SubOptions5 = New Scanning.SubOptions()
@@ -45,7 +46,7 @@ Partial Class FloorHallways
         Me.Apartment02 = New Scanning.SubOptions()
         Me.Apartment01 = New Scanning.SubOptions()
         Me.Floor = New System.Windows.Forms.PictureBox()
-        Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.MainTaskBar = New Scanning.MainTaskBar()
         CType(Me.Home, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElevatorDoorLine, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SubOptions5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -123,6 +124,10 @@ Partial Class FloorHallways
         Me.Label6.Size = New System.Drawing.Size(63, 35)
         Me.Label6.TabIndex = 43
         Me.Label6.Text = "000"
+        '
+        'ScanningTimer
+        '
+        Me.ScanningTimer.Interval = 1000
         '
         'Home
         '
@@ -284,15 +289,19 @@ Partial Class FloorHallways
         Me.Floor.TabIndex = 6
         Me.Floor.TabStop = False
         '
-        'ScanningTimer
+        'MainTaskBar
         '
-        Me.ScanningTimer.Interval = 1000
+        Me.MainTaskBar.Location = New System.Drawing.Point(229, 444)
+        Me.MainTaskBar.Name = "MainTaskBar"
+        Me.MainTaskBar.Size = New System.Drawing.Size(540, 132)
+        Me.MainTaskBar.TabIndex = 45
         '
         'FloorHallways
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 568)
+        Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.MainTaskBar)
         Me.Controls.Add(Me.Home)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -362,4 +371,5 @@ Partial Class FloorHallways
     Friend WithEvents Label6 As Label
     Friend WithEvents Home As PictureBox
     Friend WithEvents ScanningTimer As Timer
+    Friend WithEvents MainTaskBar As MainTaskBar
 End Class
