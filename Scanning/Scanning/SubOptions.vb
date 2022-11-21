@@ -16,6 +16,10 @@ Public Class SubOptions
     Private activeOption As Integer
     Private originalColor As Color
 
+    Public Sub SetOriginalColor(newColor As Color)
+        originalColor = newColor
+    End Sub
+
 #End Region
 
 #Region "Initialize"

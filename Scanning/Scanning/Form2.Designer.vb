@@ -236,9 +236,8 @@ Partial Class Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Scanning.My.Resources.Resources.background2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(817, 613)
+        Me.ClientSize = New System.Drawing.Size(1344, 897)
         Me.Controls.Add(Me.CallAgain)
         Me.Controls.Add(Me.CancelCall)
         Me.Controls.Add(Me.CallMenu)
@@ -256,6 +255,7 @@ Partial Class Form2
         Me.Controls.Add(Me.AssistanceImage)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form2"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
         CType(Me.AssistanceImage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

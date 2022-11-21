@@ -112,6 +112,11 @@ Public Class Form2
         BathroomHelp.BackColor = SystemColors.Control
         BedroomHelp.BackColor = SystemColors.Control
         ReturnToUrgency.BackColor = SystemColors.Control
+
+        TransferHelp.SetOriginalColor(SystemColors.Control)
+        BathroomHelp.SetOriginalColor(SystemColors.Control)
+        BedroomHelp.SetOriginalColor(SystemColors.Control)
+        ReturnToUrgency.SetOriginalColor(SystemColors.Control)
     End Sub
 
     Private Sub ReasonMenu_Inactive()
@@ -120,18 +125,29 @@ Public Class Form2
         BathroomHelp.BackColor = SystemColors.ButtonShadow
         BedroomHelp.BackColor = SystemColors.ButtonShadow
         ReturnToUrgency.BackColor = SystemColors.ButtonShadow
+
+        TransferHelp.SetOriginalColor(SystemColors.ButtonShadow)
+        BathroomHelp.SetOriginalColor(SystemColors.ButtonShadow)
+        BedroomHelp.SetOriginalColor(SystemColors.ButtonShadow)
+        ReturnToUrgency.SetOriginalColor(SystemColors.ButtonShadow)
     End Sub
 
     Private Sub CallMenu_Active()
         CallMenu.BackColor = SystemColors.GradientActiveCaption
         CancelCall.BackColor = SystemColors.Control
         CallAgain.BackColor = SystemColors.Control
+
+        CancelCall.SetOriginalColor(SystemColors.Control)
+        CallAgain.SetOriginalColor(SystemColors.Control)
     End Sub
 
     Private Sub CallMenu_Inactive()
         CallMenu.BackColor = SystemColors.ControlDarkDark
         CancelCall.BackColor = SystemColors.ButtonShadow
         CallAgain.BackColor = SystemColors.ButtonShadow
+
+        CancelCall.SetOriginalColor(SystemColors.ButtonShadow)
+        CallAgain.SetOriginalColor(SystemColors.ButtonShadow)
     End Sub
 
 #End Region
@@ -156,6 +172,7 @@ Public Class Form2
                 focusIsOn = 6
                 TimerStart()
             ElseIf focusIsOn = 6 Then
+                Options(topSelection).LoseFocus()
                 ReasonMenu_Inactive()
                 focusIsOn = 8
                 scanninglevel = 0
