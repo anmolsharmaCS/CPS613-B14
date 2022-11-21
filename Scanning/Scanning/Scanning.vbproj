@@ -373,6 +373,24 @@
   <ItemGroup>
     <None Include="My Project\hallwayButton.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\urgentCall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\bedButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\cancelCall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\transferButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\callAgainButton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
