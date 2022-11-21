@@ -180,7 +180,7 @@ Public Class UserApartment
                     scanninglevel = 0
                 End If
             ElseIf MainTaskBar.Assistance.BackColor = Color.LemonChiffon Then
-                Dim Assistance As New Form2(Me)
+                Dim Assistance As New assistance(Me)
                 StopScanning()
                 MainTaskBar.MenuBarOption.StopInnerScanning()
                 Assistance.Show()

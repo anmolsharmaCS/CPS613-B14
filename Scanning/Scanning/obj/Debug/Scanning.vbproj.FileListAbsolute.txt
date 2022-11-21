@@ -107,7 +107,6 @@ C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\bin\Debug\
 C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.vbproj.AssemblyReference.cache
 C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.vbproj.SuggestedBindingRedirects.cache
 C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.Form1.resources
-C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.Form2.resources
 C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.MainForm.resources
 C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.Resources.resources
 C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.SubMenu.resources
@@ -138,3 +137,4 @@ H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.xml
 H:\CPS 613\B14 Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.pdb
 C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.FloorHallways.resources
 C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.MainTaskBar.resources
+C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.assistance.resources

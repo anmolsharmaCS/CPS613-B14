@@ -89,7 +89,7 @@ Public Class FloorHallways
     ' to restrat scanning at the beginning, use StartScanning
     Public Sub ResumeScanning()
         Me.scanninglevel = 0
-        focusIsOn = focusIsOn + 1
+        focusIsOn = (focusIsOn + 1) Mod 3
         Me.Options(focusIsOn).ReceiveFocus()
         Me.ScanningTimer.Start()
     End Sub
@@ -153,7 +153,7 @@ Public Class FloorHallways
                     scanninglevel = 0
                 End If
             ElseIf MainTaskBar.Assistance.BackColor = Color.LemonChiffon Then
-                Dim Assistance As New Form2(Me)
+                Dim Assistance As New assistance(Me)
                 StopScanning()
                 MainTaskBar.MenuBarOption.StopInnerScanning()
                 Assistance.Show()

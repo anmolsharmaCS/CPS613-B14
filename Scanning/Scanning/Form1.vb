@@ -64,7 +64,7 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim assistance As Form2 = New Form2(Me)
+        Dim assistance As assistance = New assistance(Me)
         assistance.Show()
         Me.Hide()
     End Sub
