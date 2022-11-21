@@ -2,7 +2,8 @@
 
 Public Class FloorHallways
 
-    Private Options(7) As SubOptions
+    Private Options(2) As SubOptions
+    Private Apartments(6) As SubOptions
     Private MyParent As MainForm
 
     Public Sub New(floorNumber, parentForm)
@@ -25,15 +26,22 @@ Public Class FloorHallways
 
         Options(0) = Elevator
         Options(1) = Apartment01
-        Options(2) = Apartment02
-        Options(3) = Apartment03
-        Options(4) = Apartment04
-        Options(5) = Apartment05
-        Options(6) = Apartment06
-        Options(7) = MainTaskBar.MenuBarOption
+        Options(2) = MainTaskBar.MenuBarOption
 
-        For i = 0 To 7
+        For i = 0 To 2
             Options(i).Initialize()
+        Next
+
+        Apartments(0) = Apartment01
+        Apartments(1) = Apartment02
+        Apartments(2) = Apartment03
+        Apartments(3) = Apartment04
+        Apartments(4) = Apartment05
+        Apartments(5) = Apartment06
+        Apartments(6) = MainTaskBar.Back
+
+        For i = 0 To 6
+            Apartments(i).Initialize()
         Next
 
         MyParent = parentForm
@@ -81,7 +89,8 @@ Public Class FloorHallways
     ' to restrat scanning at the beginning, use StartScanning
     Public Sub ResumeScanning()
         Me.scanninglevel = 0
-        Me.Options(Me.focusIsOn).ReceiveFocus()
+        focusIsOn = focusIsOn + 1
+        Me.Options(focusIsOn).ReceiveFocus()
         Me.ScanningTimer.Start()
     End Sub
 
@@ -90,7 +99,7 @@ Public Class FloorHallways
 
         If scanninglevel = 0 Then
             Options(focusIsOn).LoseFocus()
-            focusIsOn = (focusIsOn + 1) Mod 8
+            focusIsOn = (focusIsOn + 1) Mod 3
             Options(focusIsOn).ReceiveFocus()
         Else
             Options(focusIsOn).InnerScanningNext()
@@ -102,28 +111,47 @@ Public Class FloorHallways
 
 #Region "Other events"
 
+    Private Sub Apartment01_ColorChanged(sender As Object, e As EventArgs) Handles Apartment01.BackColorChanged
+        If scanninglevel = 0 And ScanningTimer.Enabled Then
+            If Apartment01.BackColor.Equals(Color.LemonChiffon) Then
+                For i = 1 To Apartments.Length - 2
+                    Apartments(i).ReceiveFocus()
+                Next
+            Else
+                For i = 1 To Apartments.Length - 2
+                    Apartments(i).LoseFocus()
+                Next
+            End If
+
+        End If
+    End Sub
+
     Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
 
         If scanninglevel = 0 Then
             scanninglevel = 1
-            Dim Apartment As New UserApartment(Me)
             If focusIsOn = 0 Then
                 StopScanning()
                 Me.Close()
 
-            ElseIf focusIsOn = 2 And Label2.Text = "402" Then
-                StopScanning()
-                Apartment.Show()
+            ElseIf focusIsOn = 1 Then
+                Apartment01.MenuBar = True
+                Options(focusIsOn).StartInnerScanning(Apartments)
 
-            ElseIf focusIsOn = 7 Then
+            ElseIf focusIsOn = 2 Then
                 MainTaskBar.MenuBarOption.LoseFocus()
                 MainTaskBar.MenuBarOption.MenuBar = True
                 Options(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
             End If
         Else
             If MainTaskBar.Back.BackColor = Color.LemonChiffon Then
-                MainTaskBar.MenuBarOption.StopInnerScanning()
-                scanninglevel = 0
+                If focusIsOn = 1 Then
+                    Apartment01.StopInnerScanning()
+                    scanninglevel = 0
+                ElseIf focusIsOn = 2 Then
+                    MainTaskBar.MenuBarOption.StopInnerScanning()
+                    scanninglevel = 0
+                End If
             ElseIf MainTaskBar.Assistance.BackColor = Color.LemonChiffon Then
                 Dim Assistance As New Form2(Me)
                 StopScanning()
@@ -132,6 +160,11 @@ Public Class FloorHallways
             ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
                 StopScanning()
                 Me.Close()
+            ElseIf Apartment02.BackColor = Color.LemonChiffon And Label2.Text = "402" Then
+                Apartment02.LoseFocus()
+                Dim Apartment As New UserApartment(Me)
+                StopScanning()
+                Apartment.Show()
             End If
         End If
 

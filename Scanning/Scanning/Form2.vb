@@ -95,9 +95,14 @@ Public Class Form2
             focusIsOn = ((focusIsOn - 2) Mod 4) + 3
             Options(focusIsOn).ReceiveFocus()
         ElseIf scanninglevel = 2 Then
-            Options(focusIsOn).LoseFocus()
-            focusIsOn = ((focusIsOn - 6) Mod 2) + 7
-            Options(focusIsOn).ReceiveFocus()
+            If Timer1Seconds < 60 Then
+                focusIsOn = 7
+                Options(focusIsOn).ReceiveFocus()
+            Else
+                Options(focusIsOn).LoseFocus()
+                focusIsOn = ((focusIsOn - 6) Mod 2) + 7
+                Options(focusIsOn).ReceiveFocus()
+            End If
         End If
 
     End Sub
@@ -135,7 +140,7 @@ Public Class Form2
     Private Sub CallMenu_Active()
         CallMenu.BackColor = SystemColors.GradientActiveCaption
         CancelCall.BackColor = SystemColors.Control
-        CallAgain.BackColor = SystemColors.Control
+        CallAgain.BackColor = SystemColors.ButtonShadow
 
         CancelCall.SetOriginalColor(SystemColors.Control)
         CallAgain.SetOriginalColor(SystemColors.Control)
@@ -153,6 +158,8 @@ Public Class Form2
 #End Region
 
 #Region "Other events"
+
+    Private Timer1Seconds As Integer
 
     Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
 
@@ -179,13 +186,16 @@ Public Class Form2
             End If
         ElseIf scanninglevel = 2 Then
             If focusIsOn = 7 Then
+                Timer1.Enabled = False
+                TimerLabel.Hide()
                 scanninglevel = 0
                 focusIsOn = 8
                 Options(topSelection).LoseFocus()
                 ReasonMenu_Inactive()
                 CallMenu_Inactive()
             ElseIf focusIsOn = 8 Then
-
+                CallAgain.BackColor = SystemColors.ButtonShadow
+                TimerStart()
             End If
 
         End If
@@ -198,26 +208,33 @@ Public Class Form2
             MyParentApartment.ResumeScanning()
         End If
     End Sub
+
+    Private Sub TimerStart()
+        Timer1Seconds = 0
+        Timer1.Enabled = True
+        TimerLabel.Show()
+        Dim ThisMoment As Date = Now
+        TimerLabel.Text = "1 min"
+
+    End Sub
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
-        While (PictureBox2.Location.X < 250)
-            PictureBox2.Location = New Point(PictureBox2.Location.X + 1, PictureBox2.Location.Y)
-        End While
+        Timer1Seconds = Timer1Seconds + 1
+
+        If Timer1Seconds Mod 2 = 0 Then
+            TimerLabel.ForeColor = Color.Black
+        Else
+            TimerLabel.ForeColor = Color.Blue
+        End If
+
+        If Timer1Seconds = 60 Then
+            CallAgain.BackColor = SystemColors.Control
+            TimerLabel.Text = "0  min"
+        End If
 
     End Sub
 
 #End Region
-
-    Private Sub TimerStart()
-
-        ScanningTimer.Enabled = False
-        Label1.Text = ""
-
-        ScanningTimer.Enabled = True
-        Dim ThisMoment As Date
-        ThisMoment = Now
-        Label1.Text = "Your assistance should arrive at: (" & ThisMoment.Hour & "00:" & ThisMoment.Minute + 2 & ":00)"
-
-    End Sub
 
 End Class

@@ -25,8 +25,7 @@ Partial Class Form2
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.AssistanceImage = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.TimerLabel = New System.Windows.Forms.Label()
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.CallAgain = New Scanning.SubOptions()
@@ -42,7 +41,6 @@ Partial Class Form2
         Me.MakeCall = New Scanning.SubOptions()
         Me.UrgencyMenu = New Scanning.SubOptions()
         CType(Me.AssistanceImage, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CallAgain, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CancelCall, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CallMenu, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,26 +67,18 @@ Partial Class Form2
         Me.AssistanceImage.TabIndex = 2
         Me.AssistanceImage.TabStop = False
         '
-        'Label1
+        'TimerLabel
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(16, 400)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 23)
-        Me.Label1.TabIndex = 4
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImage = Global.Scanning.My.Resources.Resources.nurseWalk
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(24, 434)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(111, 114)
-        Me.PictureBox2.TabIndex = 5
-        Me.PictureBox2.TabStop = False
+        Me.TimerLabel.AutoSize = True
+        Me.TimerLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TimerLabel.Font = New System.Drawing.Font("OCR A Extended", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TimerLabel.Location = New System.Drawing.Point(587, 286)
+        Me.TimerLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.TimerLabel.Name = "TimerLabel"
+        Me.TimerLabel.Size = New System.Drawing.Size(214, 65)
+        Me.TimerLabel.TabIndex = 4
+        Me.TimerLabel.Text = "0 min"
+        Me.TimerLabel.Hide()
         '
         'ScanningTimer
         '
@@ -96,6 +86,7 @@ Partial Class Form2
         '
         'Timer1
         '
+        Me.Timer1.Interval = 1000
         '
         'CallAgain
         '
@@ -250,15 +241,13 @@ Partial Class Form2
         Me.Controls.Add(Me.MakeUrgentCall)
         Me.Controls.Add(Me.MakeCall)
         Me.Controls.Add(Me.UrgencyMenu)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TimerLabel)
         Me.Controls.Add(Me.AssistanceImage)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
         CType(Me.AssistanceImage, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CallAgain, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CancelCall, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CallMenu, System.ComponentModel.ISupportInitialize).EndInit()
@@ -277,8 +266,7 @@ Partial Class Form2
     End Sub
 
     Friend WithEvents AssistanceImage As PictureBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents TimerLabel As Label
     Friend WithEvents ScanningTimer As Timer
     Friend WithEvents UrgencyMenu As SubOptions
     Friend WithEvents MakeCall As SubOptions
