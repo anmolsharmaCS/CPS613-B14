@@ -33,7 +33,7 @@ Public Class FloorHallways
         Options(7) = MainTaskBar.MenuBarOption
 
         For i = 0 To 7
-            Me.Options(i).Initialize()
+            Options(i).Initialize()
         Next
 
         MyParent = parentForm
@@ -129,6 +129,9 @@ Public Class FloorHallways
                 StopScanning()
                 MainTaskBar.MenuBarOption.StopInnerScanning()
                 Assistance.Show()
+            ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
+                StopScanning()
+                Me.Close()
             End If
         End If
 
@@ -137,7 +140,6 @@ Public Class FloorHallways
     Private Sub FloorHallways_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         MyParent.ResumeScanning()
     End Sub
-
 
 
 #End Region

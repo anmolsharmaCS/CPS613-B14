@@ -243,10 +243,12 @@ Partial Class UserApartment
         '
         'MainTaskBar
         '
-        Me.MainTaskBar.Location = New System.Drawing.Point(225, 448)
+        Me.MainTaskBar.Location = New System.Drawing.Point(88, 448)
         Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(540, 132)
-        Me.MainTaskBar.TabIndex = 34
+        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
+        Me.MainTaskBar.TabIndex = 35
+        Me.MainTaskBar.PreviousScreen.Image = Global.Scanning.My.Resources.Resources.hallwayButton
+
         '
         'UserApartment
         '

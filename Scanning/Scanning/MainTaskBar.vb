@@ -1,6 +1,6 @@
 ﻿Public Class MainTaskBar
 
-    Private TaskBarOptions(3) As SubOptions
+    Private TaskBarOptions(4) As SubOptions
     Public Sub New()
 
         ' This call is required by the designer.
@@ -10,6 +10,7 @@
         TaskBarOptions(1) = Assistance
         TaskBarOptions(2) = Communicate
         TaskBarOptions(3) = Navigate
+        TaskBarOptions(4) = PreviousScreen
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub

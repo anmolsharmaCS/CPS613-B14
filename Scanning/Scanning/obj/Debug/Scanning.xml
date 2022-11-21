@@ -22,6 +22,11 @@ Scanning
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources._return">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.apple_podcast__1_">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -62,6 +67,11 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.buildingButton">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.bulb">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -93,6 +103,11 @@ Scanning
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.forward__1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.hallwayButton">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -158,6 +173,11 @@ Scanning
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.notUrgent__1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.nurseWalk">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

@@ -291,10 +291,11 @@ Partial Class FloorHallways
         '
         'MainTaskBar
         '
-        Me.MainTaskBar.Location = New System.Drawing.Point(229, 444)
+        Me.MainTaskBar.Location = New System.Drawing.Point(92, 455)
         Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(540, 132)
+        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
         Me.MainTaskBar.TabIndex = 45
+        Me.MainTaskBar.PreviousScreen.Image = Global.Scanning.My.Resources.Resources.buildingButton
         '
         'FloorHallways
         '
