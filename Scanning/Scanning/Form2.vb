@@ -27,6 +27,9 @@ Public Class Form2
             Options(i).Initialize()
         Next
 
+        ReasonMenu_Inactive()
+        CallMenu_Inactive()
+
         If parentForm.GetType() Is GetType(FloorHallways) Then
             MyParentHall = parentForm
         ElseIf parentForm.GetType() Is GetType(UserApartment) Then
@@ -56,6 +59,7 @@ Public Class Form2
 
     Private scanninglevel As Integer
     Private focusIsOn As Integer
+    Private topSelection As Integer
 
     ' Start scanning on the first submenu
     Public Sub StartScanning()
@@ -88,14 +92,46 @@ Public Class Form2
             Options(focusIsOn).ReceiveFocus()
         ElseIf scanninglevel = 1 Then
             Options(focusIsOn).LoseFocus()
-            focusIsOn = ((focusIsOn + 1) Mod 4) + 3
+            focusIsOn = ((focusIsOn - 2) Mod 4) + 3
             Options(focusIsOn).ReceiveFocus()
         ElseIf scanninglevel = 2 Then
             Options(focusIsOn).LoseFocus()
-            focusIsOn = ((focusIsOn + 1) Mod 2) + 7
+            focusIsOn = ((focusIsOn - 6) Mod 2) + 7
             Options(focusIsOn).ReceiveFocus()
         End If
 
+    End Sub
+
+#End Region
+
+#Region "Menu Appearances"
+
+    Private Sub ReasonMenu_Active()
+        ReasonMenu.BackColor = SystemColors.GradientActiveCaption
+        TransferHelp.BackColor = SystemColors.Control
+        BathroomHelp.BackColor = SystemColors.Control
+        BedroomHelp.BackColor = SystemColors.Control
+        ReturnToUrgency.BackColor = SystemColors.Control
+    End Sub
+
+    Private Sub ReasonMenu_Inactive()
+        ReasonMenu.BackColor = SystemColors.ControlDarkDark
+        TransferHelp.BackColor = SystemColors.ButtonShadow
+        BathroomHelp.BackColor = SystemColors.ButtonShadow
+        BedroomHelp.BackColor = SystemColors.ButtonShadow
+        ReturnToUrgency.BackColor = SystemColors.ButtonShadow
+    End Sub
+
+    Private Sub CallMenu_Active()
+        CallMenu.BackColor = SystemColors.GradientActiveCaption
+        CancelCall.BackColor = SystemColors.Control
+        CallAgain.BackColor = SystemColors.Control
+    End Sub
+
+    Private Sub CallMenu_Inactive()
+        CallMenu.BackColor = SystemColors.ControlDarkDark
+        CancelCall.BackColor = SystemColors.ButtonShadow
+        CallAgain.BackColor = SystemColors.ButtonShadow
     End Sub
 
 #End Region
@@ -106,32 +142,31 @@ Public Class Form2
 
         If scanninglevel = 0 Then
             scanninglevel = 1
-            If focusIsOn = 0 Then
-                focusIsOn = 2
-            ElseIf focusIsOn = 1 Then
+            If focusIsOn = 0 Or focusIsOn = 1 Then
+                ReasonMenu_Active()
+                topSelection = focusIsOn
                 focusIsOn = 2
             ElseIf focusIsOn = 2 Then
                 Me.Close()
             End If
         ElseIf scanninglevel = 1 Then
             scanninglevel = 2
-            If focusIsOn = 3 Then
-                focusIsOn = 6
-                TimerStart()
-            ElseIf focusIsOn = 4 Then
-                focusIsOn = 6
-                TimerStart()
-            ElseIf focusIsOn = 5 Then
+            If focusIsOn = 3 Or focusIsOn = 4 Or focusIsOn = 5 Then
+                CallMenu_Active()
                 focusIsOn = 6
                 TimerStart()
             ElseIf focusIsOn = 6 Then
-                focusIsOn = 9
+                ReasonMenu_Inactive()
+                focusIsOn = 8
                 scanninglevel = 0
             End If
         ElseIf scanninglevel = 2 Then
             If focusIsOn = 7 Then
-                focusIsOn = 9
                 scanninglevel = 0
+                focusIsOn = 8
+                Options(topSelection).LoseFocus()
+                ReasonMenu_Inactive()
+                CallMenu_Inactive()
             ElseIf focusIsOn = 8 Then
 
             End If

@@ -28,33 +28,33 @@ Partial Class Form2
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.UrgencyMenu = New Scanning.SubOptions()
-        Me.MakeCall = New Scanning.SubOptions()
-        Me.MakeUrgentCall = New Scanning.SubOptions()
-        Me.CloseWindow = New Scanning.SubOptions()
-        Me.ReasonMenu = New Scanning.SubOptions()
-        Me.TransferHelp = New Scanning.SubOptions()
-        Me.BathroomHelp = New Scanning.SubOptions()
-        Me.BedroomHelp = New Scanning.SubOptions()
-        Me.ReturnToUrgency = New Scanning.SubOptions()
-        Me.CallMenu = New Scanning.SubOptions()
-        Me.CancelCall = New Scanning.SubOptions()
-        Me.CallAgain = New Scanning.SubOptions()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.CallAgain = New Scanning.SubOptions()
+        Me.CancelCall = New Scanning.SubOptions()
+        Me.CallMenu = New Scanning.SubOptions()
+        Me.ReturnToUrgency = New Scanning.SubOptions()
+        Me.BedroomHelp = New Scanning.SubOptions()
+        Me.BathroomHelp = New Scanning.SubOptions()
+        Me.TransferHelp = New Scanning.SubOptions()
+        Me.ReasonMenu = New Scanning.SubOptions()
+        Me.CloseWindow = New Scanning.SubOptions()
+        Me.MakeUrgentCall = New Scanning.SubOptions()
+        Me.MakeCall = New Scanning.SubOptions()
+        Me.UrgencyMenu = New Scanning.SubOptions()
         CType(Me.AssistanceImage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.UrgencyMenu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MakeCall, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MakeUrgentCall, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CloseWindow, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ReasonMenu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TransferHelp, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BathroomHelp, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BedroomHelp, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ReturnToUrgency, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CallMenu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CancelCall, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CallAgain, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CancelCall, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CallMenu, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReturnToUrgency, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BedroomHelp, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BathroomHelp, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransferHelp, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ReasonMenu, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CloseWindow, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MakeUrgentCall, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MakeCall, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UrgencyMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'AssistanceImage
@@ -68,7 +68,7 @@ Partial Class Form2
         Me.AssistanceImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.AssistanceImage.TabIndex = 2
         Me.AssistanceImage.TabStop = False
-
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -93,39 +93,101 @@ Partial Class Form2
         'ScanningTimer
         '
         Me.ScanningTimer.Interval = 1000
-
         '
-        'UrgencyMenu
+        'Timer1
         '
-        Me.UrgencyMenu.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.UrgencyMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.UrgencyMenu.Location = New System.Drawing.Point(330, 15)
-        Me.UrgencyMenu.Name = "UrgencyMenu"
-        Me.UrgencyMenu.Size = New System.Drawing.Size(366, 129)
-        Me.UrgencyMenu.TabIndex = 3
-        Me.UrgencyMenu.TabStop = False
         '
-        'MakeCall
+        'CallAgain
         '
-        Me.MakeCall.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.MakeCall.Image = Global.Scanning.My.Resources.Resources._call
-        Me.MakeCall.Location = New System.Drawing.Point(345, 31)
-        Me.MakeCall.Name = "MakeCall"
-        Me.MakeCall.Size = New System.Drawing.Size(100, 100)
-        Me.MakeCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.MakeCall.TabIndex = 3
-        Me.MakeCall.TabStop = False
+        Me.CallAgain.BackColor = System.Drawing.SystemColors.Control
+        Me.CallAgain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.CallAgain.Image = Global.Scanning.My.Resources.Resources.callAgainButton
+        Me.CallAgain.Location = New System.Drawing.Point(460, 305)
+        Me.CallAgain.Name = "CallAgain"
+        Me.CallAgain.Size = New System.Drawing.Size(100, 100)
+        Me.CallAgain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.CallAgain.TabIndex = 16
+        Me.CallAgain.TabStop = False
         '
-        'MakeUrgentCall
+        'CancelCall
         '
-        Me.MakeUrgentCall.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.MakeUrgentCall.Image = Global.Scanning.My.Resources.Resources.urgentCall
-        Me.MakeUrgentCall.Location = New System.Drawing.Point(460, 31)
-        Me.MakeUrgentCall.Name = "MakeUrgentCall"
-        Me.MakeUrgentCall.Size = New System.Drawing.Size(100, 100)
-        Me.MakeUrgentCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.MakeUrgentCall.TabIndex = 7
-        Me.MakeUrgentCall.TabStop = False
+        Me.CancelCall.BackColor = System.Drawing.SystemColors.Control
+        Me.CancelCall.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.CancelCall.Image = Global.Scanning.My.Resources.Resources.cancelCall
+        Me.CancelCall.Location = New System.Drawing.Point(345, 305)
+        Me.CancelCall.Name = "CancelCall"
+        Me.CancelCall.Size = New System.Drawing.Size(100, 100)
+        Me.CancelCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.CancelCall.TabIndex = 15
+        Me.CancelCall.TabStop = False
+        '
+        'CallMenu
+        '
+        Me.CallMenu.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.CallMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.CallMenu.Location = New System.Drawing.Point(330, 286)
+        Me.CallMenu.Name = "CallMenu"
+        Me.CallMenu.Size = New System.Drawing.Size(250, 129)
+        Me.CallMenu.TabIndex = 14
+        Me.CallMenu.TabStop = False
+        '
+        'ReturnToUrgency
+        '
+        Me.ReturnToUrgency.BackColor = System.Drawing.SystemColors.Control
+        Me.ReturnToUrgency.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.ReturnToUrgency.Image = Global.Scanning.My.Resources.Resources.back_button
+        Me.ReturnToUrgency.Location = New System.Drawing.Point(693, 167)
+        Me.ReturnToUrgency.Name = "ReturnToUrgency"
+        Me.ReturnToUrgency.Size = New System.Drawing.Size(100, 100)
+        Me.ReturnToUrgency.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ReturnToUrgency.TabIndex = 13
+        Me.ReturnToUrgency.TabStop = False
+        '
+        'BedroomHelp
+        '
+        Me.BedroomHelp.BackColor = System.Drawing.SystemColors.Control
+        Me.BedroomHelp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.BedroomHelp.Image = Global.Scanning.My.Resources.Resources.bedButton
+        Me.BedroomHelp.Location = New System.Drawing.Point(576, 167)
+        Me.BedroomHelp.Name = "BedroomHelp"
+        Me.BedroomHelp.Size = New System.Drawing.Size(100, 100)
+        Me.BedroomHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.BedroomHelp.TabIndex = 12
+        Me.BedroomHelp.TabStop = False
+        '
+        'BathroomHelp
+        '
+        Me.BathroomHelp.BackColor = System.Drawing.SystemColors.Control
+        Me.BathroomHelp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.BathroomHelp.Image = Global.Scanning.My.Resources.Resources.toiletButton
+        Me.BathroomHelp.Location = New System.Drawing.Point(460, 167)
+        Me.BathroomHelp.Name = "BathroomHelp"
+        Me.BathroomHelp.Size = New System.Drawing.Size(100, 100)
+        Me.BathroomHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.BathroomHelp.TabIndex = 11
+        Me.BathroomHelp.TabStop = False
+        '
+        'TransferHelp
+        '
+        Me.TransferHelp.BackColor = System.Drawing.SystemColors.Control
+        Me.TransferHelp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.TransferHelp.Image = Global.Scanning.My.Resources.Resources.transferButton
+        Me.TransferHelp.Location = New System.Drawing.Point(345, 167)
+        Me.TransferHelp.Name = "TransferHelp"
+        Me.TransferHelp.Size = New System.Drawing.Size(100, 100)
+        Me.TransferHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.TransferHelp.TabIndex = 10
+        Me.TransferHelp.TabStop = False
+        '
+        'ReasonMenu
+        '
+        Me.ReasonMenu.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.ReasonMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.ReasonMenu.Location = New System.Drawing.Point(330, 151)
+        Me.ReasonMenu.Name = "ReasonMenu"
+        Me.ReasonMenu.Size = New System.Drawing.Size(480, 129)
+        Me.ReasonMenu.TabIndex = 9
+        Me.ReasonMenu.TabStop = False
         '
         'CloseWindow
         '
@@ -138,94 +200,37 @@ Partial Class Form2
         Me.CloseWindow.TabIndex = 8
         Me.CloseWindow.TabStop = False
         '
-        'ReasonMenu
+        'MakeUrgentCall
         '
-        Me.ReasonMenu.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.ReasonMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.ReasonMenu.Location = New System.Drawing.Point(330, 151)
-        Me.ReasonMenu.Name = "ReasonMenu"
-        Me.ReasonMenu.Size = New System.Drawing.Size(480, 129)
-        Me.ReasonMenu.TabIndex = 9
-        Me.ReasonMenu.TabStop = False
+        Me.MakeUrgentCall.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.MakeUrgentCall.Image = Global.Scanning.My.Resources.Resources.urgentCall
+        Me.MakeUrgentCall.Location = New System.Drawing.Point(460, 31)
+        Me.MakeUrgentCall.Name = "MakeUrgentCall"
+        Me.MakeUrgentCall.Size = New System.Drawing.Size(100, 100)
+        Me.MakeUrgentCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.MakeUrgentCall.TabIndex = 7
+        Me.MakeUrgentCall.TabStop = False
         '
-        'TransferHelp
+        'MakeCall
         '
-        Me.TransferHelp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.TransferHelp.Image = Global.Scanning.My.Resources.Resources.transferButton
-        Me.TransferHelp.Location = New System.Drawing.Point(345, 167)
-        Me.TransferHelp.Name = "TransferHelp"
-        Me.TransferHelp.Size = New System.Drawing.Size(100, 100)
-        Me.TransferHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.TransferHelp.TabIndex = 10
-        Me.TransferHelp.TabStop = False
+        Me.MakeCall.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.MakeCall.Image = CType(resources.GetObject("MakeCall.Image"), System.Drawing.Image)
+        Me.MakeCall.Location = New System.Drawing.Point(345, 31)
+        Me.MakeCall.Name = "MakeCall"
+        Me.MakeCall.Size = New System.Drawing.Size(100, 100)
+        Me.MakeCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.MakeCall.TabIndex = 3
+        Me.MakeCall.TabStop = False
         '
-        'BathroomHelp
+        'UrgencyMenu
         '
-        Me.BathroomHelp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BathroomHelp.Image = Global.Scanning.My.Resources.Resources.toilet
-        Me.BathroomHelp.Location = New System.Drawing.Point(460, 167)
-        Me.BathroomHelp.Name = "BathroomHelp"
-        Me.BathroomHelp.Size = New System.Drawing.Size(100, 100)
-        Me.BathroomHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BathroomHelp.TabIndex = 11
-        Me.BathroomHelp.TabStop = False
-        '
-        'BedroomHelp
-        '
-        Me.BedroomHelp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.BedroomHelp.Image = Global.Scanning.My.Resources.Resources.bedButton
-        Me.BedroomHelp.Location = New System.Drawing.Point(576, 167)
-        Me.BedroomHelp.Name = "BedroomHelp"
-        Me.BedroomHelp.Size = New System.Drawing.Size(100, 100)
-        Me.BedroomHelp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BedroomHelp.TabIndex = 12
-        Me.BedroomHelp.TabStop = False
-        '
-        'ReturnToUrgency
-        '
-        Me.ReturnToUrgency.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.ReturnToUrgency.Image = Global.Scanning.My.Resources.Resources.back_button
-        Me.ReturnToUrgency.Location = New System.Drawing.Point(693, 167)
-        Me.ReturnToUrgency.Name = "ReturnToUrgency"
-        Me.ReturnToUrgency.Size = New System.Drawing.Size(100, 100)
-        Me.ReturnToUrgency.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.ReturnToUrgency.TabIndex = 13
-        Me.ReturnToUrgency.TabStop = False
-        '
-        'CallMenu
-        '
-        Me.CallMenu.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.CallMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.CallMenu.Location = New System.Drawing.Point(330, 286)
-        Me.CallMenu.Name = "CallMenu"
-        Me.CallMenu.Size = New System.Drawing.Size(250, 129)
-        Me.CallMenu.TabIndex = 14
-        Me.CallMenu.TabStop = False
-        '
-        'CancelCall
-        '
-        Me.CancelCall.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.CancelCall.Image = Global.Scanning.My.Resources.Resources.cancelCall
-        Me.CancelCall.Location = New System.Drawing.Point(345, 305)
-        Me.CancelCall.Name = "CancelCall"
-        Me.CancelCall.Size = New System.Drawing.Size(100, 100)
-        Me.CancelCall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.CancelCall.TabIndex = 15
-        Me.CancelCall.TabStop = False
-        '
-        'CallAgain
-        '
-        Me.CallAgain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.CallAgain.Image = Global.Scanning.My.Resources.Resources.callAgainButton
-        Me.CallAgain.Location = New System.Drawing.Point(460, 305)
-        Me.CallAgain.Name = "CallAgain"
-        Me.CallAgain.Size = New System.Drawing.Size(100, 100)
-        Me.CallAgain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.CallAgain.TabIndex = 16
-        Me.CallAgain.TabStop = False
-        '
-        'Timer1
-        '
+        Me.UrgencyMenu.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.UrgencyMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.UrgencyMenu.Location = New System.Drawing.Point(330, 15)
+        Me.UrgencyMenu.Name = "UrgencyMenu"
+        Me.UrgencyMenu.Size = New System.Drawing.Size(366, 129)
+        Me.UrgencyMenu.TabIndex = 3
+        Me.UrgencyMenu.TabStop = False
         '
         'Form2
         '
@@ -249,46 +254,29 @@ Partial Class Form2
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.AssistanceImage)
-        Me.Controls.Add(Me.TopMenu1)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form2"
         Me.Text = "Form2"
         CType(Me.AssistanceImage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.UrgencyMenu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MakeCall, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MakeUrgentCall, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CloseWindow, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ReasonMenu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TransferHelp, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BathroomHelp, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BedroomHelp, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ReturnToUrgency, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CallMenu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CancelCall, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CallAgain, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CancelCall, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CallMenu, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReturnToUrgency, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BedroomHelp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BathroomHelp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransferHelp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ReasonMenu, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CloseWindow, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MakeUrgentCall, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MakeCall, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UrgencyMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TopMenu1 As TopMenu
     Friend WithEvents AssistanceImage As PictureBox
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button11 As Button
-    Friend WithEvents Button10 As Button
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Button12 As Button
-    Friend WithEvents Button13 As Button
-    Friend WithEvents Button14 As Button
-    Friend WithEvents Button15 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents ScanningTimer As Timer
