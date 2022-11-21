@@ -83,6 +83,12 @@
     <Compile Include="Bedroom.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Entertainment.Designer.vb">
+      <DependentUpon>Entertainment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Entertainment.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FloorHallways.Designer.vb">
       <DependentUpon>FloorHallways.vb</DependentUpon>
     </Compile>
@@ -162,6 +168,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Entertainment.resx">
+      <DependentUpon>Entertainment.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FloorHallways.resx">
       <DependentUpon>FloorHallways.vb</DependentUpon>
     </EmbeddedResource>
@@ -179,9 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SubMenu.resx">
       <DependentUpon>SubMenu.vb</DependentUpon>
@@ -393,6 +402,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\toiletButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\program.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\movie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\tvshow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\volumecontrol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\volumedown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\volumemute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\volumeup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\apartmentButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\rewind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\play.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

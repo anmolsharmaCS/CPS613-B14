@@ -247,8 +247,6 @@ Partial Class UserApartment
         Me.MainTaskBar.Name = "MainTaskBar"
         Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
         Me.MainTaskBar.TabIndex = 35
-        Me.MainTaskBar.PreviousScreen.Image = Global.Scanning.My.Resources.Resources.hallwayButton
-
         '
         'UserApartment
         '

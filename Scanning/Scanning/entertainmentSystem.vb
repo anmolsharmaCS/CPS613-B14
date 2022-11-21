@@ -63,7 +63,7 @@ Public Class entertainmentSystem
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) 
         Dim assistance As assistance = New assistance(Me)
         assistance.Show()
         Me.Hide()
@@ -216,7 +216,7 @@ Public Class entertainmentSystem
         End If
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) 
         Dim home As MainForm = New MainForm()
         home.Show()
         Me.Hide()

@@ -23,7 +23,6 @@ Partial Class assistance
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(assistance))
         Me.AssistanceImage = New System.Windows.Forms.PictureBox()
         Me.TimerLabel = New System.Windows.Forms.Label()
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
@@ -40,6 +39,7 @@ Partial Class assistance
         Me.MakeUrgentCall = New Scanning.SubOptions()
         Me.MakeCall = New Scanning.SubOptions()
         Me.UrgencyMenu = New Scanning.SubOptions()
+        Me.AssistanceBackground = New System.Windows.Forms.PictureBox()
         CType(Me.AssistanceImage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CallAgain, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CancelCall, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,6 +53,7 @@ Partial Class assistance
         CType(Me.MakeUrgentCall, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MakeCall, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UrgencyMenu, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AssistanceBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'AssistanceImage
@@ -78,7 +79,6 @@ Partial Class assistance
         Me.TimerLabel.Size = New System.Drawing.Size(214, 65)
         Me.TimerLabel.TabIndex = 4
         Me.TimerLabel.Text = "0 min"
-        Me.TimerLabel.Hide()
         '
         'ScanningTimer
         '
@@ -205,7 +205,7 @@ Partial Class assistance
         'MakeCall
         '
         Me.MakeCall.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.MakeCall.Image = CType(resources.GetObject("MakeCall.Image"), System.Drawing.Image)
+        Me.MakeCall.Image = Global.Scanning.My.Resources.Resources._call
         Me.MakeCall.Location = New System.Drawing.Point(345, 31)
         Me.MakeCall.Name = "MakeCall"
         Me.MakeCall.Size = New System.Drawing.Size(100, 100)
@@ -223,7 +223,16 @@ Partial Class assistance
         Me.UrgencyMenu.TabIndex = 3
         Me.UrgencyMenu.TabStop = False
         '
-        'Form2
+        'AssistanceBackground
+        '
+        Me.AssistanceBackground.BackColor = System.Drawing.Color.SandyBrown
+        Me.AssistanceBackground.Location = New System.Drawing.Point(1, 2)
+        Me.AssistanceBackground.Name = "AssistanceBackground"
+        Me.AssistanceBackground.Size = New System.Drawing.Size(826, 429)
+        Me.AssistanceBackground.TabIndex = 17
+        Me.AssistanceBackground.TabStop = False
+        '
+        'assistance
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -243,8 +252,9 @@ Partial Class assistance
         Me.Controls.Add(Me.UrgencyMenu)
         Me.Controls.Add(Me.TimerLabel)
         Me.Controls.Add(Me.AssistanceImage)
+        Me.Controls.Add(Me.AssistanceBackground)
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "Form2"
+        Me.Name = "assistance"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
         CType(Me.AssistanceImage, System.ComponentModel.ISupportInitialize).EndInit()
@@ -260,6 +270,7 @@ Partial Class assistance
         CType(Me.MakeUrgentCall, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MakeCall, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.UrgencyMenu, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AssistanceBackground, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -281,4 +292,5 @@ Partial Class assistance
     Friend WithEvents CancelCall As SubOptions
     Friend WithEvents CallAgain As SubOptions
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents AssistanceBackground As PictureBox
 End Class

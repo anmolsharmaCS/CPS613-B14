@@ -27,6 +27,11 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.apartmentButton">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.apple_podcast__1_">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -107,7 +112,7 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.forward__1_">
+<member name="P:Scanning.My.Resources.Resources.forward">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -123,11 +128,6 @@ Scanning
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.help">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Scanning.My.Resources.Resources.home">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -157,12 +157,22 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.movie">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.movie__1_">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.mp4__1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.music">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -177,12 +187,22 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.pause__1_">
+<member name="P:Scanning.My.Resources.Resources.pause">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.play">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.playOnce__1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.program">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -197,12 +217,7 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.resume__1_">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Scanning.My.Resources.Resources.Rewind__1_">
+<member name="P:Scanning.My.Resources.Resources.rewind">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -257,7 +272,7 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.urgent__1_">
+<member name="P:Scanning.My.Resources.Resources.tvshow">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -267,22 +282,22 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.volume_down__1_">
+<member name="P:Scanning.My.Resources.Resources.volumeControl">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.volume_mute__1_">
+<member name="P:Scanning.My.Resources.Resources.volumedown">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.volume_up__1_">
+<member name="P:Scanning.My.Resources.Resources.volumemute">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.volumecontrol">
+<member name="P:Scanning.My.Resources.Resources.volumeup">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

@@ -6,7 +6,7 @@ Public Class UserApartment
     Private Windows(6) As SubOptions
     Private Doors(5) As SubOptions
 
-    Private ent As New entertainmentSystem()
+    Private ent As New Entertainment(Me)
     Private bedroomForm As New Bedroom()
     Private kitchenForm As New Kitchen()
     Private bathroomForm As New Bathroom()
