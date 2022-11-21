@@ -673,7 +673,6 @@ Partial Class entertainmentSystem
         '
         'Button12
         '
-        Me.Button12.Image = Global.Scanning.My.Resources.Resources.playOnce__1_
         Me.Button12.Location = New System.Drawing.Point(117, 166)
         Me.Button12.Margin = New System.Windows.Forms.Padding(4)
         Me.Button12.Name = "Button12"
@@ -685,7 +684,6 @@ Partial Class entertainmentSystem
         'Button11
         '
         Me.Button11.Enabled = False
-        Me.Button11.Image = Global.Scanning.My.Resources.Resources.repeat__1_
         Me.Button11.Location = New System.Drawing.Point(212, 166)
         Me.Button11.Margin = New System.Windows.Forms.Padding(4)
         Me.Button11.Name = "Button11"
@@ -697,7 +695,6 @@ Partial Class entertainmentSystem
         'Button10
         '
         Me.Button10.Enabled = False
-        Me.Button10.Image = Global.Scanning.My.Resources.Resources.shuffb__1_
         Me.Button10.Location = New System.Drawing.Point(23, 166)
         Me.Button10.Margin = New System.Windows.Forms.Padding(4)
         Me.Button10.Name = "Button10"
@@ -709,7 +706,6 @@ Partial Class entertainmentSystem
         'Button9
         '
         Me.Button9.Enabled = False
-        Me.Button9.Image = Global.Scanning.My.Resources.Resources.wideA__1_
         Me.Button9.Location = New System.Drawing.Point(23, 89)
         Me.Button9.Margin = New System.Windows.Forms.Padding(4)
         Me.Button9.Name = "Button9"
@@ -721,7 +717,6 @@ Partial Class entertainmentSystem
         'Button8
         '
         Me.Button8.Enabled = False
-        Me.Button8.Image = Global.Scanning.My.Resources.Resources.wideP__1_
         Me.Button8.Location = New System.Drawing.Point(23, 27)
         Me.Button8.Margin = New System.Windows.Forms.Padding(4)
         Me.Button8.Name = "Button8"
@@ -821,7 +816,6 @@ Partial Class entertainmentSystem
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Scanning.My.Resources.Resources.background3
         Me.ClientSize = New System.Drawing.Size(1191, 876)
         Me.Controls.Add(Me.SubMenu8)
         Me.Controls.Add(Me.SubMenu7)

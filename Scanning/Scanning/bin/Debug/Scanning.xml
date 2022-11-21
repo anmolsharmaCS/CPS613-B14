@@ -42,22 +42,17 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.artist">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.assisstant">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.back_button">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Scanning.My.Resources.Resources.background2">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Scanning.My.Resources.Resources.background3">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -197,7 +192,7 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.playOnce__1_">
+<member name="P:Scanning.My.Resources.Resources.playlist">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -212,7 +207,12 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.repeat__1_">
+<member name="P:Scanning.My.Resources.Resources.repeat">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.repeatOne">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -222,7 +222,7 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.shuffb__1_">
+<member name="P:Scanning.My.Resources.Resources.shuffle">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -298,16 +298,6 @@ Scanning
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.volumeup">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Scanning.My.Resources.Resources.wideA__1_">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Scanning.My.Resources.Resources.wideP__1_">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

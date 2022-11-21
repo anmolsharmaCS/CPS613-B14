@@ -22,117 +22,169 @@ Partial Class Entertainment
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MainTaskBar = New Scanning.MainTaskBar()
+        Me.components = New System.ComponentModel.Container()
+        Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.volumeMenu = New System.Windows.Forms.PictureBox()
+        Me.entertainmentBackground = New System.Windows.Forms.PictureBox()
+        Me.playlistOption = New Scanning.SubOptions()
+        Me.artistOption = New Scanning.SubOptions()
         Me.goForward = New Scanning.SubOptions()
         Me.goBack = New Scanning.SubOptions()
-        Me.SubOptions5 = New Scanning.SubOptions()
-        Me.SubOptions4 = New Scanning.SubOptions()
-        Me.SubOptions3 = New Scanning.SubOptions()
+        Me.shuffle = New Scanning.SubOptions()
+        Me.repeat = New Scanning.SubOptions()
+        Me.repeatOne = New Scanning.SubOptions()
         Me.play = New Scanning.SubOptions()
         Me.volumeMute = New Scanning.SubOptions()
         Me.volumeDown = New Scanning.SubOptions()
         Me.volumeUp = New Scanning.SubOptions()
-        Me.mainMenu = New System.Windows.Forms.PictureBox()
         Me.volumeOption = New Scanning.SubOptions()
         Me.programOption = New Scanning.SubOptions()
         Me.tvOption = New Scanning.SubOptions()
         Me.movieOption = New Scanning.SubOptions()
         Me.musicOption = New Scanning.SubOptions()
         Me.entertainmentMenu = New Scanning.SubOptions()
-        Me.volumeMenu = New System.Windows.Forms.PictureBox()
-        Me.entertainmentBackground = New System.Windows.Forms.PictureBox()
+        Me.MainTaskBar = New Scanning.MainTaskBar()
+        Me.mainMenu = New Scanning.SubOptions()
+        CType(Me.volumeMenu, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.entertainmentBackground, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.playlistOption, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.artistOption, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.goForward, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.goBack, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SubOptions5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SubOptions4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SubOptions3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.shuffle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.repeat, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.repeatOne, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.play, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.volumeMute, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.volumeDown, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.volumeUp, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.mainMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.volumeOption, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.programOption, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tvOption, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.movieOption, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.musicOption, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.entertainmentMenu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.volumeMenu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.entertainmentBackground, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.mainMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'MainTaskBar
+        'ScanningTimer
         '
-        Me.MainTaskBar.Location = New System.Drawing.Point(161, 554)
-        Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
-        Me.MainTaskBar.TabIndex = 19
+        Me.ScanningTimer.Interval = 1000
+        '
+        'volumeMenu
+        '
+        Me.volumeMenu.BackColor = System.Drawing.Color.DarkSlateBlue
+        Me.volumeMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.volumeMenu.Location = New System.Drawing.Point(594, 159)
+        Me.volumeMenu.Name = "volumeMenu"
+        Me.volumeMenu.Size = New System.Drawing.Size(124, 367)
+        Me.volumeMenu.TabIndex = 29
+        Me.volumeMenu.TabStop = False
+        '
+        'entertainmentBackground
+        '
+        Me.entertainmentBackground.BackColor = System.Drawing.Color.Thistle
+        Me.entertainmentBackground.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.entertainmentBackground.Location = New System.Drawing.Point(12, 12)
+        Me.entertainmentBackground.Name = "entertainmentBackground"
+        Me.entertainmentBackground.Size = New System.Drawing.Size(826, 527)
+        Me.entertainmentBackground.TabIndex = 18
+        Me.entertainmentBackground.TabStop = False
+        '
+        'playlistOption
+        '
+        Me.playlistOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.playlistOption.Image = Global.Scanning.My.Resources.Resources.playlist
+        Me.playlistOption.Name = "playlistOption"
+        Me.playlistOption.Size = New System.Drawing.Size(436, 58)
+        Me.playlistOption.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.playlistOption.TabIndex = 40
+        Me.playlistOption.TabStop = False
+        Me.playlistOption.Visible = False
+        '
+        'artistOption
+        '
+        Me.artistOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.artistOption.Image = Global.Scanning.My.Resources.Resources.artist
+        Me.artistOption.Location = New System.Drawing.Point(136, 170)
+        Me.artistOption.Name = "artistOption"
+        Me.artistOption.Size = New System.Drawing.Size(436, 58)
+        Me.artistOption.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.artistOption.TabIndex = 39
+        Me.artistOption.TabStop = False
+        Me.artistOption.Visible = False
         '
         'goForward
         '
         Me.goForward.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.goForward.Image = Global.Scanning.My.Resources.Resources.forward
-        Me.goForward.Location = New System.Drawing.Point(428, 308)
+        Me.goForward.Location = New System.Drawing.Point(419, 325)
         Me.goForward.Name = "goForward"
-        Me.goForward.Size = New System.Drawing.Size(100, 100)
+        Me.goForward.Size = New System.Drawing.Size(90, 90)
         Me.goForward.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.goForward.TabIndex = 38
         Me.goForward.TabStop = False
+        Me.goForward.Visible = False
         '
         'goBack
         '
         Me.goBack.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.goBack.Image = Global.Scanning.My.Resources.Resources.rewind
-        Me.goBack.Location = New System.Drawing.Point(186, 308)
+        Me.goBack.Location = New System.Drawing.Point(186, 325)
         Me.goBack.Name = "goBack"
-        Me.goBack.Size = New System.Drawing.Size(100, 100)
+        Me.goBack.Size = New System.Drawing.Size(90, 90)
         Me.goBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.goBack.TabIndex = 37
         Me.goBack.TabStop = False
+        Me.goBack.Visible = False
         '
-        'SubOptions5
+        'shuffle
         '
-        Me.SubOptions5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.SubOptions5.Image = Global.Scanning.My.Resources.Resources.volumemute
-        Me.SubOptions5.Location = New System.Drawing.Point(186, 414)
-        Me.SubOptions5.Name = "SubOptions5"
-        Me.SubOptions5.Size = New System.Drawing.Size(100, 100)
-        Me.SubOptions5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.SubOptions5.TabIndex = 36
-        Me.SubOptions5.TabStop = False
+        Me.shuffle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.shuffle.Image = Global.Scanning.My.Resources.Resources.shuffle
+        Me.shuffle.Location = New System.Drawing.Point(186, 421)
+        Me.shuffle.Name = "shuffle"
+        Me.shuffle.Size = New System.Drawing.Size(90, 90)
+        Me.shuffle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.shuffle.TabIndex = 36
+        Me.shuffle.TabStop = False
+        Me.shuffle.Visible = False
         '
-        'SubOptions4
+        'repeat
         '
-        Me.SubOptions4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.SubOptions4.Image = Global.Scanning.My.Resources.Resources.volumemute
-        Me.SubOptions4.Location = New System.Drawing.Point(306, 414)
-        Me.SubOptions4.Name = "SubOptions4"
-        Me.SubOptions4.Size = New System.Drawing.Size(100, 100)
-        Me.SubOptions4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.SubOptions4.TabIndex = 35
-        Me.SubOptions4.TabStop = False
+        Me.repeat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.repeat.Image = Global.Scanning.My.Resources.Resources.repeat
+        Me.repeat.Location = New System.Drawing.Point(306, 421)
+        Me.repeat.Name = "repeat"
+        Me.repeat.Size = New System.Drawing.Size(90, 90)
+        Me.repeat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.repeat.TabIndex = 35
+        Me.repeat.TabStop = False
+        Me.repeat.Visible = False
         '
-        'SubOptions3
+        'repeatOne
         '
-        Me.SubOptions3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.SubOptions3.Image = Global.Scanning.My.Resources.Resources.volumemute
-        Me.SubOptions3.Location = New System.Drawing.Point(428, 414)
-        Me.SubOptions3.Name = "SubOptions3"
-        Me.SubOptions3.Size = New System.Drawing.Size(100, 100)
-        Me.SubOptions3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.SubOptions3.TabIndex = 34
-        Me.SubOptions3.TabStop = False
+        Me.repeatOne.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.repeatOne.Image = Global.Scanning.My.Resources.Resources.repeatOne
+        Me.repeatOne.Location = New System.Drawing.Point(419, 421)
+        Me.repeatOne.Name = "repeatOne"
+        Me.repeatOne.Size = New System.Drawing.Size(90, 90)
+        Me.repeatOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.repeatOne.TabIndex = 34
+        Me.repeatOne.TabStop = False
+        Me.repeatOne.Visible = False
         '
         'play
         '
         Me.play.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.play.Image = Global.Scanning.My.Resources.Resources.play
-        Me.play.Location = New System.Drawing.Point(306, 308)
+        Me.play.Location = New System.Drawing.Point(306, 325)
         Me.play.Name = "play"
-        Me.play.Size = New System.Drawing.Size(100, 100)
+        Me.play.Size = New System.Drawing.Size(90, 90)
         Me.play.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.play.TabIndex = 33
         Me.play.TabStop = False
+        Me.play.Visible = False
         '
         'volumeMute
         '
@@ -166,16 +218,6 @@ Partial Class Entertainment
         Me.volumeUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.volumeUp.TabIndex = 28
         Me.volumeUp.TabStop = False
-        '
-        'mainMenu
-        '
-        Me.mainMenu.BackColor = System.Drawing.Color.DarkSlateBlue
-        Me.mainMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.mainMenu.Location = New System.Drawing.Point(110, 159)
-        Me.mainMenu.Name = "mainMenu"
-        Me.mainMenu.Size = New System.Drawing.Size(478, 367)
-        Me.mainMenu.TabIndex = 27
-        Me.mainMenu.TabStop = False
         '
         'volumeOption
         '
@@ -242,41 +284,39 @@ Partial Class Entertainment
         Me.entertainmentMenu.TabIndex = 20
         Me.entertainmentMenu.TabStop = False
         '
-        'volumeMenu
+        'MainTaskBar
         '
-        Me.volumeMenu.BackColor = System.Drawing.Color.DarkSlateBlue
-        Me.volumeMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.volumeMenu.Location = New System.Drawing.Point(594, 159)
-        Me.volumeMenu.Name = "volumeMenu"
-        Me.volumeMenu.Size = New System.Drawing.Size(124, 367)
-        Me.volumeMenu.TabIndex = 29
-        Me.volumeMenu.TabStop = False
+        Me.MainTaskBar.Location = New System.Drawing.Point(161, 554)
+        Me.MainTaskBar.Name = "MainTaskBar"
+        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
+        Me.MainTaskBar.TabIndex = 19
         '
-        'entertainmentBackground
+        'mainMenu
         '
-        Me.entertainmentBackground.BackColor = System.Drawing.Color.Thistle
-        Me.entertainmentBackground.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.entertainmentBackground.Location = New System.Drawing.Point(12, 12)
-        Me.entertainmentBackground.Name = "entertainmentBackground"
-        Me.entertainmentBackground.Size = New System.Drawing.Size(826, 527)
-        Me.entertainmentBackground.TabIndex = 18
-        Me.entertainmentBackground.TabStop = False
+        Me.mainMenu.BackColor = System.Drawing.Color.DarkSlateBlue
+        Me.mainMenu.Location = New System.Drawing.Point(110, 159)
+        Me.mainMenu.Name = "mainMenu"
+        Me.mainMenu.Size = New System.Drawing.Size(478, 367)
+        Me.mainMenu.TabIndex = 41
+        Me.mainMenu.TabStop = False
+        Me.mainMenu.Visible = False
         '
         'Entertainment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.playlistOption)
+        Me.Controls.Add(Me.artistOption)
         Me.Controls.Add(Me.goForward)
         Me.Controls.Add(Me.goBack)
-        Me.Controls.Add(Me.SubOptions5)
-        Me.Controls.Add(Me.SubOptions4)
-        Me.Controls.Add(Me.SubOptions3)
+        Me.Controls.Add(Me.shuffle)
+        Me.Controls.Add(Me.repeat)
+        Me.Controls.Add(Me.repeatOne)
         Me.Controls.Add(Me.play)
         Me.Controls.Add(Me.volumeMute)
         Me.Controls.Add(Me.volumeDown)
         Me.Controls.Add(Me.volumeUp)
-        Me.Controls.Add(Me.mainMenu)
         Me.Controls.Add(Me.volumeOption)
         Me.Controls.Add(Me.programOption)
         Me.Controls.Add(Me.tvOption)
@@ -285,28 +325,32 @@ Partial Class Entertainment
         Me.Controls.Add(Me.entertainmentMenu)
         Me.Controls.Add(Me.MainTaskBar)
         Me.Controls.Add(Me.volumeMenu)
+        Me.Controls.Add(Me.mainMenu)
         Me.Controls.Add(Me.entertainmentBackground)
+        Me.KeyPreview = True
         Me.Name = "Entertainment"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Entertainment"
+        CType(Me.volumeMenu, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.entertainmentBackground, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.playlistOption, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.artistOption, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.goForward, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.goBack, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SubOptions5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SubOptions4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SubOptions3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.shuffle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.repeat, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.repeatOne, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.play, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.volumeMute, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.volumeDown, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.volumeUp, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.mainMenu, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.volumeOption, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.programOption, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tvOption, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.movieOption, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.musicOption, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.entertainmentMenu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.volumeMenu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.entertainmentBackground, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.mainMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -319,15 +363,18 @@ Partial Class Entertainment
     Friend WithEvents tvOption As SubOptions
     Friend WithEvents programOption As SubOptions
     Friend WithEvents volumeOption As SubOptions
-    Friend WithEvents mainMenu As PictureBox
     Friend WithEvents volumeUp As SubOptions
     Friend WithEvents volumeMenu As PictureBox
     Friend WithEvents volumeDown As SubOptions
     Friend WithEvents volumeMute As SubOptions
     Friend WithEvents play As SubOptions
-    Friend WithEvents SubOptions3 As SubOptions
-    Friend WithEvents SubOptions4 As SubOptions
-    Friend WithEvents SubOptions5 As SubOptions
+    Friend WithEvents repeatOne As SubOptions
+    Friend WithEvents repeat As SubOptions
+    Friend WithEvents shuffle As SubOptions
     Friend WithEvents goBack As SubOptions
     Friend WithEvents goForward As SubOptions
+    Friend WithEvents ScanningTimer As Timer
+    Friend WithEvents artistOption As SubOptions
+    Friend WithEvents playlistOption As SubOptions
+    Friend WithEvents mainMenu As SubOptions
 End Class
