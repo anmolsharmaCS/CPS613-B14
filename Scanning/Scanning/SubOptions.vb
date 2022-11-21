@@ -52,7 +52,7 @@ Public Class SubOptions
             Next
         Else
             For i = 1 To Options.Length - 1
-                Options(i).BackColor = originalColor
+                Options(i).BackColor = Options(i).originalColor
             Next
         End If
         GiveFocusToButton(activeOption)
@@ -76,10 +76,10 @@ Public Class SubOptions
         Else
             If index = 0 Then
                 For i = 0 To Options.Length - 1
-                    Options(i).BackColor = originalColor
+                    Options(i).BackColor = Options(i).originalColor
                 Next
             Else
-                Options(index - 1).BackColor = originalColor
+                Options(index - 1).BackColor = Options(index - 1).originalColor
             End If
         End If
     End Sub
@@ -90,7 +90,7 @@ Public Class SubOptions
             Options(index).BackColor = Color.LemonChiffon
         Else
             If index = 0 Then
-                For i = 0 To Options.Length - 1
+                For i = 0 To Options.Length - 2
                     Options(i).BackColor = Color.LemonChiffon
                 Next
             Else
@@ -106,7 +106,7 @@ Public Class SubOptions
             Next
         Else
             For i = 1 To Options.Length - 1
-                Options(i).BackColor = originalColor
+                Options(i).BackColor = Options(i).originalColor
             Next
         End If
     End Sub
