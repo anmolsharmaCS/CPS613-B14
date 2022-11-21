@@ -89,10 +89,10 @@
     <Compile Include="FloorHallways.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="entertainmentSystem.Designer.vb">
+      <DependentUpon>entertainmentSystem.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="entertainmentSystem.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="assistance.Designer.vb">
@@ -165,8 +165,8 @@
     <EmbeddedResource Include="FloorHallways.resx">
       <DependentUpon>FloorHallways.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="entertainmentSystem.resx">
+      <DependentUpon>entertainmentSystem.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="assistance.resx">
       <DependentUpon>assistance.vb</DependentUpon>
