@@ -23,7 +23,6 @@ Partial Class Livingroom
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Livingroom))
         Me.MainTaskBar = New Scanning.MainTaskBar()
         Me.LivingroomDoor = New Scanning.SubOptions()
         Me.LivingroomWindow2 = New Scanning.SubOptions()
@@ -113,7 +112,7 @@ Partial Class Livingroom
         '
         Me.entSystem.BackColor = System.Drawing.SystemColors.Control
         Me.entSystem.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.entSystem.Image = CType(resources.GetObject("entSystem.Image"), System.Drawing.Image)
+        Me.entSystem.Image = Global.Scanning.My.Resources.Resources.television
         Me.entSystem.Location = New System.Drawing.Point(83, 79)
         Me.entSystem.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.entSystem.Name = "entSystem"
@@ -152,6 +151,7 @@ Partial Class Livingroom
         Me.Controls.Add(Me.livingroomBackground)
         Me.KeyPreview = True
         Me.Name = "Livingroom"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Livingroom"
         CType(Me.LivingroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingroomWindow2, System.ComponentModel.ISupportInitialize).EndInit()

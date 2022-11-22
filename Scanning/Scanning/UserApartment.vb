@@ -10,7 +10,7 @@ Public Class UserApartment
     Private livingroomForm As New Livingroom(Me)
     Private bedroomForm As New Bedroom(Me)
     Private kitchenForm As New Kitchen(Me)
-    Private bathroomForm As New Bathroom()
+    Private bathroomForm As New Bathroom(Me)
 
     Private MyParent As FloorHallways
 
@@ -205,7 +205,7 @@ Public Class UserApartment
             ElseIf Bathroom.BackColor = Color.LemonChiffon Then
                 StopScanning()
                 bathroomForm.Show()
-                'bathroomForm.StartScanning()
+                bathroomForm.StartScanning()
             ElseIf MainTaskBar.Back.BackColor = Color.LemonChiffon Then
                 If focusIsOn = 6 Then
                     MainTaskBar.MenuBarOption.StopInnerScanning()

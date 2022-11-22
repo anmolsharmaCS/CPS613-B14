@@ -469,6 +469,7 @@ Partial Class MainForm
         Me.Controls.Add(Me.WalkwayDecoration)
         Me.Controls.Add(Me.GrassDecoration)
         Me.Controls.Add(Me.SkyDecoration)
+        Me.KeyPreview = True
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
