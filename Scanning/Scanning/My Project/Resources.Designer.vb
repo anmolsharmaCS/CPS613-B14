@@ -143,6 +143,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property BlindsClosed() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("BlindsClosed", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property BlindsOpen() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("BlindsOpen", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property buildingButton() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("buildingButton", resourceCulture)
@@ -735,6 +755,26 @@ Namespace My.Resources
         Friend ReadOnly Property volumeup() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("volumeup", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property WindowClosed() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("WindowClosed", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property WindowOpen() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("WindowOpen", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

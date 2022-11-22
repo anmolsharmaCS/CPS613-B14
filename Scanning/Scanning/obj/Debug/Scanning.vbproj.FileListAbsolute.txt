@@ -142,3 +142,28 @@ C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\
 C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.Bedroom.resources
 C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.Kitchen.resources
 C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.Livingroom.resources
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\bin\Debug\Scanning.exe.config
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\bin\Debug\Scanning.exe
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\bin\Debug\Scanning.pdb
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\bin\Debug\Scanning.xml
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.vbproj.AssemblyReference.cache
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.vbproj.SuggestedBindingRedirects.cache
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.Bathroom.resources
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.Bedroom.resources
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.Entertainment.resources
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.FloorHallways.resources
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.Assistance.resources
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.Kitchen.resources
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.Livingroom.resources
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.MainForm.resources
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.MainTaskBar.resources
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.Resources.resources
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.SubMenu.resources
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.TopMenu.resources
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.UserApartment.resources
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.WindowMenu.resources
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.vbproj.GenerateResource.cache
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.vbproj.CoreCompileInputs.cache
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.exe
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.xml
+C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.pdb

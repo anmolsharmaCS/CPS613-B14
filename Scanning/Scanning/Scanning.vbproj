@@ -166,6 +166,12 @@
     <Compile Include="UserApartment.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="WindowMenu.Designer.vb">
+      <DependentUpon>WindowMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WindowMenu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Bathroom.resx">
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserApartment.resx">
       <DependentUpon>UserApartment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowMenu.resx">
+      <DependentUpon>WindowMenu.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -546,6 +555,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\flushToilet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlindsClosed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BlindsOpen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WindowClosed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WindowOpen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

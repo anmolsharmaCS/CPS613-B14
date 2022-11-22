@@ -62,6 +62,16 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.BlindsClosed">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.BlindsOpen">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.buildingButton">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -358,6 +368,16 @@ Scanning
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.volumeup">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.WindowClosed">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.WindowOpen">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

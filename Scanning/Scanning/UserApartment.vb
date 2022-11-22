@@ -127,6 +127,8 @@ Public Class UserApartment
             TopOptions(focusIsOn).LoseFocus()
             focusIsOn = (focusIsOn + 1) Mod 4
             TopOptions(focusIsOn).ReceiveFocus()
+        ElseIf focusIsOn = 2 Then
+            Me.WindowMenu.MenuBarOption.InnerScanningNext()
         Else
             TopOptions(focusIsOn).InnerScanningNext()
         End If
@@ -183,11 +185,34 @@ Public Class UserApartment
             ElseIf focusIsOn = 1 Then
                 TopOptions(focusIsOn).StartInnerScanning(Rooms)
             ElseIf focusIsOn = 2 Then
-                TopOptions(focusIsOn).includeAllOptions = True
-                TopOptions(focusIsOn).StartInnerScanning(Windows)
+                'TopOptions(focusIsOn).includeAllOptions = True
+                'TopOptions(focusIsOn).StartInnerScanning(Windows)
+                Me.WindowMenu.Visible = True
+                Dim Options As SubOptions() = Me.WindowMenu.GetTaskBarOptions()
+                ReDim Preserve Options(Options.Length)
+                Options(Options.Length - 1) = Me.MainTaskBar.Back
+                Me.WindowMenu.MenuBarOption.StartInnerScanning(Options)
             ElseIf focusIsOn = 3 Then
                 TopOptions(focusIsOn).includeAllOptions = True
                 TopOptions(focusIsOn).StartInnerScanning(Doors)
+            End If
+        ElseIf focusIsOn = 2 Then
+            If MainTaskBar.Back.BackColor = Color.LemonChiffon Then
+                Me.WindowMenu.MenuBarOption.StopInnerScanning()
+                Me.WindowMenu.Visible = False
+                scanninglevel = 0
+            ElseIf Me.WindowMenu.CloseWindows.BackColor = Color.LemonChiffon Then
+                Me.WindowMenu.CloseWindows.BorderStyle = BorderStyle.Fixed3D
+                Me.WindowMenu.OpenWindows.BorderStyle = BorderStyle.None
+            ElseIf Me.WindowMenu.OpenWindows.BackColor = Color.LemonChiffon Then
+                Me.WindowMenu.OpenWindows.BorderStyle = BorderStyle.Fixed3D
+                Me.WindowMenu.CloseWindows.BorderStyle = BorderStyle.None
+            ElseIf Me.WindowMenu.CloseBlinds.BackColor = Color.LemonChiffon Then
+                Me.WindowMenu.CloseBlinds.BorderStyle = BorderStyle.Fixed3D
+                Me.WindowMenu.OpenBlinds.BorderStyle = BorderStyle.None
+            ElseIf Me.WindowMenu.OpenBlinds.BackColor = Color.LemonChiffon Then
+                Me.WindowMenu.OpenBlinds.BorderStyle = BorderStyle.Fixed3D
+                Me.WindowMenu.CloseBlinds.BorderStyle = BorderStyle.None
             End If
         Else
             If LivingRoom.BackColor = Color.LemonChiffon Then
