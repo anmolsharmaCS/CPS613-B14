@@ -24,8 +24,15 @@ Partial Class Entertainment
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.volumeMenu = New System.Windows.Forms.PictureBox()
-        Me.entertainmentBackground = New System.Windows.Forms.PictureBox()
+        Me.MainTaskBar = New Scanning.MainTaskBar()
+        Me.skipBack = New Scanning.SubOptions()
+        Me.skipForward = New Scanning.SubOptions()
+        Me.Netflix = New Scanning.SubOptions()
+        Me.Hulu = New Scanning.SubOptions()
+        Me.Amazon = New Scanning.SubOptions()
+        Me.podcast = New Scanning.SubOptions()
+        Me.recording = New Scanning.SubOptions()
+        Me.radio = New Scanning.SubOptions()
         Me.playlistOption = New Scanning.SubOptions()
         Me.artistOption = New Scanning.SubOptions()
         Me.goForward = New Scanning.SubOptions()
@@ -43,10 +50,17 @@ Partial Class Entertainment
         Me.movieOption = New Scanning.SubOptions()
         Me.musicOption = New Scanning.SubOptions()
         Me.entertainmentMenu = New Scanning.SubOptions()
-        Me.MainTaskBar = New Scanning.MainTaskBar()
+        Me.volumeMenu = New System.Windows.Forms.PictureBox()
         Me.mainMenu = New Scanning.SubOptions()
-        CType(Me.volumeMenu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.entertainmentBackground, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.entertainmentBackground = New System.Windows.Forms.PictureBox()
+        CType(Me.skipBack, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.skipForward, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Netflix, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Hulu, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Amazon, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.podcast, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.recording, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.radio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.playlistOption, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.artistOption, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.goForward, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,37 +78,123 @@ Partial Class Entertainment
         CType(Me.movieOption, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.musicOption, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.entertainmentMenu, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.volumeMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.mainMenu, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.entertainmentBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ScanningTimer
         '
         Me.ScanningTimer.Interval = 1000
         '
-        'volumeMenu
+        'MainTaskBar
         '
-        Me.volumeMenu.BackColor = System.Drawing.Color.DarkSlateBlue
-        Me.volumeMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.volumeMenu.Location = New System.Drawing.Point(594, 159)
-        Me.volumeMenu.Name = "volumeMenu"
-        Me.volumeMenu.Size = New System.Drawing.Size(124, 367)
-        Me.volumeMenu.TabIndex = 29
-        Me.volumeMenu.TabStop = False
+        Me.MainTaskBar.Location = New System.Drawing.Point(161, 554)
+        Me.MainTaskBar.Name = "MainTaskBar"
+        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
+        Me.MainTaskBar.TabIndex = 19
         '
-        'entertainmentBackground
+        'skipBack
         '
-        Me.entertainmentBackground.BackColor = System.Drawing.Color.Thistle
-        Me.entertainmentBackground.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.entertainmentBackground.Location = New System.Drawing.Point(12, 12)
-        Me.entertainmentBackground.Name = "entertainmentBackground"
-        Me.entertainmentBackground.Size = New System.Drawing.Size(826, 527)
-        Me.entertainmentBackground.TabIndex = 18
-        Me.entertainmentBackground.TabStop = False
+        Me.skipBack.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.skipBack.Image = Global.Scanning.My.Resources.Resources.skipBack
+        Me.skipBack.Location = New System.Drawing.Point(212, 421)
+        Me.skipBack.Name = "skipBack"
+        Me.skipBack.Size = New System.Drawing.Size(90, 90)
+        Me.skipBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.skipBack.TabIndex = 49
+        Me.skipBack.TabStop = False
+        Me.skipBack.Visible = False
+        '
+        'skipForward
+        '
+        Me.skipForward.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.skipForward.Image = Global.Scanning.My.Resources.Resources.skipForward
+        Me.skipForward.Location = New System.Drawing.Point(404, 421)
+        Me.skipForward.Name = "skipForward"
+        Me.skipForward.Size = New System.Drawing.Size(90, 90)
+        Me.skipForward.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.skipForward.TabIndex = 48
+        Me.skipForward.TabStop = False
+        Me.skipForward.Visible = False
+        '
+        'Netflix
+        '
+        Me.Netflix.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Netflix.Image = Global.Scanning.My.Resources.Resources.netflix
+        Me.Netflix.Location = New System.Drawing.Point(136, 170)
+        Me.Netflix.Name = "Netflix"
+        Me.Netflix.Size = New System.Drawing.Size(131, 131)
+        Me.Netflix.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Netflix.TabIndex = 47
+        Me.Netflix.TabStop = False
+        Me.Netflix.Visible = False
+        '
+        'Hulu
+        '
+        Me.Hulu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Hulu.Image = Global.Scanning.My.Resources.Resources.hulu
+        Me.Hulu.Location = New System.Drawing.Point(289, 170)
+        Me.Hulu.Name = "Hulu"
+        Me.Hulu.Size = New System.Drawing.Size(131, 131)
+        Me.Hulu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Hulu.TabIndex = 46
+        Me.Hulu.TabStop = False
+        Me.Hulu.Visible = False
+        '
+        'Amazon
+        '
+        Me.Amazon.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Amazon.Image = Global.Scanning.My.Resources.Resources.prime
+        Me.Amazon.Location = New System.Drawing.Point(441, 170)
+        Me.Amazon.Name = "Amazon"
+        Me.Amazon.Size = New System.Drawing.Size(131, 131)
+        Me.Amazon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Amazon.TabIndex = 45
+        Me.Amazon.TabStop = False
+        Me.Amazon.Visible = False
+        '
+        'podcast
+        '
+        Me.podcast.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.podcast.Image = Global.Scanning.My.Resources.Resources.podcast
+        Me.podcast.Location = New System.Drawing.Point(289, 170)
+        Me.podcast.Name = "podcast"
+        Me.podcast.Size = New System.Drawing.Size(131, 131)
+        Me.podcast.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.podcast.TabIndex = 44
+        Me.podcast.TabStop = False
+        Me.podcast.Visible = False
+        '
+        'recording
+        '
+        Me.recording.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.recording.Image = Global.Scanning.My.Resources.Resources.localRecording
+        Me.recording.Location = New System.Drawing.Point(441, 170)
+        Me.recording.Name = "recording"
+        Me.recording.Size = New System.Drawing.Size(131, 131)
+        Me.recording.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.recording.TabIndex = 43
+        Me.recording.TabStop = False
+        Me.recording.Visible = False
+        '
+        'radio
+        '
+        Me.radio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.radio.Image = Global.Scanning.My.Resources.Resources.radio
+        Me.radio.Location = New System.Drawing.Point(136, 170)
+        Me.radio.Name = "radio"
+        Me.radio.Size = New System.Drawing.Size(131, 131)
+        Me.radio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.radio.TabIndex = 42
+        Me.radio.TabStop = False
+        Me.radio.Visible = False
         '
         'playlistOption
         '
         Me.playlistOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.playlistOption.Image = Global.Scanning.My.Resources.Resources.playlist
+        Me.playlistOption.Location = New System.Drawing.Point(136, 243)
         Me.playlistOption.Name = "playlistOption"
         Me.playlistOption.Size = New System.Drawing.Size(436, 58)
         Me.playlistOption.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -118,7 +218,7 @@ Partial Class Entertainment
         '
         Me.goForward.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.goForward.Image = Global.Scanning.My.Resources.Resources.forward
-        Me.goForward.Location = New System.Drawing.Point(419, 325)
+        Me.goForward.Location = New System.Drawing.Point(404, 421)
         Me.goForward.Name = "goForward"
         Me.goForward.Size = New System.Drawing.Size(90, 90)
         Me.goForward.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -130,7 +230,7 @@ Partial Class Entertainment
         '
         Me.goBack.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.goBack.Image = Global.Scanning.My.Resources.Resources.rewind
-        Me.goBack.Location = New System.Drawing.Point(186, 325)
+        Me.goBack.Location = New System.Drawing.Point(212, 421)
         Me.goBack.Name = "goBack"
         Me.goBack.Size = New System.Drawing.Size(90, 90)
         Me.goBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -142,48 +242,52 @@ Partial Class Entertainment
         '
         Me.shuffle.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.shuffle.Image = Global.Scanning.My.Resources.Resources.shuffle
-        Me.shuffle.Location = New System.Drawing.Point(186, 421)
+        Me.shuffle.Location = New System.Drawing.Point(242, 345)
         Me.shuffle.Name = "shuffle"
-        Me.shuffle.Size = New System.Drawing.Size(90, 90)
+        Me.shuffle.Size = New System.Drawing.Size(70, 70)
         Me.shuffle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.shuffle.TabIndex = 36
         Me.shuffle.TabStop = False
+        Me.shuffle.Tag = "notShuffling"
         Me.shuffle.Visible = False
         '
         'repeat
         '
         Me.repeat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.repeat.Image = Global.Scanning.My.Resources.Resources.repeat
-        Me.repeat.Location = New System.Drawing.Point(306, 421)
+        Me.repeat.Location = New System.Drawing.Point(318, 345)
         Me.repeat.Name = "repeat"
-        Me.repeat.Size = New System.Drawing.Size(90, 90)
+        Me.repeat.Size = New System.Drawing.Size(70, 70)
         Me.repeat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.repeat.TabIndex = 35
         Me.repeat.TabStop = False
+        Me.repeat.Tag = "notRepeating"
         Me.repeat.Visible = False
         '
         'repeatOne
         '
         Me.repeatOne.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.repeatOne.Image = Global.Scanning.My.Resources.Resources.repeatOne
-        Me.repeatOne.Location = New System.Drawing.Point(419, 421)
+        Me.repeatOne.Location = New System.Drawing.Point(394, 345)
         Me.repeatOne.Name = "repeatOne"
-        Me.repeatOne.Size = New System.Drawing.Size(90, 90)
+        Me.repeatOne.Size = New System.Drawing.Size(70, 70)
         Me.repeatOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.repeatOne.TabIndex = 34
         Me.repeatOne.TabStop = False
+        Me.repeatOne.Tag = "notRepeatingOne"
         Me.repeatOne.Visible = False
         '
         'play
         '
         Me.play.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.play.Image = Global.Scanning.My.Resources.Resources.play
-        Me.play.Location = New System.Drawing.Point(306, 325)
+        Me.play.Location = New System.Drawing.Point(308, 421)
         Me.play.Name = "play"
         Me.play.Size = New System.Drawing.Size(90, 90)
         Me.play.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.play.TabIndex = 33
         Me.play.TabStop = False
+        Me.play.Tag = "play"
         Me.play.Visible = False
         '
         'volumeMute
@@ -284,12 +388,15 @@ Partial Class Entertainment
         Me.entertainmentMenu.TabIndex = 20
         Me.entertainmentMenu.TabStop = False
         '
-        'MainTaskBar
+        'volumeMenu
         '
-        Me.MainTaskBar.Location = New System.Drawing.Point(161, 554)
-        Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
-        Me.MainTaskBar.TabIndex = 19
+        Me.volumeMenu.BackColor = System.Drawing.Color.DarkSlateBlue
+        Me.volumeMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.volumeMenu.Location = New System.Drawing.Point(594, 159)
+        Me.volumeMenu.Name = "volumeMenu"
+        Me.volumeMenu.Size = New System.Drawing.Size(124, 367)
+        Me.volumeMenu.TabIndex = 29
+        Me.volumeMenu.TabStop = False
         '
         'mainMenu
         '
@@ -299,13 +406,30 @@ Partial Class Entertainment
         Me.mainMenu.Size = New System.Drawing.Size(478, 367)
         Me.mainMenu.TabIndex = 41
         Me.mainMenu.TabStop = False
-        Me.mainMenu.Visible = False
+        '
+        'entertainmentBackground
+        '
+        Me.entertainmentBackground.BackColor = System.Drawing.Color.Thistle
+        Me.entertainmentBackground.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.entertainmentBackground.Location = New System.Drawing.Point(12, 12)
+        Me.entertainmentBackground.Name = "entertainmentBackground"
+        Me.entertainmentBackground.Size = New System.Drawing.Size(826, 527)
+        Me.entertainmentBackground.TabIndex = 18
+        Me.entertainmentBackground.TabStop = False
         '
         'Entertainment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.skipBack)
+        Me.Controls.Add(Me.skipForward)
+        Me.Controls.Add(Me.Netflix)
+        Me.Controls.Add(Me.Hulu)
+        Me.Controls.Add(Me.Amazon)
+        Me.Controls.Add(Me.podcast)
+        Me.Controls.Add(Me.recording)
+        Me.Controls.Add(Me.radio)
         Me.Controls.Add(Me.playlistOption)
         Me.Controls.Add(Me.artistOption)
         Me.Controls.Add(Me.goForward)
@@ -331,8 +455,14 @@ Partial Class Entertainment
         Me.Name = "Entertainment"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Entertainment"
-        CType(Me.volumeMenu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.entertainmentBackground, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.skipBack, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.skipForward, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Netflix, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Hulu, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Amazon, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.podcast, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.recording, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.radio, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.playlistOption, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.artistOption, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.goForward, System.ComponentModel.ISupportInitialize).EndInit()
@@ -350,7 +480,9 @@ Partial Class Entertainment
         CType(Me.movieOption, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.musicOption, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.entertainmentMenu, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.volumeMenu, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.mainMenu, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.entertainmentBackground, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -377,4 +509,12 @@ Partial Class Entertainment
     Friend WithEvents artistOption As SubOptions
     Friend WithEvents playlistOption As SubOptions
     Friend WithEvents mainMenu As SubOptions
+    Friend WithEvents radio As SubOptions
+    Friend WithEvents recording As SubOptions
+    Friend WithEvents podcast As SubOptions
+    Friend WithEvents Amazon As SubOptions
+    Friend WithEvents Hulu As SubOptions
+    Friend WithEvents Netflix As SubOptions
+    Friend WithEvents skipForward As SubOptions
+    Friend WithEvents skipBack As SubOptions
 End Class

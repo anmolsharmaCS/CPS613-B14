@@ -172,32 +172,14 @@
   <data name="bulb" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bulb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="apple_podcast__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>apple-podcast (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Apple_Voice_Memos_Logo_1024x575__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Apple-Voice-Memos_Logo-1024x575 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="canada" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>canada.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="hellboy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>hellboy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="live__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>live (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mp4__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>mp4 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="radio__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>radio (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Skip_next" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Skip-next.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Skip_prev" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Skip-prev.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="streamed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>streamed.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -285,5 +267,44 @@
   </data>
   <data name="playlist" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>playlist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hulu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>hulu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="localRecording" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>localRecording.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="netflix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>netflix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="podcast" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>podcast.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="prime" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>prime.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="radio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>radio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="repeatActivated" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>repeatActivated.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="repeatOneActivated" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>repeatOneActivated.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shuffleActivated" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>shuffleActivated.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skipBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>skipBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skipForward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>skipForward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skip_next" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Skip-next.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skip_prev" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Skip-prev.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

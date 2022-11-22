@@ -58,6 +58,7 @@ Public Class UserApartment
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         StartScanning()
+        MainTaskBar.PreviousScreen.Image = My.Resources.hallwayButton
     End Sub
 
 #Region "Timer Properties and methods"
@@ -150,6 +151,7 @@ Public Class UserApartment
             If focusIsOn = 0 Then
                 StopScanning()
                 ent.Show()
+                ent.StartScanning()
             ElseIf focusIsOn = 1 Then
                 StopScanning()
                 bedroomForm.Show()

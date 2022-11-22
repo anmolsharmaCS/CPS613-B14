@@ -460,6 +460,39 @@
   <ItemGroup>
     <None Include="My Project\playlist.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\shuffleActivated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\repeatActivated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\repeatOneActivated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\radio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\podcast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\localRecording.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\skipBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\skipForward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\hulu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\netflix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\prime.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

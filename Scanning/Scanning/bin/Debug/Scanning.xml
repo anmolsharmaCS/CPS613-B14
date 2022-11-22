@@ -32,16 +32,6 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.apple_podcast__1_">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Scanning.My.Resources.Resources.Apple_Voice_Memos_Logo_1024x575__1_">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:Scanning.My.Resources.Resources.artist">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -117,11 +107,6 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.hellboy">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:Scanning.My.Resources.Resources.help">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -137,6 +122,11 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.hulu">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.kitchen">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -148,6 +138,11 @@ Scanning
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.livingRoom">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.localRecording">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -182,6 +177,11 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.netflix">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.pause">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -197,12 +197,22 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.podcast">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.prime">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.program">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.radio__1_">
+<member name="P:Scanning.My.Resources.Resources.radio">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -212,7 +222,17 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.repeatActivated">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.repeatOne">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.repeatOneActivated">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -227,12 +247,27 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.shuffleActivated">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.Skip_next">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.Skip_prev">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.skipBack">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.skipForward">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
