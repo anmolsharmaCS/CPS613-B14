@@ -298,7 +298,6 @@ Public Class Entertainment
                     musicGroup(i).Show()
                 Next
                 currentlyShowing = musicGroup
-                mediaOptions(focusIsOn).MenuBar = True
                 mediaOptions(focusIsOn).StartInnerScanning(musicOptions)
             ElseIf focusIsOn = 1 Then
                 If currentlyShowing IsNot Nothing Then
@@ -310,7 +309,6 @@ Public Class Entertainment
                     audioGroup(i).Show()
                 Next
                 currentlyShowing = audioGroup
-                mediaOptions(focusIsOn).MenuBar = True
                 mediaOptions(focusIsOn).StartInnerScanning(audioOptions)
             ElseIf focusIsOn = 2 Then
                 If currentlyShowing IsNot Nothing Then
@@ -322,7 +320,6 @@ Public Class Entertainment
                     movieGroup(i).Show()
                 Next
                 currentlyShowing = movieGroup
-                mediaOptions(focusIsOn).MenuBar = True
                 mediaOptions(focusIsOn).StartInnerScanning(movieOptions)
             ElseIf focusIsOn = 3 Then
                 If currentlyShowing IsNot Nothing Then
@@ -334,30 +331,24 @@ Public Class Entertainment
                     tvGroup(i).Show()
                 Next
                 currentlyShowing = tvGroup
-                mediaOptions(focusIsOn).MenuBar = True
                 mediaOptions(focusIsOn).StartInnerScanning(tvOptions)
             ElseIf focusIsOn = 4 Then
-                mediaOptions(focusIsOn).MenuBar = True
                 mediaOptions(focusIsOn).StartInnerScanning(volumeOptions)
             ElseIf focusIsOn = 5 Then
                 MainTaskBar.MenuBarOption.LoseFocus()
-                MainTaskBar.MenuBarOption.MenuBar = True
                 mediaOptions(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
             End If
         ElseIf scanninglevel = 1 Then
             If goBack.BackColor = Color.LemonChiffon Then
                 scanninglevel = 2
-                goBack.MenuBar = True
                 goBack.StartInnerScanning(playPauseAudioOptions)
                 scanninglevel1 = goBack
             ElseIf shuffle.BackColor = Color.LemonChiffon Then
                 scanninglevel = 2
-                shuffle.MenuBar = True
                 shuffle.StartInnerScanning(shuffleOptions)
                 scanninglevel1 = shuffle
             ElseIf prevVideo.BackColor = Color.LemonChiffon Then
                 scanninglevel = 2
-                prevVideo.MenuBar = True
                 prevVideo.StartInnerScanning(playPauseVisualOptions)
                 scanninglevel1 = prevVideo
             ElseIf MainTaskBar.Back.BackColor = Color.LemonChiffon Then
@@ -420,6 +411,10 @@ Public Class Entertainment
             End If
 
         End If
+    End Sub
+
+    Private Sub Entertainment_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        MyParent.ResumeScanning()
     End Sub
 
 #End Region

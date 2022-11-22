@@ -5,6 +5,7 @@ Public Class FloorHallways
     Private Options(2) As SubOptions
     Private Apartments(6) As SubOptions
     Private MyParent As MainForm
+    Private Apartment As New UserApartment(Me)
 
     Public Sub New(floorNumber, parentForm)
 
@@ -49,6 +50,7 @@ Public Class FloorHallways
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        MainTaskBar.PreviousScreen.Image = My.Resources.buildingButton
         Me.StartScanning()
     End Sub
 
@@ -135,12 +137,10 @@ Public Class FloorHallways
                 Me.Close()
 
             ElseIf focusIsOn = 1 Then
-                Apartment01.MenuBar = True
                 Options(focusIsOn).StartInnerScanning(Apartments)
 
             ElseIf focusIsOn = 2 Then
                 MainTaskBar.MenuBarOption.LoseFocus()
-                MainTaskBar.MenuBarOption.MenuBar = True
                 Options(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
             End If
         Else
@@ -159,12 +159,14 @@ Public Class FloorHallways
                 Assistance.Show()
             ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
                 StopScanning()
-                Me.Close()
+                MainTaskBar.PreviousScreen.LoseFocus()
+                Hide()
+                MyParent.ResumeScanning()
             ElseIf Apartment02.BackColor = Color.LemonChiffon And Label2.Text = "402" Then
                 Apartment02.LoseFocus()
-                Dim Apartment As New UserApartment(Me)
                 StopScanning()
                 Apartment.Show()
+                Apartment.StartScanning()
             End If
         End If
 

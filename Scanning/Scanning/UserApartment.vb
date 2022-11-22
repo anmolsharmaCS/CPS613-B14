@@ -57,7 +57,6 @@ Public Class UserApartment
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
-        StartScanning()
         MainTaskBar.PreviousScreen.Image = My.Resources.hallwayButton
     End Sub
 
@@ -162,14 +161,13 @@ Public Class UserApartment
                 StopScanning()
                 bathroomForm.Show()
             ElseIf focusIsOn = 4 Then
-                MainTaskBar.MenuBarOption.MenuBar = False
+                TopOptions(focusIsOn).includeAllOptions = True
                 TopOptions(focusIsOn).StartInnerScanning(Windows)
             ElseIf focusIsOn = 5 Then
-                MainTaskBar.MenuBarOption.MenuBar = False
+                TopOptions(focusIsOn).includeAllOptions = True
                 TopOptions(focusIsOn).StartInnerScanning(Doors)
             ElseIf focusIsOn = 6 Then
                 MainTaskBar.MenuBarOption.LoseFocus()
-                MainTaskBar.MenuBarOption.MenuBar = True
                 TopOptions(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
             End If
         Else
@@ -188,7 +186,9 @@ Public Class UserApartment
                 Assistance.Show()
             ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
                 StopScanning()
-                Me.Close()
+                MainTaskBar.PreviousScreen.LoseFocus()
+                Hide()
+                MyParent.ResumeScanning()
             End If
         End If
     End Sub

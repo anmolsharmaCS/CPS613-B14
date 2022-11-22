@@ -117,11 +117,6 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.house1">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
 <member name="P:Scanning.My.Resources.Resources.hulu">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

@@ -1,6 +1,7 @@
 ﻿Public Class MainForm
 
     Private Options(4) As SubOptions
+    Private Floor As New FloorHallways(focusIsOn, Me)
 
     Public Sub New()
 
@@ -21,7 +22,7 @@
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Me.StartScanning()
+        StartScanning()
     End Sub
 
 #Region "Timer Properties and methods"
@@ -85,16 +86,17 @@
     ' When the user selects a submenu, start scanning within that submenu
     Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
 
-        Dim FLoor As New FloorHallways(focusIsOn, Me)
         If focusIsOn = 0 Then
             StopScanning()
             ' This is also temporary, will likely implement all screens in one form in final product rather than using separate forms
             ' This will make the transition look better and it will make it easier to have some components which are present on all screens
             ' In addition, this does not lead to the correct screen for the selected item, they all lead to a placeholder to show that it works
-            FLoor.Show()
+            Floor.Show()
         Else
+            Options(focusIsOn).LoseFocus()
             StopScanning()
-            FLoor.Show()
+            Floor.Show()
+            Floor.StartScanning()
         End If
     End Sub
 

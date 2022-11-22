@@ -30,6 +30,7 @@ Partial Class FloorHallways
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.MainTaskBar = New Scanning.MainTaskBar()
         Me.Home = New System.Windows.Forms.PictureBox()
         Me.ElevatorDoorLine = New System.Windows.Forms.PictureBox()
         Me.SubOptions5 = New Scanning.SubOptions()
@@ -46,7 +47,6 @@ Partial Class FloorHallways
         Me.Apartment02 = New Scanning.SubOptions()
         Me.Apartment01 = New Scanning.SubOptions()
         Me.Floor = New System.Windows.Forms.PictureBox()
-        Me.MainTaskBar = New Scanning.MainTaskBar()
         CType(Me.Home, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElevatorDoorLine, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SubOptions5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -128,6 +128,13 @@ Partial Class FloorHallways
         'ScanningTimer
         '
         Me.ScanningTimer.Interval = 1000
+        '
+        'MainTaskBar
+        '
+        Me.MainTaskBar.Location = New System.Drawing.Point(92, 455)
+        Me.MainTaskBar.Name = "MainTaskBar"
+        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
+        Me.MainTaskBar.TabIndex = 45
         '
         'Home
         '
@@ -288,14 +295,6 @@ Partial Class FloorHallways
         Me.Floor.Size = New System.Drawing.Size(738, 417)
         Me.Floor.TabIndex = 6
         Me.Floor.TabStop = False
-        '
-        'MainTaskBar
-        '
-        Me.MainTaskBar.Location = New System.Drawing.Point(92, 455)
-        Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
-        Me.MainTaskBar.TabIndex = 45
-        Me.MainTaskBar.PreviousScreen.Image = Global.Scanning.My.Resources.Resources.buildingButton
         '
         'FloorHallways
         '
