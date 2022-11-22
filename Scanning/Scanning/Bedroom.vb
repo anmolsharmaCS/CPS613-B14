@@ -2,7 +2,8 @@
 
 Public Class Bedroom
     Private TopOptions(4) As SubOptions
-    Private Windows(2) As SubOptions
+    Private environment(2) As SubOptions
+    Private Windows(3) As SubOptions
     Private MyParent As UserApartment
 
     Public Sub New(parentForm As UserApartment)
@@ -12,20 +13,28 @@ Public Class Bedroom
         'MyParent = ParentForm
         TopOptions(0) = Bed
         TopOptions(1) = LightControl
-        TopOptions(2) = EnvControl
+        TopOptions(2) = BedroomWindow1
         TopOptions(3) = BedroomDoor
         TopOptions(4) = MainTaskBar.MenuBarOption
+
+        For i = 0 To 4
+            TopOptions(i).Initialize()
+        Next
+
+        environment(0) = LightControl
+        environment(1) = FanControl
+        environment(2) = MainTaskBar.Back
+
+        environment(2).Initialize()
+
         Windows(0) = BedroomWindow1
         Windows(1) = BedroomWindow2
         Windows(2) = BedroomWindow3
+        Windows(3) = MainTaskBar.Back
 
-        ' Add any initialization after the InitializeComponent() call.
         For i = 0 To 2
-            Me.TopOptions(i).Initialize()
-            Me.Windows(i).Initialize()
+            Windows(i).Initialize()
         Next
-        Me.TopOptions(3).Initialize()
-        Me.TopOptions(4).Initialize()
 
         MyParent = parentForm
 
@@ -45,6 +54,7 @@ Public Class Bedroom
         End Set
     End Property
 #End Region
+
 #Region "Scanning functionality"
 
     Private scanninglevel As Integer
@@ -84,14 +94,24 @@ Public Class Bedroom
         End If
     End Sub
 
-    Private Sub BedroomWindow1_ColorChanged(sender As Object, e As EventArgs) Handles BedroomWindow1.BackColorChanged, BedroomDoor.BackColorChanged
+    Private Sub Groups_ColorChanged(sender As Object, e As EventArgs) Handles BedroomWindow1.BackColorChanged, LightControl.BackColorChanged
         If scanninglevel = 0 And ScanningTimer.Enabled Then
+            If LightControl.BackColor.Equals(Color.LemonChiffon) Then
+                For i = 1 To environment.Length - 2
+                    environment(i).ReceiveFocus()
+                Next
+            Else
+                For i = 1 To environment.Length - 2
+                    environment(i).LoseFocus()
+                Next
+            End If
+
             If BedroomWindow1.BackColor.Equals(Color.LemonChiffon) Then
-                For i = 1 To Windows.Length - 1
+                For i = 1 To Windows.Length - 2
                     Windows(i).ReceiveFocus()
                 Next
             Else
-                For i = 1 To Windows.Length - 1
+                For i = 1 To Windows.Length - 2
                     Windows(i).LoseFocus()
                 Next
             End If
@@ -108,12 +128,35 @@ Public Class Bedroom
     Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
         If scanninglevel = 0 Then
             scanninglevel = 1
-            If focusIsOn = 4 Then
+            If focusIsOn = 1 Then
+                TopOptions(focusIsOn).StartInnerScanning(environment)
+            ElseIf focusIsOn = 4 Then
                 MainTaskBar.MenuBarOption.LoseFocus()
                 TopOptions(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
             End If
         ElseIf scanninglevel = 1 Then
-            If MainTaskBar.Back.BackColor = Color.LemonChiffon Then
+            If LightControl.BackColor = Color.LemonChiffon Then
+                If LightControl.Tag = "on" Then
+                    LightControl.Image = My.Resources.bulbUnlit
+                    MyParent.bedroomLight.Image = My.Resources.bulbUnlit
+                    LightControl.Tag = "off"
+                ElseIf LightControl.Tag = "off" Then
+                    LightControl.Image = My.Resources.bulbLit
+                    MyParent.bedroomLight.Image = My.Resources.bulbLit
+                    LightControl.Tag = "on"
+                End If
+            ElseIf FanControl.BackColor = Color.LemonChiffon Then
+                If FanControl.Tag = "on" Then
+                    FanControl.Image = My.Resources.fanOff
+                    MyParent.bedroomFan.Image = My.Resources.fanOff
+                    FanControl.Tag = "off"
+                ElseIf FanControl.Tag = "off" Then
+                    FanControl.Image = My.Resources.fanOn
+                    MyParent.bedroomFan.Image = My.Resources.fanOn
+                    FanControl.Tag = "on"
+                End If
+
+            ElseIf MainTaskBar.Back.BackColor = Color.LemonChiffon Then
                 If focusIsOn = 5 Then
                     MainTaskBar.MenuBarOption.StopInnerScanning()
                     scanninglevel = 0

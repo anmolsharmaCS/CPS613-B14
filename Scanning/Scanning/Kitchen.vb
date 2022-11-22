@@ -123,21 +123,21 @@ Public Class Kitchen
             If lightOption.BackColor = Color.LemonChiffon Then
                 If lightOption.Tag = "on" Then
                     lightOption.Image = My.Resources.bulbUnlit
-                    MyParent.livingroomLight.Image = My.Resources.bulbUnlit
+                    MyParent.kitchenLight.Image = My.Resources.bulbUnlit
                     lightOption.Tag = "off"
                 ElseIf lightOption.Tag = "off" Then
                     lightOption.Image = My.Resources.bulbLit
-                    MyParent.livingroomLight.Image = My.Resources.bulbLit
+                    MyParent.kitchenLight.Image = My.Resources.bulbLit
                     lightOption.Tag = "on"
                 End If
             ElseIf fanOption.BackColor = Color.LemonChiffon Then
                 If fanOption.Tag = "on" Then
                     fanOption.Image = My.Resources.fanOff
-                    MyParent.livingroomFan.Image = My.Resources.fanOff
+                    MyParent.kitchenFan.Image = My.Resources.fanOff
                     fanOption.Tag = "off"
                 ElseIf fanOption.Tag = "off" Then
                     fanOption.Image = My.Resources.fanOn
-                    MyParent.livingroomFan.Image = My.Resources.fanOn
+                    MyParent.kitchenFan.Image = My.Resources.fanOn
                     fanOption.Tag = "on"
                 End If
             ElseIf MainTaskBar.Back.BackColor = Color.LemonChiffon Then

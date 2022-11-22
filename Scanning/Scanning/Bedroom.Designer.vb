@@ -27,22 +27,20 @@ Partial Class Bedroom
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MainTaskBar = New Scanning.MainTaskBar()
         Me.LightControl = New Scanning.SubOptions()
-        Me.EnvControl = New Scanning.SubOptions()
         Me.Bed = New Scanning.SubOptions()
         Me.BedroomWindow3 = New Scanning.SubOptions()
         Me.BedroomWindow2 = New Scanning.SubOptions()
         Me.BedroomWindow1 = New Scanning.SubOptions()
         Me.BedroomDoor = New Scanning.SubOptions()
-        Me.SubOptions1 = New Scanning.SubOptions()
+        Me.FanControl = New Scanning.SubOptions()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LightControl, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EnvControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bed, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SubOptions1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FanControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ScanningTimer
@@ -71,37 +69,24 @@ Partial Class Bedroom
         Me.LightControl.BackColor = System.Drawing.SystemColors.Control
         Me.LightControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LightControl.Image = Global.Scanning.My.Resources.Resources.bulbLit
-        Me.LightControl.Location = New System.Drawing.Point(283, 153)
+        Me.LightControl.Location = New System.Drawing.Point(477, 101)
         Me.LightControl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.LightControl.Name = "LightControl"
         Me.LightControl.Size = New System.Drawing.Size(149, 113)
         Me.LightControl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.LightControl.TabIndex = 53
         Me.LightControl.TabStop = False
-        Me.LightControl.Tag = ""
-        '
-        'EnvControl
-        '
-        Me.EnvControl.BackColor = System.Drawing.SystemColors.Control
-        Me.EnvControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.EnvControl.Image = Global.Scanning.My.Resources.Resources.thermometer
-        Me.EnvControl.Location = New System.Drawing.Point(597, 153)
-        Me.EnvControl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.EnvControl.Name = "EnvControl"
-        Me.EnvControl.Size = New System.Drawing.Size(135, 139)
-        Me.EnvControl.TabIndex = 52
-        Me.EnvControl.TabStop = False
-        Me.EnvControl.Tag = ""
+        Me.LightControl.Tag = "on"
         '
         'Bed
         '
-        Me.Bed.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.Bed.BackColor = System.Drawing.SystemColors.Control
         Me.Bed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Bed.Image = Global.Scanning.My.Resources.Resources.bed2
-        Me.Bed.Location = New System.Drawing.Point(31, 153)
+        Me.Bed.Image = Global.Scanning.My.Resources.Resources.bedButton
+        Me.Bed.Location = New System.Drawing.Point(169, 101)
         Me.Bed.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Bed.Name = "Bed"
-        Me.Bed.Size = New System.Drawing.Size(217, 152)
+        Me.Bed.Size = New System.Drawing.Size(283, 245)
         Me.Bed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Bed.TabIndex = 51
         Me.Bed.TabStop = False
@@ -154,48 +139,47 @@ Partial Class Bedroom
         Me.BedroomDoor.TabIndex = 47
         Me.BedroomDoor.TabStop = False
         '
-        'SubOptions1
+        'FanControl
         '
-        Me.SubOptions1.BackColor = System.Drawing.SystemColors.Control
-        Me.SubOptions1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.SubOptions1.Image = Global.Scanning.My.Resources.Resources.fanOff
-        Me.SubOptions1.Location = New System.Drawing.Point(442, 153)
-        Me.SubOptions1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.SubOptions1.Name = "SubOptions1"
-        Me.SubOptions1.Size = New System.Drawing.Size(149, 113)
-        Me.SubOptions1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.SubOptions1.TabIndex = 55
-        Me.SubOptions1.TabStop = False
-        Me.SubOptions1.Tag = ""
+        Me.FanControl.BackColor = System.Drawing.SystemColors.Control
+        Me.FanControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.FanControl.Image = Global.Scanning.My.Resources.Resources.fanOff
+        Me.FanControl.Location = New System.Drawing.Point(477, 233)
+        Me.FanControl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.FanControl.Name = "FanControl"
+        Me.FanControl.Size = New System.Drawing.Size(149, 113)
+        Me.FanControl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.FanControl.TabIndex = 55
+        Me.FanControl.TabStop = False
+        Me.FanControl.Tag = "off"
         '
         'Bedroom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
-        Me.Controls.Add(Me.SubOptions1)
+        Me.Controls.Add(Me.FanControl)
         Me.Controls.Add(Me.MainTaskBar)
         Me.Controls.Add(Me.LightControl)
-        Me.Controls.Add(Me.EnvControl)
         Me.Controls.Add(Me.Bed)
         Me.Controls.Add(Me.BedroomWindow3)
         Me.Controls.Add(Me.BedroomWindow2)
         Me.Controls.Add(Me.BedroomWindow1)
         Me.Controls.Add(Me.BedroomDoor)
         Me.Controls.Add(Me.PictureBox1)
+        Me.KeyPreview = True
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Bedroom"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Bedroom"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LightControl, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EnvControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Bed, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomWindow3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomWindow2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomWindow1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SubOptions1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FanControl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -206,9 +190,8 @@ Partial Class Bedroom
     Friend WithEvents BedroomWindow2 As SubOptions
     Friend WithEvents BedroomWindow3 As SubOptions
     Friend WithEvents Bed As SubOptions
-    Friend WithEvents EnvControl As SubOptions
     Friend WithEvents LightControl As SubOptions
     Friend WithEvents ScanningTimer As Timer
     Friend WithEvents MainTaskBar As MainTaskBar
-    Friend WithEvents SubOptions1 As SubOptions
+    Friend WithEvents FanControl As SubOptions
 End Class
