@@ -6,6 +6,11 @@ Public Class Assistance
 
     Private MyParentHall As FloorHallways
     Private MyParentApartment As UserApartment
+    Private MyParentBedroom As Bedroom
+    Private MyParentBathroom As Bathroom
+    Private MyParentKitchen As Kitchen
+    Private MyParentLivingroom As Livingroom
+    Private MyParentEnt As Entertainment
 
     Public Sub New(parentForm)
 
@@ -30,10 +35,22 @@ Public Class Assistance
         ReasonMenu_Inactive()
         CallMenu_Inactive()
 
+
+
         If parentForm.GetType() Is GetType(FloorHallways) Then
             MyParentHall = parentForm
         ElseIf parentForm.GetType() Is GetType(UserApartment) Then
             MyParentApartment = parentForm
+        ElseIf parentForm.GetType() Is GetType(Bedroom) Then
+            MyParentBedroom = parentForm
+        ElseIf parentForm.GetType() Is GetType(Bathroom) Then
+            MyParentBathroom = parentForm
+        ElseIf parentForm.GetType() Is GetType(Kitchen) Then
+            MyParentKitchen = parentForm
+        ElseIf parentForm.GetType() Is GetType(Livingroom) Then
+            MyParentLivingroom = parentForm
+        ElseIf parentForm.GetType() Is GetType(Entertainment) Then
+            MyParentEnt = parentForm
         End If
 
     End Sub
@@ -206,6 +223,16 @@ Public Class Assistance
             MyParentHall.ResumeScanning()
         ElseIf MyParentApartment IsNot Nothing Then
             MyParentApartment.ResumeScanning()
+        ElseIf MyParentBedroom IsNot Nothing Then
+            MyParentBedroom.ResumeScanning()
+        ElseIf MyParentBathroom IsNot Nothing Then
+            MyParentBathroom.ResumeScanning()
+        ElseIf MyParentKitchen IsNot Nothing Then
+            MyParentKitchen.ResumeScanning()
+        ElseIf MyParentLivingroom IsNot Nothing Then
+            MyParentLivingroom.ResumeScanning()
+        ElseIf MyParentEnt IsNot Nothing Then
+            MyParentEnt.ResumeScanning()
         End If
     End Sub
 

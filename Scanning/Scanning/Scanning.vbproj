@@ -142,23 +142,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="SubMenu.Designer.vb">
-      <DependentUpon>SubMenu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="SubMenu.vb">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="SubOptions.Designer.vb">
       <DependentUpon>SubOptions.vb</DependentUpon>
     </Compile>
     <Compile Include="SubOptions.vb">
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TopMenu.Designer.vb">
-      <DependentUpon>TopMenu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="TopMenu.vb">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserApartment.Designer.vb">
       <DependentUpon>UserApartment.vb</DependentUpon>
@@ -206,12 +194,6 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SubMenu.resx">
-      <DependentUpon>SubMenu.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TopMenu.resx">
-      <DependentUpon>TopMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserApartment.resx">
       <DependentUpon>UserApartment.vb</DependentUpon>

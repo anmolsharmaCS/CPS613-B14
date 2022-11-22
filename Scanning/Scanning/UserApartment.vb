@@ -127,6 +127,7 @@ Public Class UserApartment
     ' to restrat scanning at the beginning, use StartScanning
     Public Sub ResumeScanning()
         scanninglevel = 0
+        focusIsOn = (focusIsOn + 1) Mod 3
         TopOptions(focusIsOn).ReceiveFocus()
         ScanningTimer.Start()
     End Sub
@@ -253,7 +254,9 @@ Public Class UserApartment
                     scanninglevel = 0
                 End If
             ElseIf upArrow.BackColor = Color.LemonChiffon Then
-
+                tempLabel.Text = CInt(tempLabel.Text) + 1
+            ElseIf downArrow.BackColor = Color.LemonChiffon Then
+                tempLabel.Text = CInt(tempLabel.Text) - 1
             ElseIf MainTaskBar.Assistance.BackColor = Color.LemonChiffon Then
                 Dim Assistance As New Assistance(Me)
                 StopScanning()
