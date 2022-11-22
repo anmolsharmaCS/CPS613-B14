@@ -107,6 +107,12 @@
     <Compile Include="Kitchen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Livingroom.Designer.vb">
+      <DependentUpon>Livingroom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Livingroom.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Kitchen.resx">
       <DependentUpon>Kitchen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Livingroom.resx">
+      <DependentUpon>Livingroom.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
@@ -507,6 +516,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\live.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\litBulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\unlitBulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\bulbLit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\bulbUnlit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\fanOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\fanOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\television.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\livingroomButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

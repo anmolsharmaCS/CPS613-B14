@@ -19,7 +19,7 @@ Public Class Entertainment
     Private tvGroup(10) As SubOptions
 
     Private scanninglevel1 As SubOptions
-    Private MyParent As UserApartment
+    Private MyParent As Livingroom
 
     Public Sub New(parentForm)
 
@@ -179,7 +179,7 @@ Public Class Entertainment
     End Sub
 
     Private Sub Entertainment_Load(sender As Object, e As EventArgs) Handles Me.Load
-        MainTaskBar.PreviousScreen.Image = My.Resources.apartmentButton
+        MainTaskBar.PreviousScreen.Image = My.Resources.livingroomButton
     End Sub
 
 #Region "Timer Properties and methods"

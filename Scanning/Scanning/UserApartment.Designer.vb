@@ -41,6 +41,14 @@ Partial Class UserApartment
         Me.LivingRoom = New Scanning.SubOptions()
         Me.Kitchen = New Scanning.SubOptions()
         Me.MainTaskBar = New Scanning.MainTaskBar()
+        Me.livingroomLight = New System.Windows.Forms.PictureBox()
+        Me.kitchenLight = New System.Windows.Forms.PictureBox()
+        Me.bedroomLight = New System.Windows.Forms.PictureBox()
+        Me.bathroomLight = New System.Windows.Forms.PictureBox()
+        Me.bedroomFan = New System.Windows.Forms.PictureBox()
+        Me.bathroomFan = New System.Windows.Forms.PictureBox()
+        Me.kitchenFan = New System.Windows.Forms.PictureBox()
+        Me.livingroomFan = New System.Windows.Forms.PictureBox()
         CType(Me.apartment, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BathroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,6 +65,14 @@ Partial Class UserApartment
         CType(Me.Bedroom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingRoom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Kitchen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomLight, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.kitchenLight, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bedroomLight, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bathroomLight, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bedroomFan, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bathroomFan, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.kitchenFan, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomFan, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ScanningTimer
@@ -248,11 +264,107 @@ Partial Class UserApartment
         Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
         Me.MainTaskBar.TabIndex = 35
         '
+        'livingroomLight
+        '
+        Me.livingroomLight.BackColor = System.Drawing.Color.Transparent
+        Me.livingroomLight.Image = Global.Scanning.My.Resources.Resources.bulbUnlit
+        Me.livingroomLight.Location = New System.Drawing.Point(5, 12)
+        Me.livingroomLight.Name = "livingroomLight"
+        Me.livingroomLight.Size = New System.Drawing.Size(71, 53)
+        Me.livingroomLight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomLight.TabIndex = 36
+        Me.livingroomLight.TabStop = False
+        '
+        'kitchenLight
+        '
+        Me.kitchenLight.BackColor = System.Drawing.Color.Transparent
+        Me.kitchenLight.Image = Global.Scanning.My.Resources.Resources.bulbUnlit
+        Me.kitchenLight.Location = New System.Drawing.Point(5, 12)
+        Me.kitchenLight.Name = "kitchenLight"
+        Me.kitchenLight.Size = New System.Drawing.Size(71, 53)
+        Me.kitchenLight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.kitchenLight.TabIndex = 37
+        Me.kitchenLight.TabStop = False
+        '
+        'bedroomLight
+        '
+        Me.bedroomLight.BackColor = System.Drawing.Color.Transparent
+        Me.bedroomLight.Image = Global.Scanning.My.Resources.Resources.bulbLit
+        Me.bedroomLight.Location = New System.Drawing.Point(5, 12)
+        Me.bedroomLight.Name = "bedroomLight"
+        Me.bedroomLight.Size = New System.Drawing.Size(71, 53)
+        Me.bedroomLight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.bedroomLight.TabIndex = 38
+        Me.bedroomLight.TabStop = False
+        '
+        'bathroomLight
+        '
+        Me.bathroomLight.BackColor = System.Drawing.Color.Transparent
+        Me.bathroomLight.Image = Global.Scanning.My.Resources.Resources.bulbUnlit
+        Me.bathroomLight.Location = New System.Drawing.Point(5, 12)
+        Me.bathroomLight.Name = "bathroomLight"
+        Me.bathroomLight.Size = New System.Drawing.Size(71, 53)
+        Me.bathroomLight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.bathroomLight.TabIndex = 39
+        Me.bathroomLight.TabStop = False
+        '
+        'bedroomFan
+        '
+        Me.bedroomFan.BackColor = System.Drawing.Color.Transparent
+        Me.bedroomFan.Image = Global.Scanning.My.Resources.Resources.fanOff
+        Me.bedroomFan.Location = New System.Drawing.Point(5, 67)
+        Me.bedroomFan.Name = "bedroomFan"
+        Me.bedroomFan.Size = New System.Drawing.Size(71, 53)
+        Me.bedroomFan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.bedroomFan.TabIndex = 40
+        Me.bedroomFan.TabStop = False
+        '
+        'bathroomFan
+        '
+        Me.bathroomFan.BackColor = System.Drawing.Color.Transparent
+        Me.bathroomFan.Image = Global.Scanning.My.Resources.Resources.fanOff
+        Me.bathroomFan.Location = New System.Drawing.Point(5, 67)
+        Me.bathroomFan.Name = "bathroomFan"
+        Me.bathroomFan.Size = New System.Drawing.Size(71, 53)
+        Me.bathroomFan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.bathroomFan.TabIndex = 41
+        Me.bathroomFan.TabStop = False
+        '
+        'kitchenFan
+        '
+        Me.kitchenFan.BackColor = System.Drawing.Color.Transparent
+        Me.kitchenFan.Image = Global.Scanning.My.Resources.Resources.fanOff
+        Me.kitchenFan.Location = New System.Drawing.Point(5, 67)
+        Me.kitchenFan.Name = "kitchenFan"
+        Me.kitchenFan.Size = New System.Drawing.Size(71, 53)
+        Me.kitchenFan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.kitchenFan.TabIndex = 42
+        Me.kitchenFan.TabStop = False
+        '
+        'livingroomFan
+        '
+        Me.livingroomFan.BackColor = System.Drawing.Color.Transparent
+        Me.livingroomFan.Image = Global.Scanning.My.Resources.Resources.fanOff
+        Me.livingroomFan.Location = New System.Drawing.Point(5, 67)
+        Me.livingroomFan.Name = "livingroomFan"
+        Me.livingroomFan.Size = New System.Drawing.Size(71, 53)
+        Me.livingroomFan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomFan.TabIndex = 43
+        Me.livingroomFan.TabStop = False
+        '
         'UserApartment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.livingroomFan)
+        Me.Controls.Add(Me.kitchenFan)
+        Me.Controls.Add(Me.bathroomFan)
+        Me.Controls.Add(Me.bedroomFan)
+        Me.Controls.Add(Me.bathroomLight)
+        Me.Controls.Add(Me.bedroomLight)
+        Me.Controls.Add(Me.kitchenLight)
+        Me.Controls.Add(Me.livingroomLight)
         Me.Controls.Add(Me.MainTaskBar)
         Me.Controls.Add(Me.LivingroomDoor)
         Me.Controls.Add(Me.BathroomDoor)
@@ -290,6 +402,14 @@ Partial Class UserApartment
         CType(Me.Bedroom, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingRoom, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Kitchen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomLight, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.kitchenLight, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bedroomLight, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bathroomLight, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bedroomFan, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bathroomFan, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.kitchenFan, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomFan, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -311,4 +431,12 @@ Partial Class UserApartment
     Friend WithEvents BathroomDoor As SubOptions
     Friend WithEvents LivingroomDoor As SubOptions
     Friend WithEvents MainTaskBar As MainTaskBar
+    Friend WithEvents livingroomLight As PictureBox
+    Friend WithEvents kitchenLight As PictureBox
+    Friend WithEvents bedroomLight As PictureBox
+    Friend WithEvents bathroomLight As PictureBox
+    Friend WithEvents bedroomFan As PictureBox
+    Friend WithEvents bathroomFan As PictureBox
+    Friend WithEvents kitchenFan As PictureBox
+    Friend WithEvents livingroomFan As PictureBox
 End Class

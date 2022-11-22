@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Bedroom
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -24,6 +24,8 @@ Partial Class Bedroom
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.MainTaskBar = New Scanning.MainTaskBar()
         Me.LightControl = New Scanning.SubOptions()
         Me.EnvControl = New Scanning.SubOptions()
         Me.Bed = New Scanning.SubOptions()
@@ -31,8 +33,8 @@ Partial Class Bedroom
         Me.BedroomWindow2 = New Scanning.SubOptions()
         Me.BedroomWindow1 = New Scanning.SubOptions()
         Me.BedroomDoor = New Scanning.SubOptions()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.MainTaskBar = New Scanning.MainTaskBar()
+        Me.SubOptions1 = New Scanning.SubOptions()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LightControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnvControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bed, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -40,22 +42,40 @@ Partial Class Bedroom
         CType(Me.BedroomWindow2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SubOptions1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ScanningTimer
         '
         Me.ScanningTimer.Interval = 1000
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.PictureBox1.Location = New System.Drawing.Point(31, 21)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(739, 417)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'MainTaskBar
+        '
+        Me.MainTaskBar.Location = New System.Drawing.Point(93, 457)
+        Me.MainTaskBar.Name = "MainTaskBar"
+        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
+        Me.MainTaskBar.TabIndex = 54
+        '
         'LightControl
         '
         Me.LightControl.BackColor = System.Drawing.SystemColors.Control
         Me.LightControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LightControl.Image = Global.Scanning.My.Resources.Resources.bulb
-        Me.LightControl.Location = New System.Drawing.Point(339, 160)
+        Me.LightControl.Image = Global.Scanning.My.Resources.Resources.bulbLit
+        Me.LightControl.Location = New System.Drawing.Point(283, 153)
         Me.LightControl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.LightControl.Name = "LightControl"
-        Me.LightControl.Size = New System.Drawing.Size(149, 139)
+        Me.LightControl.Size = New System.Drawing.Size(149, 113)
+        Me.LightControl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.LightControl.TabIndex = 53
         Me.LightControl.TabStop = False
         Me.LightControl.Tag = ""
@@ -65,7 +85,7 @@ Partial Class Bedroom
         Me.EnvControl.BackColor = System.Drawing.SystemColors.Control
         Me.EnvControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.EnvControl.Image = Global.Scanning.My.Resources.Resources.thermometer
-        Me.EnvControl.Location = New System.Drawing.Point(579, 160)
+        Me.EnvControl.Location = New System.Drawing.Point(597, 153)
         Me.EnvControl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.EnvControl.Name = "EnvControl"
         Me.EnvControl.Size = New System.Drawing.Size(135, 139)
@@ -82,6 +102,7 @@ Partial Class Bedroom
         Me.Bed.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Bed.Name = "Bed"
         Me.Bed.Size = New System.Drawing.Size(217, 152)
+        Me.Bed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Bed.TabIndex = 51
         Me.Bed.TabStop = False
         Me.Bed.Tag = ""
@@ -133,28 +154,26 @@ Partial Class Bedroom
         Me.BedroomDoor.TabIndex = 47
         Me.BedroomDoor.TabStop = False
         '
-        'PictureBox1
+        'SubOptions1
         '
-        Me.PictureBox1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.PictureBox1.Location = New System.Drawing.Point(31, 21)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(739, 417)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'MainTaskBar
-        '
-        Me.MainTaskBar.Location = New System.Drawing.Point(93, 457)
-        Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
-        Me.MainTaskBar.TabIndex = 54
+        Me.SubOptions1.BackColor = System.Drawing.SystemColors.Control
+        Me.SubOptions1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.SubOptions1.Image = Global.Scanning.My.Resources.Resources.fanOff
+        Me.SubOptions1.Location = New System.Drawing.Point(442, 153)
+        Me.SubOptions1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.SubOptions1.Name = "SubOptions1"
+        Me.SubOptions1.Size = New System.Drawing.Size(149, 113)
+        Me.SubOptions1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.SubOptions1.TabIndex = 55
+        Me.SubOptions1.TabStop = False
+        Me.SubOptions1.Tag = ""
         '
         'Bedroom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.SubOptions1)
         Me.Controls.Add(Me.MainTaskBar)
         Me.Controls.Add(Me.LightControl)
         Me.Controls.Add(Me.EnvControl)
@@ -164,10 +183,11 @@ Partial Class Bedroom
         Me.Controls.Add(Me.BedroomWindow1)
         Me.Controls.Add(Me.BedroomDoor)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Bedroom"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Bedroom"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LightControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnvControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Bed, System.ComponentModel.ISupportInitialize).EndInit()
@@ -175,7 +195,7 @@ Partial Class Bedroom
         CType(Me.BedroomWindow2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomWindow1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SubOptions1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -190,4 +210,5 @@ Partial Class Bedroom
     Friend WithEvents LightControl As SubOptions
     Friend WithEvents ScanningTimer As Timer
     Friend WithEvents MainTaskBar As MainTaskBar
+    Friend WithEvents SubOptions1 As SubOptions
 End Class
