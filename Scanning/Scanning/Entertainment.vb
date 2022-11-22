@@ -11,12 +11,12 @@ Public Class Entertainment
 
     Private shuffleOptions(3) As SubOptions
     Private playPauseAudioOptions(3) As SubOptions
-    Private playPauseMovieOptions(3) As SubOptions
-    Private playPauseTVOptions(5) As SubOptions
+    Private playPauseVisualOptions(5) As SubOptions
 
     Private musicGroup(7) As SubOptions
     Private audioGroup(5) As SubOptions
-    Private movieGroup(5) As SubOptions
+    Private movieGroup(7) As SubOptions
+    Private tvGroup(10) As SubOptions
 
     Private scanninglevel1 As SubOptions
     Private MyParent As UserApartment
@@ -67,11 +67,24 @@ Public Class Entertainment
         movieOptions(0) = Netflix
         movieOptions(1) = Hulu
         movieOptions(2) = Amazon
-        movieOptions(3) = skipBack
+        movieOptions(3) = prevVideo
         movieOptions(4) = MainTaskBar.Back
 
         For i = 0 To 3
             movieOptions(i).Initialize()
+        Next
+
+        tvOptions(0) = Netflix
+        tvOptions(1) = Hulu
+        tvOptions(2) = Amazon
+        tvOptions(3) = liveVideo
+        tvOptions(4) = streamVideo
+        tvOptions(5) = recordedVideo
+        tvOptions(6) = prevVideo
+        tvOptions(7) = MainTaskBar.Back
+
+        For i = 3 To 5
+            tvOptions(i).Initialize()
         Next
 
         volumeOptions(0) = volumeUp
@@ -105,12 +118,16 @@ Public Class Entertainment
             playPauseAudioOptions(i).Initialize()
         Next
 
-        playPauseMovieOptions(0) = skipBack
-        playPauseMovieOptions(1) = play
-        playPauseMovieOptions(2) = skipForward
-        playPauseMovieOptions(3) = MainTaskBar.Back
+        playPauseVisualOptions(0) = prevVideo
+        playPauseVisualOptions(1) = skipBack
+        playPauseVisualOptions(2) = play
+        playPauseVisualOptions(3) = skipForward
+        playPauseVisualOptions(4) = nextVideo
+        playPauseVisualOptions(5) = MainTaskBar.Back
 
-        skipForward.Initialize()
+        For i = 1 To 4
+            playPauseVisualOptions(i).Initialize()
+        Next
 
         '
         'create media groups
@@ -135,9 +152,23 @@ Public Class Entertainment
         movieGroup(0) = Netflix
         movieGroup(1) = Hulu
         movieGroup(2) = Amazon
-        movieGroup(3) = skipBack
-        movieGroup(4) = play
-        movieGroup(5) = skipForward
+        movieGroup(3) = prevVideo
+        movieGroup(4) = skipBack
+        movieGroup(5) = play
+        movieGroup(6) = skipForward
+        movieGroup(7) = nextVideo
+
+        tvGroup(0) = Netflix
+        tvGroup(1) = Hulu
+        tvGroup(2) = Amazon
+        tvGroup(3) = liveVideo
+        tvGroup(4) = streamVideo
+        tvGroup(5) = recordedVideo
+        tvGroup(6) = prevVideo
+        tvGroup(7) = skipBack
+        tvGroup(8) = play
+        tvGroup(9) = skipForward
+        tvGroup(10) = nextVideo
 
         '
         'assign parent form
@@ -205,7 +236,7 @@ Public Class Entertainment
         End If
     End Sub
 
-    Private Sub InnerComponents_ColorChanged(sender As Object, e As EventArgs) Handles goBack.BackColorChanged, shuffle.BackColorChanged, skipBack.BackColorChanged
+    Private Sub goBack_ColorChanged(sender As Object, e As EventArgs) Handles goBack.BackColorChanged
         If scanninglevel = 1 And ScanningTimer.Enabled Then
             If goBack.BackColor.Equals(Color.LemonChiffon) Then
                 For i = 1 To playPauseAudioOptions.Length - 2
@@ -216,7 +247,11 @@ Public Class Entertainment
                     playPauseAudioOptions(i).LoseFocus()
                 Next
             End If
+        End If
+    End Sub
 
+    Private Sub shuffle_ColorChanged(sender As Object, e As EventArgs) Handles shuffle.BackColorChanged
+        If scanninglevel = 1 And ScanningTimer.Enabled Then
             If shuffle.BackColor.Equals(Color.LemonChiffon) Then
                 For i = 1 To shuffleOptions.Length - 2
                     shuffleOptions(i).ReceiveFocus()
@@ -226,17 +261,20 @@ Public Class Entertainment
                     shuffleOptions(i).LoseFocus()
                 Next
             End If
+        End If
+    End Sub
 
-            If skipBack.BackColor.Equals(Color.LemonChiffon) Then
-                For i = 1 To playPauseMovieOptions.Length - 2
-                    playPauseMovieOptions(i).ReceiveFocus()
+    Private Sub prevVideok_ColorChanged(sender As Object, e As EventArgs) Handles prevVideo.BackColorChanged
+        If scanninglevel = 1 And ScanningTimer.Enabled Then
+            If prevVideo.BackColor.Equals(Color.LemonChiffon) Then
+                For i = 1 To playPauseVisualOptions.Length - 2
+                    playPauseVisualOptions(i).ReceiveFocus()
                 Next
             Else
-                For i = 1 To playPauseMovieOptions.Length - 2
-                    playPauseMovieOptions(i).LoseFocus()
+                For i = 1 To playPauseVisualOptions.Length - 2
+                    playPauseVisualOptions(i).LoseFocus()
                 Next
             End If
-
         End If
     End Sub
 
@@ -280,14 +318,24 @@ Public Class Entertainment
                         currentlyShowing(i).Hide()
                     Next
                 End If
-                For i = 0 To 5
+                For i = 0 To 7
                     movieGroup(i).Show()
                 Next
                 currentlyShowing = movieGroup
                 mediaOptions(focusIsOn).MenuBar = True
                 mediaOptions(focusIsOn).StartInnerScanning(movieOptions)
             ElseIf focusIsOn = 3 Then
-
+                If currentlyShowing IsNot Nothing Then
+                    For i = 0 To currentlyShowing.Length - 1
+                        currentlyShowing(i).Hide()
+                    Next
+                End If
+                For i = 0 To 10
+                    tvGroup(i).Show()
+                Next
+                currentlyShowing = tvGroup
+                mediaOptions(focusIsOn).MenuBar = True
+                mediaOptions(focusIsOn).StartInnerScanning(tvOptions)
             ElseIf focusIsOn = 4 Then
                 mediaOptions(focusIsOn).MenuBar = True
                 mediaOptions(focusIsOn).StartInnerScanning(volumeOptions)
@@ -307,11 +355,11 @@ Public Class Entertainment
                 shuffle.MenuBar = True
                 shuffle.StartInnerScanning(shuffleOptions)
                 scanninglevel1 = shuffle
-            ElseIf skipBack.BackColor = Color.LemonChiffon Then
+            ElseIf prevVideo.BackColor = Color.LemonChiffon Then
                 scanninglevel = 2
-                skipBack.MenuBar = True
-                skipBack.StartInnerScanning(playPauseMovieOptions)
-                scanninglevel1 = skipBack
+                prevVideo.MenuBar = True
+                prevVideo.StartInnerScanning(playPauseVisualOptions)
+                scanninglevel1 = prevVideo
             ElseIf MainTaskBar.Back.BackColor = Color.LemonChiffon Then
                 If focusIsOn = 5 Then
                     MainTaskBar.MenuBarOption.StopInnerScanning()
@@ -321,7 +369,7 @@ Public Class Entertainment
                     scanninglevel = 0
                 End If
             ElseIf MainTaskBar.Assistance.BackColor = Color.LemonChiffon Then
-                Dim Assistance As New assistance(Me)
+                Dim Assistance As New Assistance(Me)
                 StopScanning()
                 MainTaskBar.MenuBarOption.StopInnerScanning()
                 Assistance.Show()

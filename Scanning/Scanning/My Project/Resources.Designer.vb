@@ -282,9 +282,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property live__1_() As System.Drawing.Bitmap
+        Friend ReadOnly Property live() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("live__1_", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("live", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -332,16 +332,6 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property mp4__1_() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("mp4__1_", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property music() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("music", resourceCulture)
@@ -375,6 +365,16 @@ Namespace My.Resources
         Friend ReadOnly Property netflix() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("netflix", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property nextVideo() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("nextVideo", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -422,6 +422,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property previousVideo() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("previousVideo", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property prime() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("prime", resourceCulture)
@@ -445,6 +455,16 @@ Namespace My.Resources
         Friend ReadOnly Property radio() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("radio", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property recordedVideo() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("recordedVideo", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -522,26 +542,6 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property Skip_next() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Skip_next", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property Skip_prev() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("Skip_prev", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
         Friend ReadOnly Property skipBack() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("skipBack", resourceCulture)
@@ -562,9 +562,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property streamed() As System.Drawing.Bitmap
+        Friend ReadOnly Property stream() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("streamed", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("stream", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

@@ -24,7 +24,13 @@ Partial Class Entertainment
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.MainTaskBar = New Scanning.MainTaskBar()
+        Me.volumeMenu = New System.Windows.Forms.PictureBox()
+        Me.entertainmentBackground = New System.Windows.Forms.PictureBox()
+        Me.streamVideo = New Scanning.SubOptions()
+        Me.recordedVideo = New Scanning.SubOptions()
+        Me.liveVideo = New Scanning.SubOptions()
+        Me.prevVideo = New Scanning.SubOptions()
+        Me.nextVideo = New Scanning.SubOptions()
         Me.skipBack = New Scanning.SubOptions()
         Me.skipForward = New Scanning.SubOptions()
         Me.Netflix = New Scanning.SubOptions()
@@ -50,9 +56,15 @@ Partial Class Entertainment
         Me.movieOption = New Scanning.SubOptions()
         Me.musicOption = New Scanning.SubOptions()
         Me.entertainmentMenu = New Scanning.SubOptions()
-        Me.volumeMenu = New System.Windows.Forms.PictureBox()
+        Me.MainTaskBar = New Scanning.MainTaskBar()
         Me.mainMenu = New Scanning.SubOptions()
-        Me.entertainmentBackground = New System.Windows.Forms.PictureBox()
+        CType(Me.volumeMenu, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.entertainmentBackground, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.streamVideo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.recordedVideo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.liveVideo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.prevVideo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nextVideo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.skipBack, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.skipForward, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Netflix, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,21 +90,92 @@ Partial Class Entertainment
         CType(Me.movieOption, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.musicOption, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.entertainmentMenu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.volumeMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.mainMenu, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.entertainmentBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ScanningTimer
         '
         Me.ScanningTimer.Interval = 1000
         '
-        'MainTaskBar
+        'volumeMenu
         '
-        Me.MainTaskBar.Location = New System.Drawing.Point(161, 554)
-        Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
-        Me.MainTaskBar.TabIndex = 19
+        Me.volumeMenu.BackColor = System.Drawing.Color.DarkSlateBlue
+        Me.volumeMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.volumeMenu.Location = New System.Drawing.Point(594, 159)
+        Me.volumeMenu.Name = "volumeMenu"
+        Me.volumeMenu.Size = New System.Drawing.Size(124, 367)
+        Me.volumeMenu.TabIndex = 29
+        Me.volumeMenu.TabStop = False
+        '
+        'entertainmentBackground
+        '
+        Me.entertainmentBackground.BackColor = System.Drawing.Color.Thistle
+        Me.entertainmentBackground.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.entertainmentBackground.Location = New System.Drawing.Point(12, 12)
+        Me.entertainmentBackground.Name = "entertainmentBackground"
+        Me.entertainmentBackground.Size = New System.Drawing.Size(826, 527)
+        Me.entertainmentBackground.TabIndex = 18
+        Me.entertainmentBackground.TabStop = False
+        '
+        'streamVideo
+        '
+        Me.streamVideo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.streamVideo.Image = Global.Scanning.My.Resources.Resources.stream
+        Me.streamVideo.Location = New System.Drawing.Point(289, 307)
+        Me.streamVideo.Name = "streamVideo"
+        Me.streamVideo.Size = New System.Drawing.Size(131, 90)
+        Me.streamVideo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.streamVideo.TabIndex = 54
+        Me.streamVideo.TabStop = False
+        Me.streamVideo.Visible = False
+        '
+        'recordedVideo
+        '
+        Me.recordedVideo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.recordedVideo.Image = Global.Scanning.My.Resources.Resources.recordedVideo
+        Me.recordedVideo.Location = New System.Drawing.Point(441, 307)
+        Me.recordedVideo.Name = "recordedVideo"
+        Me.recordedVideo.Size = New System.Drawing.Size(129, 90)
+        Me.recordedVideo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.recordedVideo.TabIndex = 53
+        Me.recordedVideo.TabStop = False
+        Me.recordedVideo.Visible = False
+        '
+        'liveVideo
+        '
+        Me.liveVideo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.liveVideo.Image = Global.Scanning.My.Resources.Resources.live
+        Me.liveVideo.Location = New System.Drawing.Point(136, 307)
+        Me.liveVideo.Name = "liveVideo"
+        Me.liveVideo.Size = New System.Drawing.Size(131, 90)
+        Me.liveVideo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.liveVideo.TabIndex = 52
+        Me.liveVideo.TabStop = False
+        Me.liveVideo.Visible = False
+        '
+        'prevVideo
+        '
+        Me.prevVideo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.prevVideo.Image = Global.Scanning.My.Resources.Resources.previousVideo
+        Me.prevVideo.Location = New System.Drawing.Point(136, 441)
+        Me.prevVideo.Name = "prevVideo"
+        Me.prevVideo.Size = New System.Drawing.Size(70, 70)
+        Me.prevVideo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.prevVideo.TabIndex = 51
+        Me.prevVideo.TabStop = False
+        Me.prevVideo.Visible = False
+        '
+        'nextVideo
+        '
+        Me.nextVideo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.nextVideo.Image = Global.Scanning.My.Resources.Resources.nextVideo
+        Me.nextVideo.Location = New System.Drawing.Point(500, 441)
+        Me.nextVideo.Name = "nextVideo"
+        Me.nextVideo.Size = New System.Drawing.Size(70, 70)
+        Me.nextVideo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.nextVideo.TabIndex = 50
+        Me.nextVideo.TabStop = False
+        Me.nextVideo.Visible = False
         '
         'skipBack
         '
@@ -388,15 +471,12 @@ Partial Class Entertainment
         Me.entertainmentMenu.TabIndex = 20
         Me.entertainmentMenu.TabStop = False
         '
-        'volumeMenu
+        'MainTaskBar
         '
-        Me.volumeMenu.BackColor = System.Drawing.Color.DarkSlateBlue
-        Me.volumeMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.volumeMenu.Location = New System.Drawing.Point(594, 159)
-        Me.volumeMenu.Name = "volumeMenu"
-        Me.volumeMenu.Size = New System.Drawing.Size(124, 367)
-        Me.volumeMenu.TabIndex = 29
-        Me.volumeMenu.TabStop = False
+        Me.MainTaskBar.Location = New System.Drawing.Point(161, 554)
+        Me.MainTaskBar.Name = "MainTaskBar"
+        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
+        Me.MainTaskBar.TabIndex = 19
         '
         'mainMenu
         '
@@ -407,21 +487,16 @@ Partial Class Entertainment
         Me.mainMenu.TabIndex = 41
         Me.mainMenu.TabStop = False
         '
-        'entertainmentBackground
-        '
-        Me.entertainmentBackground.BackColor = System.Drawing.Color.Thistle
-        Me.entertainmentBackground.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.entertainmentBackground.Location = New System.Drawing.Point(12, 12)
-        Me.entertainmentBackground.Name = "entertainmentBackground"
-        Me.entertainmentBackground.Size = New System.Drawing.Size(826, 527)
-        Me.entertainmentBackground.TabIndex = 18
-        Me.entertainmentBackground.TabStop = False
-        '
         'Entertainment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.streamVideo)
+        Me.Controls.Add(Me.recordedVideo)
+        Me.Controls.Add(Me.liveVideo)
+        Me.Controls.Add(Me.prevVideo)
+        Me.Controls.Add(Me.nextVideo)
         Me.Controls.Add(Me.skipBack)
         Me.Controls.Add(Me.skipForward)
         Me.Controls.Add(Me.Netflix)
@@ -455,6 +530,13 @@ Partial Class Entertainment
         Me.Name = "Entertainment"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Entertainment"
+        CType(Me.volumeMenu, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.entertainmentBackground, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.streamVideo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.recordedVideo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.liveVideo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.prevVideo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nextVideo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.skipBack, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.skipForward, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Netflix, System.ComponentModel.ISupportInitialize).EndInit()
@@ -480,9 +562,7 @@ Partial Class Entertainment
         CType(Me.movieOption, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.musicOption, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.entertainmentMenu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.volumeMenu, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.mainMenu, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.entertainmentBackground, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -517,4 +597,9 @@ Partial Class Entertainment
     Friend WithEvents Netflix As SubOptions
     Friend WithEvents skipForward As SubOptions
     Friend WithEvents skipBack As SubOptions
+    Friend WithEvents nextVideo As SubOptions
+    Friend WithEvents prevVideo As SubOptions
+    Friend WithEvents liveVideo As SubOptions
+    Friend WithEvents recordedVideo As SubOptions
+    Friend WithEvents streamVideo As SubOptions
 End Class

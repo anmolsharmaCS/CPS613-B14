@@ -95,16 +95,10 @@
     <Compile Include="FloorHallways.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="entertainmentSystem.Designer.vb">
-      <DependentUpon>entertainmentSystem.vb</DependentUpon>
+    <Compile Include="Assistance.Designer.vb">
+      <DependentUpon>Assistance.vb</DependentUpon>
     </Compile>
-    <Compile Include="entertainmentSystem.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="assistance.Designer.vb">
-      <DependentUpon>assistance.vb</DependentUpon>
-    </Compile>
-    <Compile Include="assistance.vb">
+    <Compile Include="Assistance.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Kitchen.Designer.vb">
@@ -174,11 +168,8 @@
     <EmbeddedResource Include="FloorHallways.resx">
       <DependentUpon>FloorHallways.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="entertainmentSystem.resx">
-      <DependentUpon>entertainmentSystem.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="assistance.resx">
-      <DependentUpon>assistance.vb</DependentUpon>
+    <EmbeddedResource Include="Assistance.resx">
+      <DependentUpon>Assistance.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
@@ -492,6 +483,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\prime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\previousVideo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\nextVideo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\stream.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\recordedVideo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\live.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

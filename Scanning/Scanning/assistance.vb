@@ -1,7 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports System.Reflection.Emit
 Imports System.Threading
-Public Class assistance
+Public Class Assistance
     Private Options(8) As SubOptions
 
     Private MyParentHall As FloorHallways
