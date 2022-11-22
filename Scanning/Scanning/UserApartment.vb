@@ -2,10 +2,11 @@
 
 Public Class UserApartment
 
-    Private TopOptions(3) As SubOptions
+    Private TopOptions(4) As SubOptions
     Private Rooms(4) As SubOptions
     Private Windows(6) As SubOptions
     Private Doors(5) As SubOptions
+    Private temperature(2) As SubOptions
 
     Private livingroomForm As New Livingroom(Me)
     Private bedroomForm As New Bedroom(Me)
@@ -24,8 +25,9 @@ Public Class UserApartment
         TopOptions(1) = LivingRoom
         TopOptions(2) = LivingroomWindow1
         TopOptions(3) = FrontDoor
+        TopOptions(4) = tempOption
 
-        For i = 0 To 3
+        For i = 0 To 4
             TopOptions(i).Initialize()
         Next
 
@@ -49,6 +51,14 @@ Public Class UserApartment
 
         For i = 0 To 6
             Windows(i).Initialize()
+        Next
+
+        temperature(0) = upArrow
+        temperature(1) = downArrow
+        temperature(2) = MainTaskBar.Back
+
+        For i = 0 To 1
+            temperature(i).Initialize()
         Next
 
         Doors(0) = FrontDoor
@@ -125,7 +135,7 @@ Public Class UserApartment
     Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles ScanningTimer.Tick
         If scanninglevel = 0 Then
             TopOptions(focusIsOn).LoseFocus()
-            focusIsOn = (focusIsOn + 1) Mod 4
+            focusIsOn = (focusIsOn + 1) Mod 5
             TopOptions(focusIsOn).ReceiveFocus()
         ElseIf focusIsOn = 2 Then
             Me.WindowMenu.MenuBarOption.InnerScanningNext()
@@ -195,6 +205,9 @@ Public Class UserApartment
             ElseIf focusIsOn = 3 Then
                 TopOptions(focusIsOn).includeAllOptions = True
                 TopOptions(focusIsOn).StartInnerScanning(Doors)
+            ElseIf focusIsOn = 4 Then
+                tempOption.LoseFocus()
+                TopOptions(focusIsOn).StartInnerScanning(temperature)
             End If
         ElseIf focusIsOn = 2 Then
             If MainTaskBar.Back.BackColor = Color.LemonChiffon Then
@@ -214,7 +227,7 @@ Public Class UserApartment
                 Me.WindowMenu.OpenBlinds.BorderStyle = BorderStyle.Fixed3D
                 Me.WindowMenu.CloseBlinds.BorderStyle = BorderStyle.None
             End If
-        Else
+        ElseIf scanninglevel = 1 Then
             If LivingRoom.BackColor = Color.LemonChiffon Then
                 StopScanning()
                 livingroomForm.Show()
@@ -239,6 +252,8 @@ Public Class UserApartment
                     TopOptions(focusIsOn).StopInnerScanning()
                     scanninglevel = 0
                 End If
+            ElseIf upArrow.BackColor = Color.LemonChiffon Then
+
             ElseIf MainTaskBar.Assistance.BackColor = Color.LemonChiffon Then
                 Dim Assistance As New Assistance(Me)
                 StopScanning()

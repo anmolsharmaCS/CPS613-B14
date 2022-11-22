@@ -580,6 +580,15 @@
   <ItemGroup>
     <None Include="My Project\bedUp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\uparrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\downarrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\temp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

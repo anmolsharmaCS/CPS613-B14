@@ -262,6 +262,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property downarrow() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("downarrow", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property ent() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("ent", resourceCulture)
@@ -672,6 +682,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property temp() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("temp", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property thermometer() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("thermometer", resourceCulture)
@@ -745,6 +765,16 @@ Namespace My.Resources
         Friend ReadOnly Property tvshow() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("tvshow", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property uparrow() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("uparrow", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

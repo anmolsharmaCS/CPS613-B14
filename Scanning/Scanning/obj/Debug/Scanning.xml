@@ -122,6 +122,11 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.downarrow">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.ent">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -327,6 +332,11 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.temp">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.thermometer">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -363,6 +373,11 @@ Scanning
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.tvshow">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.uparrow">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
