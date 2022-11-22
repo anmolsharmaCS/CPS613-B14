@@ -192,7 +192,7 @@ Public Class Livingroom
         End If
     End Sub
 
-    Private Sub UserApartment_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+    Private Sub Livingroom_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         MyParent.ResumeScanning()
     End Sub
 

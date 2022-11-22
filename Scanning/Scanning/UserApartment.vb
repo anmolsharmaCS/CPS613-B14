@@ -9,7 +9,7 @@ Public Class UserApartment
 
     Private livingroomForm As New Livingroom(Me)
     Private bedroomForm As New Bedroom(Me)
-    Private kitchenForm As New Kitchen()
+    Private kitchenForm As New Kitchen(Me)
     Private bathroomForm As New Bathroom()
 
     Private MyParent As FloorHallways
@@ -201,7 +201,7 @@ Public Class UserApartment
             ElseIf Kitchen.BackColor = Color.LemonChiffon Then
                 StopScanning()
                 kitchenForm.Show()
-                'kitchenForm.StartScanning()
+                kitchenForm.StartScanning()
             ElseIf Bathroom.BackColor = Color.LemonChiffon Then
                 StopScanning()
                 bathroomForm.Show()
