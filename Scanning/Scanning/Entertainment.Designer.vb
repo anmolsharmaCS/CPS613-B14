@@ -499,6 +499,7 @@ Partial Class Entertainment
         Me.tvPower.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.tvPower.TabIndex = 55
         Me.tvPower.TabStop = False
+        Me.tvPower.Tag = "off"
         '
         'Entertainment
         '

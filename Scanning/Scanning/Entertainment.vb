@@ -228,7 +228,7 @@ Public Class Entertainment
     Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles ScanningTimer.Tick
         If scanninglevel = 0 Then
             mediaOptions(focusIsOn).LoseFocus()
-            focusIsOn = (focusIsOn + 1) Mod 6
+            focusIsOn = (focusIsOn + 1) Mod 7
             mediaOptions(focusIsOn).ReceiveFocus()
         ElseIf scanninglevel = 1 Then
             mediaOptions(focusIsOn).InnerScanningNext()

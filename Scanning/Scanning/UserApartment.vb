@@ -123,11 +123,9 @@ Public Class UserApartment
         Me.Focus()
     End Sub
 
-    ' Resume scanning on the same submenu where you stopped
-    ' to restrat scanning at the beginning, use StartScanning
     Public Sub ResumeScanning()
         scanninglevel = 0
-        focusIsOn = (focusIsOn + 1) Mod 3
+        focusIsOn = 0
         TopOptions(focusIsOn).ReceiveFocus()
         ScanningTimer.Start()
     End Sub
