@@ -7,7 +7,7 @@ Public Class UserApartment
     Private Doors(5) As SubOptions
 
     Private ent As New Entertainment(Me)
-    Private bedroomForm As New Bedroom()
+    Private bedroomForm As New Bedroom(Me)
     Private kitchenForm As New Kitchen()
     Private bathroomForm As New Bathroom()
 
@@ -154,12 +154,15 @@ Public Class UserApartment
             ElseIf focusIsOn = 1 Then
                 StopScanning()
                 bedroomForm.Show()
+                bedroomForm.StartScanning()
             ElseIf focusIsOn = 2 Then
                 StopScanning()
                 kitchenForm.Show()
+                'kitchenForm.StartScanning()
             ElseIf focusIsOn = 3 Then
                 StopScanning()
                 bathroomForm.Show()
+                'bathroomForm.StartScanning()
             ElseIf focusIsOn = 4 Then
                 TopOptions(focusIsOn).includeAllOptions = True
                 TopOptions(focusIsOn).StartInnerScanning(Windows)

@@ -22,9 +22,43 @@ Partial Class Kitchen
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.MainTaskBar1 = New Scanning.MainTaskBar()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.PictureBox1.Location = New System.Drawing.Point(13, 13)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(739, 417)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'MainTaskBar1
+        '
+        Me.MainTaskBar1.Location = New System.Drawing.Point(75, 437)
+        Me.MainTaskBar1.Name = "MainTaskBar1"
+        Me.MainTaskBar1.Size = New System.Drawing.Size(677, 132)
+        Me.MainTaskBar1.TabIndex = 2
+        '
+        'Kitchen
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.MainTaskBar1)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Name = "Kitchen"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "KitchenForm"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+
     End Sub
+
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents MainTaskBar1 As MainTaskBar
 End Class

@@ -160,8 +160,7 @@ Public Class FloorHallways
             ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
                 StopScanning()
                 MainTaskBar.PreviousScreen.LoseFocus()
-                Hide()
-                MyParent.ResumeScanning()
+                Close()
             ElseIf Apartment02.BackColor = Color.LemonChiffon And Label2.Text = "402" Then
                 Apartment02.LoseFocus()
                 StopScanning()

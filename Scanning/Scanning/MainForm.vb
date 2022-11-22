@@ -1,7 +1,6 @@
 ﻿Public Class MainForm
 
     Private Options(4) As SubOptions
-    Private Floor As New FloorHallways(focusIsOn, Me)
 
     Public Sub New()
 
@@ -85,7 +84,7 @@
 
     ' When the user selects a submenu, start scanning within that submenu
     Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
-
+        Dim Floor As New FloorHallways(focusIsOn, Me)
         If focusIsOn = 0 Then
             StopScanning()
             ' This is also temporary, will likely implement all screens in one form in final product rather than using separate forms

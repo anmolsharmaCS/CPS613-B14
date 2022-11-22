@@ -178,7 +178,7 @@ Public Class Entertainment
 
     End Sub
 
-    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub Entertainment_Load(sender As Object, e As EventArgs) Handles Me.Load
         MainTaskBar.PreviousScreen.Image = My.Resources.apartmentButton
     End Sub
 
@@ -285,7 +285,7 @@ Public Class Entertainment
     Private currentlyShowing As SubOptions()
 
     ' When the user selects a submenu, start scanning within that submenu
-    Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
+    Private Sub Entertainment_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
         If scanninglevel = 0 Then
             scanninglevel = 1
             If focusIsOn = 0 Then

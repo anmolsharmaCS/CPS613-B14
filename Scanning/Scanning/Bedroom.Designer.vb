@@ -23,7 +23,7 @@ Partial Class Bedroom
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.MainTaskBar = New Scanning.MainTaskBar()
+        Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
         Me.LightControl = New Scanning.SubOptions()
         Me.EnvControl = New Scanning.SubOptions()
         Me.Bed = New Scanning.SubOptions()
@@ -32,7 +32,7 @@ Partial Class Bedroom
         Me.BedroomWindow1 = New Scanning.SubOptions()
         Me.BedroomDoor = New Scanning.SubOptions()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.MainTaskBar = New Scanning.MainTaskBar()
         CType(Me.LightControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EnvControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bed, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -43,23 +43,19 @@ Partial Class Bedroom
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'MainTaskBar
+        'ScanningTimer
         '
-        Me.MainTaskBar.Location = New System.Drawing.Point(172, 361)
-        Me.MainTaskBar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(405, 107)
-        Me.MainTaskBar.TabIndex = 46
+        Me.ScanningTimer.Interval = 1000
         '
         'LightControl
         '
         Me.LightControl.BackColor = System.Drawing.SystemColors.Control
         Me.LightControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LightControl.Image = Global.Scanning.My.Resources.Resources.bulb
-        Me.LightControl.Location = New System.Drawing.Point(254, 130)
-        Me.LightControl.Margin = New System.Windows.Forms.Padding(2)
+        Me.LightControl.Location = New System.Drawing.Point(339, 160)
+        Me.LightControl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.LightControl.Name = "LightControl"
-        Me.LightControl.Size = New System.Drawing.Size(112, 113)
+        Me.LightControl.Size = New System.Drawing.Size(149, 139)
         Me.LightControl.TabIndex = 53
         Me.LightControl.TabStop = False
         Me.LightControl.Tag = ""
@@ -69,10 +65,10 @@ Partial Class Bedroom
         Me.EnvControl.BackColor = System.Drawing.SystemColors.Control
         Me.EnvControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.EnvControl.Image = Global.Scanning.My.Resources.Resources.thermometer
-        Me.EnvControl.Location = New System.Drawing.Point(434, 130)
-        Me.EnvControl.Margin = New System.Windows.Forms.Padding(2)
+        Me.EnvControl.Location = New System.Drawing.Point(579, 160)
+        Me.EnvControl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.EnvControl.Name = "EnvControl"
-        Me.EnvControl.Size = New System.Drawing.Size(102, 113)
+        Me.EnvControl.Size = New System.Drawing.Size(135, 139)
         Me.EnvControl.TabIndex = 52
         Me.EnvControl.TabStop = False
         Me.EnvControl.Tag = ""
@@ -82,10 +78,10 @@ Partial Class Bedroom
         Me.Bed.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.Bed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Bed.Image = Global.Scanning.My.Resources.Resources.bed2
-        Me.Bed.Location = New System.Drawing.Point(23, 124)
-        Me.Bed.Margin = New System.Windows.Forms.Padding(2)
+        Me.Bed.Location = New System.Drawing.Point(31, 153)
+        Me.Bed.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Bed.Name = "Bed"
-        Me.Bed.Size = New System.Drawing.Size(163, 124)
+        Me.Bed.Size = New System.Drawing.Size(217, 152)
         Me.Bed.TabIndex = 51
         Me.Bed.TabStop = False
         Me.Bed.Tag = ""
@@ -94,10 +90,10 @@ Partial Class Bedroom
         '
         Me.BedroomWindow3.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.BedroomWindow3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BedroomWindow3.Location = New System.Drawing.Point(565, 110)
-        Me.BedroomWindow3.Margin = New System.Windows.Forms.Padding(2)
+        Me.BedroomWindow3.Location = New System.Drawing.Point(753, 135)
+        Me.BedroomWindow3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BedroomWindow3.Name = "BedroomWindow3"
-        Me.BedroomWindow3.Size = New System.Drawing.Size(12, 155)
+        Me.BedroomWindow3.Size = New System.Drawing.Size(15, 190)
         Me.BedroomWindow3.TabIndex = 50
         Me.BedroomWindow3.TabStop = False
         Me.BedroomWindow3.Tag = ""
@@ -106,10 +102,10 @@ Partial Class Bedroom
         '
         Me.BedroomWindow2.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.BedroomWindow2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BedroomWindow2.Location = New System.Drawing.Point(371, 17)
-        Me.BedroomWindow2.Margin = New System.Windows.Forms.Padding(2)
+        Me.BedroomWindow2.Location = New System.Drawing.Point(495, 21)
+        Me.BedroomWindow2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BedroomWindow2.Name = "BedroomWindow2"
-        Me.BedroomWindow2.Size = New System.Drawing.Size(110, 13)
+        Me.BedroomWindow2.Size = New System.Drawing.Size(146, 16)
         Me.BedroomWindow2.TabIndex = 49
         Me.BedroomWindow2.TabStop = False
         Me.BedroomWindow2.Tag = ""
@@ -118,10 +114,10 @@ Partial Class Bedroom
         '
         Me.BedroomWindow1.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.BedroomWindow1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BedroomWindow1.Location = New System.Drawing.Point(98, 17)
-        Me.BedroomWindow1.Margin = New System.Windows.Forms.Padding(2)
+        Me.BedroomWindow1.Location = New System.Drawing.Point(131, 21)
+        Me.BedroomWindow1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BedroomWindow1.Name = "BedroomWindow1"
-        Me.BedroomWindow1.Size = New System.Drawing.Size(110, 13)
+        Me.BedroomWindow1.Size = New System.Drawing.Size(146, 16)
         Me.BedroomWindow1.TabIndex = 48
         Me.BedroomWindow1.TabStop = False
         Me.BedroomWindow1.Tag = ""
@@ -130,31 +126,36 @@ Partial Class Bedroom
         '
         Me.BedroomDoor.BackColor = System.Drawing.Color.SaddleBrown
         Me.BedroomDoor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BedroomDoor.Location = New System.Drawing.Point(254, 344)
-        Me.BedroomDoor.Margin = New System.Windows.Forms.Padding(2)
+        Me.BedroomDoor.Location = New System.Drawing.Point(339, 423)
+        Me.BedroomDoor.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BedroomDoor.Name = "BedroomDoor"
-        Me.BedroomDoor.Size = New System.Drawing.Size(85, 12)
+        Me.BedroomDoor.Size = New System.Drawing.Size(113, 14)
         Me.BedroomDoor.TabIndex = 47
         Me.BedroomDoor.TabStop = False
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.PictureBox1.Location = New System.Drawing.Point(23, 17)
+        Me.PictureBox1.Location = New System.Drawing.Point(31, 21)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(554, 339)
+        Me.PictureBox1.Size = New System.Drawing.Size(739, 417)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'ScanningTimer
+        'MainTaskBar
         '
-        Me.ScanningTimer.Interval = 1000
+        Me.MainTaskBar.Location = New System.Drawing.Point(93, 457)
+        Me.MainTaskBar.Name = "MainTaskBar"
+        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
+        Me.MainTaskBar.TabIndex = 54
         '
         'Bedroom
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.MainTaskBar)
         Me.Controls.Add(Me.LightControl)
         Me.Controls.Add(Me.EnvControl)
         Me.Controls.Add(Me.Bed)
@@ -162,9 +163,10 @@ Partial Class Bedroom
         Me.Controls.Add(Me.BedroomWindow2)
         Me.Controls.Add(Me.BedroomWindow1)
         Me.Controls.Add(Me.BedroomDoor)
-        Me.Controls.Add(Me.MainTaskBar)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Bedroom"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Bedroom"
         CType(Me.LightControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EnvControl, System.ComponentModel.ISupportInitialize).EndInit()
@@ -179,7 +181,6 @@ Partial Class Bedroom
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents MainTaskBar As MainTaskBar
     Friend WithEvents BedroomDoor As SubOptions
     Friend WithEvents BedroomWindow1 As SubOptions
     Friend WithEvents BedroomWindow2 As SubOptions
@@ -188,4 +189,5 @@ Partial Class Bedroom
     Friend WithEvents EnvControl As SubOptions
     Friend WithEvents LightControl As SubOptions
     Friend WithEvents ScanningTimer As Timer
+    Friend WithEvents MainTaskBar As MainTaskBar
 End Class
