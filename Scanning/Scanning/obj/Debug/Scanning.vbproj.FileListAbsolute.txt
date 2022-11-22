@@ -167,3 +167,4 @@ C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\
 C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.exe
 C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.xml
 C:\Users\03Adam03\Documents\CPS 613\Project Repo 3\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.pdb
+C:\Users\acach\OneDrive\Documents\GitHub\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.WindowMenu.resources

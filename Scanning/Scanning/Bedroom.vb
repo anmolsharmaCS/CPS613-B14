@@ -127,10 +127,19 @@ Public Class Bedroom
 
     Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
         If scanninglevel = 0 Then
-            scanninglevel = 1
-            If focusIsOn = 1 Then
+            If focusIsOn = 0 Then
+                If Bed.Tag = "up" Then
+                    Bed.Image = My.Resources.bedDown
+                    Bed.Tag = "down"
+                ElseIf Bed.Tag = "down" Then
+                    Bed.Image = My.Resources.bedUp
+                    Bed.Tag = "up"
+                End If
+            ElseIf focusIsOn = 1 Then
+                scanninglevel = 1
                 TopOptions(focusIsOn).StartInnerScanning(environment)
             ElseIf focusIsOn = 4 Then
+                scanninglevel = 1
                 MainTaskBar.MenuBarOption.LoseFocus()
                 TopOptions(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
             End If

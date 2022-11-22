@@ -24,38 +24,28 @@ Partial Class Bedroom
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MainTaskBar = New Scanning.MainTaskBar()
+        Me.FanControl = New Scanning.SubOptions()
         Me.LightControl = New Scanning.SubOptions()
         Me.Bed = New Scanning.SubOptions()
         Me.BedroomWindow3 = New Scanning.SubOptions()
         Me.BedroomWindow2 = New Scanning.SubOptions()
         Me.BedroomWindow1 = New Scanning.SubOptions()
         Me.BedroomDoor = New Scanning.SubOptions()
-        Me.FanControl = New Scanning.SubOptions()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.FanControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LightControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bed, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FanControl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ScanningTimer
         '
         Me.ScanningTimer.Interval = 1000
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.PictureBox1.Location = New System.Drawing.Point(31, 21)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(739, 417)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
         '
         'MainTaskBar
         '
@@ -63,6 +53,20 @@ Partial Class Bedroom
         Me.MainTaskBar.Name = "MainTaskBar"
         Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
         Me.MainTaskBar.TabIndex = 54
+        '
+        'FanControl
+        '
+        Me.FanControl.BackColor = System.Drawing.SystemColors.Control
+        Me.FanControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.FanControl.Image = Global.Scanning.My.Resources.Resources.fanOff
+        Me.FanControl.Location = New System.Drawing.Point(477, 233)
+        Me.FanControl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.FanControl.Name = "FanControl"
+        Me.FanControl.Size = New System.Drawing.Size(149, 113)
+        Me.FanControl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.FanControl.TabIndex = 55
+        Me.FanControl.TabStop = False
+        Me.FanControl.Tag = "off"
         '
         'LightControl
         '
@@ -82,7 +86,7 @@ Partial Class Bedroom
         '
         Me.Bed.BackColor = System.Drawing.SystemColors.Control
         Me.Bed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Bed.Image = Global.Scanning.My.Resources.Resources.bedButton
+        Me.Bed.Image = Global.Scanning.My.Resources.Resources.bedUp
         Me.Bed.Location = New System.Drawing.Point(169, 101)
         Me.Bed.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Bed.Name = "Bed"
@@ -90,7 +94,7 @@ Partial Class Bedroom
         Me.Bed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Bed.TabIndex = 51
         Me.Bed.TabStop = False
-        Me.Bed.Tag = ""
+        Me.Bed.Tag = "up"
         '
         'BedroomWindow3
         '
@@ -139,19 +143,15 @@ Partial Class Bedroom
         Me.BedroomDoor.TabIndex = 47
         Me.BedroomDoor.TabStop = False
         '
-        'FanControl
+        'PictureBox1
         '
-        Me.FanControl.BackColor = System.Drawing.SystemColors.Control
-        Me.FanControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.FanControl.Image = Global.Scanning.My.Resources.Resources.fanOff
-        Me.FanControl.Location = New System.Drawing.Point(477, 233)
-        Me.FanControl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.FanControl.Name = "FanControl"
-        Me.FanControl.Size = New System.Drawing.Size(149, 113)
-        Me.FanControl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.FanControl.TabIndex = 55
-        Me.FanControl.TabStop = False
-        Me.FanControl.Tag = "off"
+        Me.PictureBox1.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.PictureBox1.Location = New System.Drawing.Point(31, 21)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(739, 417)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'Bedroom
         '
@@ -172,14 +172,14 @@ Partial Class Bedroom
         Me.Name = "Bedroom"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Bedroom"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FanControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LightControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Bed, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomWindow3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomWindow2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomWindow1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FanControl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

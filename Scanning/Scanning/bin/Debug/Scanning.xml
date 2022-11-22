@@ -62,6 +62,16 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.bedDown">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.bedUp">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.BlindsClosed">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -338,6 +348,16 @@ Scanning
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.transferButton">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.tvOff">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.tvOn">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

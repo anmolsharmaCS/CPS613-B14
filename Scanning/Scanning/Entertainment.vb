@@ -2,7 +2,7 @@
 
 Public Class Entertainment
 
-    Private mediaOptions(5) As SubOptions
+    Private mediaOptions(6) As SubOptions
     Private musicOptions(4) As SubOptions
     Private audioOptions(4) As SubOptions
     Private movieOptions(4) As SubOptions
@@ -34,9 +34,10 @@ Public Class Entertainment
         mediaOptions(2) = movieOption
         mediaOptions(3) = tvOption
         mediaOptions(4) = volumeOption
-        mediaOptions(5) = MainTaskBar.MenuBarOption
+        mediaOptions(5) = tvPower
+        mediaOptions(6) = MainTaskBar.MenuBarOption
 
-        For i = 0 To 5
+        For i = 0 To 6
             mediaOptions(i).Initialize()
         Next
 
@@ -319,6 +320,10 @@ Public Class Entertainment
                 For i = 0 To 7
                     movieGroup(i).Show()
                 Next
+                If tvPower.Tag = "off" Then
+                    tvPower.Image = My.Resources.tvOn
+                    tvPower.Tag = "on"
+                End If
                 currentlyShowing = movieGroup
                 mediaOptions(focusIsOn).StartInnerScanning(movieOptions)
             ElseIf focusIsOn = 3 Then
@@ -330,11 +335,29 @@ Public Class Entertainment
                 For i = 0 To 10
                     tvGroup(i).Show()
                 Next
+                If tvPower.Tag = "off" Then
+                    tvPower.Image = My.Resources.tvOn
+                    tvPower.Tag = "on"
+                End If
                 currentlyShowing = tvGroup
                 mediaOptions(focusIsOn).StartInnerScanning(tvOptions)
             ElseIf focusIsOn = 4 Then
                 mediaOptions(focusIsOn).StartInnerScanning(volumeOptions)
             ElseIf focusIsOn = 5 Then
+                If tvPower.Tag = "on" Then
+                    tvPower.Image = My.Resources.tvOff
+                    tvPower.Tag = "off"
+                    If Netflix.Visible = True Then
+                        For i = 0 To currentlyShowing.Length - 1
+                            currentlyShowing(i).Hide()
+                        Next
+                    End If
+                ElseIf tvPower.Tag = "off" Then
+                    tvPower.Image = My.Resources.tvOn
+                    tvPower.Tag = "on"
+                End If
+                scanninglevel = 0
+            ElseIf focusIsOn = 6 Then
                 MainTaskBar.MenuBarOption.LoseFocus()
                 mediaOptions(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
             End If

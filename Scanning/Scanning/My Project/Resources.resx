@@ -334,4 +334,16 @@
   <data name="WindowOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WindowOpen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bedDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>bedDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bedUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>bedUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tvOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>tvOff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tvOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>tvOn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
