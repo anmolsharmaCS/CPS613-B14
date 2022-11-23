@@ -6,7 +6,7 @@ Public Class Entertainment
     Private musicOptions(4) As SubOptions
     Private audioOptions(4) As SubOptions
     Private movieOptions(4) As SubOptions
-    Private tvOptions(7) As SubOptions
+    Private tvOptions(8) As SubOptions
     Private volumeOptions(3) As SubOptions
 
     Private shuffleOptions(3) As SubOptions
@@ -16,7 +16,7 @@ Public Class Entertainment
     Private musicGroup(7) As SubOptions
     Private audioGroup(5) As SubOptions
     Private movieGroup(7) As SubOptions
-    Private tvGroup(10) As SubOptions
+    Private tvGroup(11) As SubOptions
 
     Private scanninglevel1 As SubOptions
     Private MyParent As Livingroom
@@ -75,16 +75,17 @@ Public Class Entertainment
             movieOptions(i).Initialize()
         Next
 
-        tvOptions(0) = Netflix
-        tvOptions(1) = Hulu
-        tvOptions(2) = Amazon
-        tvOptions(3) = liveVideo
-        tvOptions(4) = streamVideo
-        tvOptions(5) = recordedVideo
-        tvOptions(6) = prevVideo
-        tvOptions(7) = MainTaskBar.Back
+        tvOptions(0) = Favourite
+        tvOptions(1) = Netflix
+        tvOptions(2) = Hulu
+        tvOptions(3) = Amazon
+        tvOptions(4) = liveVideo
+        tvOptions(5) = streamVideo
+        tvOptions(6) = recordedVideo
+        tvOptions(7) = prevVideo
+        tvOptions(8) = MainTaskBar.Back
 
-        For i = 3 To 5
+        For i = 3 To 6
             tvOptions(i).Initialize()
         Next
 
@@ -159,17 +160,18 @@ Public Class Entertainment
         movieGroup(6) = skipForward
         movieGroup(7) = nextVideo
 
-        tvGroup(0) = Netflix
-        tvGroup(1) = Hulu
-        tvGroup(2) = Amazon
-        tvGroup(3) = liveVideo
-        tvGroup(4) = streamVideo
-        tvGroup(5) = recordedVideo
-        tvGroup(6) = prevVideo
-        tvGroup(7) = skipBack
-        tvGroup(8) = play
-        tvGroup(9) = skipForward
-        tvGroup(10) = nextVideo
+        tvGroup(0) = Favourite
+        tvGroup(1) = Netflix
+        tvGroup(2) = Hulu
+        tvGroup(3) = Amazon
+        tvGroup(4) = liveVideo
+        tvGroup(5) = streamVideo
+        tvGroup(6) = recordedVideo
+        tvGroup(7) = prevVideo
+        tvGroup(8) = skipBack
+        tvGroup(9) = play
+        tvGroup(10) = skipForward
+        tvGroup(11) = nextVideo
 
         '
         'assign parent form
@@ -439,6 +441,8 @@ Public Class Entertainment
     Private Sub Entertainment_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         MyParent.ResumeScanning()
     End Sub
+
+
 
 #End Region
 
