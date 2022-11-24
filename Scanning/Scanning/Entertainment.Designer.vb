@@ -110,7 +110,7 @@ Partial Class Entertainment
         '
         'Favourite
         '
-        Me.Favourite.Image = Global.Scanning.My.Resources.Resources.favorite
+        'Me.Favourite.Image = Global.Scanning.My.Resources.Resources.favorite
         Me.Favourite.Location = New System.Drawing.Point(49, 187)
         Me.Favourite.Name = "Favourite"
         Me.Favourite.Size = New System.Drawing.Size(100, 92)

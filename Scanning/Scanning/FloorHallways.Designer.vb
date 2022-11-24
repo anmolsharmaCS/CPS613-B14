@@ -228,7 +228,7 @@ Partial Class FloorHallways
         '
         'Apartment06
         '
-        Me.Apartment06.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Apartment06.BackColor = System.Drawing.Color.DarkKhaki
         Me.Apartment06.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Apartment06.Location = New System.Drawing.Point(523, 268)
         Me.Apartment06.Name = "Apartment06"
@@ -238,7 +238,7 @@ Partial Class FloorHallways
         '
         'Apartment05
         '
-        Me.Apartment05.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Apartment05.BackColor = System.Drawing.Color.DarkKhaki
         Me.Apartment05.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Apartment05.Location = New System.Drawing.Point(277, 268)
         Me.Apartment05.Name = "Apartment05"
@@ -248,7 +248,7 @@ Partial Class FloorHallways
         '
         'Apartment04
         '
-        Me.Apartment04.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Apartment04.BackColor = System.Drawing.Color.DarkKhaki
         Me.Apartment04.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Apartment04.Location = New System.Drawing.Point(31, 268)
         Me.Apartment04.Name = "Apartment04"
@@ -258,7 +258,7 @@ Partial Class FloorHallways
         '
         'Apartment03
         '
-        Me.Apartment03.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Apartment03.BackColor = System.Drawing.Color.DarkKhaki
         Me.Apartment03.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Apartment03.Location = New System.Drawing.Point(523, 21)
         Me.Apartment03.Name = "Apartment03"
@@ -268,7 +268,7 @@ Partial Class FloorHallways
         '
         'Apartment02
         '
-        Me.Apartment02.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Apartment02.BackColor = System.Drawing.Color.DarkKhaki
         Me.Apartment02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Apartment02.Location = New System.Drawing.Point(277, 21)
         Me.Apartment02.Name = "Apartment02"
@@ -278,7 +278,7 @@ Partial Class FloorHallways
         '
         'Apartment01
         '
-        Me.Apartment01.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Apartment01.BackColor = System.Drawing.Color.DarkKhaki
         Me.Apartment01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Apartment01.Location = New System.Drawing.Point(31, 21)
         Me.Apartment01.Name = "Apartment01"
@@ -288,7 +288,7 @@ Partial Class FloorHallways
         '
         'Floor
         '
-        Me.Floor.BackColor = System.Drawing.Color.SandyBrown
+        Me.Floor.BackColor = System.Drawing.Color.BurlyWood
         Me.Floor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Floor.Location = New System.Drawing.Point(31, 21)
         Me.Floor.Name = "Floor"
