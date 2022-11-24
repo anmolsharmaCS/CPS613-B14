@@ -152,10 +152,12 @@ Public Class FloorHallways
             ElseIf MainTaskBar.Assistance.BackColor = Color.LemonChiffon Then
                 Dim Assistance As New Assistance(Me)
                 StopScanning()
+                MainTaskBar.exitTaskBar.Hide()
                 MainTaskBar.MenuBarOption.StopInnerScanning()
                 Assistance.Show()
             ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
                 StopScanning()
+                MainTaskBar.exitTaskBar.Hide()
                 MainTaskBar.PreviousScreen.LoseFocus()
                 Close()
             ElseIf exitApartments.BackColor = Color.LemonChiffon Then
@@ -165,6 +167,7 @@ Public Class FloorHallways
             ElseIf Apartment02.BackColor = Color.LemonChiffon And Label2.Text = "402" Then
                 Apartment02.LoseFocus()
                 StopScanning()
+                exitApartments.Hide()
                 Apartment.Show()
                 Apartment.StartScanning()
             End If

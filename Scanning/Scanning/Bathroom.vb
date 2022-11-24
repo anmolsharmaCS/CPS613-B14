@@ -159,12 +159,14 @@ Public Class Bathroom
 
                 Dim Assistance As New Assistance(Me)
                 StopScanning()
+                MainTaskBar.exitTaskBar.Hide()
                 MainTaskBar.MenuBarOption.StopInnerScanning()
                 Assistance.Show()
 
             ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
 
                 StopScanning()
+                MainTaskBar.exitTaskBar.Hide()
                 MainTaskBar.PreviousScreen.LoseFocus()
                 Hide()
                 MyParent.ResumeScanning()

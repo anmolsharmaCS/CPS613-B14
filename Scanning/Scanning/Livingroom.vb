@@ -247,6 +247,7 @@ Public Class Livingroom
 
                 Dim Assistance As New Assistance(Me)
                 StopScanning()
+                MainTaskBar.exitTaskBar.Hide()
                 MainTaskBar.MenuBarOption.StopInnerScanning()
                 Assistance.Show()
 

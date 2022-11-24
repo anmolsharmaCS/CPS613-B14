@@ -14,7 +14,7 @@ Public Class Kitchen
 
         ' Add any initialization after the InitializeComponent() call.
         Options(0) = cooking
-        Options(1) = lightOption
+        Options(1) = envOption
         Options(2) = MainTaskBar.MenuBarOption
 
         For i = 0 To 2
@@ -23,16 +23,12 @@ Public Class Kitchen
 
         environment(0) = lightOption
         environment(1) = fanOption
-        environment(2) = MainTaskBar.PreviousScreen
+        environment(2) = exitEnv
 
-        environment(1).Initialize()
+        environment(2).Initialize()
 
         MyParent = parentForm
 
-    End Sub
-
-    Private Sub Kitchen_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        MainTaskBar.PreviousScreen.Image = My.Resources.apartmentButton
     End Sub
 
 #Region "Timer Properties and methods"
@@ -87,22 +83,6 @@ Public Class Kitchen
         End If
     End Sub
 
-    Private Sub Groups_ColorChanged(sender As Object, e As EventArgs) Handles lightOption.BackColorChanged
-        If scanninglevel = 0 And ScanningTimer.Enabled Then
-            If lightOption.BackColor.Equals(Color.LemonChiffon) Then
-                For i = 1 To environment.Length - 2
-                    environment(i).ReceiveFocus()
-                Next
-            Else
-                For i = 1 To environment.Length - 2
-                    environment(i).LoseFocus()
-                Next
-            End If
-        End If
-    End Sub
-
-
-
 #End Region
 
 #Region "Other events"
@@ -112,9 +92,12 @@ Public Class Kitchen
         If scanninglevel = 0 Then
             If focusIsOn = 1 Then
                 scanninglevel = 1
+                envOption.LoseFocus()
+                exitEnv.Show()
                 Options(focusIsOn).StartInnerScanning(environment)
             ElseIf focusIsOn = 2 Then
                 scanninglevel = 1
+                MainTaskBar.exitTaskBar.Show()
                 MainTaskBar.MenuBarOption.LoseFocus()
                 Options(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
             End If
@@ -139,21 +122,23 @@ Public Class Kitchen
                     MyParent.kitchenFan.Image = My.Resources.fanOn
                     fanOption.Tag = "on"
                 End If
-            ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
-                If focusIsOn = 6 Then
-                    MainTaskBar.MenuBarOption.StopInnerScanning()
-                    scanninglevel = 0
-                Else
-                    Options(focusIsOn).StopInnerScanning()
-                    scanninglevel = 0
-                End If
+            ElseIf exitEnv.BackColor = Color.LemonChiffon Then
+                exitEnv.Hide()
+                envOption.StopInnerScanning()
+                scanninglevel = 0
+            ElseIf MainTaskBar.exitTaskBar.BackColor = Color.LemonChiffon Then
+                MainTaskBar.exitTaskBar.Hide()
+                MainTaskBar.MenuBarOption.StopInnerScanning()
+                scanninglevel = 0
             ElseIf MainTaskBar.Assistance.BackColor = Color.LemonChiffon Then
                 Dim Assistance As New Assistance(Me)
                 StopScanning()
+                MainTaskBar.exitTaskBar.Hide()
                 MainTaskBar.MenuBarOption.StopInnerScanning()
                 Assistance.Show()
             ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
                 StopScanning()
+                MainTaskBar.exitTaskBar.Hide()
                 MainTaskBar.PreviousScreen.LoseFocus()
                 Hide()
                 MyParent.ResumeScanning()

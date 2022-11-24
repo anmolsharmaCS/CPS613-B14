@@ -33,10 +33,10 @@ Partial Class Bedroom
         Me.BedroomDoor = New Scanning.SubOptions()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.envOption = New Scanning.SubOptions()
-        Me.exitEnv = New Scanning.SubOptions()
         Me.bedroomShutters1 = New System.Windows.Forms.PictureBox()
         Me.bedroomShutters2 = New System.Windows.Forms.PictureBox()
         Me.WindowMenu = New Scanning.WindowMenu()
+        Me.exitEnv = New Scanning.SubOptions()
         CType(Me.FanControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LightControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bed, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,9 +45,9 @@ Partial Class Bedroom
         CType(Me.BedroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.envOption, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.exitEnv, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bedroomShutters1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bedroomShutters2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.exitEnv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ScanningTimer
@@ -158,19 +158,6 @@ Partial Class Bedroom
         Me.envOption.TabIndex = 63
         Me.envOption.TabStop = False
         '
-        'exitEnv
-        '
-        Me.exitEnv.BackColor = System.Drawing.Color.Red
-        Me.exitEnv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.exitEnv.Image = Global.Scanning.My.Resources.Resources._exit
-        Me.exitEnv.Location = New System.Drawing.Point(652, 95)
-        Me.exitEnv.Name = "exitEnv"
-        Me.exitEnv.Size = New System.Drawing.Size(40, 40)
-        Me.exitEnv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.exitEnv.TabIndex = 66
-        Me.exitEnv.TabStop = False
-        Me.exitEnv.Visible = False
-        '
         'bedroomShutters1
         '
         Me.bedroomShutters1.Image = Global.Scanning.My.Resources.Resources.openwindow
@@ -201,15 +188,28 @@ Partial Class Bedroom
         Me.WindowMenu.TabIndex = 71
         Me.WindowMenu.Visible = False
         '
+        'exitEnv
+        '
+        Me.exitEnv.BackColor = System.Drawing.Color.Red
+        Me.exitEnv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.exitEnv.Image = Global.Scanning.My.Resources.Resources._exit
+        Me.exitEnv.Location = New System.Drawing.Point(652, 96)
+        Me.exitEnv.Name = "exitEnv"
+        Me.exitEnv.Size = New System.Drawing.Size(40, 40)
+        Me.exitEnv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.exitEnv.TabIndex = 72
+        Me.exitEnv.TabStop = False
+        Me.exitEnv.Visible = False
+        '
         'Bedroom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.exitEnv)
         Me.Controls.Add(Me.WindowMenu)
         Me.Controls.Add(Me.bedroomShutters2)
         Me.Controls.Add(Me.bedroomShutters1)
-        Me.Controls.Add(Me.exitEnv)
         Me.Controls.Add(Me.FanControl)
         Me.Controls.Add(Me.LightControl)
         Me.Controls.Add(Me.envOption)
@@ -232,9 +232,9 @@ Partial Class Bedroom
         CType(Me.BedroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.envOption, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.exitEnv, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bedroomShutters1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bedroomShutters2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.exitEnv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -249,8 +249,8 @@ Partial Class Bedroom
     Friend WithEvents MainTaskBar As MainTaskBar
     Friend WithEvents FanControl As SubOptions
     Friend WithEvents envOption As SubOptions
-    Friend WithEvents exitEnv As SubOptions
     Friend WithEvents bedroomShutters1 As PictureBox
     Friend WithEvents bedroomShutters2 As PictureBox
     Friend WithEvents WindowMenu As WindowMenu
+    Friend WithEvents exitEnv As SubOptions
 End Class
