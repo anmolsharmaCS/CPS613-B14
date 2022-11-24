@@ -138,8 +138,8 @@
                 window9.Show()
                 window10.Show()
                 window11.Show()
-                elevator.Location = New Point(185, 487)
-                elevatorCrack.Location = New Point(249, 487)
+                elevator.Top = 487
+                elevatorCrack.Top = 487
             Else
                 Options(focusIsOn).LoseFocus()
                 StopScanning()

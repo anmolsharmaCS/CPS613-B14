@@ -199,7 +199,7 @@ Partial Class MainForm
         '
         Me.elevator.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.elevator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.elevator.Location = New System.Drawing.Point(185, 487)
+        Me.elevator.Location = New System.Drawing.Point(183, 487)
         Me.elevator.Name = "elevator"
         Me.elevator.Size = New System.Drawing.Size(128, 143)
         Me.elevator.TabIndex = 24

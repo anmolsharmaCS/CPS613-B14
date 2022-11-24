@@ -22,88 +22,69 @@ Partial Class WindowMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.OpenBlinds = New Scanning.SubOptions()
-        Me.CloseBlinds = New Scanning.SubOptions()
-        Me.OpenWindows = New Scanning.SubOptions()
-        Me.CloseWindows = New Scanning.SubOptions()
+        Me.blindControl = New Scanning.SubOptions()
+        Me.windowControl = New Scanning.SubOptions()
         Me.MenuBarOption = New Scanning.SubOptions()
-        CType(Me.OpenBlinds, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CloseBlinds, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OpenWindows, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CloseWindows, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.blindControl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.windowControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MenuBarOption, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'OpenBlinds
+        'blindControl
         '
-        Me.OpenBlinds.Image = Global.Scanning.My.Resources.Resources.BlindsOpen
-        Me.OpenBlinds.Location = New System.Drawing.Point(214, 160)
-        Me.OpenBlinds.Name = "OpenBlinds"
-        Me.OpenBlinds.Size = New System.Drawing.Size(150, 100)
-        Me.OpenBlinds.TabIndex = 4
-        Me.OpenBlinds.TabStop = False
+        Me.blindControl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.blindControl.Image = Global.Scanning.My.Resources.Resources.BlindsOpen
+        Me.blindControl.Location = New System.Drawing.Point(287, 23)
+        Me.blindControl.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.blindControl.Name = "blindControl"
+        Me.blindControl.Size = New System.Drawing.Size(200, 123)
+        Me.blindControl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.blindControl.TabIndex = 4
+        Me.blindControl.TabStop = False
+        Me.blindControl.Tag = "open"
         '
-        'CloseBlinds
+        'windowControl
         '
-        Me.CloseBlinds.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.CloseBlinds.Image = Global.Scanning.My.Resources.Resources.BlindsClosed
-        Me.CloseBlinds.Location = New System.Drawing.Point(44, 160)
-        Me.CloseBlinds.Name = "CloseBlinds"
-        Me.CloseBlinds.Size = New System.Drawing.Size(150, 100)
-        Me.CloseBlinds.TabIndex = 3
-        Me.CloseBlinds.TabStop = False
-        '
-        'OpenWindows
-        '
-        Me.OpenWindows.Image = Global.Scanning.My.Resources.Resources.WindowOpen
-        Me.OpenWindows.Location = New System.Drawing.Point(214, 35)
-        Me.OpenWindows.Name = "OpenWindows"
-        Me.OpenWindows.Size = New System.Drawing.Size(150, 100)
-        Me.OpenWindows.TabIndex = 2
-        Me.OpenWindows.TabStop = False
-        '
-        'CloseWindows
-        '
-        Me.CloseWindows.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.CloseWindows.Image = Global.Scanning.My.Resources.Resources.WindowClosed
-        Me.CloseWindows.Location = New System.Drawing.Point(44, 35)
-        Me.CloseWindows.Name = "CloseWindows"
-        Me.CloseWindows.Size = New System.Drawing.Size(150, 100)
-        Me.CloseWindows.TabIndex = 1
-        Me.CloseWindows.TabStop = False
+        Me.windowControl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.windowControl.Image = Global.Scanning.My.Resources.Resources.WindowOpen
+        Me.windowControl.Location = New System.Drawing.Point(42, 23)
+        Me.windowControl.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.windowControl.Name = "windowControl"
+        Me.windowControl.Size = New System.Drawing.Size(200, 123)
+        Me.windowControl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.windowControl.TabIndex = 2
+        Me.windowControl.TabStop = False
+        Me.windowControl.Tag = "open"
         '
         'MenuBarOption
         '
         Me.MenuBarOption.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.MenuBarOption.Location = New System.Drawing.Point(0, 0)
+        Me.MenuBarOption.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MenuBarOption.Name = "MenuBarOption"
-        Me.MenuBarOption.Size = New System.Drawing.Size(408, 294)
+        Me.MenuBarOption.Size = New System.Drawing.Size(544, 186)
         Me.MenuBarOption.TabIndex = 0
         Me.MenuBarOption.TabStop = False
         '
         'WindowMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.OpenBlinds)
-        Me.Controls.Add(Me.CloseBlinds)
-        Me.Controls.Add(Me.OpenWindows)
-        Me.Controls.Add(Me.CloseWindows)
+        Me.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Controls.Add(Me.blindControl)
+        Me.Controls.Add(Me.windowControl)
         Me.Controls.Add(Me.MenuBarOption)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "WindowMenu"
-        Me.Size = New System.Drawing.Size(408, 294)
-        CType(Me.OpenBlinds, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CloseBlinds, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OpenWindows, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CloseWindows, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Size = New System.Drawing.Size(540, 183)
+        CType(Me.blindControl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.windowControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MenuBarOption, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents MenuBarOption As SubOptions
-    Friend WithEvents CloseWindows As SubOptions
-    Friend WithEvents OpenWindows As SubOptions
-    Friend WithEvents CloseBlinds As SubOptions
-    Friend WithEvents OpenBlinds As SubOptions
+    Friend WithEvents windowControl As SubOptions
+    Friend WithEvents blindControl As SubOptions
 End Class

@@ -146,9 +146,12 @@ Public Class UserApartment
             focusIsOn = (focusIsOn + 1) Mod 5
             TopOptions(focusIsOn).ReceiveFocus()
         ElseIf scanninglevel = 1 Then
-            TopOptions(focusIsOn).InnerScanningNext()
-        ElseIf scanninglevel = 2 Then
-            Me.WindowMenu.MenuBarOption.InnerScanningNext()
+            If focusIsOn = 2 Then
+                WindowMenu.MenuBarOption.InnerScanningNext()
+            Else
+                TopOptions(focusIsOn).InnerScanningNext()
+            End If
+
         End If
     End Sub
 
@@ -203,8 +206,11 @@ Public Class UserApartment
             ElseIf focusIsOn = 1 Then
                 TopOptions(focusIsOn).StartInnerScanning(Rooms)
             ElseIf focusIsOn = 2 Then
-                TopOptions(focusIsOn).includeAllOptions = True
-                TopOptions(focusIsOn).StartInnerScanning(Windows)
+                Me.WindowMenu.Visible = True
+                Dim Options As SubOptions() = Me.WindowMenu.GetTaskBarOptions()
+                ReDim Preserve Options(Options.Length)
+                Options(Options.Length - 1) = Me.MainTaskBar.Back
+                Me.WindowMenu.MenuBarOption.StartInnerScanning(Options)
             ElseIf focusIsOn = 3 Then
                 TopOptions(focusIsOn).includeAllOptions = True
                 TopOptions(focusIsOn).StartInnerScanning(Doors)
@@ -214,7 +220,41 @@ Public Class UserApartment
             End If
 
         ElseIf scanninglevel = 1 Then
-            If LivingRoom.BackColor = Color.LemonChiffon Then
+            If focusIsOn = 2 Then
+                If MainTaskBar.Back.BackColor = Color.LemonChiffon Then
+                    Me.WindowMenu.MenuBarOption.StopInnerScanning()
+                    Me.WindowMenu.Visible = False
+                    scanninglevel = 0
+                ElseIf Me.WindowMenu.windowControl.BackColor = Color.LemonChiffon Then
+                    If WindowMenu.windowControl.Tag = "open" Then
+                        WindowMenu.windowControl.Image = My.Resources.WindowClosed
+                        WindowMenu.windowControl.Tag = "closed"
+                        For i = 0 To shutters.Length - 1
+                            shutters(i).Hide()
+                        Next
+                    ElseIf WindowMenu.windowControl.Tag = "closed" Then
+                        WindowMenu.windowControl.Image = My.Resources.WindowOpen
+                        WindowMenu.windowControl.Tag = "open"
+                        For i = 0 To shutters.Length - 1
+                            shutters(i).Show()
+                        Next
+                    End If
+                ElseIf Me.WindowMenu.blindControl.BackColor = Color.LemonChiffon Then
+                    If WindowMenu.blindControl.Tag = "open" Then
+                        WindowMenu.blindControl.Image = My.Resources.BlindsClosed
+                        WindowMenu.blindControl.Tag = "closed"
+                        'For i = 0 To blinds.Length - 1
+                        'blinds(i).Hide()
+                        'Next
+                    ElseIf WindowMenu.blindControl.Tag = "closed" Then
+                        WindowMenu.blindControl.Image = My.Resources.BlindsOpen
+                        WindowMenu.blindControl.Tag = "open"
+                        'For i = 0 To blinds.Length - 1
+                        'blinds(i).Show()
+                        'Next
+                    End If
+                End If
+            ElseIf LivingRoom.BackColor = Color.LemonChiffon Then
                 StopScanning()
                 livingroomForm.Show()
                 livingroomForm.StartScanning()
@@ -238,13 +278,6 @@ Public Class UserApartment
                     TopOptions(focusIsOn).StopInnerScanning()
                     scanninglevel = 0
                 End If
-            ElseIf focusIsOn = 2 Then
-                scanninglevel = 2
-                Me.WindowMenu.Visible = True
-                Dim Options As SubOptions() = Me.WindowMenu.GetTaskBarOptions()
-                ReDim Preserve Options(Options.Length)
-                Options(Options.Length - 1) = Me.MainTaskBar.Back
-                Me.WindowMenu.MenuBarOption.StartInnerScanning(Options)
             ElseIf upArrow.BackColor = Color.LemonChiffon Then
                 tempLabel.Text = CInt(tempLabel.Text) + 1
             ElseIf downArrow.BackColor = Color.LemonChiffon Then
@@ -260,44 +293,7 @@ Public Class UserApartment
                 Hide()
                 MyParent.ResumeScanning()
             End If
-        ElseIf scanninglevel = 2 Then
-            If MainTaskBar.Back.BackColor = Color.LemonChiffon Then
-                Me.WindowMenu.MenuBarOption.StopInnerScanning()
-                Me.WindowMenu.Visible = False
-                scanninglevel = 0
-            ElseIf Me.WindowMenu.CloseWindows.BackColor = Color.LemonChiffon Then
-                Me.WindowMenu.CloseWindows.BorderStyle = BorderStyle.Fixed3D
-                Me.WindowMenu.OpenWindows.BorderStyle = BorderStyle.None
-                For i = 0 To Windows.Length - 2
-                    If Windows(i).BackColor = Color.LemonChiffon Then
-                        Dim shutterName As String = Windows(i).Name & "Shutters"
-                        For j = 0 To shutters.Length - 1
-                            If String.Compare(shutters(j).Name, shutterName) = 0 Then
-                                shutters(j).Hide()
-                            End If
-                        Next
-                    End If
-                Next
-            ElseIf Me.WindowMenu.OpenWindows.BackColor = Color.LemonChiffon Then
-                Me.WindowMenu.OpenWindows.BorderStyle = BorderStyle.Fixed3D
-                Me.WindowMenu.CloseWindows.BorderStyle = BorderStyle.None
-                For i = 0 To Windows.Length - 2
-                    If Windows(i).BackColor = Color.LemonChiffon Then
-                        Dim shutterName = Windows(i).Name & "Shutters"
-                        For j = 0 To shutters.Length - 1
-                            If String.Compare(shutters(j).Name, shutterName) = 0 Then
-                                shutters(j).Show()
-                            End If
-                        Next
-                    End If
-                Next
-            ElseIf Me.WindowMenu.CloseBlinds.BackColor = Color.LemonChiffon Then
-                Me.WindowMenu.CloseBlinds.BorderStyle = BorderStyle.Fixed3D
-                Me.WindowMenu.OpenBlinds.BorderStyle = BorderStyle.None
-            ElseIf Me.WindowMenu.OpenBlinds.BackColor = Color.LemonChiffon Then
-                Me.WindowMenu.OpenBlinds.BorderStyle = BorderStyle.Fixed3D
-                Me.WindowMenu.CloseBlinds.BorderStyle = BorderStyle.None
-            End If
+
         End If
     End Sub
 

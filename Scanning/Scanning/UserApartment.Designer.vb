@@ -33,9 +33,6 @@ Partial Class UserApartment
         Me.BedroomWindow2Shutters = New System.Windows.Forms.PictureBox()
         Me.LivingroomWindow1Shutters = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.downArrow = New Scanning.SubOptions()
-        Me.upArrow = New Scanning.SubOptions()
-        Me.tempOption = New Scanning.SubOptions()
         Me.livingroomFan = New System.Windows.Forms.PictureBox()
         Me.kitchenFan = New System.Windows.Forms.PictureBox()
         Me.bathroomFan = New System.Windows.Forms.PictureBox()
@@ -44,6 +41,12 @@ Partial Class UserApartment
         Me.bedroomLight = New System.Windows.Forms.PictureBox()
         Me.kitchenLight = New System.Windows.Forms.PictureBox()
         Me.livingroomLight = New System.Windows.Forms.PictureBox()
+        Me.apartment = New System.Windows.Forms.PictureBox()
+        Me.downArrow = New Scanning.SubOptions()
+        Me.upArrow = New Scanning.SubOptions()
+        Me.tempOption = New Scanning.SubOptions()
+        Me.WindowMenu = New Scanning.WindowMenu()
+        Me.MainTaskBar = New Scanning.MainTaskBar()
         Me.LivingroomDoor = New Scanning.SubOptions()
         Me.BathroomDoor = New Scanning.SubOptions()
         Me.KitchenDoor = New Scanning.SubOptions()
@@ -59,9 +62,6 @@ Partial Class UserApartment
         Me.Bedroom = New Scanning.SubOptions()
         Me.LivingRoom = New Scanning.SubOptions()
         Me.Kitchen = New Scanning.SubOptions()
-        Me.apartment = New System.Windows.Forms.PictureBox()
-        Me.WindowMenu = New Scanning.WindowMenu()
-        Me.MainTaskBar = New Scanning.MainTaskBar()
         CType(Me.BedroomWindow3Shutters, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BathroomWindowShutters, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingroomWindow2Shutters, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,9 +69,6 @@ Partial Class UserApartment
         CType(Me.BedroomWindow2Shutters, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingroomWindow1Shutters, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.downArrow, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.upArrow, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.tempOption, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.livingroomFan, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.kitchenFan, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bathroomFan, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,6 +77,10 @@ Partial Class UserApartment
         CType(Me.bedroomLight, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.kitchenLight, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.livingroomLight, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.apartment, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.downArrow, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.upArrow, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.tempOption, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BathroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KitchenDoor, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,7 +96,6 @@ Partial Class UserApartment
         CType(Me.Bedroom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingRoom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Kitchen, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.apartment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ScanningTimer
@@ -197,38 +197,6 @@ Partial Class UserApartment
         Me.PictureBox1.TabIndex = 50
         Me.PictureBox1.TabStop = False
         '
-        'downArrow
-        '
-        Me.downArrow.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.downArrow.Image = Global.Scanning.My.Resources.Resources.downarrow
-        Me.downArrow.Location = New System.Drawing.Point(886, 230)
-        Me.downArrow.Name = "downArrow"
-        Me.downArrow.Size = New System.Drawing.Size(66, 50)
-        Me.downArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.downArrow.TabIndex = 49
-        Me.downArrow.TabStop = False
-        '
-        'upArrow
-        '
-        Me.upArrow.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.upArrow.Image = Global.Scanning.My.Resources.Resources.uparrow
-        Me.upArrow.Location = New System.Drawing.Point(886, 123)
-        Me.upArrow.Name = "upArrow"
-        Me.upArrow.Size = New System.Drawing.Size(66, 50)
-        Me.upArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.upArrow.TabIndex = 48
-        Me.upArrow.TabStop = False
-        '
-        'tempOption
-        '
-        Me.tempOption.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.tempOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.tempOption.Location = New System.Drawing.Point(852, 33)
-        Me.tempOption.Name = "tempOption"
-        Me.tempOption.Size = New System.Drawing.Size(135, 262)
-        Me.tempOption.TabIndex = 45
-        Me.tempOption.TabStop = False
-        '
         'livingroomFan
         '
         Me.livingroomFan.BackColor = System.Drawing.Color.Transparent
@@ -324,6 +292,67 @@ Partial Class UserApartment
         Me.livingroomLight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.livingroomLight.TabIndex = 36
         Me.livingroomLight.TabStop = False
+        '
+        'apartment
+        '
+        Me.apartment.BackColor = System.Drawing.Color.SandyBrown
+        Me.apartment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.apartment.Location = New System.Drawing.Point(50, 40)
+        Me.apartment.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.apartment.Name = "apartment"
+        Me.apartment.Size = New System.Drawing.Size(738, 417)
+        Me.apartment.TabIndex = 5
+        Me.apartment.TabStop = False
+        '
+        'downArrow
+        '
+        Me.downArrow.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.downArrow.Image = Global.Scanning.My.Resources.Resources.downarrow
+        Me.downArrow.Location = New System.Drawing.Point(886, 230)
+        Me.downArrow.Name = "downArrow"
+        Me.downArrow.Size = New System.Drawing.Size(66, 50)
+        Me.downArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.downArrow.TabIndex = 49
+        Me.downArrow.TabStop = False
+        '
+        'upArrow
+        '
+        Me.upArrow.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.upArrow.Image = Global.Scanning.My.Resources.Resources.uparrow
+        Me.upArrow.Location = New System.Drawing.Point(886, 123)
+        Me.upArrow.Name = "upArrow"
+        Me.upArrow.Size = New System.Drawing.Size(66, 50)
+        Me.upArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.upArrow.TabIndex = 48
+        Me.upArrow.TabStop = False
+        '
+        'tempOption
+        '
+        Me.tempOption.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.tempOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.tempOption.Location = New System.Drawing.Point(852, 33)
+        Me.tempOption.Name = "tempOption"
+        Me.tempOption.Size = New System.Drawing.Size(135, 262)
+        Me.tempOption.TabIndex = 45
+        Me.tempOption.TabStop = False
+        '
+        'WindowMenu
+        '
+        Me.WindowMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.WindowMenu.Location = New System.Drawing.Point(132, 75)
+        Me.WindowMenu.Margin = New System.Windows.Forms.Padding(5)
+        Me.WindowMenu.Name = "WindowMenu"
+        Me.WindowMenu.Size = New System.Drawing.Size(543, 184)
+        Me.WindowMenu.TabIndex = 44
+        Me.WindowMenu.Visible = False
+        '
+        'MainTaskBar
+        '
+        Me.MainTaskBar.Location = New System.Drawing.Point(111, 473)
+        Me.MainTaskBar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MainTaskBar.Name = "MainTaskBar"
+        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
+        Me.MainTaskBar.TabIndex = 35
         '
         'LivingroomDoor
         '
@@ -508,35 +537,6 @@ Partial Class UserApartment
         Me.Kitchen.TabStop = False
         Me.Kitchen.Tag = "0"
         '
-        'apartment
-        '
-        Me.apartment.BackColor = System.Drawing.Color.SandyBrown
-        Me.apartment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.apartment.Location = New System.Drawing.Point(50, 40)
-        Me.apartment.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.apartment.Name = "apartment"
-        Me.apartment.Size = New System.Drawing.Size(738, 417)
-        Me.apartment.TabIndex = 5
-        Me.apartment.TabStop = False
-        '
-        'WindowMenu
-        '
-        Me.WindowMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.WindowMenu.Location = New System.Drawing.Point(132, 75)
-        Me.WindowMenu.Margin = New System.Windows.Forms.Padding(5)
-        Me.WindowMenu.Name = "WindowMenu"
-        Me.WindowMenu.Size = New System.Drawing.Size(543, 361)
-        Me.WindowMenu.TabIndex = 44
-        Me.WindowMenu.Visible = False
-        '
-        'MainTaskBar
-        '
-        Me.MainTaskBar.Location = New System.Drawing.Point(111, 473)
-        Me.MainTaskBar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
-        Me.MainTaskBar.TabIndex = 35
-        '
         'UserApartment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -592,9 +592,6 @@ Partial Class UserApartment
         CType(Me.BedroomWindow2Shutters, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingroomWindow1Shutters, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.downArrow, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.upArrow, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.tempOption, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.livingroomFan, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.kitchenFan, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bathroomFan, System.ComponentModel.ISupportInitialize).EndInit()
@@ -603,6 +600,10 @@ Partial Class UserApartment
         CType(Me.bedroomLight, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.kitchenLight, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.livingroomLight, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.apartment, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.downArrow, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.upArrow, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.tempOption, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BathroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KitchenDoor, System.ComponentModel.ISupportInitialize).EndInit()
@@ -618,7 +619,6 @@ Partial Class UserApartment
         CType(Me.Bedroom, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingRoom, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Kitchen, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.apartment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

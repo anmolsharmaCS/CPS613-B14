@@ -1,5 +1,5 @@
 ﻿Public Class WindowMenu
-    Private TaskBarOptions(3) As SubOptions
+    Private TaskBarOptions(1) As SubOptions
 
     Public Sub New()
 
@@ -7,10 +7,8 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        TaskBarOptions(0) = Me.CloseWindows
-        TaskBarOptions(1) = Me.OpenWindows
-        TaskBarOptions(2) = Me.CloseBlinds
-        TaskBarOptions(3) = Me.OpenBlinds
+        TaskBarOptions(0) = Me.windowControl
+        TaskBarOptions(1) = Me.blindControl
     End Sub
 
     Public Function GetTaskBarOptions()
