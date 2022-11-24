@@ -36,6 +36,7 @@ Partial Class Bedroom
         Me.exitEnv = New Scanning.SubOptions()
         Me.bedroomShutters1 = New System.Windows.Forms.PictureBox()
         Me.bedroomShutters2 = New System.Windows.Forms.PictureBox()
+        Me.WindowMenu = New Scanning.WindowMenu()
         CType(Me.FanControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LightControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bed, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -190,11 +191,22 @@ Partial Class Bedroom
         Me.bedroomShutters2.TabIndex = 70
         Me.bedroomShutters2.TabStop = False
         '
+        'WindowMenu
+        '
+        Me.WindowMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.WindowMenu.Location = New System.Drawing.Point(141, 165)
+        Me.WindowMenu.Margin = New System.Windows.Forms.Padding(4)
+        Me.WindowMenu.Name = "WindowMenu"
+        Me.WindowMenu.Size = New System.Drawing.Size(540, 183)
+        Me.WindowMenu.TabIndex = 71
+        Me.WindowMenu.Visible = False
+        '
         'Bedroom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.WindowMenu)
         Me.Controls.Add(Me.bedroomShutters2)
         Me.Controls.Add(Me.bedroomShutters1)
         Me.Controls.Add(Me.exitEnv)
@@ -240,4 +252,5 @@ Partial Class Bedroom
     Friend WithEvents exitEnv As SubOptions
     Friend WithEvents bedroomShutters1 As PictureBox
     Friend WithEvents bedroomShutters2 As PictureBox
+    Friend WithEvents WindowMenu As WindowMenu
 End Class

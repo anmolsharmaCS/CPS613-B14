@@ -2,7 +2,7 @@
 
 Public Class Kitchen
 
-    Private Options(3) As SubOptions
+    Private Options(2) As SubOptions
     Private environment(2) As SubOptions
 
     Private MyParent As UserApartment
@@ -15,10 +15,9 @@ Public Class Kitchen
         ' Add any initialization after the InitializeComponent() call.
         Options(0) = cooking
         Options(1) = lightOption
-        Options(2) = kitchenDoor
-        Options(3) = MainTaskBar.MenuBarOption
+        Options(2) = MainTaskBar.MenuBarOption
 
-        For i = 0 To 3
+        For i = 0 To 2
             Options(i).Initialize()
         Next
 
@@ -81,7 +80,7 @@ Public Class Kitchen
     Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles ScanningTimer.Tick
         If scanninglevel = 0 Then
             Options(focusIsOn).LoseFocus()
-            focusIsOn = (focusIsOn + 1) Mod 4
+            focusIsOn = (focusIsOn + 1) Mod 3
             Options(focusIsOn).ReceiveFocus()
         Else
             Options(focusIsOn).InnerScanningNext()
@@ -114,7 +113,7 @@ Public Class Kitchen
             If focusIsOn = 1 Then
                 scanninglevel = 1
                 Options(focusIsOn).StartInnerScanning(environment)
-            ElseIf focusIsOn = 3 Then
+            ElseIf focusIsOn = 2 Then
                 scanninglevel = 1
                 MainTaskBar.MenuBarOption.LoseFocus()
                 Options(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())

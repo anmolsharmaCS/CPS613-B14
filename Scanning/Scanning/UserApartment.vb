@@ -181,6 +181,20 @@ Public Class UserApartment
                         shutters(i).Hide()
 
                     Next
+                    For i = 0 To bedroomForm.shutters.Length - 1
+
+                        bedroomForm.shutters(i).Hide()
+
+                    Next
+                    bedroomForm.WindowMenu.windowControl.Image = My.Resources.WindowClosed
+                    bedroomForm.WindowMenu.windowControl.Tag = "closed"
+                    For i = 0 To livingroomForm.shutters.Length - 1
+
+                        livingroomForm.shutters(i).Hide()
+
+                    Next
+                    livingroomForm.WindowMenu.windowControl.Image = My.Resources.WindowClosed
+                    livingroomForm.WindowMenu.windowControl.Tag = "closed"
 
                 ElseIf WindowMenu.windowControl.Tag = "closed" Then
 
@@ -191,6 +205,20 @@ Public Class UserApartment
                         shutters(i).Show()
 
                     Next
+                    For i = 0 To bedroomForm.shutters.Length - 1
+
+                        bedroomForm.shutters(i).Show()
+
+                    Next
+                    bedroomForm.WindowMenu.windowControl.Image = My.Resources.WindowOpen
+                    bedroomForm.WindowMenu.windowControl.Tag = "open"
+                    For i = 0 To livingroomForm.shutters.Length - 1
+
+                        livingroomForm.shutters(i).Show()
+
+                    Next
+                    livingroomForm.WindowMenu.windowControl.Image = My.Resources.WindowOpen
+                    livingroomForm.WindowMenu.windowControl.Tag = "open"
 
                 End If
 

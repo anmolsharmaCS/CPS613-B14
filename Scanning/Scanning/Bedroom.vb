@@ -4,16 +4,17 @@ Public Class Bedroom
     Private TopOptions(3) As SubOptions
     Private environment(2) As SubOptions
     Private Windows(1) As SubOptions
+    Public shutters(1) As PictureBox
     Private MyParent As UserApartment
 
     Public Sub New(parentForm As UserApartment)
         ' This call is required by the designer.
         InitializeComponent()
 
-        TopOptions(0) = Bed
-        TopOptions(1) = envOption
-        TopOptions(2) = BedroomWindow1
-        TopOptions(3) = MainTaskBar.MenuBarOption
+        TopOptions(0) = MainTaskBar.MenuBarOption
+        TopOptions(1) = BedroomWindow1
+        TopOptions(2) = Bed
+        TopOptions(3) = envOption
 
         For i = 0 To 3
             TopOptions(i).Initialize()
@@ -33,6 +34,9 @@ Public Class Bedroom
         For i = 0 To 1
             Windows(i).Initialize()
         Next
+
+        shutters(0) = bedroomShutters1
+        shutters(1) = bedroomShutters2
 
         MyParent = parentForm
 
@@ -98,7 +102,22 @@ Public Class Bedroom
 
     Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
         If scanninglevel = 0 Then
+
             If focusIsOn = 0 Then
+
+                scanninglevel = 1
+                MainTaskBar.exitTaskBar.Show()
+                MainTaskBar.MenuBarOption.LoseFocus()
+                TopOptions(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
+
+            ElseIf focusIsOn = 1 Then
+
+                scanninglevel = 1
+                WindowMenu.Show()
+                TopOptions(focusIsOn).StartInnerScanning(WindowMenu.GetTaskBarOptions)
+
+            ElseIf focusIsOn = 2 Then
+
                 If Bed.Tag = "up" Then
                     Bed.Image = My.Resources.bedDown
                     Bed.Tag = "down"
@@ -106,17 +125,12 @@ Public Class Bedroom
                     Bed.Image = My.Resources.bedUp
                     Bed.Tag = "up"
                 End If
-            ElseIf focusIsOn = 1 Then
-
-                exitEnv.Show()
-                envOption.LoseFocus()
-                scanninglevel = 1
-                TopOptions(focusIsOn).StartInnerScanning(environment)
 
             ElseIf focusIsOn = 3 Then
                 scanninglevel = 1
-                MainTaskBar.MenuBarOption.LoseFocus()
-                TopOptions(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
+                envOption.LoseFocus()
+                exitEnv.Show()
+                TopOptions(focusIsOn).StartInnerScanning(environment)
             End If
         ElseIf scanninglevel = 1 Then
             If LightControl.BackColor = Color.LemonChiffon Then
@@ -157,24 +171,81 @@ Public Class Bedroom
                 envOption.StopInnerScanning()
                 scanninglevel = 0
 
-            ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
-                If focusIsOn = 5 Then
-                    MainTaskBar.MenuBarOption.StopInnerScanning()
-                    scanninglevel = 0
-                Else
-                    TopOptions(focusIsOn).StopInnerScanning()
-                    scanninglevel = 0
+            ElseIf WindowMenu.exitWindows.BackColor = Color.LemonChiffon Then
+
+                TopOptions(focusIsOn).StopInnerScanning()
+                Me.WindowMenu.Visible = False
+                scanninglevel = 0
+
+            ElseIf Me.WindowMenu.windowControl.BackColor = Color.LemonChiffon Then
+
+                If WindowMenu.windowControl.Tag = "open" Then
+
+                    WindowMenu.windowControl.Image = My.Resources.WindowClosed
+                    WindowMenu.windowControl.Tag = "closed"
+                    For i = 0 To shutters.Length - 1
+
+                        shutters(i).Hide()
+
+                    Next
+                    MyParent.BedroomWindow1Shutters.Hide()
+                    MyParent.BedroomWindow2Shutters.Hide()
+
+                ElseIf WindowMenu.windowControl.Tag = "closed" Then
+
+                    WindowMenu.windowControl.Image = My.Resources.WindowOpen
+                    WindowMenu.windowControl.Tag = "open"
+                    For i = 0 To shutters.Length - 1
+
+                        shutters(i).Show()
+
+                    Next
+                    MyParent.BedroomWindow1Shutters.Show()
+                    MyParent.BedroomWindow2Shutters.Show()
+
                 End If
+
+            ElseIf Me.WindowMenu.blindControl.BackColor = Color.LemonChiffon Then
+
+                If WindowMenu.blindControl.Tag = "open" Then
+
+                    WindowMenu.blindControl.Image = My.Resources.BlindsClosed
+                    WindowMenu.blindControl.Tag = "closed"
+                    'For i = 0 To blinds.Length - 1
+                    'blinds(i).Hide()
+                    'Next
+
+                ElseIf WindowMenu.blindControl.Tag = "closed" Then
+
+                    WindowMenu.blindControl.Image = My.Resources.BlindsOpen
+                    WindowMenu.blindControl.Tag = "open"
+                    'For i = 0 To blinds.Length - 1
+                    'blinds(i).Show()
+                    'Next
+
+                End If
+
+            ElseIf MainTaskBar.exitTaskBar.BackColor = Color.LemonChiffon Then
+
+                MainTaskBar.exitTaskBar.Hide()
+                MainTaskBar.MenuBarOption.StopInnerScanning()
+                scanninglevel = 0
+
             ElseIf MainTaskBar.Assistance.BackColor = Color.LemonChiffon Then
+
                 Dim Assistance As New Assistance(Me)
                 StopScanning()
                 MainTaskBar.MenuBarOption.StopInnerScanning()
                 Assistance.Show()
+
             ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
+
                 StopScanning()
                 MainTaskBar.PreviousScreen.LoseFocus()
+                MainTaskBar.exitTaskBar.Hide()
                 Me.Hide()
                 MyParent.ResumeScanning()
+
             End If
 
         End If
@@ -193,11 +264,11 @@ Public Class Bedroom
             End If
 
             If BedroomWindow1.BackColor.Equals(Color.LemonChiffon) Then
-                For i = 1 To Windows.Length - 1
+                For i = 0 To Windows.Length - 1
                     Windows(i).ReceiveFocus()
                 Next
             Else
-                For i = 1 To Windows.Length - 1
+                For i = 0 To Windows.Length - 1
                     Windows(i).LoseFocus()
                 Next
             End If
