@@ -27,6 +27,11 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources._exit">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.apartmentButton">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -148,11 +153,6 @@ Scanning
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.forward">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Scanning.My.Resources.Resources.hallwayButton">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

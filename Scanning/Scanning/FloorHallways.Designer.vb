@@ -30,15 +30,16 @@ Partial Class FloorHallways
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.MainTaskBar = New Scanning.MainTaskBar()
         Me.Home = New System.Windows.Forms.PictureBox()
         Me.ElevatorDoorLine = New System.Windows.Forms.PictureBox()
-        Me.SubOptions5 = New Scanning.SubOptions()
-        Me.SubOptions4 = New Scanning.SubOptions()
-        Me.SubOptions3 = New Scanning.SubOptions()
-        Me.SubOptions2 = New Scanning.SubOptions()
-        Me.SubOptions1 = New Scanning.SubOptions()
-        Me.BedroomDoor = New Scanning.SubOptions()
+        Me.Floor = New System.Windows.Forms.PictureBox()
+        Me.exitApartments = New Scanning.SubOptions()
+        Me.door06 = New Scanning.SubOptions()
+        Me.door05 = New Scanning.SubOptions()
+        Me.door04 = New Scanning.SubOptions()
+        Me.door03 = New Scanning.SubOptions()
+        Me.door02 = New Scanning.SubOptions()
+        Me.door01 = New Scanning.SubOptions()
         Me.Elevator = New Scanning.SubOptions()
         Me.Apartment06 = New Scanning.SubOptions()
         Me.Apartment05 = New Scanning.SubOptions()
@@ -46,15 +47,17 @@ Partial Class FloorHallways
         Me.Apartment03 = New Scanning.SubOptions()
         Me.Apartment02 = New Scanning.SubOptions()
         Me.Apartment01 = New Scanning.SubOptions()
-        Me.Floor = New System.Windows.Forms.PictureBox()
+        Me.MainTaskBar = New Scanning.MainTaskBar()
         CType(Me.Home, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElevatorDoorLine, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SubOptions5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SubOptions4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SubOptions3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SubOptions2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SubOptions1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BedroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Floor, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.exitApartments, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.door06, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.door05, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.door04, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.door03, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.door02, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.door01, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Elevator, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Apartment06, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Apartment05, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,7 +65,6 @@ Partial Class FloorHallways
         CType(Me.Apartment03, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Apartment02, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Apartment01, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Floor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -129,16 +131,9 @@ Partial Class FloorHallways
         '
         Me.ScanningTimer.Interval = 1000
         '
-        'MainTaskBar
-        '
-        Me.MainTaskBar.Location = New System.Drawing.Point(92, 455)
-        Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
-        Me.MainTaskBar.TabIndex = 45
-        '
         'Home
         '
-        Me.Home.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Home.BackColor = System.Drawing.Color.DarkKhaki
         Me.Home.Image = Global.Scanning.My.Resources.Resources.house
         Me.Home.Location = New System.Drawing.Point(359, 71)
         Me.Home.Name = "Home"
@@ -156,65 +151,88 @@ Partial Class FloorHallways
         Me.ElevatorDoorLine.TabIndex = 37
         Me.ElevatorDoorLine.TabStop = False
         '
-        'SubOptions5
+        'Floor
         '
-        Me.SubOptions5.BackColor = System.Drawing.Color.SaddleBrown
-        Me.SubOptions5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.SubOptions5.Location = New System.Drawing.Point(628, 265)
-        Me.SubOptions5.Name = "SubOptions5"
-        Me.SubOptions5.Size = New System.Drawing.Size(54, 7)
-        Me.SubOptions5.TabIndex = 36
-        Me.SubOptions5.TabStop = False
+        Me.Floor.BackColor = System.Drawing.Color.BurlyWood
+        Me.Floor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Floor.Location = New System.Drawing.Point(31, 21)
+        Me.Floor.Name = "Floor"
+        Me.Floor.Size = New System.Drawing.Size(738, 417)
+        Me.Floor.TabIndex = 6
+        Me.Floor.TabStop = False
         '
-        'SubOptions4
+        'exitApartments
         '
-        Me.SubOptions4.BackColor = System.Drawing.Color.SaddleBrown
-        Me.SubOptions4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.SubOptions4.Location = New System.Drawing.Point(373, 265)
-        Me.SubOptions4.Name = "SubOptions4"
-        Me.SubOptions4.Size = New System.Drawing.Size(54, 7)
-        Me.SubOptions4.TabIndex = 35
-        Me.SubOptions4.TabStop = False
+        Me.exitApartments.BackColor = System.Drawing.Color.Red
+        Me.exitApartments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.exitApartments.Image = Global.Scanning.My.Resources.Resources._exit
+        Me.exitApartments.Location = New System.Drawing.Point(739, 12)
+        Me.exitApartments.Name = "exitApartments"
+        Me.exitApartments.Size = New System.Drawing.Size(51, 45)
+        Me.exitApartments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.exitApartments.TabIndex = 46
+        Me.exitApartments.TabStop = False
+        Me.exitApartments.Visible = False
         '
-        'SubOptions3
+        'door06
         '
-        Me.SubOptions3.BackColor = System.Drawing.Color.SaddleBrown
-        Me.SubOptions3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.SubOptions3.Location = New System.Drawing.Point(127, 265)
-        Me.SubOptions3.Name = "SubOptions3"
-        Me.SubOptions3.Size = New System.Drawing.Size(54, 7)
-        Me.SubOptions3.TabIndex = 34
-        Me.SubOptions3.TabStop = False
+        Me.door06.BackColor = System.Drawing.Color.SaddleBrown
+        Me.door06.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.door06.Location = New System.Drawing.Point(628, 265)
+        Me.door06.Name = "door06"
+        Me.door06.Size = New System.Drawing.Size(54, 7)
+        Me.door06.TabIndex = 36
+        Me.door06.TabStop = False
         '
-        'SubOptions2
+        'door05
         '
-        Me.SubOptions2.BackColor = System.Drawing.Color.SaddleBrown
-        Me.SubOptions2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.SubOptions2.Location = New System.Drawing.Point(628, 189)
-        Me.SubOptions2.Name = "SubOptions2"
-        Me.SubOptions2.Size = New System.Drawing.Size(54, 7)
-        Me.SubOptions2.TabIndex = 33
-        Me.SubOptions2.TabStop = False
+        Me.door05.BackColor = System.Drawing.Color.SaddleBrown
+        Me.door05.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.door05.Location = New System.Drawing.Point(373, 265)
+        Me.door05.Name = "door05"
+        Me.door05.Size = New System.Drawing.Size(54, 7)
+        Me.door05.TabIndex = 35
+        Me.door05.TabStop = False
         '
-        'SubOptions1
+        'door04
         '
-        Me.SubOptions1.BackColor = System.Drawing.Color.SaddleBrown
-        Me.SubOptions1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.SubOptions1.Location = New System.Drawing.Point(373, 187)
-        Me.SubOptions1.Name = "SubOptions1"
-        Me.SubOptions1.Size = New System.Drawing.Size(54, 7)
-        Me.SubOptions1.TabIndex = 32
-        Me.SubOptions1.TabStop = False
+        Me.door04.BackColor = System.Drawing.Color.SaddleBrown
+        Me.door04.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.door04.Location = New System.Drawing.Point(127, 265)
+        Me.door04.Name = "door04"
+        Me.door04.Size = New System.Drawing.Size(54, 7)
+        Me.door04.TabIndex = 34
+        Me.door04.TabStop = False
         '
-        'BedroomDoor
+        'door03
         '
-        Me.BedroomDoor.BackColor = System.Drawing.Color.SaddleBrown
-        Me.BedroomDoor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BedroomDoor.Location = New System.Drawing.Point(127, 187)
-        Me.BedroomDoor.Name = "BedroomDoor"
-        Me.BedroomDoor.Size = New System.Drawing.Size(54, 7)
-        Me.BedroomDoor.TabIndex = 31
-        Me.BedroomDoor.TabStop = False
+        Me.door03.BackColor = System.Drawing.Color.SaddleBrown
+        Me.door03.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.door03.Location = New System.Drawing.Point(628, 189)
+        Me.door03.Name = "door03"
+        Me.door03.Size = New System.Drawing.Size(54, 7)
+        Me.door03.TabIndex = 33
+        Me.door03.TabStop = False
+        '
+        'door02
+        '
+        Me.door02.BackColor = System.Drawing.Color.SaddleBrown
+        Me.door02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.door02.Location = New System.Drawing.Point(373, 187)
+        Me.door02.Name = "door02"
+        Me.door02.Size = New System.Drawing.Size(54, 7)
+        Me.door02.TabIndex = 32
+        Me.door02.TabStop = False
+        '
+        'door01
+        '
+        Me.door01.BackColor = System.Drawing.Color.SaddleBrown
+        Me.door01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.door01.Location = New System.Drawing.Point(127, 187)
+        Me.door01.Name = "door01"
+        Me.door01.Size = New System.Drawing.Size(54, 7)
+        Me.door01.TabIndex = 31
+        Me.door01.TabStop = False
         '
         'Elevator
         '
@@ -286,15 +304,12 @@ Partial Class FloorHallways
         Me.Apartment01.TabIndex = 7
         Me.Apartment01.TabStop = False
         '
-        'Floor
+        'MainTaskBar
         '
-        Me.Floor.BackColor = System.Drawing.Color.BurlyWood
-        Me.Floor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Floor.Location = New System.Drawing.Point(31, 21)
-        Me.Floor.Name = "Floor"
-        Me.Floor.Size = New System.Drawing.Size(738, 417)
-        Me.Floor.TabIndex = 6
-        Me.Floor.TabStop = False
+        Me.MainTaskBar.Location = New System.Drawing.Point(167, 457)
+        Me.MainTaskBar.Name = "MainTaskBar"
+        Me.MainTaskBar.Size = New System.Drawing.Size(602, 132)
+        Me.MainTaskBar.TabIndex = 47
         '
         'FloorHallways
         '
@@ -302,6 +317,7 @@ Partial Class FloorHallways
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
         Me.Controls.Add(Me.MainTaskBar)
+        Me.Controls.Add(Me.exitApartments)
         Me.Controls.Add(Me.Home)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -310,12 +326,12 @@ Partial Class FloorHallways
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ElevatorDoorLine)
-        Me.Controls.Add(Me.SubOptions5)
-        Me.Controls.Add(Me.SubOptions4)
-        Me.Controls.Add(Me.SubOptions3)
-        Me.Controls.Add(Me.SubOptions2)
-        Me.Controls.Add(Me.SubOptions1)
-        Me.Controls.Add(Me.BedroomDoor)
+        Me.Controls.Add(Me.door06)
+        Me.Controls.Add(Me.door05)
+        Me.Controls.Add(Me.door04)
+        Me.Controls.Add(Me.door03)
+        Me.Controls.Add(Me.door02)
+        Me.Controls.Add(Me.door01)
         Me.Controls.Add(Me.Elevator)
         Me.Controls.Add(Me.Apartment06)
         Me.Controls.Add(Me.Apartment05)
@@ -330,12 +346,14 @@ Partial Class FloorHallways
         Me.Text = "FloorHallways"
         CType(Me.Home, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ElevatorDoorLine, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SubOptions5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SubOptions4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SubOptions3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SubOptions2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SubOptions1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BedroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Floor, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.exitApartments, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.door06, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.door05, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.door04, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.door03, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.door02, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.door01, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Elevator, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Apartment06, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Apartment05, System.ComponentModel.ISupportInitialize).EndInit()
@@ -343,7 +361,6 @@ Partial Class FloorHallways
         CType(Me.Apartment03, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Apartment02, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Apartment01, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Floor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -357,12 +374,12 @@ Partial Class FloorHallways
     Friend WithEvents Apartment05 As SubOptions
     Friend WithEvents Apartment06 As SubOptions
     Friend WithEvents Elevator As SubOptions
-    Friend WithEvents BedroomDoor As SubOptions
-    Friend WithEvents SubOptions1 As SubOptions
-    Friend WithEvents SubOptions2 As SubOptions
-    Friend WithEvents SubOptions3 As SubOptions
-    Friend WithEvents SubOptions4 As SubOptions
-    Friend WithEvents SubOptions5 As SubOptions
+    Friend WithEvents door01 As SubOptions
+    Friend WithEvents door02 As SubOptions
+    Friend WithEvents door03 As SubOptions
+    Friend WithEvents door04 As SubOptions
+    Friend WithEvents door05 As SubOptions
+    Friend WithEvents door06 As SubOptions
     Friend WithEvents ElevatorDoorLine As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
@@ -372,5 +389,6 @@ Partial Class FloorHallways
     Friend WithEvents Label6 As Label
     Friend WithEvents Home As PictureBox
     Friend WithEvents ScanningTimer As Timer
+    Friend WithEvents exitApartments As SubOptions
     Friend WithEvents MainTaskBar As MainTaskBar
 End Class

@@ -26,8 +26,6 @@ Partial Class UserApartment
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
         Me.tempLabel = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.BedroomWindow3Shutters = New System.Windows.Forms.PictureBox()
-        Me.BathroomWindowShutters = New System.Windows.Forms.PictureBox()
         Me.LivingroomWindow2Shutters = New System.Windows.Forms.PictureBox()
         Me.BedroomWindow1Shutters = New System.Windows.Forms.PictureBox()
         Me.BedroomWindow2Shutters = New System.Windows.Forms.PictureBox()
@@ -42,28 +40,26 @@ Partial Class UserApartment
         Me.kitchenLight = New System.Windows.Forms.PictureBox()
         Me.livingroomLight = New System.Windows.Forms.PictureBox()
         Me.apartment = New System.Windows.Forms.PictureBox()
+        Me.WindowMenu = New Scanning.WindowMenu()
+        Me.exitRooms = New Scanning.SubOptions()
         Me.downArrow = New Scanning.SubOptions()
         Me.upArrow = New Scanning.SubOptions()
         Me.tempOption = New Scanning.SubOptions()
-        Me.WindowMenu = New Scanning.WindowMenu()
         Me.MainTaskBar = New Scanning.MainTaskBar()
         Me.LivingroomDoor = New Scanning.SubOptions()
         Me.BathroomDoor = New Scanning.SubOptions()
         Me.KitchenDoor = New Scanning.SubOptions()
         Me.BedroomDoor = New Scanning.SubOptions()
-        Me.BathroomWindow = New Scanning.SubOptions()
         Me.LivingroomWindow2 = New Scanning.SubOptions()
         Me.BedroomWindow1 = New Scanning.SubOptions()
         Me.BedroomWindow2 = New Scanning.SubOptions()
-        Me.BedroomWindow3 = New Scanning.SubOptions()
         Me.FrontDoor = New Scanning.SubOptions()
         Me.LivingroomWindow1 = New Scanning.SubOptions()
         Me.Bathroom = New Scanning.SubOptions()
         Me.Bedroom = New Scanning.SubOptions()
         Me.LivingRoom = New Scanning.SubOptions()
         Me.Kitchen = New Scanning.SubOptions()
-        CType(Me.BedroomWindow3Shutters, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BathroomWindowShutters, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.exitTemp = New Scanning.SubOptions()
         CType(Me.LivingroomWindow2Shutters, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow1Shutters, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow2Shutters, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,6 +74,7 @@ Partial Class UserApartment
         CType(Me.kitchenLight, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.livingroomLight, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.apartment, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.exitRooms, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.downArrow, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.upArrow, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tempOption, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,17 +82,16 @@ Partial Class UserApartment
         CType(Me.BathroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KitchenDoor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BathroomWindow, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingroomWindow2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BedroomWindow3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FrontDoor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingroomWindow1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bathroom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bedroom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingRoom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Kitchen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.exitTemp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ScanningTimer
@@ -107,7 +103,7 @@ Partial Class UserApartment
         Me.tempLabel.AutoSize = True
         Me.tempLabel.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.tempLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tempLabel.Location = New System.Drawing.Point(876, 182)
+        Me.tempLabel.Location = New System.Drawing.Point(828, 189)
         Me.tempLabel.Name = "tempLabel"
         Me.tempLabel.Size = New System.Drawing.Size(48, 32)
         Me.tempLabel.TabIndex = 46
@@ -118,31 +114,11 @@ Partial Class UserApartment
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(919, 182)
+        Me.Label1.Location = New System.Drawing.Point(871, 189)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(47, 32)
         Me.Label1.TabIndex = 47
         Me.Label1.Text = "°C"
-        '
-        'BedroomWindow3Shutters
-        '
-        Me.BedroomWindow3Shutters.Image = Global.Scanning.My.Resources.Resources.openWindowSideways
-        Me.BedroomWindow3Shutters.Location = New System.Drawing.Point(798, 57)
-        Me.BedroomWindow3Shutters.Name = "BedroomWindow3Shutters"
-        Me.BedroomWindow3Shutters.Size = New System.Drawing.Size(28, 137)
-        Me.BedroomWindow3Shutters.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BedroomWindow3Shutters.TabIndex = 57
-        Me.BedroomWindow3Shutters.TabStop = False
-        '
-        'BathroomWindowShutters
-        '
-        Me.BathroomWindowShutters.Image = Global.Scanning.My.Resources.Resources.openWindowSideways
-        Me.BathroomWindowShutters.Location = New System.Drawing.Point(795, 299)
-        Me.BathroomWindowShutters.Name = "BathroomWindowShutters"
-        Me.BathroomWindowShutters.Size = New System.Drawing.Size(28, 137)
-        Me.BathroomWindowShutters.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BathroomWindowShutters.TabIndex = 56
-        Me.BathroomWindowShutters.TabStop = False
         '
         'LivingroomWindow2Shutters
         '
@@ -190,7 +166,7 @@ Partial Class UserApartment
         '
         Me.PictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.PictureBox1.Image = Global.Scanning.My.Resources.Resources.temp
-        Me.PictureBox1.Location = New System.Drawing.Point(884, 40)
+        Me.PictureBox1.Location = New System.Drawing.Point(836, 47)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(70, 70)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -304,11 +280,34 @@ Partial Class UserApartment
         Me.apartment.TabIndex = 5
         Me.apartment.TabStop = False
         '
+        'WindowMenu
+        '
+        Me.WindowMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.WindowMenu.Location = New System.Drawing.Point(144, 156)
+        Me.WindowMenu.Margin = New System.Windows.Forms.Padding(4)
+        Me.WindowMenu.Name = "WindowMenu"
+        Me.WindowMenu.Size = New System.Drawing.Size(540, 183)
+        Me.WindowMenu.TabIndex = 60
+        Me.WindowMenu.Visible = False
+        '
+        'exitRooms
+        '
+        Me.exitRooms.BackColor = System.Drawing.Color.Red
+        Me.exitRooms.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.exitRooms.Image = Global.Scanning.My.Resources.Resources._exit
+        Me.exitRooms.Location = New System.Drawing.Point(725, 58)
+        Me.exitRooms.Name = "exitRooms"
+        Me.exitRooms.Size = New System.Drawing.Size(51, 45)
+        Me.exitRooms.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.exitRooms.TabIndex = 59
+        Me.exitRooms.TabStop = False
+        Me.exitRooms.Visible = False
+        '
         'downArrow
         '
         Me.downArrow.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.downArrow.Image = Global.Scanning.My.Resources.Resources.downarrow
-        Me.downArrow.Location = New System.Drawing.Point(886, 230)
+        Me.downArrow.Location = New System.Drawing.Point(838, 237)
         Me.downArrow.Name = "downArrow"
         Me.downArrow.Size = New System.Drawing.Size(66, 50)
         Me.downArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -319,7 +318,7 @@ Partial Class UserApartment
         '
         Me.upArrow.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.upArrow.Image = Global.Scanning.My.Resources.Resources.uparrow
-        Me.upArrow.Location = New System.Drawing.Point(886, 123)
+        Me.upArrow.Location = New System.Drawing.Point(838, 130)
         Me.upArrow.Name = "upArrow"
         Me.upArrow.Size = New System.Drawing.Size(66, 50)
         Me.upArrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -330,21 +329,11 @@ Partial Class UserApartment
         '
         Me.tempOption.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.tempOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.tempOption.Location = New System.Drawing.Point(852, 33)
+        Me.tempOption.Location = New System.Drawing.Point(804, 40)
         Me.tempOption.Name = "tempOption"
         Me.tempOption.Size = New System.Drawing.Size(135, 262)
         Me.tempOption.TabIndex = 45
         Me.tempOption.TabStop = False
-        '
-        'WindowMenu
-        '
-        Me.WindowMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.WindowMenu.Location = New System.Drawing.Point(132, 75)
-        Me.WindowMenu.Margin = New System.Windows.Forms.Padding(5)
-        Me.WindowMenu.Name = "WindowMenu"
-        Me.WindowMenu.Size = New System.Drawing.Size(543, 184)
-        Me.WindowMenu.TabIndex = 44
-        Me.WindowMenu.Visible = False
         '
         'MainTaskBar
         '
@@ -361,7 +350,7 @@ Partial Class UserApartment
         Me.LivingroomDoor.Location = New System.Drawing.Point(364, 215)
         Me.LivingroomDoor.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.LivingroomDoor.Name = "LivingroomDoor"
-        Me.LivingroomDoor.Size = New System.Drawing.Size(15, 64)
+        Me.LivingroomDoor.Size = New System.Drawing.Size(5, 64)
         Me.LivingroomDoor.TabIndex = 33
         Me.LivingroomDoor.TabStop = False
         '
@@ -369,10 +358,10 @@ Partial Class UserApartment
         '
         Me.BathroomDoor.BackColor = System.Drawing.Color.SaddleBrown
         Me.BathroomDoor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BathroomDoor.Location = New System.Drawing.Point(439, 345)
+        Me.BathroomDoor.Location = New System.Drawing.Point(448, 345)
         Me.BathroomDoor.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BathroomDoor.Name = "BathroomDoor"
-        Me.BathroomDoor.Size = New System.Drawing.Size(15, 64)
+        Me.BathroomDoor.Size = New System.Drawing.Size(5, 64)
         Me.BathroomDoor.TabIndex = 32
         Me.BathroomDoor.TabStop = False
         '
@@ -383,7 +372,7 @@ Partial Class UserApartment
         Me.KitchenDoor.Location = New System.Drawing.Point(364, 345)
         Me.KitchenDoor.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.KitchenDoor.Name = "KitchenDoor"
-        Me.KitchenDoor.Size = New System.Drawing.Size(15, 64)
+        Me.KitchenDoor.Size = New System.Drawing.Size(5, 64)
         Me.KitchenDoor.TabIndex = 31
         Me.KitchenDoor.TabStop = False
         '
@@ -391,24 +380,12 @@ Partial Class UserApartment
         '
         Me.BedroomDoor.BackColor = System.Drawing.Color.SaddleBrown
         Me.BedroomDoor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BedroomDoor.Location = New System.Drawing.Point(540, 215)
+        Me.BedroomDoor.Location = New System.Drawing.Point(540, 211)
         Me.BedroomDoor.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BedroomDoor.Name = "BedroomDoor"
-        Me.BedroomDoor.Size = New System.Drawing.Size(63, 16)
+        Me.BedroomDoor.Size = New System.Drawing.Size(63, 5)
         Me.BedroomDoor.TabIndex = 30
         Me.BedroomDoor.TabStop = False
-        '
-        'BathroomWindow
-        '
-        Me.BathroomWindow.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.BathroomWindow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BathroomWindow.Location = New System.Drawing.Point(782, 325)
-        Me.BathroomWindow.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BathroomWindow.Name = "BathroomWindow"
-        Me.BathroomWindow.Size = New System.Drawing.Size(15, 98)
-        Me.BathroomWindow.TabIndex = 29
-        Me.BathroomWindow.TabStop = False
-        Me.BathroomWindow.Tag = ""
         '
         'LivingroomWindow2
         '
@@ -446,26 +423,14 @@ Partial Class UserApartment
         Me.BedroomWindow2.TabStop = False
         Me.BedroomWindow2.Tag = ""
         '
-        'BedroomWindow3
-        '
-        Me.BedroomWindow3.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.BedroomWindow3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BedroomWindow3.Location = New System.Drawing.Point(782, 75)
-        Me.BedroomWindow3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BedroomWindow3.Name = "BedroomWindow3"
-        Me.BedroomWindow3.Size = New System.Drawing.Size(15, 98)
-        Me.BedroomWindow3.TabIndex = 24
-        Me.BedroomWindow3.TabStop = False
-        Me.BedroomWindow3.Tag = ""
-        '
         'FrontDoor
         '
         Me.FrontDoor.BackColor = System.Drawing.Color.SaddleBrown
         Me.FrontDoor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.FrontDoor.Location = New System.Drawing.Point(372, 452)
+        Me.FrontDoor.Location = New System.Drawing.Point(375, 454)
         Me.FrontDoor.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.FrontDoor.Name = "FrontDoor"
-        Me.FrontDoor.Size = New System.Drawing.Size(63, 16)
+        Me.FrontDoor.Size = New System.Drawing.Size(63, 5)
         Me.FrontDoor.TabIndex = 23
         Me.FrontDoor.TabStop = False
         '
@@ -537,13 +502,27 @@ Partial Class UserApartment
         Me.Kitchen.TabStop = False
         Me.Kitchen.Tag = "0"
         '
+        'exitTemp
+        '
+        Me.exitTemp.BackColor = System.Drawing.Color.Red
+        Me.exitTemp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.exitTemp.Image = Global.Scanning.My.Resources.Resources._exit
+        Me.exitTemp.Location = New System.Drawing.Point(899, 40)
+        Me.exitTemp.Name = "exitTemp"
+        Me.exitTemp.Size = New System.Drawing.Size(40, 40)
+        Me.exitTemp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.exitTemp.TabIndex = 61
+        Me.exitTemp.TabStop = False
+        Me.exitTemp.Visible = False
+        '
         'UserApartment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
-        Me.Controls.Add(Me.BedroomWindow3Shutters)
-        Me.Controls.Add(Me.BathroomWindowShutters)
+        Me.Controls.Add(Me.exitTemp)
+        Me.Controls.Add(Me.WindowMenu)
+        Me.Controls.Add(Me.exitRooms)
         Me.Controls.Add(Me.LivingroomWindow2Shutters)
         Me.Controls.Add(Me.BedroomWindow1Shutters)
         Me.Controls.Add(Me.BedroomWindow2Shutters)
@@ -554,7 +533,6 @@ Partial Class UserApartment
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.tempLabel)
         Me.Controls.Add(Me.tempOption)
-        Me.Controls.Add(Me.WindowMenu)
         Me.Controls.Add(Me.livingroomFan)
         Me.Controls.Add(Me.kitchenFan)
         Me.Controls.Add(Me.bathroomFan)
@@ -568,11 +546,9 @@ Partial Class UserApartment
         Me.Controls.Add(Me.BathroomDoor)
         Me.Controls.Add(Me.KitchenDoor)
         Me.Controls.Add(Me.BedroomDoor)
-        Me.Controls.Add(Me.BathroomWindow)
         Me.Controls.Add(Me.LivingroomWindow2)
         Me.Controls.Add(Me.BedroomWindow1)
         Me.Controls.Add(Me.BedroomWindow2)
-        Me.Controls.Add(Me.BedroomWindow3)
         Me.Controls.Add(Me.FrontDoor)
         Me.Controls.Add(Me.LivingroomWindow1)
         Me.Controls.Add(Me.Bathroom)
@@ -585,8 +561,6 @@ Partial Class UserApartment
         Me.Name = "UserApartment"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "UserApartment"
-        CType(Me.BedroomWindow3Shutters, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BathroomWindowShutters, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingroomWindow2Shutters, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomWindow1Shutters, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomWindow2Shutters, System.ComponentModel.ISupportInitialize).EndInit()
@@ -601,6 +575,7 @@ Partial Class UserApartment
         CType(Me.kitchenLight, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.livingroomLight, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.apartment, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.exitRooms, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.downArrow, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.upArrow, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tempOption, System.ComponentModel.ISupportInitialize).EndInit()
@@ -608,17 +583,16 @@ Partial Class UserApartment
         CType(Me.BathroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KitchenDoor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BathroomWindow, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingroomWindow2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomWindow1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomWindow2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BedroomWindow3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FrontDoor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingroomWindow1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Bathroom, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Bedroom, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingRoom, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Kitchen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.exitTemp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -631,11 +605,9 @@ Partial Class UserApartment
     Friend WithEvents Bathroom As SubOptions
     Friend WithEvents LivingroomWindow1 As SubOptions
     Friend WithEvents FrontDoor As SubOptions
-    Friend WithEvents BedroomWindow3 As SubOptions
     Friend WithEvents BedroomWindow2 As SubOptions
     Friend WithEvents BedroomWindow1 As SubOptions
     Friend WithEvents LivingroomWindow2 As SubOptions
-    Friend WithEvents BathroomWindow As SubOptions
     Friend WithEvents BedroomDoor As SubOptions
     Friend WithEvents KitchenDoor As SubOptions
     Friend WithEvents BathroomDoor As SubOptions
@@ -649,7 +621,6 @@ Partial Class UserApartment
     Friend WithEvents bathroomFan As PictureBox
     Friend WithEvents kitchenFan As PictureBox
     Friend WithEvents livingroomFan As PictureBox
-    Friend WithEvents WindowMenu As WindowMenu
     Friend WithEvents tempOption As SubOptions
     Friend WithEvents tempLabel As Label
     Friend WithEvents Label1 As Label
@@ -660,6 +631,7 @@ Partial Class UserApartment
     Friend WithEvents BedroomWindow2Shutters As PictureBox
     Friend WithEvents BedroomWindow1Shutters As PictureBox
     Friend WithEvents LivingroomWindow2Shutters As PictureBox
-    Friend WithEvents BathroomWindowShutters As PictureBox
-    Friend WithEvents BedroomWindow3Shutters As PictureBox
+    Friend WithEvents exitRooms As SubOptions
+    Friend WithEvents WindowMenu As WindowMenu
+    Friend WithEvents exitTemp As SubOptions
 End Class

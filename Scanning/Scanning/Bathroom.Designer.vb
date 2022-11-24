@@ -23,47 +23,97 @@ Partial Class Bathroom
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.MainTaskBar = New Scanning.MainTaskBar()
-        Me.bathroomWindow = New Scanning.SubOptions()
-        Me.bathroomDoor = New Scanning.SubOptions()
-        Me.flushToilet = New Scanning.SubOptions()
-        Me.fanOption = New Scanning.SubOptions()
-        Me.lightOption = New Scanning.SubOptions()
         Me.bathroomBackground = New System.Windows.Forms.PictureBox()
         Me.ScanningTImer = New System.Windows.Forms.Timer(Me.components)
-        CType(Me.bathroomWindow, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bathroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.flushToilet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.exitBathroomEnv = New Scanning.SubOptions()
+        Me.fanOption = New Scanning.SubOptions()
+        Me.lightOption = New Scanning.SubOptions()
+        Me.envOption = New Scanning.SubOptions()
+        Me.bathroomDoor = New Scanning.SubOptions()
+        Me.flushToilet = New Scanning.SubOptions()
+        Me.MainTaskBar = New Scanning.MainTaskBar()
+        CType(Me.bathroomBackground, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.exitBathroomEnv, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.fanOption, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lightOption, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bathroomBackground, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.envOption, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bathroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.flushToilet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'MainTaskBar
+        'bathroomBackground
         '
-        Me.MainTaskBar.Location = New System.Drawing.Point(93, 454)
-        Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
-        Me.MainTaskBar.TabIndex = 2
+        Me.bathroomBackground.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.bathroomBackground.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.bathroomBackground.Location = New System.Drawing.Point(31, 17)
+        Me.bathroomBackground.Margin = New System.Windows.Forms.Padding(4)
+        Me.bathroomBackground.Name = "bathroomBackground"
+        Me.bathroomBackground.Size = New System.Drawing.Size(739, 417)
+        Me.bathroomBackground.TabIndex = 1
+        Me.bathroomBackground.TabStop = False
         '
-        'bathroomWindow
+        'ScanningTImer
         '
-        Me.bathroomWindow.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.bathroomWindow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.bathroomWindow.Location = New System.Drawing.Point(762, 134)
-        Me.bathroomWindow.Name = "bathroomWindow"
-        Me.bathroomWindow.Size = New System.Drawing.Size(15, 178)
-        Me.bathroomWindow.TabIndex = 61
-        Me.bathroomWindow.TabStop = False
-        Me.bathroomWindow.Tag = ""
+        Me.ScanningTImer.Interval = 1000
+        '
+        'exitBathroomEnv
+        '
+        Me.exitBathroomEnv.BackColor = System.Drawing.Color.Red
+        Me.exitBathroomEnv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.exitBathroomEnv.Image = Global.Scanning.My.Resources.Resources._exit
+        Me.exitBathroomEnv.Location = New System.Drawing.Point(654, 60)
+        Me.exitBathroomEnv.Name = "exitBathroomEnv"
+        Me.exitBathroomEnv.Size = New System.Drawing.Size(40, 40)
+        Me.exitBathroomEnv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.exitBathroomEnv.TabIndex = 65
+        Me.exitBathroomEnv.TabStop = False
+        Me.exitBathroomEnv.Visible = False
+        '
+        'fanOption
+        '
+        Me.fanOption.BackColor = System.Drawing.SystemColors.Control
+        Me.fanOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.fanOption.Image = Global.Scanning.My.Resources.Resources.fanOff
+        Me.fanOption.Location = New System.Drawing.Point(520, 224)
+        Me.fanOption.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.fanOption.Name = "fanOption"
+        Me.fanOption.Size = New System.Drawing.Size(128, 112)
+        Me.fanOption.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.fanOption.TabIndex = 57
+        Me.fanOption.TabStop = False
+        Me.fanOption.Tag = "off"
+        '
+        'lightOption
+        '
+        Me.lightOption.BackColor = System.Drawing.SystemColors.Control
+        Me.lightOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lightOption.Image = Global.Scanning.My.Resources.Resources.bulbUnlit
+        Me.lightOption.Location = New System.Drawing.Point(520, 97)
+        Me.lightOption.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.lightOption.Name = "lightOption"
+        Me.lightOption.Size = New System.Drawing.Size(128, 112)
+        Me.lightOption.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.lightOption.TabIndex = 56
+        Me.lightOption.TabStop = False
+        Me.lightOption.Tag = "off"
+        '
+        'envOption
+        '
+        Me.envOption.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.envOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.envOption.Location = New System.Drawing.Point(499, 83)
+        Me.envOption.Name = "envOption"
+        Me.envOption.Size = New System.Drawing.Size(173, 267)
+        Me.envOption.TabIndex = 62
+        Me.envOption.TabStop = False
         '
         'bathroomDoor
         '
         Me.bathroomDoor.BackColor = System.Drawing.Color.SaddleBrown
         Me.bathroomDoor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.bathroomDoor.Location = New System.Drawing.Point(20, 275)
+        Me.bathroomDoor.Location = New System.Drawing.Point(27, 275)
         Me.bathroomDoor.Name = "bathroomDoor"
-        Me.bathroomDoor.Size = New System.Drawing.Size(12, 123)
+        Me.bathroomDoor.Size = New System.Drawing.Size(5, 123)
         Me.bathroomDoor.TabIndex = 60
         Me.bathroomDoor.TabStop = False
         '
@@ -81,70 +131,37 @@ Partial Class Bathroom
         Me.flushToilet.TabStop = False
         Me.flushToilet.Tag = ""
         '
-        'fanOption
+        'MainTaskBar
         '
-        Me.fanOption.BackColor = System.Drawing.SystemColors.Control
-        Me.fanOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.fanOption.Image = Global.Scanning.My.Resources.Resources.fanOff
-        Me.fanOption.Location = New System.Drawing.Point(499, 237)
-        Me.fanOption.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.fanOption.Name = "fanOption"
-        Me.fanOption.Size = New System.Drawing.Size(149, 113)
-        Me.fanOption.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.fanOption.TabIndex = 57
-        Me.fanOption.TabStop = False
-        Me.fanOption.Tag = "off"
-        '
-        'lightOption
-        '
-        Me.lightOption.BackColor = System.Drawing.SystemColors.Control
-        Me.lightOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lightOption.Image = Global.Scanning.My.Resources.Resources.bulbUnlit
-        Me.lightOption.Location = New System.Drawing.Point(499, 83)
-        Me.lightOption.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.lightOption.Name = "lightOption"
-        Me.lightOption.Size = New System.Drawing.Size(149, 113)
-        Me.lightOption.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.lightOption.TabIndex = 56
-        Me.lightOption.TabStop = False
-        Me.lightOption.Tag = "off"
-        '
-        'bathroomBackground
-        '
-        Me.bathroomBackground.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.bathroomBackground.Location = New System.Drawing.Point(31, 17)
-        Me.bathroomBackground.Margin = New System.Windows.Forms.Padding(4)
-        Me.bathroomBackground.Name = "bathroomBackground"
-        Me.bathroomBackground.Size = New System.Drawing.Size(739, 417)
-        Me.bathroomBackground.TabIndex = 1
-        Me.bathroomBackground.TabStop = False
-        '
-        'ScanningTImer
-        '
-        Me.ScanningTImer.Interval = 1000
+        Me.MainTaskBar.Location = New System.Drawing.Point(169, 441)
+        Me.MainTaskBar.Name = "MainTaskBar"
+        Me.MainTaskBar.Size = New System.Drawing.Size(601, 132)
+        Me.MainTaskBar.TabIndex = 2
         '
         'Bathroom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
-        Me.Controls.Add(Me.bathroomWindow)
-        Me.Controls.Add(Me.bathroomDoor)
-        Me.Controls.Add(Me.flushToilet)
+        Me.Controls.Add(Me.exitBathroomEnv)
         Me.Controls.Add(Me.fanOption)
         Me.Controls.Add(Me.lightOption)
+        Me.Controls.Add(Me.envOption)
+        Me.Controls.Add(Me.bathroomDoor)
+        Me.Controls.Add(Me.flushToilet)
         Me.Controls.Add(Me.MainTaskBar)
         Me.Controls.Add(Me.bathroomBackground)
         Me.KeyPreview = True
         Me.Name = "Bathroom"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Bathroom"
-        CType(Me.bathroomWindow, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bathroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.flushToilet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bathroomBackground, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.exitBathroomEnv, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.fanOption, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lightOption, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bathroomBackground, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.envOption, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bathroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.flushToilet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -155,6 +172,7 @@ Partial Class Bathroom
     Friend WithEvents fanOption As SubOptions
     Friend WithEvents flushToilet As SubOptions
     Friend WithEvents bathroomDoor As SubOptions
-    Friend WithEvents bathroomWindow As SubOptions
     Friend WithEvents ScanningTImer As Timer
+    Friend WithEvents envOption As SubOptions
+    Friend WithEvents exitBathroomEnv As SubOptions
 End Class

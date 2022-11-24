@@ -49,7 +49,7 @@ Public Class Entertainment
         musicOptions(1) = playlistOption
         musicOptions(2) = shuffle
         musicOptions(3) = goBack
-        musicOptions(4) = MainTaskBar.Back
+        musicOptions(4) = MainTaskBar.PreviousScreen
 
         For i = 0 To 4
             musicOptions(i).Initialize()
@@ -59,7 +59,7 @@ Public Class Entertainment
         audioOptions(1) = podcast
         audioOptions(2) = recording
         audioOptions(3) = goBack
-        audioOptions(4) = MainTaskBar.Back
+        audioOptions(4) = MainTaskBar.PreviousScreen
 
         For i = 0 To 2
             audioOptions(i).Initialize()
@@ -69,7 +69,7 @@ Public Class Entertainment
         movieOptions(1) = Hulu
         movieOptions(2) = Amazon
         movieOptions(3) = prevVideo
-        movieOptions(4) = MainTaskBar.Back
+        movieOptions(4) = MainTaskBar.PreviousScreen
 
         For i = 0 To 3
             movieOptions(i).Initialize()
@@ -83,7 +83,7 @@ Public Class Entertainment
         tvOptions(5) = streamVideo
         tvOptions(6) = recordedVideo
         tvOptions(7) = prevVideo
-        tvOptions(8) = MainTaskBar.Back
+        tvOptions(8) = MainTaskBar.PreviousScreen
 
         For i = 3 To 6
             tvOptions(i).Initialize()
@@ -92,7 +92,7 @@ Public Class Entertainment
         volumeOptions(0) = volumeUp
         volumeOptions(1) = volumeDown
         volumeOptions(2) = volumeMute
-        volumeOptions(3) = MainTaskBar.Back
+        volumeOptions(3) = MainTaskBar.PreviousScreen
 
         For i = 0 To 2
             volumeOptions.Initialize()
@@ -105,7 +105,7 @@ Public Class Entertainment
         shuffleOptions(0) = shuffle
         shuffleOptions(1) = repeat
         shuffleOptions(2) = repeatOne
-        shuffleOptions(3) = MainTaskBar.Back
+        shuffleOptions(3) = MainTaskBar.PreviousScreen
 
         For i = 1 To 2
             shuffleOptions(i).Initialize()
@@ -114,7 +114,7 @@ Public Class Entertainment
         playPauseAudioOptions(0) = goBack
         playPauseAudioOptions(1) = play
         playPauseAudioOptions(2) = goForward
-        playPauseAudioOptions(3) = MainTaskBar.Back
+        playPauseAudioOptions(3) = MainTaskBar.PreviousScreen
 
         For i = 1 To 2
             playPauseAudioOptions(i).Initialize()
@@ -125,7 +125,7 @@ Public Class Entertainment
         playPauseVisualOptions(2) = play
         playPauseVisualOptions(3) = skipForward
         playPauseVisualOptions(4) = nextVideo
-        playPauseVisualOptions(5) = MainTaskBar.Back
+        playPauseVisualOptions(5) = MainTaskBar.PreviousScreen
 
         For i = 1 To 4
             playPauseVisualOptions(i).Initialize()
@@ -376,7 +376,7 @@ Public Class Entertainment
                 scanninglevel = 2
                 prevVideo.StartInnerScanning(playPauseVisualOptions)
                 scanninglevel1 = prevVideo
-            ElseIf MainTaskBar.Back.BackColor = Color.LemonChiffon Then
+            ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
                 If focusIsOn = 5 Then
                     MainTaskBar.MenuBarOption.StopInnerScanning()
                     scanninglevel = 0
@@ -430,7 +430,7 @@ Public Class Entertainment
                     repeatOne.Image = My.Resources.repeatOne
                     repeatOne.Tag = "notRepeatingOne"
                 End If
-            ElseIf MainTaskBar.Back.BackColor = Color.LemonChiffon Then
+            ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
                 scanninglevel1.StopInnerScanning()
                 scanninglevel = 1
             End If

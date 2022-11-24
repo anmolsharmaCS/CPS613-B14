@@ -29,13 +29,13 @@ Public Class Livingroom
 
         Windows(0) = LivingroomWindow1
         Windows(1) = LivingroomWindow2
-        Windows(2) = MainTaskBar.Back
+        Windows(2) = MainTaskBar.PreviousScreen
 
         Windows(1).Initialize()
 
         environment(0) = lightOption
         environment(1) = fanOption
-        environment(2) = MainTaskBar.Back
+        environment(2) = MainTaskBar.PreviousScreen
 
         environment(1).Initialize()
 
@@ -170,7 +170,7 @@ Public Class Livingroom
                     MyParent.livingroomFan.Image = My.Resources.fanOn
                     fanOption.Tag = "on"
                 End If
-            ElseIf MainTaskBar.Back.BackColor = Color.LemonChiffon Then
+            ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
                 If focusIsOn = 6 Then
                     MainTaskBar.MenuBarOption.StopInnerScanning()
                     scanninglevel = 0
