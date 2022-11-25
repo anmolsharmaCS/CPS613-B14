@@ -110,7 +110,6 @@ Partial Class Entertainment
         '
         'Favourite
         '
-        'Me.Favourite.Image = Global.Scanning.My.Resources.Resources.favorite
         Me.Favourite.Location = New System.Drawing.Point(49, 187)
         Me.Favourite.Name = "Favourite"
         Me.Favourite.Size = New System.Drawing.Size(100, 92)
@@ -434,7 +433,7 @@ Partial Class Entertainment
         'programOption
         '
         Me.programOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.programOption.Image = Global.Scanning.My.Resources.Resources.program
+        Me.programOption.Image = Global.Scanning.My.Resources.Resources.radio
         Me.programOption.Location = New System.Drawing.Point(170, 35)
         Me.programOption.Name = "programOption"
         Me.programOption.Size = New System.Drawing.Size(100, 100)

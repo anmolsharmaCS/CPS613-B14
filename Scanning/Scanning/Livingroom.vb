@@ -18,8 +18,8 @@ Public Class Livingroom
 
         ' Add any initialization after the InitializeComponent() call.
         Options(0) = MainTaskBar.MenuBarOption
-        Options(1) = LivingroomWindow1
-        Options(2) = entSystem
+        Options(1) = entSystem
+        Options(2) = LivingroomWindow1
         Options(3) = livingroomEnvironmentMenu.envMenuBackground
 
         For i = 0 To 3
@@ -116,15 +116,15 @@ Public Class Livingroom
 
             ElseIf focusIsOn = 1 Then
 
-                scanninglevel = 1
-                WindowMenu.Show()
-                Options(focusIsOn).StartInnerScanning(WindowMenu.GetTaskBarOptions)
-
-            ElseIf focusIsOn = 2 Then
-
                 StopScanning()
                 ent.Show()
                 ent.StartScanning()
+
+            ElseIf focusIsOn = 2 Then
+
+                scanninglevel = 1
+                WindowMenu.Show()
+                Options(focusIsOn).StartInnerScanning(WindowMenu.GetTaskBarOptions)
 
             ElseIf focusIsOn = 3 Then
 

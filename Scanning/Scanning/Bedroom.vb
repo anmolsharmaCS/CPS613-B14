@@ -11,8 +11,8 @@ Public Class Bedroom
         InitializeComponent()
 
         Options(0) = MainTaskBar.MenuBarOption
-        Options(1) = BedroomWindow1
-        Options(2) = Bed
+        Options(1) = Bed
+        Options(2) = BedroomWindow1
         Options(3) = bedroomEnvironmentMenu.envMenuBackground
 
         For i = 0 To 3
@@ -105,12 +105,6 @@ Public Class Bedroom
 
             ElseIf focusIsOn = 1 Then
 
-                scanninglevel = 1
-                WindowMenu.Show()
-                Options(focusIsOn).StartInnerScanning(WindowMenu.GetTaskBarOptions)
-
-            ElseIf focusIsOn = 2 Then
-
                 If Bed.Tag = "up" Then
                     Bed.Image = My.Resources.bedDown
                     Bed.Tag = "down"
@@ -118,6 +112,12 @@ Public Class Bedroom
                     Bed.Image = My.Resources.bedUp
                     Bed.Tag = "up"
                 End If
+
+            ElseIf focusIsOn = 2 Then
+
+                scanninglevel = 1
+                WindowMenu.Show()
+                Options(focusIsOn).StartInnerScanning(WindowMenu.GetTaskBarOptions)
 
             ElseIf focusIsOn = 3 Then
 
