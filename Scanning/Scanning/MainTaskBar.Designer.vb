@@ -41,7 +41,7 @@ Partial Class MainTaskBar
         Me.exitTaskBar.BackColor = System.Drawing.Color.Red
         Me.exitTaskBar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.exitTaskBar.Image = Global.Scanning.My.Resources.Resources._exit
-        Me.exitTaskBar.Location = New System.Drawing.Point(545, 16)
+        Me.exitTaskBar.Location = New System.Drawing.Point(444, 16)
         Me.exitTaskBar.Name = "exitTaskBar"
         Me.exitTaskBar.Size = New System.Drawing.Size(51, 45)
         Me.exitTaskBar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -53,7 +53,7 @@ Partial Class MainTaskBar
         '
         Me.PreviousScreen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PreviousScreen.Image = Global.Scanning.My.Resources.Resources.back_button
-        Me.PreviousScreen.Location = New System.Drawing.Point(49, 16)
+        Me.PreviousScreen.Location = New System.Drawing.Point(20, 16)
         Me.PreviousScreen.Name = "PreviousScreen"
         Me.PreviousScreen.Size = New System.Drawing.Size(100, 100)
         Me.PreviousScreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -64,7 +64,7 @@ Partial Class MainTaskBar
         '
         Me.Navigate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Navigate.Image = Global.Scanning.My.Resources.Resources.navigation
-        Me.Navigate.Location = New System.Drawing.Point(439, 16)
+        Me.Navigate.Location = New System.Drawing.Point(338, 16)
         Me.Navigate.Name = "Navigate"
         Me.Navigate.Size = New System.Drawing.Size(100, 100)
         Me.Navigate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -75,7 +75,7 @@ Partial Class MainTaskBar
         '
         Me.Assistance.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Assistance.Image = Global.Scanning.My.Resources.Resources.assisstant
-        Me.Assistance.Location = New System.Drawing.Point(179, 16)
+        Me.Assistance.Location = New System.Drawing.Point(126, 16)
         Me.Assistance.Name = "Assistance"
         Me.Assistance.Size = New System.Drawing.Size(100, 100)
         Me.Assistance.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -86,7 +86,7 @@ Partial Class MainTaskBar
         '
         Me.Communicate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Communicate.Image = Global.Scanning.My.Resources.Resources.communication
-        Me.Communicate.Location = New System.Drawing.Point(309, 16)
+        Me.Communicate.Location = New System.Drawing.Point(232, 16)
         Me.Communicate.Name = "Communicate"
         Me.Communicate.Size = New System.Drawing.Size(100, 100)
         Me.Communicate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -99,7 +99,7 @@ Partial Class MainTaskBar
         Me.MenuBarOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.MenuBarOption.Location = New System.Drawing.Point(0, 0)
         Me.MenuBarOption.Name = "MenuBarOption"
-        Me.MenuBarOption.Size = New System.Drawing.Size(602, 132)
+        Me.MenuBarOption.Size = New System.Drawing.Size(501, 132)
         Me.MenuBarOption.TabIndex = 9
         Me.MenuBarOption.TabStop = False
         '
@@ -114,7 +114,7 @@ Partial Class MainTaskBar
         Me.Controls.Add(Me.Communicate)
         Me.Controls.Add(Me.MenuBarOption)
         Me.Name = "MainTaskBar"
-        Me.Size = New System.Drawing.Size(602, 132)
+        Me.Size = New System.Drawing.Size(501, 132)
         CType(Me.exitTaskBar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PreviousScreen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Navigate, System.ComponentModel.ISupportInitialize).EndInit()

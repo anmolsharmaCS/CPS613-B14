@@ -3,7 +3,6 @@
 Public Class Kitchen
 
     Private Options(2) As SubOptions
-    Private environment(2) As SubOptions
 
     Private MyParent As UserApartment
 
@@ -14,18 +13,12 @@ Public Class Kitchen
 
         ' Add any initialization after the InitializeComponent() call.
         Options(0) = cooking
-        Options(1) = envOption
+        Options(1) = kitchenEnvironmentMenu.envMenuBackground
         Options(2) = MainTaskBar.MenuBarOption
 
         For i = 0 To 2
             Options(i).Initialize()
         Next
-
-        environment(0) = lightOption
-        environment(1) = fanOption
-        environment(2) = exitEnv
-
-        environment(2).Initialize()
 
         MyParent = parentForm
 
@@ -78,78 +71,143 @@ Public Class Kitchen
             Options(focusIsOn).LoseFocus()
             focusIsOn = (focusIsOn + 1) Mod 3
             Options(focusIsOn).ReceiveFocus()
-        Else
+        ElseIf scanninglevel = 1 Then
             Options(focusIsOn).InnerScanningNext()
+        ElseIf scanninglevel = 2 Then
+            kitchenEnvironmentMenu.tempOption.InnerScanningNext()
         End If
     End Sub
 
 #End Region
 
-#Region "Other events"
+#Region "Key Press"
 
     ' When the user selects a submenu, start scanning within that submenu
     Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
         If scanninglevel = 0 Then
+
             If focusIsOn = 1 Then
+
                 scanninglevel = 1
-                envOption.LoseFocus()
-                exitEnv.Show()
-                Options(focusIsOn).StartInnerScanning(environment)
+                kitchenEnvironmentMenu.exitEnvMenu.Show()
+                kitchenEnvironmentMenu.envMenuBackground.LoseFocus()
+                Options(focusIsOn).StartInnerScanning(kitchenEnvironmentMenu.GetTaskBarOptions)
+
             ElseIf focusIsOn = 2 Then
+
                 scanninglevel = 1
                 MainTaskBar.exitTaskBar.Show()
                 MainTaskBar.MenuBarOption.LoseFocus()
                 Options(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
+
             End If
-        Else
-            If lightOption.BackColor = Color.LemonChiffon Then
-                If lightOption.Tag = "on" Then
-                    lightOption.Image = My.Resources.bulbUnlit
-                    MyParent.kitchenLight.Image = My.Resources.bulbUnlit
-                    lightOption.Tag = "off"
-                ElseIf lightOption.Tag = "off" Then
-                    lightOption.Image = My.Resources.bulbLit
-                    MyParent.kitchenLight.Image = My.Resources.bulbLit
-                    lightOption.Tag = "on"
+
+        ElseIf scanninglevel = 1 Then
+
+            If kitchenEnvironmentMenu.lights.BackColor = Color.LemonChiffon Then
+
+                If kitchenEnvironmentMenu.lights.Tag = "on" Then
+                    KitchenLightsOff()
+                ElseIf kitchenEnvironmentMenu.lights.Tag = "off" Then
+                    KitchenLightsOn()
                 End If
-            ElseIf fanOption.BackColor = Color.LemonChiffon Then
-                If fanOption.Tag = "on" Then
-                    fanOption.Image = My.Resources.fanOff
-                    MyParent.kitchenFan.Image = My.Resources.fanOff
-                    fanOption.Tag = "off"
-                ElseIf fanOption.Tag = "off" Then
-                    fanOption.Image = My.Resources.fanOn
-                    MyParent.kitchenFan.Image = My.Resources.fanOn
-                    fanOption.Tag = "on"
+
+            ElseIf kitchenEnvironmentMenu.fan.BackColor = Color.LemonChiffon Then
+
+                If kitchenEnvironmentMenu.fan.Tag = "on" Then
+                    KitchenFanOff()
+                ElseIf kitchenEnvironmentMenu.fan.Tag = "off" Then
+                    KitchenFanOn()
                 End If
-            ElseIf exitEnv.BackColor = Color.LemonChiffon Then
-                exitEnv.Hide()
-                envOption.StopInnerScanning()
+
+            ElseIf kitchenEnvironmentMenu.temperature.BackColor = Color.LemonChiffon Then
+
+                scanninglevel = 2
+                kitchenEnvironmentMenu.tempOption.StartInnerScanning(kitchenEnvironmentMenu.GetTempOptions)
+                kitchenEnvironmentMenu.ToggleTempMenu(True)
+
+            ElseIf kitchenEnvironmentMenu.exitEnvMenu.BackColor = Color.LemonChiffon Then
+
+                kitchenEnvironmentMenu.exitEnvMenu.Hide()
+                kitchenEnvironmentMenu.envMenuBackground.StopInnerScanning()
                 scanninglevel = 0
+
             ElseIf MainTaskBar.exitTaskBar.BackColor = Color.LemonChiffon Then
+
                 MainTaskBar.exitTaskBar.Hide()
                 MainTaskBar.MenuBarOption.StopInnerScanning()
                 scanninglevel = 0
+
             ElseIf MainTaskBar.Assistance.BackColor = Color.LemonChiffon Then
+
                 Dim Assistance As New Assistance(Me)
                 StopScanning()
                 MainTaskBar.exitTaskBar.Hide()
                 MainTaskBar.MenuBarOption.StopInnerScanning()
                 Assistance.Show()
+
             ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
+
                 StopScanning()
                 MainTaskBar.exitTaskBar.Hide()
                 MainTaskBar.PreviousScreen.LoseFocus()
                 Hide()
                 MyParent.ResumeScanning()
+
+            End If
+
+        ElseIf scanninglevel = 2 Then
+
+            If kitchenEnvironmentMenu.upArrow.BackColor = Color.LemonChiffon Then
+
+                kitchenEnvironmentMenu.tempLabel.Text = CInt(kitchenEnvironmentMenu.tempLabel.Text) + 1
+
+            ElseIf kitchenEnvironmentMenu.downArrow.BackColor = Color.LemonChiffon Then
+
+                kitchenEnvironmentMenu.tempLabel.Text = CInt(kitchenEnvironmentMenu.tempLabel.Text) - 1
+
+            ElseIf kitchenEnvironmentMenu.exitTemp.BackColor = Color.LemonChiffon Then
+
+                kitchenEnvironmentMenu.tempOption.StopInnerScanning()
+                scanninglevel = 1
+                kitchenEnvironmentMenu.ToggleTempMenu(False)
+
             End If
         End If
     End Sub
 
-    Private Sub Kitchen_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
-        MyParent.ResumeScanning()
+#End Region
+
+#Region "Environment"
+
+    Public Sub KitchenLightsOn()
+        kitchenEnvironmentMenu.lights.Image = My.Resources.bulbLit
+        kitchenEnvironmentMenu.lights.Tag = "on"
+        MyParent.kitchenLight.Image = My.Resources.bulbLit
+    End Sub
+
+    Public Sub KitchenLightsOff()
+        kitchenEnvironmentMenu.lights.Image = My.Resources.bulbUnlit
+        kitchenEnvironmentMenu.lights.Tag = "off"
+        MyParent.kitchenLight.Image = My.Resources.bulbUnlit
+    End Sub
+
+    Public Sub KitchenFanOn()
+        kitchenEnvironmentMenu.fan.Image = My.Resources.fanOn
+        kitchenEnvironmentMenu.fan.Tag = "on"
+        MyParent.kitchenFan.Image = My.Resources.fanOn
+    End Sub
+
+    Public Sub KitchenFanOff()
+        kitchenEnvironmentMenu.fan.Image = My.Resources.fanOff
+        kitchenEnvironmentMenu.fan.Tag = "off"
+        MyParent.kitchenFan.Image = My.Resources.fanOff
     End Sub
 
 #End Region
+
+    Private Sub Kitchen_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
+        MyParent.ResumeScanning()
+    End Sub
 
 End Class

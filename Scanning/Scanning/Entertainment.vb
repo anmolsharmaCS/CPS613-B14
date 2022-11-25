@@ -181,10 +181,6 @@ Public Class Entertainment
 
     End Sub
 
-    Private Sub Entertainment_Load(sender As Object, e As EventArgs) Handles Me.Load
-        MainTaskBar.PreviousScreen.Image = My.Resources.livingroomButton
-    End Sub
-
 #Region "Timer Properties and methods"
 
     ' Make the Scanningtimer interval accessible 

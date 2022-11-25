@@ -3,7 +3,6 @@
 Public Class Livingroom
 
     Private Options(3) As SubOptions
-    Private environment(2) As SubOptions
     Private Windows(1) As SubOptions
 
     Private ent As New Entertainment(Me)
@@ -21,7 +20,7 @@ Public Class Livingroom
         Options(0) = MainTaskBar.MenuBarOption
         Options(1) = LivingroomWindow1
         Options(2) = entSystem
-        Options(3) = envOption
+        Options(3) = livingroomEnvironmentMenu.envMenuBackground
 
         For i = 0 To 3
             Options(i).Initialize()
@@ -33,14 +32,6 @@ Public Class Livingroom
 
         Windows(0).Initialize()
         Windows(1).Initialize()
-
-        environment(0) = lightOption
-        environment(1) = fanOption
-        environment(2) = exitLivingroomEnv
-
-        For i = 0 To 2
-            environment(i).Initialize()
-        Next
 
         shutters(0) = livingroomShutters1
         shutters(1) = livingroomShutters2
@@ -99,15 +90,17 @@ Public Class Livingroom
             Options(focusIsOn).LoseFocus()
             focusIsOn = (focusIsOn + 1) Mod 4
             Options(focusIsOn).ReceiveFocus()
-        Else
+        ElseIf scanninglevel = 1 Then
             Options(focusIsOn).InnerScanningNext()
+        ElseIf scanninglevel = 2 Then
+            livingroomEnvironmentMenu.tempOption.InnerScanningNext()
         End If
     End Sub
 
 
 #End Region
 
-#Region "Other events"
+#Region "Key Press"
 
     ' When the user selects a submenu, start scanning within that submenu
     Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
@@ -136,50 +129,48 @@ Public Class Livingroom
             ElseIf focusIsOn = 3 Then
 
                 scanninglevel = 1
-                envOption.LoseFocus()
-                exitLivingroomEnv.Show()
-                Options(focusIsOn).StartInnerScanning(environment)
+                livingroomEnvironmentMenu.exitEnvMenu.Show()
+                livingroomEnvironmentMenu.envMenuBackground.LoseFocus()
+                Options(focusIsOn).StartInnerScanning(livingroomEnvironmentMenu.GetTaskBarOptions)
 
             End If
 
-        Else
+        ElseIf scanninglevel = 1 Then
 
-            If lightOption.BackColor = Color.LemonChiffon Then
+            If livingroomEnvironmentMenu.lights.BackColor = Color.LemonChiffon Then
 
-                If lightOption.Tag = "on" Then
+                If livingroomEnvironmentMenu.lights.Tag = "on" Then
 
-                    lightOption.Image = My.Resources.bulbUnlit
-                    MyParent.livingroomLight.Image = My.Resources.bulbUnlit
-                    lightOption.Tag = "off"
+                    LivingroomLightsOff()
 
-                ElseIf lightOption.Tag = "off" Then
+                ElseIf livingroomEnvironmentMenu.lights.Tag = "off" Then
 
-                    lightOption.Image = My.Resources.bulbLit
-                    MyParent.livingroomLight.Image = My.Resources.bulbLit
-                    lightOption.Tag = "on"
+                    LivingroomLightsOn()
 
                 End If
 
-            ElseIf fanOption.BackColor = Color.LemonChiffon Then
+            ElseIf livingroomEnvironmentMenu.temperature.BackColor = Color.LemonChiffon Then
 
-                If fanOption.Tag = "on" Then
+                scanninglevel = 2
+                livingroomEnvironmentMenu.tempOption.StartInnerScanning(livingroomEnvironmentMenu.GetTempOptions)
+                livingroomEnvironmentMenu.ToggleTempMenu(True)
 
-                    fanOption.Image = My.Resources.fanOff
-                    MyParent.livingroomFan.Image = My.Resources.fanOff
-                    fanOption.Tag = "off"
+            ElseIf livingroomEnvironmentMenu.fan.BackColor = Color.LemonChiffon Then
 
-                ElseIf fanOption.Tag = "off" Then
+                If livingroomEnvironmentMenu.fan.Tag = "on" Then
 
-                    fanOption.Image = My.Resources.fanOn
-                    MyParent.livingroomFan.Image = My.Resources.fanOn
-                    fanOption.Tag = "on"
+                    LivingroomFanOff()
+
+                ElseIf livingroomEnvironmentMenu.fan.Tag = "off" Then
+
+                    LivingroomFanOn()
 
                 End If
 
-            ElseIf exitLivingroomEnv.BackColor = Color.LemonChiffon Then
+            ElseIf livingroomEnvironmentMenu.exitEnvMenu.BackColor = Color.LemonChiffon Then
 
-                exitLivingroomEnv.Hide()
-                envOption.StopInnerScanning()
+                livingroomEnvironmentMenu.exitEnvMenu.Hide()
+                livingroomEnvironmentMenu.envMenuBackground.StopInnerScanning()
                 scanninglevel = 0
 
             ElseIf WindowMenu.exitWindows.BackColor = Color.LemonChiffon Then
@@ -192,27 +183,11 @@ Public Class Livingroom
 
                 If WindowMenu.windowControl.Tag = "open" Then
 
-                    WindowMenu.windowControl.Image = My.Resources.WindowClosed
-                    WindowMenu.windowControl.Tag = "closed"
-                    For i = 0 To shutters.Length - 1
-
-                        shutters(i).Hide()
-
-                    Next
-                    MyParent.LivingroomWindow1Shutters.Hide()
-                    MyParent.LivingroomWindow2Shutters.Hide()
+                    LivingroomWindowsClose()
 
                 ElseIf WindowMenu.windowControl.Tag = "closed" Then
 
-                    WindowMenu.windowControl.Image = My.Resources.WindowOpen
-                    WindowMenu.windowControl.Tag = "open"
-                    For i = 0 To shutters.Length - 1
-
-                        shutters(i).Show()
-
-                    Next
-                    MyParent.LivingroomWindow1Shutters.Show()
-                    MyParent.LivingroomWindow2Shutters.Show()
+                    LivingroomWindowsOpen()
 
                 End If
 
@@ -220,19 +195,11 @@ Public Class Livingroom
 
                 If WindowMenu.blindControl.Tag = "open" Then
 
-                    WindowMenu.blindControl.Image = My.Resources.BlindsClosed
-                    WindowMenu.blindControl.Tag = "closed"
-                    'For i = 0 To blinds.Length - 1
-                    'blinds(i).Hide()
-                    'Next
+                    LivingroomBlindsClose()
 
                 ElseIf WindowMenu.blindControl.Tag = "closed" Then
 
-                    WindowMenu.blindControl.Image = My.Resources.BlindsOpen
-                    WindowMenu.blindControl.Tag = "open"
-                    'For i = 0 To blinds.Length - 1
-                    'blinds(i).Show()
-                    'Next
+                    LivingroomBlindsOpen()
 
                 End If
 
@@ -261,9 +228,94 @@ Public Class Livingroom
 
             End If
 
+        ElseIf scanninglevel = 2 Then
+
+            If livingroomEnvironmentMenu.upArrow.BackColor = Color.LemonChiffon Then
+
+                livingroomEnvironmentMenu.tempLabel.Text = CInt(livingroomEnvironmentMenu.tempLabel.Text) + 1
+
+            ElseIf livingroomEnvironmentMenu.downArrow.BackColor = Color.LemonChiffon Then
+
+                livingroomEnvironmentMenu.tempLabel.Text = CInt(livingroomEnvironmentMenu.tempLabel.Text) - 1
+
+            ElseIf livingroomEnvironmentMenu.exitTemp.BackColor = Color.LemonChiffon Then
+
+                livingroomEnvironmentMenu.tempOption.StopInnerScanning()
+                scanninglevel = 1
+                livingroomEnvironmentMenu.ToggleTempMenu(False)
+
+            End If
+
         End If
 
     End Sub
+
+#End Region
+
+#Region "Environment"
+
+    Public Sub LivingroomWindowsOpen()
+        WindowMenu.windowControl.Image = My.Resources.WindowOpen
+        WindowMenu.windowControl.Tag = "open"
+        For i = 0 To shutters.Length - 1
+
+            shutters(i).Show()
+
+        Next
+        MyParent.LivingroomWindow1Shutters.Show()
+        MyParent.LivingroomWindow2Shutters.Show()
+    End Sub
+
+
+    Public Sub LivingroomWindowsClose()
+        WindowMenu.windowControl.Image = My.Resources.WindowClosed
+        WindowMenu.windowControl.Tag = "closed"
+        For i = 0 To shutters.Length - 1
+
+            shutters(i).Hide()
+
+        Next
+        MyParent.LivingroomWindow1Shutters.Hide()
+        MyParent.LivingroomWindow2Shutters.Hide()
+    End Sub
+
+
+    Public Sub LivingroomBlindsOpen()
+        WindowMenu.blindControl.Image = My.Resources.BlindsOpen
+        WindowMenu.blindControl.Tag = "open"
+    End Sub
+
+
+    Public Sub LivingroomBlindsClose()
+        WindowMenu.blindControl.Image = My.Resources.BlindsClosed
+        WindowMenu.blindControl.Tag = "closed"
+    End Sub
+
+    Public Sub LivingroomLightsOn()
+        livingroomEnvironmentMenu.lights.Image = My.Resources.bulbLit
+        livingroomEnvironmentMenu.lights.Tag = "on"
+        MyParent.livingroomLight.Image = My.Resources.bulbLit
+    End Sub
+
+    Public Sub LivingroomLightsOff()
+        livingroomEnvironmentMenu.lights.Image = My.Resources.bulbUnlit
+        livingroomEnvironmentMenu.lights.Tag = "off"
+        MyParent.livingroomLight.Image = My.Resources.bulbUnlit
+    End Sub
+
+    Public Sub LivingroomFanOn()
+        livingroomEnvironmentMenu.fan.Image = My.Resources.fanOn
+        livingroomEnvironmentMenu.fan.Tag = "on"
+        MyParent.livingroomFan.Image = My.Resources.fanOn
+    End Sub
+
+    Public Sub LivingroomFanOff()
+        livingroomEnvironmentMenu.fan.Image = My.Resources.fanOff
+        livingroomEnvironmentMenu.fan.Tag = "off"
+        MyParent.livingroomFan.Image = My.Resources.fanOff
+    End Sub
+
+#End Region
 
     Private Sub Groups_ColorChanged(sender As Object, e As EventArgs) Handles LivingroomWindow1.BackColorChanged
         If scanninglevel = 0 And ScanningTimer.Enabled Then
@@ -279,10 +331,9 @@ Public Class Livingroom
         End If
     End Sub
 
+
     Private Sub Livingroom_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         MyParent.ResumeScanning()
     End Sub
-
-#End Region
 
 End Class

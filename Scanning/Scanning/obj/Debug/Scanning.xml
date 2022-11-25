@@ -172,6 +172,11 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.humidity">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.kitchen">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -183,11 +188,6 @@ Scanning
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.livingRoom">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="P:Scanning.My.Resources.Resources.livingroomButton">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

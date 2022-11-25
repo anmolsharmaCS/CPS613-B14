@@ -3,7 +3,6 @@
 Public Class Bathroom
 
     Private Options(2) As SubOptions
-    Private environment(2) As SubOptions
 
     Private MyParent As UserApartment
 
@@ -14,19 +13,11 @@ Public Class Bathroom
 
         ' Add any initialization after the InitializeComponent() call.
         Options(0) = flushToilet
-        Options(1) = envOption
-        Options(2) = MainTaskBar.MenuBarOption
+        Options(1) = bathroomEnvironmentMenu.envMenuBackground
+        Options(2) = bathroomMainTaskBar.MenuBarOption
 
         For i = 0 To 2
             Options(i).Initialize()
-        Next
-
-        environment(0) = lightOption
-        environment(1) = fanOption
-        environment(2) = exitBathroomEnv
-
-        For i = 0 To 2
-            environment(i).Initialize()
         Next
 
         MyParent = parentForm
@@ -38,10 +29,10 @@ Public Class Bathroom
     ' Make the Scanningtimer interval accessible 
     Public Property ScanningInterval As Integer
         Get
-            Return ScanningTimer.Interval
+            Return ScanningTImer.Interval
         End Get
         Set(value As Integer)
-            ScanningTimer.Interval = value
+            ScanningTImer.Interval = value
         End Set
     End Property
 #End Region
@@ -56,12 +47,12 @@ Public Class Bathroom
         scanninglevel = 0
         focusIsOn = 0
         Options(focusIsOn).ReceiveFocus()
-        ScanningTimer.Start()
+        ScanningTImer.Start()
     End Sub
 
     ' Stop scanning
     Public Sub StopScanning()
-        ScanningTimer.Stop()
+        ScanningTImer.Stop()
         Options(focusIsOn).LoseFocus()
         Focus()
     End Sub
@@ -71,23 +62,25 @@ Public Class Bathroom
     Public Sub ResumeScanning()
         scanninglevel = 0
         Options(focusIsOn).ReceiveFocus()
-        ScanningTimer.Start()
+        ScanningTImer.Start()
     End Sub
 
     ' When the timer goes off, scan to next submenu
-    Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles ScanningTimer.Tick
+    Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles ScanningTImer.Tick
         If scanninglevel = 0 Then
             Options(focusIsOn).LoseFocus()
             focusIsOn = (focusIsOn + 1) Mod 3
             Options(focusIsOn).ReceiveFocus()
-        Else
+        ElseIf scanninglevel = 1 Then
             Options(focusIsOn).InnerScanningNext()
+        ElseIf scanninglevel = 2 Then
+            bathroomEnvironmentMenu.tempOption.InnerScanningNext()
         End If
     End Sub
 
 #End Region
 
-#Region "Other events"
+#Region "Keypress"
 
     ' When the user selects a submenu, start scanning within that submenu
     Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
@@ -97,79 +90,95 @@ Public Class Bathroom
             scanninglevel = 1
             If focusIsOn = 1 Then
 
-                exitBathroomEnv.Show()
-                envOption.LoseFocus()
-                Options(focusIsOn).StartInnerScanning(environment)
+                bathroomEnvironmentMenu.exitEnvMenu.Show()
+                bathroomEnvironmentMenu.envMenuBackground.LoseFocus()
+                Options(focusIsOn).StartInnerScanning(bathroomEnvironmentMenu.GetTaskBarOptions)
 
             ElseIf focusIsOn = 2 Then
 
-                MainTaskBar.exitTaskBar.Show()
-                MainTaskBar.MenuBarOption.LoseFocus()
-                Options(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
+                bathroomMainTaskBar.exitTaskBar.Show()
+                bathroomMainTaskBar.MenuBarOption.LoseFocus()
+                Options(focusIsOn).StartInnerScanning(bathroomMainTaskBar.GetTaskBarOptions())
 
             End If
 
-        Else
+        ElseIf scanninglevel = 1 Then
 
-            If lightOption.BackColor = Color.LemonChiffon Then
+            If bathroomEnvironmentMenu.lights.BackColor = Color.LemonChiffon Then
 
-                If lightOption.Tag = "on" Then
+                If bathroomEnvironmentMenu.lights.Tag = "on" Then
 
-                    lightOption.Image = My.Resources.bulbUnlit
-                    MyParent.bathroomLight.Image = My.Resources.bulbUnlit
-                    lightOption.Tag = "off"
+                    BathroomLightsOff()
 
-                ElseIf lightOption.Tag = "off" Then
+                ElseIf bathroomEnvironmentMenu.lights.Tag = "off" Then
 
-                    lightOption.Image = My.Resources.bulbLit
-                    MyParent.bathroomLight.Image = My.Resources.bulbLit
-                    lightOption.Tag = "on"
+                    BathroomLightsOn()
 
                 End If
 
-            ElseIf fanOption.BackColor = Color.LemonChiffon Then
+            ElseIf bathroomEnvironmentMenu.temperature.BackColor = Color.LemonChiffon Then
 
-                If fanOption.Tag = "on" Then
+                scanninglevel = 2
+                bathroomEnvironmentMenu.tempOption.StartInnerScanning(bathroomEnvironmentMenu.GetTempOptions)
+                bathroomEnvironmentMenu.ToggleTempMenu(True)
 
-                    fanOption.Image = My.Resources.fanOff
-                    MyParent.bathroomFan.Image = My.Resources.fanOff
-                    fanOption.Tag = "off"
+            ElseIf bathroomEnvironmentMenu.fan.BackColor = Color.LemonChiffon Then
 
-                ElseIf fanOption.Tag = "off" Then
+                If bathroomEnvironmentMenu.fan.Tag = "on" Then
 
-                    fanOption.Image = My.Resources.fanOn
-                    MyParent.bathroomFan.Image = My.Resources.fanOn
-                    fanOption.Tag = "on"
+                    BathroomFanOff()
+
+                ElseIf bathroomEnvironmentMenu.fan.Tag = "off" Then
+
+                    BathroomFanOn()
 
                 End If
 
-            ElseIf exitBathroomEnv.BackColor = Color.LemonChiffon Then
+            ElseIf bathroomEnvironmentMenu.exitEnvMenu.BackColor = Color.LemonChiffon Then
 
-                exitBathroomEnv.Hide()
-                envOption.StopInnerScanning()
+                bathroomEnvironmentMenu.exitEnvMenu.Hide()
+                bathroomEnvironmentMenu.envMenuBackground.StopInnerScanning()
                 scanninglevel = 0
 
-            ElseIf MainTaskBar.exitTaskBar.BackColor = Color.LemonChiffon Then
+            ElseIf bathroomMainTaskBar.exitTaskBar.BackColor = Color.LemonChiffon Then
 
-                MainTaskBar.exitTaskBar.Hide()
-                MainTaskBar.MenuBarOption.StopInnerScanning()
+                bathroomMainTaskBar.exitTaskBar.Hide()
+                bathroomMainTaskBar.MenuBarOption.StopInnerScanning()
                 scanninglevel = 0
 
-            ElseIf MainTaskBar.Assistance.BackColor = Color.LemonChiffon Then
+            ElseIf bathroomMainTaskBar.Assistance.BackColor = Color.LemonChiffon Then
 
                 Dim Assistance As New Assistance(Me)
                 StopScanning()
-                MainTaskBar.exitTaskBar.Hide()
-                MainTaskBar.MenuBarOption.StopInnerScanning()
+                bathroomMainTaskBar.exitTaskBar.Hide()
+                bathroomMainTaskBar.MenuBarOption.StopInnerScanning()
                 Assistance.Show()
 
-            ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
+            ElseIf bathroomMainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
 
                 StopScanning()
-                MainTaskBar.exitTaskBar.Hide()
-                MainTaskBar.PreviousScreen.LoseFocus()
+                bathroomMainTaskBar.exitTaskBar.Hide()
+                bathroomMainTaskBar.PreviousScreen.LoseFocus()
                 Hide()
                 MyParent.ResumeScanning()
+
+            End If
+
+        ElseIf scanninglevel = 2 Then
+
+            If bathroomEnvironmentMenu.upArrow.BackColor = Color.LemonChiffon Then
+
+                bathroomEnvironmentMenu.tempLabel.Text = CInt(bathroomEnvironmentMenu.tempLabel.Text) + 1
+
+            ElseIf bathroomEnvironmentMenu.downArrow.BackColor = Color.LemonChiffon Then
+
+                bathroomEnvironmentMenu.tempLabel.Text = CInt(bathroomEnvironmentMenu.tempLabel.Text) - 1
+
+            ElseIf bathroomEnvironmentMenu.exitTemp.BackColor = Color.LemonChiffon Then
+
+                bathroomEnvironmentMenu.tempOption.StopInnerScanning()
+                scanninglevel = 1
+                bathroomEnvironmentMenu.ToggleTempMenu(False)
 
             End If
 
@@ -177,11 +186,38 @@ Public Class Bathroom
 
     End Sub
 
+#End Region
+
+#Region "Environment"
+
+    Public Sub BathroomLightsOn()
+        bathroomEnvironmentMenu.lights.Image = My.Resources.bulbLit
+        bathroomEnvironmentMenu.lights.Tag = "on"
+        MyParent.bathroomLight.Image = My.Resources.bulbLit
+    End Sub
+
+    Public Sub BathroomLightsOff()
+        bathroomEnvironmentMenu.lights.Image = My.Resources.bulbUnlit
+        bathroomEnvironmentMenu.lights.Tag = "off"
+        MyParent.bathroomLight.Image = My.Resources.bulbUnlit
+    End Sub
+
+    Public Sub BathroomFanOn()
+        bathroomEnvironmentMenu.fan.Image = My.Resources.fanOn
+        bathroomEnvironmentMenu.fan.Tag = "on"
+        MyParent.bathroomFan.Image = My.Resources.fanOn
+    End Sub
+
+    Public Sub BathroomFanOff()
+        bathroomEnvironmentMenu.fan.Image = My.Resources.fanOff
+        bathroomEnvironmentMenu.fan.Tag = "off"
+        MyParent.bathroomFan.Image = My.Resources.fanOff
+    End Sub
+
+#End Region
+
     Private Sub Bathroom_Closing(sender As Object, e As CancelEventArgs) Handles MyBase.Closing
         MyParent.ResumeScanning()
     End Sub
-
-
-#End Region
 
 End Class

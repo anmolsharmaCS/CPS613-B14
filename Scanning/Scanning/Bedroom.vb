@@ -1,8 +1,7 @@
 ﻿Imports System.ComponentModel
 
 Public Class Bedroom
-    Private TopOptions(3) As SubOptions
-    Private environment(2) As SubOptions
+    Private Options(3) As SubOptions
     Private Windows(1) As SubOptions
     Public shutters(1) As PictureBox
     Private MyParent As UserApartment
@@ -11,21 +10,13 @@ Public Class Bedroom
         ' This call is required by the designer.
         InitializeComponent()
 
-        TopOptions(0) = MainTaskBar.MenuBarOption
-        TopOptions(1) = BedroomWindow1
-        TopOptions(2) = Bed
-        TopOptions(3) = envOption
+        Options(0) = MainTaskBar.MenuBarOption
+        Options(1) = BedroomWindow1
+        Options(2) = Bed
+        Options(3) = bedroomEnvironmentMenu.envMenuBackground
 
         For i = 0 To 3
-            TopOptions(i).Initialize()
-        Next
-
-        environment(0) = LightControl
-        environment(1) = FanControl
-        environment(2) = exitEnv
-
-        For i = 0 To 2
-            environment.Initialize()
+            Options(i).Initialize()
         Next
 
         Windows(0) = BedroomWindow1
@@ -64,14 +55,14 @@ Public Class Bedroom
     Public Sub StartScanning()
         scanninglevel = 0
         focusIsOn = 0
-        TopOptions(focusIsOn).ReceiveFocus()
+        Options(focusIsOn).ReceiveFocus()
         ScanningTimer.Start()
     End Sub
 
     ' Stop scanning
     Public Sub StopScanning()
         ScanningTimer.Stop()
-        TopOptions(focusIsOn).LoseFocus()
+        Options(focusIsOn).LoseFocus()
         Me.Focus()
     End Sub
 
@@ -79,18 +70,20 @@ Public Class Bedroom
     ' to restrat scanning at the beginning, use StartScanning
     Public Sub ResumeScanning()
         scanninglevel = 0
-        TopOptions(focusIsOn).ReceiveFocus()
+        Options(focusIsOn).ReceiveFocus()
         ScanningTimer.Start()
     End Sub
 
     ' When the timer goes off, scan to next submenu
     Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles ScanningTimer.Tick
         If scanninglevel = 0 Then
-            TopOptions(focusIsOn).LoseFocus()
+            Options(focusIsOn).LoseFocus()
             focusIsOn = (focusIsOn + 1) Mod 4
-            TopOptions(focusIsOn).ReceiveFocus()
+            Options(focusIsOn).ReceiveFocus()
         ElseIf scanninglevel = 1 Then
-            TopOptions(focusIsOn).InnerScanningNext()
+            Options(focusIsOn).InnerScanningNext()
+        ElseIf scanninglevel = 2 Then
+            bedroomEnvironmentMenu.tempOption.InnerScanningNext()
         End If
     End Sub
 
@@ -98,7 +91,7 @@ Public Class Bedroom
 
 #End Region
 
-#Region "Other Events"
+#Region "Key Press"
 
     Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
         If scanninglevel = 0 Then
@@ -108,13 +101,13 @@ Public Class Bedroom
                 scanninglevel = 1
                 MainTaskBar.exitTaskBar.Show()
                 MainTaskBar.MenuBarOption.LoseFocus()
-                TopOptions(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
+                Options(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
 
             ElseIf focusIsOn = 1 Then
 
                 scanninglevel = 1
                 WindowMenu.Show()
-                TopOptions(focusIsOn).StartInnerScanning(WindowMenu.GetTaskBarOptions)
+                Options(focusIsOn).StartInnerScanning(WindowMenu.GetTaskBarOptions)
 
             ElseIf focusIsOn = 2 Then
 
@@ -127,53 +120,53 @@ Public Class Bedroom
                 End If
 
             ElseIf focusIsOn = 3 Then
+
                 scanninglevel = 1
-                envOption.LoseFocus()
-                exitEnv.Show()
-                TopOptions(focusIsOn).StartInnerScanning(environment)
+                bedroomEnvironmentMenu.exitEnvMenu.Show()
+                bedroomEnvironmentMenu.envMenuBackground.LoseFocus()
+                Options(focusIsOn).StartInnerScanning(bedroomEnvironmentMenu.GetTaskBarOptions)
+
             End If
         ElseIf scanninglevel = 1 Then
-            If LightControl.BackColor = Color.LemonChiffon Then
+            If bedroomEnvironmentMenu.lights.BackColor = Color.LemonChiffon Then
 
-                If LightControl.Tag = "on" Then
+                If bedroomEnvironmentMenu.lights.Tag = "on" Then
 
-                    LightControl.Image = My.Resources.bulbUnlit
-                    MyParent.bedroomLight.Image = My.Resources.bulbUnlit
-                    LightControl.Tag = "off"
+                    BedroomLightsOff()
 
-                ElseIf LightControl.Tag = "off" Then
+                ElseIf bedroomEnvironmentMenu.lights.Tag = "off" Then
 
-                    LightControl.Image = My.Resources.bulbLit
-                    MyParent.bedroomLight.Image = My.Resources.bulbLit
-                    LightControl.Tag = "on"
+                    BedroomLightsOn()
 
                 End If
 
-            ElseIf FanControl.BackColor = Color.LemonChiffon Then
+            ElseIf bedroomEnvironmentMenu.temperature.BackColor = Color.LemonChiffon Then
 
-                If FanControl.Tag = "on" Then
+                scanninglevel = 2
+                bedroomEnvironmentMenu.tempOption.StartInnerScanning(bedroomEnvironmentMenu.GetTempOptions)
+                bedroomEnvironmentMenu.ToggleTempMenu(True)
 
-                    FanControl.Image = My.Resources.fanOff
-                    MyParent.bedroomFan.Image = My.Resources.fanOff
-                    FanControl.Tag = "off"
+            ElseIf bedroomEnvironmentMenu.fan.BackColor = Color.LemonChiffon Then
 
-                ElseIf FanControl.Tag = "off" Then
+                If bedroomEnvironmentMenu.fan.Tag = "on" Then
 
-                    FanControl.Image = My.Resources.fanOn
-                    MyParent.bedroomFan.Image = My.Resources.fanOn
-                    FanControl.Tag = "on"
+                    BedroomFanOff()
+
+                ElseIf bedroomEnvironmentMenu.fan.Tag = "off" Then
+
+                    BedroomFanOn()
 
                 End If
 
-            ElseIf exitEnv.BackColor = Color.LemonChiffon Then
+            ElseIf bedroomEnvironmentMenu.exitEnvMenu.BackColor = Color.LemonChiffon Then
 
-                exitEnv.Hide()
-                envOption.StopInnerScanning()
+                bedroomEnvironmentMenu.exitEnvMenu.Hide()
+                bedroomEnvironmentMenu.envMenuBackground.StopInnerScanning()
                 scanninglevel = 0
 
             ElseIf WindowMenu.exitWindows.BackColor = Color.LemonChiffon Then
 
-                TopOptions(focusIsOn).StopInnerScanning()
+                Options(focusIsOn).StopInnerScanning()
                 Me.WindowMenu.Visible = False
                 scanninglevel = 0
 
@@ -181,27 +174,11 @@ Public Class Bedroom
 
                 If WindowMenu.windowControl.Tag = "open" Then
 
-                    WindowMenu.windowControl.Image = My.Resources.WindowClosed
-                    WindowMenu.windowControl.Tag = "closed"
-                    For i = 0 To shutters.Length - 1
-
-                        shutters(i).Hide()
-
-                    Next
-                    MyParent.BedroomWindow1Shutters.Hide()
-                    MyParent.BedroomWindow2Shutters.Hide()
+                    BedroomWindowsClose()
 
                 ElseIf WindowMenu.windowControl.Tag = "closed" Then
 
-                    WindowMenu.windowControl.Image = My.Resources.WindowOpen
-                    WindowMenu.windowControl.Tag = "open"
-                    For i = 0 To shutters.Length - 1
-
-                        shutters(i).Show()
-
-                    Next
-                    MyParent.BedroomWindow1Shutters.Show()
-                    MyParent.BedroomWindow2Shutters.Show()
+                    BedroomWindowsOpen()
 
                 End If
 
@@ -209,19 +186,11 @@ Public Class Bedroom
 
                 If WindowMenu.blindControl.Tag = "open" Then
 
-                    WindowMenu.blindControl.Image = My.Resources.BlindsClosed
-                    WindowMenu.blindControl.Tag = "closed"
-                    'For i = 0 To blinds.Length - 1
-                    'blinds(i).Hide()
-                    'Next
+                    BedroomBlindsClose()
 
                 ElseIf WindowMenu.blindControl.Tag = "closed" Then
 
-                    WindowMenu.blindControl.Image = My.Resources.BlindsOpen
-                    WindowMenu.blindControl.Tag = "open"
-                    'For i = 0 To blinds.Length - 1
-                    'blinds(i).Show()
-                    'Next
+                    BedroomBlindsOpen()
 
                 End If
 
@@ -249,20 +218,100 @@ Public Class Bedroom
 
             End If
 
+        ElseIf scanninglevel = 2 Then
+
+            If bedroomEnvironmentMenu.upArrow.BackColor = Color.LemonChiffon Then
+
+                bedroomEnvironmentMenu.tempLabel.Text = CInt(bedroomEnvironmentMenu.tempLabel.Text) + 1
+
+            ElseIf bedroomEnvironmentMenu.downArrow.BackColor = Color.LemonChiffon Then
+
+                bedroomEnvironmentMenu.tempLabel.Text = CInt(bedroomEnvironmentMenu.tempLabel.Text) - 1
+
+            ElseIf bedroomEnvironmentMenu.exitTemp.BackColor = Color.LemonChiffon Then
+
+                bedroomEnvironmentMenu.tempOption.StopInnerScanning()
+                scanninglevel = 1
+                bedroomEnvironmentMenu.ToggleTempMenu(False)
+
+            End If
+
         End If
     End Sub
 
-    Private Sub Groups_ColorChanged(sender As Object, e As EventArgs) Handles BedroomWindow1.BackColorChanged, LightControl.BackColorChanged
+
+#Region "Environment"
+
+    Public Sub BedroomWindowsOpen()
+
+        WindowMenu.windowControl.Image = My.Resources.WindowOpen
+        WindowMenu.windowControl.Tag = "open"
+        For i = 0 To shutters.Length - 1
+            shutters(i).Show()
+        Next
+        MyParent.BedroomWindow1Shutters.Show()
+        MyParent.BedroomWindow2Shutters.Show()
+
+    End Sub
+
+
+    Public Sub BedroomWindowsClose()
+
+        WindowMenu.windowControl.Image = My.Resources.WindowClosed
+        WindowMenu.windowControl.Tag = "closed"
+        For i = 0 To shutters.Length - 1
+            shutters(i).Hide()
+        Next
+        MyParent.BedroomWindow1Shutters.Hide()
+        MyParent.BedroomWindow2Shutters.Hide()
+    End Sub
+
+    Public Sub BedroomBlindsOpen()
+
+        WindowMenu.blindControl.Image = My.Resources.BlindsOpen
+        WindowMenu.blindControl.Tag = "open"
+
+    End Sub
+
+
+    Public Sub BedroomBlindsClose()
+
+        WindowMenu.blindControl.Image = My.Resources.BlindsClosed
+        WindowMenu.blindControl.Tag = "closed"
+
+    End Sub
+
+
+    Public Sub BedroomLightsOn()
+        bedroomEnvironmentMenu.lights.Image = My.Resources.bulbLit
+        bedroomEnvironmentMenu.lights.Tag = "on"
+        MyParent.bedroomLight.Image = My.Resources.bulbLit
+    End Sub
+
+    Public Sub BedroomLightsOff()
+        bedroomEnvironmentMenu.lights.Image = My.Resources.bulbUnlit
+        bedroomEnvironmentMenu.lights.Tag = "off"
+        MyParent.bedroomLight.Image = My.Resources.bulbUnlit
+    End Sub
+
+    Public Sub BedroomFanOn()
+        bedroomEnvironmentMenu.fan.Image = My.Resources.fanOn
+        bedroomEnvironmentMenu.fan.Tag = "on"
+        MyParent.bedroomFan.Image = My.Resources.fanOn
+    End Sub
+
+    Public Sub BedroomFanOff()
+        bedroomEnvironmentMenu.fan.Image = My.Resources.fanOff
+        bedroomEnvironmentMenu.fan.Tag = "off"
+        MyParent.bedroomFan.Image = My.Resources.fanOff
+    End Sub
+
+
+
+#End Region
+
+    Private Sub Groups_ColorChanged(sender As Object, e As EventArgs) Handles BedroomWindow1.BackColorChanged
         If scanninglevel = 0 And ScanningTimer.Enabled Then
-            If LightControl.BackColor.Equals(Color.LemonChiffon) Then
-                For i = 1 To environment.Length - 2
-                    environment(i).ReceiveFocus()
-                Next
-            Else
-                For i = 1 To environment.Length - 2
-                    environment(i).LoseFocus()
-                Next
-            End If
 
             If BedroomWindow1.BackColor.Equals(Color.LemonChiffon) Then
                 For i = 0 To Windows.Length - 1

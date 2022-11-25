@@ -2,7 +2,7 @@
 
 Public Class FloorHallways
 
-    Private Options(2) As SubOptions
+    Private Options(1) As SubOptions
     Private Apartments(6) As SubOptions
     Private MyParent As MainForm
     Private Apartment As New UserApartment(Me)
@@ -25,11 +25,10 @@ Public Class FloorHallways
             Home.Hide()
         End If
 
-        Options(0) = Elevator
+        Options(0) = MainTaskBar.MenuBarOption
         Options(1) = Apartment01
-        Options(2) = MainTaskBar.MenuBarOption
 
-        For i = 0 To 2
+        For i = 0 To 1
             Options(i).Initialize()
         Next
 
@@ -90,7 +89,7 @@ Public Class FloorHallways
     ' to restrat scanning at the beginning, use StartScanning
     Public Sub ResumeScanning()
         Me.scanninglevel = 0
-        focusIsOn = (focusIsOn + 1) Mod 3
+        focusIsOn = (focusIsOn + 1) Mod 2
         Me.Options(focusIsOn).ReceiveFocus()
         Me.ScanningTimer.Start()
     End Sub
@@ -100,7 +99,7 @@ Public Class FloorHallways
 
         If scanninglevel = 0 Then
             Options(focusIsOn).LoseFocus()
-            focusIsOn = (focusIsOn + 1) Mod 3
+            focusIsOn = (focusIsOn + 1) Mod 2
             Options(focusIsOn).ReceiveFocus()
         Else
             Options(focusIsOn).InnerScanningNext()
@@ -112,37 +111,19 @@ Public Class FloorHallways
 
 #Region "Other events"
 
-    Private Sub Apartment01_ColorChanged(sender As Object, e As EventArgs) Handles Apartment01.BackColorChanged
-        If scanninglevel = 0 And ScanningTimer.Enabled Then
-            If Apartment01.BackColor.Equals(Color.LemonChiffon) Then
-                For i = 1 To Apartments.Length - 2
-                    Apartments(i).ReceiveFocus()
-                Next
-            Else
-                For i = 1 To Apartments.Length - 2
-                    Apartments(i).LoseFocus()
-                Next
-            End If
-
-        End If
-    End Sub
-
     Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
 
         If scanninglevel = 0 Then
             scanninglevel = 1
             If focusIsOn = 0 Then
-                StopScanning()
-                Me.Close()
+                MainTaskBar.exitTaskBar.Show()
+                MainTaskBar.MenuBarOption.LoseFocus()
+                Options(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
 
             ElseIf focusIsOn = 1 Then
                 exitApartments.Show()
                 Options(focusIsOn).StartInnerScanning(Apartments)
 
-            ElseIf focusIsOn = 2 Then
-                MainTaskBar.exitTaskBar.Show()
-                MainTaskBar.MenuBarOption.LoseFocus()
-                Options(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
             End If
         Else
             If MainTaskBar.exitTaskBar.BackColor = Color.LemonChiffon Then
@@ -173,6 +154,21 @@ Public Class FloorHallways
             End If
         End If
 
+    End Sub
+
+    Private Sub Apartment01_ColorChanged(sender As Object, e As EventArgs) Handles Apartment01.BackColorChanged
+        If scanninglevel = 0 And ScanningTimer.Enabled Then
+            If Apartment01.BackColor.Equals(Color.LemonChiffon) Then
+                For i = 1 To Apartments.Length - 2
+                    Apartments(i).ReceiveFocus()
+                Next
+            Else
+                For i = 1 To Apartments.Length - 2
+                    Apartments(i).LoseFocus()
+                Next
+            End If
+
+        End If
     End Sub
 
     Private Sub FloorHallways_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing

@@ -89,6 +89,12 @@
     <Compile Include="Entertainment.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EnvironmentMenu.Designer.vb">
+      <DependentUpon>EnvironmentMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EnvironmentMenu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="FloorHallways.Designer.vb">
       <DependentUpon>FloorHallways.vb</DependentUpon>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Entertainment.resx">
       <DependentUpon>Entertainment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnvironmentMenu.resx">
+      <DependentUpon>EnvironmentMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FloorHallways.resx">
       <DependentUpon>FloorHallways.vb</DependentUpon>
@@ -582,6 +591,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\humidity.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

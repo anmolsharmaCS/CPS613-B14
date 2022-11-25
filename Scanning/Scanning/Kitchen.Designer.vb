@@ -25,18 +25,11 @@ Partial Class Kitchen
         Me.components = New System.ComponentModel.Container()
         Me.kitchenbackground = New System.Windows.Forms.PictureBox()
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
-        Me.exitEnv = New Scanning.SubOptions()
-        Me.fanOption = New Scanning.SubOptions()
-        Me.lightOption = New Scanning.SubOptions()
-        Me.envOption = New Scanning.SubOptions()
         Me.cooking = New Scanning.SubOptions()
         Me.kitchenDoor = New Scanning.SubOptions()
         Me.MainTaskBar = New Scanning.MainTaskBar()
+        Me.kitchenEnvironmentMenu = New Scanning.EnvironmentMenu()
         CType(Me.kitchenbackground, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.exitEnv, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.fanOption, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lightOption, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.envOption, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cooking, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.kitchenDoor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -47,7 +40,7 @@ Partial Class Kitchen
         Me.kitchenbackground.Location = New System.Drawing.Point(13, 13)
         Me.kitchenbackground.Margin = New System.Windows.Forms.Padding(4)
         Me.kitchenbackground.Name = "kitchenbackground"
-        Me.kitchenbackground.Size = New System.Drawing.Size(739, 417)
+        Me.kitchenbackground.Size = New System.Drawing.Size(739, 512)
         Me.kitchenbackground.TabIndex = 1
         Me.kitchenbackground.TabStop = False
         '
@@ -55,63 +48,12 @@ Partial Class Kitchen
         '
         Me.ScanningTimer.Interval = 1000
         '
-        'exitEnv
-        '
-        Me.exitEnv.BackColor = System.Drawing.Color.Red
-        Me.exitEnv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.exitEnv.Image = Global.Scanning.My.Resources.Resources._exit
-        Me.exitEnv.Location = New System.Drawing.Point(619, 78)
-        Me.exitEnv.Name = "exitEnv"
-        Me.exitEnv.Size = New System.Drawing.Size(40, 40)
-        Me.exitEnv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.exitEnv.TabIndex = 73
-        Me.exitEnv.TabStop = False
-        Me.exitEnv.Visible = False
-        '
-        'fanOption
-        '
-        Me.fanOption.BackColor = System.Drawing.SystemColors.Control
-        Me.fanOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.fanOption.Image = Global.Scanning.My.Resources.Resources.fanOff
-        Me.fanOption.Location = New System.Drawing.Point(485, 243)
-        Me.fanOption.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.fanOption.Name = "fanOption"
-        Me.fanOption.Size = New System.Drawing.Size(128, 112)
-        Me.fanOption.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.fanOption.TabIndex = 57
-        Me.fanOption.TabStop = False
-        Me.fanOption.Tag = "off"
-        '
-        'lightOption
-        '
-        Me.lightOption.BackColor = System.Drawing.SystemColors.Control
-        Me.lightOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lightOption.Image = Global.Scanning.My.Resources.Resources.bulbUnlit
-        Me.lightOption.Location = New System.Drawing.Point(485, 115)
-        Me.lightOption.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.lightOption.Name = "lightOption"
-        Me.lightOption.Size = New System.Drawing.Size(128, 112)
-        Me.lightOption.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.lightOption.TabIndex = 56
-        Me.lightOption.TabStop = False
-        Me.lightOption.Tag = "off"
-        '
-        'envOption
-        '
-        Me.envOption.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.envOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.envOption.Location = New System.Drawing.Point(462, 98)
-        Me.envOption.Name = "envOption"
-        Me.envOption.Size = New System.Drawing.Size(173, 267)
-        Me.envOption.TabIndex = 74
-        Me.envOption.TabStop = False
-        '
         'cooking
         '
         Me.cooking.BackColor = System.Drawing.SystemColors.Control
         Me.cooking.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.cooking.Image = Global.Scanning.My.Resources.Resources.cooking
-        Me.cooking.Location = New System.Drawing.Point(75, 98)
+        Me.cooking.Location = New System.Drawing.Point(196, 127)
         Me.cooking.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.cooking.Name = "cooking"
         Me.cooking.Size = New System.Drawing.Size(372, 267)
@@ -132,20 +74,24 @@ Partial Class Kitchen
         '
         'MainTaskBar
         '
-        Me.MainTaskBar.Location = New System.Drawing.Point(75, 437)
+        Me.MainTaskBar.Location = New System.Drawing.Point(266, 532)
         Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
+        Me.MainTaskBar.Size = New System.Drawing.Size(503, 132)
         Me.MainTaskBar.TabIndex = 2
+        '
+        'kitchenEnvironmentMenu
+        '
+        Me.kitchenEnvironmentMenu.Location = New System.Drawing.Point(769, 13)
+        Me.kitchenEnvironmentMenu.Name = "kitchenEnvironmentMenu"
+        Me.kitchenEnvironmentMenu.Size = New System.Drawing.Size(255, 513)
+        Me.kitchenEnvironmentMenu.TabIndex = 62
         '
         'Kitchen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
-        Me.Controls.Add(Me.exitEnv)
-        Me.Controls.Add(Me.fanOption)
-        Me.Controls.Add(Me.lightOption)
-        Me.Controls.Add(Me.envOption)
+        Me.Controls.Add(Me.kitchenEnvironmentMenu)
         Me.Controls.Add(Me.cooking)
         Me.Controls.Add(Me.kitchenDoor)
         Me.Controls.Add(Me.MainTaskBar)
@@ -155,10 +101,6 @@ Partial Class Kitchen
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "KitchenForm"
         CType(Me.kitchenbackground, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.exitEnv, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.fanOption, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lightOption, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.envOption, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cooking, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.kitchenDoor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -167,11 +109,8 @@ Partial Class Kitchen
 
     Friend WithEvents kitchenbackground As PictureBox
     Friend WithEvents MainTaskBar As MainTaskBar
-    Friend WithEvents lightOption As SubOptions
-    Friend WithEvents fanOption As SubOptions
     Friend WithEvents kitchenDoor As SubOptions
     Friend WithEvents cooking As SubOptions
     Friend WithEvents ScanningTimer As Timer
-    Friend WithEvents exitEnv As SubOptions
-    Friend WithEvents envOption As SubOptions
+    Friend WithEvents kitchenEnvironmentMenu As EnvironmentMenu
 End Class

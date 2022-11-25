@@ -71,7 +71,7 @@ Partial Class FloorHallways
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Modern No. 20", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(129, 33)
+        Me.Label1.Location = New System.Drawing.Point(110, 24)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(63, 35)
         Me.Label1.TabIndex = 38
@@ -81,7 +81,7 @@ Partial Class FloorHallways
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Modern No. 20", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(369, 33)
+        Me.Label2.Location = New System.Drawing.Point(350, 24)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(63, 35)
         Me.Label2.TabIndex = 39
@@ -91,7 +91,7 @@ Partial Class FloorHallways
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Modern No. 20", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(619, 33)
+        Me.Label3.Location = New System.Drawing.Point(600, 24)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(63, 35)
         Me.Label3.TabIndex = 40
@@ -101,7 +101,7 @@ Partial Class FloorHallways
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Modern No. 20", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(118, 385)
+        Me.Label4.Location = New System.Drawing.Point(99, 376)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(63, 35)
         Me.Label4.TabIndex = 41
@@ -111,7 +111,7 @@ Partial Class FloorHallways
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Modern No. 20", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(369, 385)
+        Me.Label5.Location = New System.Drawing.Point(350, 376)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(63, 35)
         Me.Label5.TabIndex = 42
@@ -121,7 +121,7 @@ Partial Class FloorHallways
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Modern No. 20", 20.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(619, 385)
+        Me.Label6.Location = New System.Drawing.Point(600, 376)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(63, 35)
         Me.Label6.TabIndex = 43
@@ -135,7 +135,7 @@ Partial Class FloorHallways
         '
         Me.Home.BackColor = System.Drawing.Color.DarkKhaki
         Me.Home.Image = Global.Scanning.My.Resources.Resources.house
-        Me.Home.Location = New System.Drawing.Point(359, 71)
+        Me.Home.Location = New System.Drawing.Point(340, 62)
         Me.Home.Name = "Home"
         Me.Home.Size = New System.Drawing.Size(82, 81)
         Me.Home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -145,7 +145,7 @@ Partial Class FloorHallways
         'ElevatorDoorLine
         '
         Me.ElevatorDoorLine.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.ElevatorDoorLine.Location = New System.Drawing.Point(31, 226)
+        Me.ElevatorDoorLine.Location = New System.Drawing.Point(12, 217)
         Me.ElevatorDoorLine.Name = "ElevatorDoorLine"
         Me.ElevatorDoorLine.Size = New System.Drawing.Size(39, 1)
         Me.ElevatorDoorLine.TabIndex = 37
@@ -155,7 +155,7 @@ Partial Class FloorHallways
         '
         Me.Floor.BackColor = System.Drawing.Color.BurlyWood
         Me.Floor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Floor.Location = New System.Drawing.Point(31, 21)
+        Me.Floor.Location = New System.Drawing.Point(12, 12)
         Me.Floor.Name = "Floor"
         Me.Floor.Size = New System.Drawing.Size(738, 417)
         Me.Floor.TabIndex = 6
@@ -166,7 +166,7 @@ Partial Class FloorHallways
         Me.exitApartments.BackColor = System.Drawing.Color.Red
         Me.exitApartments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.exitApartments.Image = Global.Scanning.My.Resources.Resources._exit
-        Me.exitApartments.Location = New System.Drawing.Point(739, 12)
+        Me.exitApartments.Location = New System.Drawing.Point(720, 3)
         Me.exitApartments.Name = "exitApartments"
         Me.exitApartments.Size = New System.Drawing.Size(51, 45)
         Me.exitApartments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -178,7 +178,7 @@ Partial Class FloorHallways
         '
         Me.door06.BackColor = System.Drawing.Color.SaddleBrown
         Me.door06.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.door06.Location = New System.Drawing.Point(628, 265)
+        Me.door06.Location = New System.Drawing.Point(609, 256)
         Me.door06.Name = "door06"
         Me.door06.Size = New System.Drawing.Size(54, 7)
         Me.door06.TabIndex = 36
@@ -188,7 +188,7 @@ Partial Class FloorHallways
         '
         Me.door05.BackColor = System.Drawing.Color.SaddleBrown
         Me.door05.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.door05.Location = New System.Drawing.Point(373, 265)
+        Me.door05.Location = New System.Drawing.Point(354, 256)
         Me.door05.Name = "door05"
         Me.door05.Size = New System.Drawing.Size(54, 7)
         Me.door05.TabIndex = 35
@@ -198,7 +198,7 @@ Partial Class FloorHallways
         '
         Me.door04.BackColor = System.Drawing.Color.SaddleBrown
         Me.door04.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.door04.Location = New System.Drawing.Point(127, 265)
+        Me.door04.Location = New System.Drawing.Point(108, 256)
         Me.door04.Name = "door04"
         Me.door04.Size = New System.Drawing.Size(54, 7)
         Me.door04.TabIndex = 34
@@ -208,7 +208,7 @@ Partial Class FloorHallways
         '
         Me.door03.BackColor = System.Drawing.Color.SaddleBrown
         Me.door03.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.door03.Location = New System.Drawing.Point(628, 189)
+        Me.door03.Location = New System.Drawing.Point(609, 180)
         Me.door03.Name = "door03"
         Me.door03.Size = New System.Drawing.Size(54, 7)
         Me.door03.TabIndex = 33
@@ -218,7 +218,7 @@ Partial Class FloorHallways
         '
         Me.door02.BackColor = System.Drawing.Color.SaddleBrown
         Me.door02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.door02.Location = New System.Drawing.Point(373, 187)
+        Me.door02.Location = New System.Drawing.Point(354, 178)
         Me.door02.Name = "door02"
         Me.door02.Size = New System.Drawing.Size(54, 7)
         Me.door02.TabIndex = 32
@@ -228,7 +228,7 @@ Partial Class FloorHallways
         '
         Me.door01.BackColor = System.Drawing.Color.SaddleBrown
         Me.door01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.door01.Location = New System.Drawing.Point(127, 187)
+        Me.door01.Location = New System.Drawing.Point(108, 178)
         Me.door01.Name = "door01"
         Me.door01.Size = New System.Drawing.Size(54, 7)
         Me.door01.TabIndex = 31
@@ -238,7 +238,7 @@ Partial Class FloorHallways
         '
         Me.Elevator.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.Elevator.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Elevator.Location = New System.Drawing.Point(31, 189)
+        Me.Elevator.Location = New System.Drawing.Point(12, 180)
         Me.Elevator.Name = "Elevator"
         Me.Elevator.Size = New System.Drawing.Size(39, 81)
         Me.Elevator.TabIndex = 13
@@ -248,7 +248,7 @@ Partial Class FloorHallways
         '
         Me.Apartment06.BackColor = System.Drawing.Color.DarkKhaki
         Me.Apartment06.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Apartment06.Location = New System.Drawing.Point(523, 268)
+        Me.Apartment06.Location = New System.Drawing.Point(504, 259)
         Me.Apartment06.Name = "Apartment06"
         Me.Apartment06.Size = New System.Drawing.Size(246, 170)
         Me.Apartment06.TabIndex = 12
@@ -258,7 +258,7 @@ Partial Class FloorHallways
         '
         Me.Apartment05.BackColor = System.Drawing.Color.DarkKhaki
         Me.Apartment05.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Apartment05.Location = New System.Drawing.Point(277, 268)
+        Me.Apartment05.Location = New System.Drawing.Point(258, 259)
         Me.Apartment05.Name = "Apartment05"
         Me.Apartment05.Size = New System.Drawing.Size(246, 170)
         Me.Apartment05.TabIndex = 11
@@ -268,7 +268,7 @@ Partial Class FloorHallways
         '
         Me.Apartment04.BackColor = System.Drawing.Color.DarkKhaki
         Me.Apartment04.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Apartment04.Location = New System.Drawing.Point(31, 268)
+        Me.Apartment04.Location = New System.Drawing.Point(12, 259)
         Me.Apartment04.Name = "Apartment04"
         Me.Apartment04.Size = New System.Drawing.Size(246, 170)
         Me.Apartment04.TabIndex = 10
@@ -278,7 +278,7 @@ Partial Class FloorHallways
         '
         Me.Apartment03.BackColor = System.Drawing.Color.DarkKhaki
         Me.Apartment03.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Apartment03.Location = New System.Drawing.Point(523, 21)
+        Me.Apartment03.Location = New System.Drawing.Point(504, 12)
         Me.Apartment03.Name = "Apartment03"
         Me.Apartment03.Size = New System.Drawing.Size(246, 170)
         Me.Apartment03.TabIndex = 9
@@ -288,7 +288,7 @@ Partial Class FloorHallways
         '
         Me.Apartment02.BackColor = System.Drawing.Color.DarkKhaki
         Me.Apartment02.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Apartment02.Location = New System.Drawing.Point(277, 21)
+        Me.Apartment02.Location = New System.Drawing.Point(258, 12)
         Me.Apartment02.Name = "Apartment02"
         Me.Apartment02.Size = New System.Drawing.Size(246, 170)
         Me.Apartment02.TabIndex = 8
@@ -298,7 +298,7 @@ Partial Class FloorHallways
         '
         Me.Apartment01.BackColor = System.Drawing.Color.DarkKhaki
         Me.Apartment01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Apartment01.Location = New System.Drawing.Point(31, 21)
+        Me.Apartment01.Location = New System.Drawing.Point(12, 12)
         Me.Apartment01.Name = "Apartment01"
         Me.Apartment01.Size = New System.Drawing.Size(246, 170)
         Me.Apartment01.TabIndex = 7
@@ -306,9 +306,9 @@ Partial Class FloorHallways
         '
         'MainTaskBar
         '
-        Me.MainTaskBar.Location = New System.Drawing.Point(167, 457)
+        Me.MainTaskBar.Location = New System.Drawing.Point(249, 435)
         Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(602, 132)
+        Me.MainTaskBar.Size = New System.Drawing.Size(501, 132)
         Me.MainTaskBar.TabIndex = 47
         '
         'FloorHallways
