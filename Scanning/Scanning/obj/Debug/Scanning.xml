@@ -97,6 +97,11 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.bulbDim">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.bulbLit">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -142,12 +147,22 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.fanOff">
+<member name="P:Scanning.My.Resources.Resources.fanHigh">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.fanOn">
+<member name="P:Scanning.My.Resources.Resources.fanLow">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.fanMedium">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.fanOff">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

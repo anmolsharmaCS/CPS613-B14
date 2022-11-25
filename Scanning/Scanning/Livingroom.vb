@@ -140,13 +140,11 @@ Public Class Livingroom
             If livingroomEnvironmentMenu.lights.BackColor = Color.LemonChiffon Then
 
                 If livingroomEnvironmentMenu.lights.Tag = "on" Then
-
+                    LivingroomLightsDim()
+                ElseIf livingroomEnvironmentMenu.lights.Tag = "dim" Then
                     LivingroomLightsOff()
-
                 ElseIf livingroomEnvironmentMenu.lights.Tag = "off" Then
-
                     LivingroomLightsOn()
-
                 End If
 
             ElseIf livingroomEnvironmentMenu.temperature.BackColor = Color.LemonChiffon Then
@@ -157,13 +155,21 @@ Public Class Livingroom
 
             ElseIf livingroomEnvironmentMenu.fan.BackColor = Color.LemonChiffon Then
 
-                If livingroomEnvironmentMenu.fan.Tag = "on" Then
+                If livingroomEnvironmentMenu.fan.Tag = "off" Then
+
+                    LivingroomFanLow()
+
+                ElseIf livingroomEnvironmentMenu.fan.Tag = "low" Then
+
+                    LivingroomFanMedium()
+
+                ElseIf livingroomEnvironmentMenu.fan.Tag = "medium" Then
+
+                    LivingroomFanHigh()
+
+                ElseIf livingroomEnvironmentMenu.fan.Tag = "high" Then
 
                     LivingroomFanOff()
-
-                ElseIf livingroomEnvironmentMenu.fan.Tag = "off" Then
-
-                    LivingroomFanOn()
 
                 End If
 
@@ -308,16 +314,34 @@ Public Class Livingroom
         MyParent.livingroomLight.Image = My.Resources.bulbLit
     End Sub
 
+    Public Sub LivingroomLightsDim()
+        livingroomEnvironmentMenu.lights.Image = My.Resources.bulbDim
+        livingroomEnvironmentMenu.lights.Tag = "dim"
+        MyParent.livingroomLight.Image = My.Resources.bulbDim
+    End Sub
+
     Public Sub LivingroomLightsOff()
         livingroomEnvironmentMenu.lights.Image = My.Resources.bulbUnlit
         livingroomEnvironmentMenu.lights.Tag = "off"
         MyParent.livingroomLight.Image = My.Resources.bulbUnlit
     End Sub
 
-    Public Sub LivingroomFanOn()
-        livingroomEnvironmentMenu.fan.Image = My.Resources.fanOn
-        livingroomEnvironmentMenu.fan.Tag = "on"
-        MyParent.livingroomFan.Image = My.Resources.fanOn
+    Public Sub LivingroomFanHigh()
+        livingroomEnvironmentMenu.fan.Image = My.Resources.fanHigh
+        livingroomEnvironmentMenu.fan.Tag = "high"
+        MyParent.livingroomFan.Image = My.Resources.fanHigh
+    End Sub
+
+    Public Sub LivingroomFanMedium()
+        livingroomEnvironmentMenu.fan.Image = My.Resources.fanMedium
+        livingroomEnvironmentMenu.fan.Tag = "medium"
+        MyParent.livingroomFan.Image = My.Resources.fanMedium
+    End Sub
+
+    Public Sub LivingroomFanLow()
+        livingroomEnvironmentMenu.fan.Image = My.Resources.fanLow
+        livingroomEnvironmentMenu.fan.Tag = "low"
+        MyParent.livingroomFan.Image = My.Resources.fanLow
     End Sub
 
     Public Sub LivingroomFanOff()

@@ -87,15 +87,16 @@ Public Class Bathroom
 
         If scanninglevel = 0 Then
 
-            scanninglevel = 1
             If focusIsOn = 1 Then
 
+                scanninglevel = 1
                 bathroomEnvironmentMenu.exitEnvMenu.Show()
                 bathroomEnvironmentMenu.envMenuBackground.LoseFocus()
                 Options(focusIsOn).StartInnerScanning(bathroomEnvironmentMenu.GetTaskBarOptions)
 
             ElseIf focusIsOn = 2 Then
 
+                scanninglevel = 1
                 bathroomMainTaskBar.exitTaskBar.Show()
                 bathroomMainTaskBar.MenuBarOption.LoseFocus()
                 Options(focusIsOn).StartInnerScanning(bathroomMainTaskBar.GetTaskBarOptions())
@@ -107,13 +108,11 @@ Public Class Bathroom
             If bathroomEnvironmentMenu.lights.BackColor = Color.LemonChiffon Then
 
                 If bathroomEnvironmentMenu.lights.Tag = "on" Then
-
+                    BathroomLightsDim()
+                ElseIf bathroomEnvironmentMenu.lights.Tag = "dim" Then
                     BathroomLightsOff()
-
                 ElseIf bathroomEnvironmentMenu.lights.Tag = "off" Then
-
                     BathroomLightsOn()
-
                 End If
 
             ElseIf bathroomEnvironmentMenu.temperature.BackColor = Color.LemonChiffon Then
@@ -124,14 +123,14 @@ Public Class Bathroom
 
             ElseIf bathroomEnvironmentMenu.fan.BackColor = Color.LemonChiffon Then
 
-                If bathroomEnvironmentMenu.fan.Tag = "on" Then
-
+                If bathroomEnvironmentMenu.fan.Tag = "off" Then
+                    BathroomFanLow()
+                ElseIf bathroomEnvironmentMenu.fan.Tag = "low" Then
+                    BathroomFanMedium()
+                ElseIf bathroomEnvironmentMenu.fan.Tag = "medium" Then
+                    BathroomFanHigh()
+                ElseIf bathroomEnvironmentMenu.fan.Tag = "high" Then
                     BathroomFanOff()
-
-                ElseIf bathroomEnvironmentMenu.fan.Tag = "off" Then
-
-                    BathroomFanOn()
-
                 End If
 
             ElseIf bathroomEnvironmentMenu.exitEnvMenu.BackColor = Color.LemonChiffon Then
@@ -202,10 +201,28 @@ Public Class Bathroom
         MyParent.bathroomLight.Image = My.Resources.bulbUnlit
     End Sub
 
-    Public Sub BathroomFanOn()
-        bathroomEnvironmentMenu.fan.Image = My.Resources.fanOn
-        bathroomEnvironmentMenu.fan.Tag = "on"
-        MyParent.bathroomFan.Image = My.Resources.fanOn
+    Public Sub BathroomLightsDim()
+        bathroomEnvironmentMenu.lights.Image = My.Resources.bulbDim
+        bathroomEnvironmentMenu.lights.Tag = "dim"
+        MyParent.bathroomLight.Image = My.Resources.bulbDim
+    End Sub
+
+    Public Sub BathroomFanHigh()
+        bathroomEnvironmentMenu.fan.Image = My.Resources.fanHigh
+        bathroomEnvironmentMenu.fan.Tag = "high"
+        MyParent.bathroomFan.Image = My.Resources.fanHigh
+    End Sub
+
+    Public Sub BathroomFanMedium()
+        bathroomEnvironmentMenu.fan.Image = My.Resources.fanMedium
+        bathroomEnvironmentMenu.fan.Tag = "medium"
+        MyParent.bathroomFan.Image = My.Resources.fanMedium
+    End Sub
+
+    Public Sub BathroomFanLow()
+        bathroomEnvironmentMenu.fan.Image = My.Resources.fanLow
+        bathroomEnvironmentMenu.fan.Tag = "low"
+        MyParent.bathroomFan.Image = My.Resources.fanLow
     End Sub
 
     Public Sub BathroomFanOff()

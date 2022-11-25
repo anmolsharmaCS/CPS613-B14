@@ -213,6 +213,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property bulbDim() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("bulbDim", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property bulbLit() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("bulbLit", resourceCulture)
@@ -302,9 +312,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property fanOff() As System.Drawing.Bitmap
+        Friend ReadOnly Property fanHigh() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("fanOff", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("fanHigh", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -312,9 +322,29 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property fanOn() As System.Drawing.Bitmap
+        Friend ReadOnly Property fanLow() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("fanOn", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("fanLow", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property fanMedium() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("fanMedium", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property fanOff() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("fanOff", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

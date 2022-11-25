@@ -127,13 +127,11 @@ Public Class Bedroom
             If bedroomEnvironmentMenu.lights.BackColor = Color.LemonChiffon Then
 
                 If bedroomEnvironmentMenu.lights.Tag = "on" Then
-
+                    BedroomLightsDim()
+                ElseIf bedroomEnvironmentMenu.lights.Tag = "dim" Then
                     BedroomLightsOff()
-
                 ElseIf bedroomEnvironmentMenu.lights.Tag = "off" Then
-
                     BedroomLightsOn()
-
                 End If
 
             ElseIf bedroomEnvironmentMenu.temperature.BackColor = Color.LemonChiffon Then
@@ -144,13 +142,21 @@ Public Class Bedroom
 
             ElseIf bedroomEnvironmentMenu.fan.BackColor = Color.LemonChiffon Then
 
-                If bedroomEnvironmentMenu.fan.Tag = "on" Then
+                If bedroomEnvironmentMenu.fan.Tag = "off" Then
+
+                    BedroomFanLow()
+
+                ElseIf bedroomEnvironmentMenu.fan.Tag = "low" Then
+
+                    BedroomFanMedium()
+
+                ElseIf bedroomEnvironmentMenu.fan.Tag = "medium" Then
+
+                    BedroomFanHigh()
+
+                ElseIf bedroomEnvironmentMenu.fan.Tag = "high" Then
 
                     BedroomFanOff()
-
-                ElseIf bedroomEnvironmentMenu.fan.Tag = "off" Then
-
-                    BedroomFanOn()
 
                 End If
 
@@ -299,16 +305,34 @@ Public Class Bedroom
         MyParent.bedroomLight.Image = My.Resources.bulbLit
     End Sub
 
+    Public Sub BedroomLightsDim()
+        bedroomEnvironmentMenu.lights.Image = My.Resources.bulbDim
+        bedroomEnvironmentMenu.lights.Tag = "dim"
+        MyParent.bedroomLight.Image = My.Resources.bulbDim
+    End Sub
+
     Public Sub BedroomLightsOff()
         bedroomEnvironmentMenu.lights.Image = My.Resources.bulbUnlit
         bedroomEnvironmentMenu.lights.Tag = "off"
         MyParent.bedroomLight.Image = My.Resources.bulbUnlit
     End Sub
 
-    Public Sub BedroomFanOn()
-        bedroomEnvironmentMenu.fan.Image = My.Resources.fanOn
-        bedroomEnvironmentMenu.fan.Tag = "on"
-        MyParent.bedroomFan.Image = My.Resources.fanOn
+    Public Sub BedroomFanHigh()
+        bedroomEnvironmentMenu.fan.Image = My.Resources.fanHigh
+        bedroomEnvironmentMenu.fan.Tag = "high"
+        MyParent.bedroomFan.Image = My.Resources.fanHigh
+    End Sub
+
+    Public Sub BedroomFanMedium()
+        bedroomEnvironmentMenu.fan.Image = My.Resources.fanMedium
+        bedroomEnvironmentMenu.fan.Tag = "medium"
+        MyParent.bedroomFan.Image = My.Resources.fanMedium
+    End Sub
+
+    Public Sub BedroomFanLow()
+        bedroomEnvironmentMenu.fan.Image = My.Resources.fanLow
+        bedroomEnvironmentMenu.fan.Tag = "low"
+        MyParent.bedroomFan.Image = My.Resources.fanLow
     End Sub
 
     Public Sub BedroomFanOff()

@@ -330,6 +330,16 @@ Public Class UserApartment
     Private Sub LightsChange()
         If EnvironmentMenu.lights.Tag = "on" Then
 
+            EnvironmentMenu.lights.Tag = "dim"
+            EnvironmentMenu.lights.Image = My.Resources.bulbDim
+
+            livingroomForm.LivingroomLightsDim()
+            bedroomForm.BedroomLightsDim()
+            kitchenForm.KitchenLightsDim()
+            bathroomForm.BathroomLightsDim()
+
+        ElseIf EnvironmentMenu.lights.Tag = "dim" Then
+
             EnvironmentMenu.lights.Tag = "off"
             EnvironmentMenu.lights.Image = My.Resources.bulbUnlit
 
@@ -352,7 +362,37 @@ Public Class UserApartment
     End Sub
 
     Private Sub FanChange()
-        If EnvironmentMenu.fan.Tag = "on" Then
+        If EnvironmentMenu.fan.Tag = "off" Then
+
+            EnvironmentMenu.fan.Tag = "low"
+            EnvironmentMenu.fan.Image = My.Resources.fanLow
+
+            livingroomForm.LivingroomFanLow()
+            bedroomForm.BedroomFanLow()
+            kitchenForm.KitchenFanLow()
+            bathroomForm.BathroomFanLow()
+
+        ElseIf EnvironmentMenu.fan.Tag = "low" Then
+
+            EnvironmentMenu.fan.Tag = "medium"
+            EnvironmentMenu.fan.Image = My.Resources.fanMedium
+
+            livingroomForm.LivingroomFanMedium()
+            bedroomForm.BedroomFanMedium()
+            kitchenForm.KitchenFanMedium()
+            bathroomForm.BathroomFanMedium()
+
+        ElseIf EnvironmentMenu.fan.Tag = "medium" Then
+
+            EnvironmentMenu.fan.Tag = "high"
+            EnvironmentMenu.fan.Image = My.Resources.fanHigh
+
+            livingroomForm.LivingroomFanHigh()
+            bedroomForm.BedroomFanHigh()
+            kitchenForm.KitchenFanHigh()
+            bathroomForm.BathroomFanHigh()
+
+        ElseIf EnvironmentMenu.fan.Tag = "high" Then
 
             EnvironmentMenu.fan.Tag = "off"
             EnvironmentMenu.fan.Image = My.Resources.fanOff
@@ -361,16 +401,6 @@ Public Class UserApartment
             bedroomForm.BedroomFanOff()
             kitchenForm.KitchenFanOff()
             bathroomForm.BathroomFanOff()
-
-        ElseIf EnvironmentMenu.fan.Tag = "off" Then
-
-            EnvironmentMenu.fan.Tag = "on"
-            EnvironmentMenu.fan.Image = My.Resources.fanOn
-
-            livingroomForm.LivingroomFanOn()
-            bedroomForm.BedroomFanOn()
-            kitchenForm.KitchenFanOn()
-            bathroomForm.BathroomFanOn()
 
         End If
     End Sub

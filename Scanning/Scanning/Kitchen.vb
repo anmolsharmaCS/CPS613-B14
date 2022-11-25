@@ -107,6 +107,8 @@ Public Class Kitchen
             If kitchenEnvironmentMenu.lights.BackColor = Color.LemonChiffon Then
 
                 If kitchenEnvironmentMenu.lights.Tag = "on" Then
+                    KitchenLightsDim()
+                ElseIf kitchenEnvironmentMenu.lights.Tag = "dim" Then
                     KitchenLightsOff()
                 ElseIf kitchenEnvironmentMenu.lights.Tag = "off" Then
                     KitchenLightsOn()
@@ -114,10 +116,14 @@ Public Class Kitchen
 
             ElseIf kitchenEnvironmentMenu.fan.BackColor = Color.LemonChiffon Then
 
-                If kitchenEnvironmentMenu.fan.Tag = "on" Then
+                If kitchenEnvironmentMenu.fan.Tag = "off" Then
+                    KitchenFanLow()
+                ElseIf kitchenEnvironmentMenu.fan.Tag = "low" Then
+                    KitchenFanMedium()
+                ElseIf kitchenEnvironmentMenu.fan.Tag = "medium" Then
+                    KitchenFanHigh()
+                ElseIf kitchenEnvironmentMenu.fan.Tag = "high" Then
                     KitchenFanOff()
-                ElseIf kitchenEnvironmentMenu.fan.Tag = "off" Then
-                    KitchenFanOn()
                 End If
 
             ElseIf kitchenEnvironmentMenu.temperature.BackColor = Color.LemonChiffon Then
@@ -186,16 +192,34 @@ Public Class Kitchen
         MyParent.kitchenLight.Image = My.Resources.bulbLit
     End Sub
 
+    Public Sub KitchenLightsDim()
+        kitchenEnvironmentMenu.lights.Image = My.Resources.bulbDim
+        kitchenEnvironmentMenu.lights.Tag = "dim"
+        MyParent.kitchenLight.Image = My.Resources.bulbDim
+    End Sub
+
     Public Sub KitchenLightsOff()
         kitchenEnvironmentMenu.lights.Image = My.Resources.bulbUnlit
         kitchenEnvironmentMenu.lights.Tag = "off"
         MyParent.kitchenLight.Image = My.Resources.bulbUnlit
     End Sub
 
-    Public Sub KitchenFanOn()
-        kitchenEnvironmentMenu.fan.Image = My.Resources.fanOn
-        kitchenEnvironmentMenu.fan.Tag = "on"
-        MyParent.kitchenFan.Image = My.Resources.fanOn
+    Public Sub KitchenFanHigh()
+        kitchenEnvironmentMenu.fan.Image = My.Resources.fanHigh
+        kitchenEnvironmentMenu.fan.Tag = "high"
+        MyParent.kitchenFan.Image = My.Resources.fanHigh
+    End Sub
+
+    Public Sub KitchenFanMedium()
+        kitchenEnvironmentMenu.fan.Image = My.Resources.fanMedium
+        kitchenEnvironmentMenu.fan.Tag = "medium"
+        MyParent.kitchenFan.Image = My.Resources.fanMedium
+    End Sub
+
+    Public Sub KitchenFanLow()
+        kitchenEnvironmentMenu.fan.Image = My.Resources.fanLow
+        kitchenEnvironmentMenu.fan.Tag = "low"
+        MyParent.kitchenFan.Image = My.Resources.fanLow
     End Sub
 
     Public Sub KitchenFanOff()
