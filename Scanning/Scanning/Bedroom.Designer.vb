@@ -36,6 +36,7 @@ Partial Class Bedroom
         Me.bedroomEnvironmentMenu = New Scanning.EnvironmentMenu()
         Me.bedroomBlinds1 = New System.Windows.Forms.PictureBox()
         Me.bedroomBlinds2 = New System.Windows.Forms.PictureBox()
+        Me.exitWindowSelection = New Scanning.SubOptions()
         CType(Me.Bed, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,6 +46,7 @@ Partial Class Bedroom
         CType(Me.bedroomShutters2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bedroomBlinds1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bedroomBlinds2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.exitWindowSelection, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ScanningTimer
@@ -176,11 +178,25 @@ Partial Class Bedroom
         Me.bedroomBlinds2.TabStop = False
         Me.bedroomBlinds2.Visible = False
         '
+        'exitWindowSelection
+        '
+        Me.exitWindowSelection.BackColor = System.Drawing.Color.Red
+        Me.exitWindowSelection.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.exitWindowSelection.Image = Global.Scanning.My.Resources.Resources._exit
+        Me.exitWindowSelection.Location = New System.Drawing.Point(699, 25)
+        Me.exitWindowSelection.Name = "exitWindowSelection"
+        Me.exitWindowSelection.Size = New System.Drawing.Size(45, 45)
+        Me.exitWindowSelection.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.exitWindowSelection.TabIndex = 80
+        Me.exitWindowSelection.TabStop = False
+        Me.exitWindowSelection.Visible = False
+        '
         'Bedroom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.exitWindowSelection)
         Me.Controls.Add(Me.bedroomBlinds2)
         Me.Controls.Add(Me.bedroomBlinds1)
         Me.Controls.Add(Me.bedroomEnvironmentMenu)
@@ -207,6 +223,7 @@ Partial Class Bedroom
         CType(Me.bedroomShutters2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bedroomBlinds1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bedroomBlinds2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.exitWindowSelection, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -224,4 +241,5 @@ Partial Class Bedroom
     Friend WithEvents bedroomEnvironmentMenu As EnvironmentMenu
     Friend WithEvents bedroomBlinds1 As PictureBox
     Friend WithEvents bedroomBlinds2 As PictureBox
+    Friend WithEvents exitWindowSelection As SubOptions
 End Class

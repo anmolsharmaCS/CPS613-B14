@@ -3,11 +3,9 @@
 Public Class Livingroom
 
     Private Options(3) As SubOptions
-    Private Windows(1) As SubOptions
+    Private Windows(2) As SubOptions
 
     Private ent As New Entertainment(Me)
-
-    Public shutters(1) As PictureBox
 
     Private MyParent As UserApartment
 
@@ -29,12 +27,11 @@ Public Class Livingroom
 
         Windows(0) = LivingroomWindow1
         Windows(1) = LivingroomWindow2
+        Windows(2) = exitWindowSelection
 
-        Windows(0).Initialize()
-        Windows(1).Initialize()
-
-        shutters(0) = livingroomShutters1
-        shutters(1) = livingroomShutters2
+        For i = 0 To 2
+            Windows(i).Initialize()
+        Next
 
         WindowMenu.windowControl.Image = My.Resources.WindowClosed
         WindowMenu.windowControl.Tag = "closed"
@@ -93,7 +90,11 @@ Public Class Livingroom
         ElseIf scanninglevel = 1 Then
             Options(focusIsOn).InnerScanningNext()
         ElseIf scanninglevel = 2 Then
-            livingroomEnvironmentMenu.tempOption.InnerScanningNext()
+            If livingroomEnvironmentMenu.temperature.BackColor = Color.LemonChiffon Then
+                livingroomEnvironmentMenu.tempOption.InnerScanningNext()
+            Else
+                WindowMenu.MenuBarOption.InnerScanningNext()
+            End If
         End If
     End Sub
 
@@ -123,8 +124,9 @@ Public Class Livingroom
             ElseIf focusIsOn = 2 Then
 
                 scanninglevel = 1
-                WindowMenu.Show()
-                Options(focusIsOn).StartInnerScanning(WindowMenu.GetTaskBarOptions)
+                exitWindowSelection.Show()
+                LivingroomWindow1.includeAllOptions = True
+                LivingroomWindow1.StartInnerScanning(Windows)
 
             ElseIf focusIsOn = 3 Then
 
@@ -179,36 +181,22 @@ Public Class Livingroom
                 livingroomEnvironmentMenu.envMenuBackground.StopInnerScanning()
                 scanninglevel = 0
 
-            ElseIf WindowMenu.exitWindows.BackColor = Color.LemonChiffon Then
+            ElseIf focusIsOn = 2 Then
 
-                Options(focusIsOn).StopInnerScanning()
-                WindowMenu.Visible = False
-                scanninglevel = 0
+                If exitWindowSelection.BackColor = Color.LemonChiffon Then
 
-            ElseIf WindowMenu.windowControl.BackColor = Color.LemonChiffon Then
+                    exitWindowSelection.Hide()
+                    LivingroomWindow1.StopInnerScanning()
+                    scanninglevel = 0
 
-                If WindowMenu.windowControl.Tag = "open" Then
+                Else
 
-                    LivingroomWindowsClose()
-
-                ElseIf WindowMenu.windowControl.Tag = "closed" Then
-
-                    LivingroomWindowsOpen()
-
-                End If
-
-            ElseIf Me.WindowMenu.blindControl.BackColor = Color.LemonChiffon Then
-
-                If WindowMenu.blindControl.Tag = "open" Then
-
-                    LivingroomBlindsClose()
-
-                ElseIf WindowMenu.blindControl.Tag = "closed" Then
-
-                    LivingroomBlindsOpen()
+                    scanninglevel = 2
+                    exitWindowSelection.Hide()
+                    WindowMenu.Show()
+                    WindowMenu.MenuBarOption.StartInnerScanning(WindowMenu.GetTaskBarOptions)
 
                 End If
-
 
             ElseIf MainTaskBar.exitTaskBar.BackColor = Color.LemonChiffon Then
 
@@ -250,6 +238,36 @@ Public Class Livingroom
                 scanninglevel = 1
                 livingroomEnvironmentMenu.ToggleTempMenu(False)
 
+            ElseIf WindowMenu.exitWindows.BackColor = Color.LemonChiffon Then
+
+                Options(focusIsOn).StopInnerScanning()
+                WindowMenu.Visible = False
+                scanninglevel = 0
+
+            ElseIf WindowMenu.windowControl.BackColor = Color.LemonChiffon Then
+
+                If WindowMenu.windowControl.Tag = "open" Then
+
+                    LivingroomWindowsClose()
+
+                ElseIf WindowMenu.windowControl.Tag = "closed" Then
+
+                    LivingroomWindowsOpen()
+
+                End If
+
+            ElseIf Me.WindowMenu.blindControl.BackColor = Color.LemonChiffon Then
+
+                If WindowMenu.blindControl.Tag = "open" Then
+
+                    LivingroomBlindsClose()
+
+                ElseIf WindowMenu.blindControl.Tag = "closed" Then
+
+                    LivingroomBlindsOpen()
+
+                End If
+
             End If
 
         End If
@@ -264,11 +282,27 @@ Public Class Livingroom
         WindowMenu.windowControl.Image = My.Resources.WindowOpen
         WindowMenu.windowControl.Tag = "open"
 
-        livingroomShutters1.Show()
-        livingroomShutters2.Show()
+        If ScanningTimer.Enabled = False Then
+            livingroomShutters1.Show()
+            livingroomShutters2.Show()
 
-        MyParent.LivingroomWindow1Shutters.Show()
-        MyParent.LivingroomWindow2Shutters.Show()
+            MyParent.LivingroomWindow1Shutters.Show()
+            MyParent.LivingroomWindow2Shutters.Show()
+
+        Else
+
+            If LivingroomWindow1.BackColor = Color.LemonChiffon Then
+                livingroomShutters1.Show()
+                MyParent.LivingroomWindow1Shutters.Show()
+            End If
+
+            If LivingroomWindow2.BackColor = Color.LemonChiffon Then
+                livingroomShutters2.Show()
+                MyParent.LivingroomWindow2Shutters.Show()
+            End If
+
+        End If
+
     End Sub
 
 
@@ -276,11 +310,27 @@ Public Class Livingroom
         WindowMenu.windowControl.Image = My.Resources.WindowClosed
         WindowMenu.windowControl.Tag = "closed"
 
-        livingroomShutters1.Hide()
-        livingroomShutters2.Hide()
+        If ScanningTimer.Enabled = False Then
+            livingroomShutters1.Hide()
+            livingroomShutters2.Hide()
 
-        MyParent.LivingroomWindow1Shutters.Hide()
-        MyParent.LivingroomWindow2Shutters.Hide()
+            MyParent.LivingroomWindow2Shutters.Hide()
+            MyParent.LivingroomWindow1Shutters.Hide()
+
+        Else
+
+            If LivingroomWindow1.BackColor = Color.LemonChiffon Then
+                livingroomShutters1.Hide()
+                MyParent.LivingroomWindow1Shutters.Hide()
+            End If
+
+            If LivingroomWindow2.BackColor = Color.LemonChiffon Then
+                livingroomShutters2.Hide()
+                MyParent.LivingroomWindow2Shutters.Hide()
+            End If
+
+        End If
+
     End Sub
 
 
@@ -288,11 +338,27 @@ Public Class Livingroom
         WindowMenu.blindControl.Image = My.Resources.BlindsOpen
         WindowMenu.blindControl.Tag = "open"
 
-        livingroomBlinds1.Hide()
-        livingroomBlinds2.Hide()
+        If ScanningTimer.Enabled Then
 
-        MyParent.livingroomWindow1Blinds.Hide()
-        MyParent.livingroomWindow2Blinds.Hide()
+            If LivingroomWindow1.BackColor = Color.LemonChiffon Then
+                livingroomBlinds1.Hide()
+                MyParent.livingroomWindow1Blinds.Hide()
+            End If
+
+            If LivingroomWindow2.BackColor = Color.LemonChiffon Then
+                livingroomBlinds2.Hide()
+                MyParent.livingroomWindow2Blinds.Hide()
+            End If
+
+        Else
+
+            livingroomBlinds1.Hide()
+            MyParent.livingroomWindow1Blinds.Hide()
+
+            livingroomBlinds2.Hide()
+            MyParent.livingroomWindow2Blinds.Hide()
+
+        End If
 
     End Sub
 
@@ -301,11 +367,28 @@ Public Class Livingroom
         WindowMenu.blindControl.Image = My.Resources.BlindsClosed
         WindowMenu.blindControl.Tag = "closed"
 
-        livingroomBlinds1.Show()
-        livingroomBlinds2.Show()
+        If ScanningTimer.Enabled Then
 
-        MyParent.livingroomWindow1Blinds.Show()
-        MyParent.livingroomWindow2Blinds.Show()
+            If LivingroomWindow1.BackColor = Color.LemonChiffon Then
+                livingroomBlinds1.Show()
+                MyParent.livingroomWindow1Blinds.Show()
+            End If
+
+            If LivingroomWindow2.BackColor = Color.LemonChiffon Then
+                livingroomBlinds2.Show()
+                MyParent.livingroomWindow2Blinds.Show()
+            End If
+
+        Else
+
+            livingroomBlinds1.Show()
+            MyParent.livingroomWindow1Blinds.Show()
+
+            livingroomBlinds2.Show()
+            MyParent.livingroomWindow2Blinds.Show()
+
+        End If
+
     End Sub
 
     Public Sub LivingroomLightsOn()
@@ -355,19 +438,16 @@ Public Class Livingroom
     Private Sub Groups_ColorChanged(sender As Object, e As EventArgs) Handles LivingroomWindow1.BackColorChanged
         If scanninglevel = 0 And ScanningTimer.Enabled Then
             If LivingroomWindow1.BackColor.Equals(Color.LemonChiffon) Then
-                For i = 0 To Windows.Length - 1
-                    Windows(i).ReceiveFocus()
-                Next
+                LivingroomWindow2.ReceiveFocus()
             Else
-                For i = 0 To Windows.Length - 1
-                    Windows(i).LoseFocus()
-                Next
+                LivingroomWindow2.LoseFocus()
             End If
         End If
     End Sub
 
 
     Private Sub Livingroom_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+
         MyParent.ResumeScanning()
     End Sub
 

@@ -36,6 +36,7 @@ Partial Class Livingroom
         Me.livingroomEnvironmentMenu = New Scanning.EnvironmentMenu()
         Me.livingroomBlinds2 = New System.Windows.Forms.PictureBox()
         Me.livingroomBlinds1 = New System.Windows.Forms.PictureBox()
+        Me.exitWindowSelection = New Scanning.SubOptions()
         CType(Me.livingroomBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.livingroomShutters2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.livingroomShutters1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,6 +46,7 @@ Partial Class Livingroom
         CType(Me.entSystem, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.livingroomBlinds2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.livingroomBlinds1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.exitWindowSelection, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'livingroomBackground
@@ -176,11 +178,25 @@ Partial Class Livingroom
         Me.livingroomBlinds1.TabStop = False
         Me.livingroomBlinds1.Visible = False
         '
+        'exitWindowSelection
+        '
+        Me.exitWindowSelection.BackColor = System.Drawing.Color.Red
+        Me.exitWindowSelection.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.exitWindowSelection.Image = Global.Scanning.My.Resources.Resources._exit
+        Me.exitWindowSelection.Location = New System.Drawing.Point(671, 33)
+        Me.exitWindowSelection.Name = "exitWindowSelection"
+        Me.exitWindowSelection.Size = New System.Drawing.Size(45, 45)
+        Me.exitWindowSelection.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.exitWindowSelection.TabIndex = 79
+        Me.exitWindowSelection.TabStop = False
+        Me.exitWindowSelection.Visible = False
+        '
         'Livingroom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.exitWindowSelection)
         Me.Controls.Add(Me.livingroomBlinds1)
         Me.Controls.Add(Me.livingroomBlinds2)
         Me.Controls.Add(Me.livingroomEnvironmentMenu)
@@ -206,6 +222,7 @@ Partial Class Livingroom
         CType(Me.entSystem, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.livingroomBlinds2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.livingroomBlinds1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.exitWindowSelection, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -223,4 +240,5 @@ Partial Class Livingroom
     Friend WithEvents livingroomEnvironmentMenu As EnvironmentMenu
     Friend WithEvents livingroomBlinds2 As PictureBox
     Friend WithEvents livingroomBlinds1 As PictureBox
+    Friend WithEvents exitWindowSelection As SubOptions
 End Class
