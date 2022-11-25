@@ -367,6 +367,18 @@
   <data name="bulbDim" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>bulbDim.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="doorbell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>doorBell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="doorbellCancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>doorbellCancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ellipse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>ellipse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="enterFriendApartment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>enterFriendApartment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fanHigh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>fanHigh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

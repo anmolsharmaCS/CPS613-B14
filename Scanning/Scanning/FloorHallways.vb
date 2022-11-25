@@ -4,6 +4,8 @@ Public Class FloorHallways
 
     Private Options(1) As SubOptions
     Private Apartments(6) As SubOptions
+    Private doorBellOptions(1) As SubOptions
+
     Private MyParent As MainForm
     Private Apartment As New UserApartment(Me)
 
@@ -44,6 +46,13 @@ Public Class FloorHallways
             Apartments(i).Initialize()
         Next
 
+        doorBellOptions(0) = doorbellOption
+        doorBellOptions(1) = exitDoorbell
+
+        doorBellOptions(0).Initialize()
+        doorBellOptions(1).Initialize()
+
+        waitingForResponse.MyParent = Me
         MyParent = parentForm
 
     End Sub
@@ -101,16 +110,17 @@ Public Class FloorHallways
             Options(focusIsOn).LoseFocus()
             focusIsOn = (focusIsOn + 1) Mod 2
             Options(focusIsOn).ReceiveFocus()
-        Else
+        ElseIf scanninglevel = 1 Then
             Options(focusIsOn).InnerScanningNext()
+        ElseIf scanninglevel = 2 Then
+            doorbellOption.InnerScanningNext()
         End If
 
     End Sub
 
 #End Region
 
-#Region "Other events"
-
+#Region "KeyPress"
     Private Sub TopMenu_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
 
         If scanninglevel = 0 Then
@@ -125,7 +135,7 @@ Public Class FloorHallways
                 Options(focusIsOn).StartInnerScanning(Apartments)
 
             End If
-        Else
+        ElseIf scanninglevel = 1 Then
             If MainTaskBar.exitTaskBar.BackColor = Color.LemonChiffon Then
                 MainTaskBar.MenuBarOption.StopInnerScanning()
                 scanninglevel = 0
@@ -151,10 +161,75 @@ Public Class FloorHallways
                 exitApartments.Hide()
                 Apartment.Show()
                 Apartment.StartScanning()
+            Else
+                scanninglevel = 2
+                exitDoorbell.Show()
+                doorbellOption.Show()
+                doorbellOption.StartInnerScanning(doorBellOptions)
+            End If
+        ElseIf scanninglevel = 2 Then
+            If exitDoorbell.BackColor = Color.LemonChiffon Then
+                exitDoorbell.Hide()
+                doorbellOption.Hide()
+                doorbellOption.StopInnerScanning()
+
+                waitingForResponse.ellipseTimer.Enabled = False
+                waitingForResponse.dot1.Hide()
+                waitingForResponse.dot2.Hide()
+                waitingForResponse.dot3.Hide()
+                waitingForResponse.countDown = 0
+                waitingForResponse.dotNumber = 0
+
+                doorbellOption.Tag = "doorbell"
+                doorbellOption.Image = My.Resources.doorbell
+
+                scanninglevel = 1
+
+            ElseIf doorbellOption.BackColor = Color.LemonChiffon Then
+                If doorbellOption.Tag = "doorbell" Then
+                    waitingForResponse.ellipseTimer.Enabled = True
+                    doorbellOption.Tag = "cancelDoorbell"
+                    doorbellOption.Image = My.Resources.doorbellCancel
+
+                ElseIf doorbellOption.Tag = "cancelDoorbell" Then
+                    waitingForResponse.ellipseTimer.Enabled = False
+                    waitingForResponse.dot1.Hide()
+                    waitingForResponse.dot2.Hide()
+                    waitingForResponse.dot3.Hide()
+                    waitingForResponse.countDown = 0
+                    waitingForResponse.dotNumber = 0
+
+                    doorbellOption.Tag = "doorbell"
+                    doorbellOption.Image = My.Resources.doorbell
+                ElseIf doorbellOption.Tag = "enter" Then
+                    exitDoorbell.Hide()
+                    doorbellOption.Hide()
+                    doorbellOption.StopInnerScanning()
+
+                    waitingForResponse.ellipseTimer.Enabled = False
+                    waitingForResponse.dot1.Hide()
+                    waitingForResponse.dot2.Hide()
+                    waitingForResponse.dot3.Hide()
+                    waitingForResponse.countDown = 0
+                    waitingForResponse.dotNumber = 0
+
+                    doorbellOption.Tag = "doorbell"
+                    doorbellOption.Image = My.Resources.doorbell
+
+                    'Apartment02.LoseFocus()
+                    StopScanning()
+                    exitApartments.Hide()
+                    Dim friendApt As New FriendApartment(Me)
+                    friendApt.Show()
+                    friendApt.StartScanning()
+
+                End If
             End If
         End If
-
     End Sub
+#End Region
+
+#Region "Other events"
 
     Private Sub Apartment01_ColorChanged(sender As Object, e As EventArgs) Handles Apartment01.BackColorChanged
         If scanninglevel = 0 And ScanningTimer.Enabled Then

@@ -30,10 +30,12 @@ Partial Class FloorHallways
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.MainTaskBar = New Scanning.MainTaskBar()
+        Me.exitDoorbell = New Scanning.SubOptions()
+        Me.doorbellOption = New Scanning.SubOptions()
+        Me.exitApartments = New Scanning.SubOptions()
         Me.Home = New System.Windows.Forms.PictureBox()
         Me.ElevatorDoorLine = New System.Windows.Forms.PictureBox()
-        Me.Floor = New System.Windows.Forms.PictureBox()
-        Me.exitApartments = New Scanning.SubOptions()
         Me.door06 = New Scanning.SubOptions()
         Me.door05 = New Scanning.SubOptions()
         Me.door04 = New Scanning.SubOptions()
@@ -47,11 +49,13 @@ Partial Class FloorHallways
         Me.Apartment03 = New Scanning.SubOptions()
         Me.Apartment02 = New Scanning.SubOptions()
         Me.Apartment01 = New Scanning.SubOptions()
-        Me.MainTaskBar = New Scanning.MainTaskBar()
+        Me.Floor = New System.Windows.Forms.PictureBox()
+        Me.waitingForResponse = New Scanning.waiting()
+        CType(Me.exitDoorbell, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.doorbellOption, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.exitApartments, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Home, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ElevatorDoorLine, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Floor, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.exitApartments, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.door06, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.door05, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.door04, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,6 +69,7 @@ Partial Class FloorHallways
         CType(Me.Apartment03, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Apartment02, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Apartment01, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Floor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -131,6 +136,53 @@ Partial Class FloorHallways
         '
         Me.ScanningTimer.Interval = 1000
         '
+        'MainTaskBar
+        '
+        Me.MainTaskBar.Location = New System.Drawing.Point(249, 435)
+        Me.MainTaskBar.Name = "MainTaskBar"
+        Me.MainTaskBar.Size = New System.Drawing.Size(501, 132)
+        Me.MainTaskBar.TabIndex = 47
+        '
+        'exitDoorbell
+        '
+        Me.exitDoorbell.BackColor = System.Drawing.Color.Red
+        Me.exitDoorbell.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.exitDoorbell.Image = Global.Scanning.My.Resources.Resources._exit
+        Me.exitDoorbell.Location = New System.Drawing.Point(870, 114)
+        Me.exitDoorbell.Name = "exitDoorbell"
+        Me.exitDoorbell.Size = New System.Drawing.Size(40, 40)
+        Me.exitDoorbell.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.exitDoorbell.TabIndex = 49
+        Me.exitDoorbell.TabStop = False
+        Me.exitDoorbell.Visible = False
+        '
+        'doorbellOption
+        '
+        Me.doorbellOption.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.doorbellOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.doorbellOption.Image = Global.Scanning.My.Resources.Resources.doorbell
+        Me.doorbellOption.Location = New System.Drawing.Point(756, 146)
+        Me.doorbellOption.Name = "doorbellOption"
+        Me.doorbellOption.Size = New System.Drawing.Size(133, 144)
+        Me.doorbellOption.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.doorbellOption.TabIndex = 48
+        Me.doorbellOption.TabStop = False
+        Me.doorbellOption.Tag = "doorbell"
+        Me.doorbellOption.Visible = False
+        '
+        'exitApartments
+        '
+        Me.exitApartments.BackColor = System.Drawing.Color.Red
+        Me.exitApartments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.exitApartments.Image = Global.Scanning.My.Resources.Resources._exit
+        Me.exitApartments.Location = New System.Drawing.Point(720, 3)
+        Me.exitApartments.Name = "exitApartments"
+        Me.exitApartments.Size = New System.Drawing.Size(51, 45)
+        Me.exitApartments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.exitApartments.TabIndex = 46
+        Me.exitApartments.TabStop = False
+        Me.exitApartments.Visible = False
+        '
         'Home
         '
         Me.Home.BackColor = System.Drawing.Color.DarkKhaki
@@ -150,29 +202,6 @@ Partial Class FloorHallways
         Me.ElevatorDoorLine.Size = New System.Drawing.Size(39, 1)
         Me.ElevatorDoorLine.TabIndex = 37
         Me.ElevatorDoorLine.TabStop = False
-        '
-        'Floor
-        '
-        Me.Floor.BackColor = System.Drawing.Color.BurlyWood
-        Me.Floor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Floor.Location = New System.Drawing.Point(12, 12)
-        Me.Floor.Name = "Floor"
-        Me.Floor.Size = New System.Drawing.Size(738, 417)
-        Me.Floor.TabIndex = 6
-        Me.Floor.TabStop = False
-        '
-        'exitApartments
-        '
-        Me.exitApartments.BackColor = System.Drawing.Color.Red
-        Me.exitApartments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.exitApartments.Image = Global.Scanning.My.Resources.Resources._exit
-        Me.exitApartments.Location = New System.Drawing.Point(720, 3)
-        Me.exitApartments.Name = "exitApartments"
-        Me.exitApartments.Size = New System.Drawing.Size(51, 45)
-        Me.exitApartments.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.exitApartments.TabIndex = 46
-        Me.exitApartments.TabStop = False
-        Me.exitApartments.Visible = False
         '
         'door06
         '
@@ -304,18 +333,31 @@ Partial Class FloorHallways
         Me.Apartment01.TabIndex = 7
         Me.Apartment01.TabStop = False
         '
-        'MainTaskBar
+        'Floor
         '
-        Me.MainTaskBar.Location = New System.Drawing.Point(249, 435)
-        Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(501, 132)
-        Me.MainTaskBar.TabIndex = 47
+        Me.Floor.BackColor = System.Drawing.Color.BurlyWood
+        Me.Floor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Floor.Location = New System.Drawing.Point(12, 12)
+        Me.Floor.Name = "Floor"
+        Me.Floor.Size = New System.Drawing.Size(738, 417)
+        Me.Floor.TabIndex = 6
+        Me.Floor.TabStop = False
+        '
+        'waitingForResponse
+        '
+        Me.waitingForResponse.Location = New System.Drawing.Point(753, 296)
+        Me.waitingForResponse.Name = "waitingForResponse"
+        Me.waitingForResponse.Size = New System.Drawing.Size(213, 71)
+        Me.waitingForResponse.TabIndex = 50
         '
         'FloorHallways
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.waitingForResponse)
+        Me.Controls.Add(Me.exitDoorbell)
+        Me.Controls.Add(Me.doorbellOption)
         Me.Controls.Add(Me.MainTaskBar)
         Me.Controls.Add(Me.exitApartments)
         Me.Controls.Add(Me.Home)
@@ -344,10 +386,11 @@ Partial Class FloorHallways
         Me.Name = "FloorHallways"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FloorHallways"
+        CType(Me.exitDoorbell, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.doorbellOption, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.exitApartments, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Home, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ElevatorDoorLine, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Floor, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.exitApartments, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.door06, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.door05, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.door04, System.ComponentModel.ISupportInitialize).EndInit()
@@ -361,6 +404,7 @@ Partial Class FloorHallways
         CType(Me.Apartment03, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Apartment02, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Apartment01, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Floor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -391,4 +435,7 @@ Partial Class FloorHallways
     Friend WithEvents ScanningTimer As Timer
     Friend WithEvents exitApartments As SubOptions
     Friend WithEvents MainTaskBar As MainTaskBar
+    Friend WithEvents doorbellOption As SubOptions
+    Friend WithEvents exitDoorbell As SubOptions
+    Friend WithEvents waitingForResponse As waiting
 End Class

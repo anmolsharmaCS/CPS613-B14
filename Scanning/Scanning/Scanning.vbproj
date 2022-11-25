@@ -47,15 +47,19 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -105,6 +109,12 @@
       <DependentUpon>Assistance.vb</DependentUpon>
     </Compile>
     <Compile Include="Assistance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FriendApartment.Designer.vb">
+      <DependentUpon>FriendApartment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FriendApartment.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Kitchen.Designer.vb">
@@ -160,6 +170,12 @@
     <Compile Include="UserApartment.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="waiting.Designer.vb">
+      <DependentUpon>waiting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="waiting.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="WindowMenu.Designer.vb">
       <DependentUpon>WindowMenu.vb</DependentUpon>
     </Compile>
@@ -186,6 +202,9 @@
     <EmbeddedResource Include="Assistance.resx">
       <DependentUpon>Assistance.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FriendApartment.resx">
+      <DependentUpon>FriendApartment.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kitchen.resx">
       <DependentUpon>Kitchen.vb</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserApartment.resx">
       <DependentUpon>UserApartment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="waiting.resx">
+      <DependentUpon>waiting.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WindowMenu.resx">
       <DependentUpon>WindowMenu.vb</DependentUpon>
@@ -609,6 +631,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\bulbDim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\doorBell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\enterFriendApartment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\ellipse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\doorbellCancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
