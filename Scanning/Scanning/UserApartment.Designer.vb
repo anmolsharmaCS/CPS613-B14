@@ -58,6 +58,10 @@ Partial Class UserApartment
         Me.Bedroom = New Scanning.SubOptions()
         Me.LivingRoom = New Scanning.SubOptions()
         Me.Kitchen = New Scanning.SubOptions()
+        Me.livingroomWindow2Blinds = New System.Windows.Forms.PictureBox()
+        Me.bedroomWindow2Blinds = New System.Windows.Forms.PictureBox()
+        Me.bedroomWindow1Blinds = New System.Windows.Forms.PictureBox()
+        Me.livingroomWindow1Blinds = New System.Windows.Forms.PictureBox()
         CType(Me.LivingroomWindow2Shutters, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow1Shutters, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow2Shutters, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,6 +93,10 @@ Partial Class UserApartment
         CType(Me.Bedroom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingRoom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Kitchen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomWindow2Blinds, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bedroomWindow2Blinds, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bedroomWindow1Blinds, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomWindow1Blinds, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ScanningTimer
@@ -376,7 +384,7 @@ Partial Class UserApartment
         '
         'LivingroomWindow2
         '
-        Me.LivingroomWindow2.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.LivingroomWindow2.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.LivingroomWindow2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LivingroomWindow2.Location = New System.Drawing.Point(192, 34)
         Me.LivingroomWindow2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -388,7 +396,7 @@ Partial Class UserApartment
         '
         'BedroomWindow1
         '
-        Me.BedroomWindow1.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.BedroomWindow1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.BedroomWindow1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.BedroomWindow1.Location = New System.Drawing.Point(364, 34)
         Me.BedroomWindow1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -400,7 +408,7 @@ Partial Class UserApartment
         '
         'BedroomWindow2
         '
-        Me.BedroomWindow2.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.BedroomWindow2.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.BedroomWindow2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.BedroomWindow2.Location = New System.Drawing.Point(604, 34)
         Me.BedroomWindow2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -423,7 +431,7 @@ Partial Class UserApartment
         '
         'LivingroomWindow1
         '
-        Me.LivingroomWindow1.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.LivingroomWindow1.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.LivingroomWindow1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.LivingroomWindow1.Location = New System.Drawing.Point(31, 34)
         Me.LivingroomWindow1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -489,30 +497,80 @@ Partial Class UserApartment
         Me.Kitchen.TabStop = False
         Me.Kitchen.Tag = "0"
         '
+        'livingroomWindow2Blinds
+        '
+        Me.livingroomWindow2Blinds.Image = Global.Scanning.My.Resources.Resources.blinds
+        Me.livingroomWindow2Blinds.Location = New System.Drawing.Point(192, 46)
+        Me.livingroomWindow2Blinds.Name = "livingroomWindow2Blinds"
+        Me.livingroomWindow2Blinds.Size = New System.Drawing.Size(98, 31)
+        Me.livingroomWindow2Blinds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomWindow2Blinds.TabIndex = 68
+        Me.livingroomWindow2Blinds.TabStop = False
+        Me.livingroomWindow2Blinds.Visible = False
+        '
+        'bedroomWindow2Blinds
+        '
+        Me.bedroomWindow2Blinds.Image = Global.Scanning.My.Resources.Resources.blinds
+        Me.bedroomWindow2Blinds.Location = New System.Drawing.Point(604, 46)
+        Me.bedroomWindow2Blinds.Name = "bedroomWindow2Blinds"
+        Me.bedroomWindow2Blinds.Size = New System.Drawing.Size(98, 31)
+        Me.bedroomWindow2Blinds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.bedroomWindow2Blinds.TabIndex = 69
+        Me.bedroomWindow2Blinds.TabStop = False
+        Me.bedroomWindow2Blinds.Tag = ""
+        Me.bedroomWindow2Blinds.Visible = False
+        '
+        'bedroomWindow1Blinds
+        '
+        Me.bedroomWindow1Blinds.Image = Global.Scanning.My.Resources.Resources.blinds
+        Me.bedroomWindow1Blinds.Location = New System.Drawing.Point(364, 46)
+        Me.bedroomWindow1Blinds.Name = "bedroomWindow1Blinds"
+        Me.bedroomWindow1Blinds.Size = New System.Drawing.Size(98, 31)
+        Me.bedroomWindow1Blinds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.bedroomWindow1Blinds.TabIndex = 70
+        Me.bedroomWindow1Blinds.TabStop = False
+        Me.bedroomWindow1Blinds.Tag = ""
+        Me.bedroomWindow1Blinds.Visible = False
+        '
+        'livingroomWindow1Blinds
+        '
+        Me.livingroomWindow1Blinds.Image = Global.Scanning.My.Resources.Resources.blinds
+        Me.livingroomWindow1Blinds.Location = New System.Drawing.Point(31, 46)
+        Me.livingroomWindow1Blinds.Name = "livingroomWindow1Blinds"
+        Me.livingroomWindow1Blinds.Size = New System.Drawing.Size(98, 31)
+        Me.livingroomWindow1Blinds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomWindow1Blinds.TabIndex = 71
+        Me.livingroomWindow1Blinds.TabStop = False
+        Me.livingroomWindow1Blinds.Visible = False
+        '
         'UserApartment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.exitRooms)
+        Me.Controls.Add(Me.livingroomFan)
+        Me.Controls.Add(Me.livingroomLight)
+        Me.Controls.Add(Me.livingroomWindow1Blinds)
+        Me.Controls.Add(Me.bedroomWindow1Blinds)
+        Me.Controls.Add(Me.bedroomWindow2Blinds)
+        Me.Controls.Add(Me.livingroomWindow2Blinds)
         Me.Controls.Add(Me.EnvironmentMenu)
         Me.Controls.Add(Me.bedroomHumidity)
         Me.Controls.Add(Me.kitchenHumidity)
         Me.Controls.Add(Me.bathroomHUmidity)
         Me.Controls.Add(Me.livingroomHumidity)
         Me.Controls.Add(Me.WindowMenu)
-        Me.Controls.Add(Me.exitRooms)
         Me.Controls.Add(Me.LivingroomWindow2Shutters)
         Me.Controls.Add(Me.BedroomWindow1Shutters)
         Me.Controls.Add(Me.BedroomWindow2Shutters)
         Me.Controls.Add(Me.LivingroomWindow1Shutters)
-        Me.Controls.Add(Me.livingroomFan)
         Me.Controls.Add(Me.kitchenFan)
         Me.Controls.Add(Me.bathroomFan)
         Me.Controls.Add(Me.bedroomFan)
         Me.Controls.Add(Me.bathroomLight)
         Me.Controls.Add(Me.bedroomLight)
         Me.Controls.Add(Me.kitchenLight)
-        Me.Controls.Add(Me.livingroomLight)
         Me.Controls.Add(Me.MainTaskBar)
         Me.Controls.Add(Me.LivingroomDoor)
         Me.Controls.Add(Me.BathroomDoor)
@@ -564,6 +622,10 @@ Partial Class UserApartment
         CType(Me.Bedroom, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingRoom, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Kitchen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomWindow2Blinds, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bedroomWindow2Blinds, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bedroomWindow1Blinds, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomWindow1Blinds, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -602,4 +664,8 @@ Partial Class UserApartment
     Friend WithEvents kitchenHumidity As PictureBox
     Friend WithEvents bedroomHumidity As PictureBox
     Friend WithEvents EnvironmentMenu As EnvironmentMenu
+    Friend WithEvents livingroomWindow2Blinds As PictureBox
+    Friend WithEvents bedroomWindow2Blinds As PictureBox
+    Friend WithEvents bedroomWindow1Blinds As PictureBox
+    Friend WithEvents livingroomWindow1Blinds As PictureBox
 End Class

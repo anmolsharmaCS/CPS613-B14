@@ -34,6 +34,8 @@ Partial Class Bedroom
         Me.bedroomShutters2 = New System.Windows.Forms.PictureBox()
         Me.WindowMenu = New Scanning.WindowMenu()
         Me.bedroomEnvironmentMenu = New Scanning.EnvironmentMenu()
+        Me.bedroomBlinds1 = New System.Windows.Forms.PictureBox()
+        Me.bedroomBlinds2 = New System.Windows.Forms.PictureBox()
         CType(Me.Bed, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,6 +43,8 @@ Partial Class Bedroom
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bedroomShutters1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bedroomShutters2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bedroomBlinds1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bedroomBlinds2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ScanningTimer
@@ -150,11 +154,35 @@ Partial Class Bedroom
         Me.bedroomEnvironmentMenu.Size = New System.Drawing.Size(255, 513)
         Me.bedroomEnvironmentMenu.TabIndex = 73
         '
+        'bedroomBlinds1
+        '
+        Me.bedroomBlinds1.Image = Global.Scanning.My.Resources.Resources.blinds
+        Me.bedroomBlinds1.Location = New System.Drawing.Point(131, 52)
+        Me.bedroomBlinds1.Name = "bedroomBlinds1"
+        Me.bedroomBlinds1.Size = New System.Drawing.Size(146, 39)
+        Me.bedroomBlinds1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.bedroomBlinds1.TabIndex = 75
+        Me.bedroomBlinds1.TabStop = False
+        Me.bedroomBlinds1.Visible = False
+        '
+        'bedroomBlinds2
+        '
+        Me.bedroomBlinds2.Image = Global.Scanning.My.Resources.Resources.blinds
+        Me.bedroomBlinds2.Location = New System.Drawing.Point(495, 52)
+        Me.bedroomBlinds2.Name = "bedroomBlinds2"
+        Me.bedroomBlinds2.Size = New System.Drawing.Size(146, 39)
+        Me.bedroomBlinds2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.bedroomBlinds2.TabIndex = 76
+        Me.bedroomBlinds2.TabStop = False
+        Me.bedroomBlinds2.Visible = False
+        '
         'Bedroom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.bedroomBlinds2)
+        Me.Controls.Add(Me.bedroomBlinds1)
         Me.Controls.Add(Me.bedroomEnvironmentMenu)
         Me.Controls.Add(Me.WindowMenu)
         Me.Controls.Add(Me.bedroomShutters2)
@@ -177,6 +205,8 @@ Partial Class Bedroom
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bedroomShutters1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bedroomShutters2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bedroomBlinds1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bedroomBlinds2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -192,4 +222,6 @@ Partial Class Bedroom
     Friend WithEvents bedroomShutters2 As PictureBox
     Friend WithEvents WindowMenu As WindowMenu
     Friend WithEvents bedroomEnvironmentMenu As EnvironmentMenu
+    Friend WithEvents bedroomBlinds1 As PictureBox
+    Friend WithEvents bedroomBlinds2 As PictureBox
 End Class

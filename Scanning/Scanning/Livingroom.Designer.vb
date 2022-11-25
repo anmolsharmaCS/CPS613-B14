@@ -34,6 +34,8 @@ Partial Class Livingroom
         Me.entSystem = New Scanning.SubOptions()
         Me.WindowMenu = New Scanning.WindowMenu()
         Me.livingroomEnvironmentMenu = New Scanning.EnvironmentMenu()
+        Me.livingroomBlinds2 = New System.Windows.Forms.PictureBox()
+        Me.livingroomBlinds1 = New System.Windows.Forms.PictureBox()
         CType(Me.livingroomBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.livingroomShutters2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.livingroomShutters1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,6 +43,8 @@ Partial Class Livingroom
         CType(Me.LivingroomWindow2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingroomWindow1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.entSystem, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomBlinds2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomBlinds1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'livingroomBackground
@@ -150,11 +154,35 @@ Partial Class Livingroom
         Me.livingroomEnvironmentMenu.Size = New System.Drawing.Size(255, 513)
         Me.livingroomEnvironmentMenu.TabIndex = 76
         '
+        'livingroomBlinds2
+        '
+        Me.livingroomBlinds2.Image = Global.Scanning.My.Resources.Resources.blinds
+        Me.livingroomBlinds2.Location = New System.Drawing.Point(435, 61)
+        Me.livingroomBlinds2.Name = "livingroomBlinds2"
+        Me.livingroomBlinds2.Size = New System.Drawing.Size(178, 52)
+        Me.livingroomBlinds2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomBlinds2.TabIndex = 77
+        Me.livingroomBlinds2.TabStop = False
+        Me.livingroomBlinds2.Visible = False
+        '
+        'livingroomBlinds1
+        '
+        Me.livingroomBlinds1.Image = Global.Scanning.My.Resources.Resources.blinds
+        Me.livingroomBlinds1.Location = New System.Drawing.Point(88, 61)
+        Me.livingroomBlinds1.Name = "livingroomBlinds1"
+        Me.livingroomBlinds1.Size = New System.Drawing.Size(178, 52)
+        Me.livingroomBlinds1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomBlinds1.TabIndex = 78
+        Me.livingroomBlinds1.TabStop = False
+        Me.livingroomBlinds1.Visible = False
+        '
         'Livingroom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.livingroomBlinds1)
+        Me.Controls.Add(Me.livingroomBlinds2)
         Me.Controls.Add(Me.livingroomEnvironmentMenu)
         Me.Controls.Add(Me.WindowMenu)
         Me.Controls.Add(Me.MainTaskBar)
@@ -176,6 +204,8 @@ Partial Class Livingroom
         CType(Me.LivingroomWindow2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingroomWindow1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.entSystem, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomBlinds2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomBlinds1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -191,4 +221,6 @@ Partial Class Livingroom
     Friend WithEvents MainTaskBar As MainTaskBar
     Friend WithEvents WindowMenu As WindowMenu
     Friend WithEvents livingroomEnvironmentMenu As EnvironmentMenu
+    Friend WithEvents livingroomBlinds2 As PictureBox
+    Friend WithEvents livingroomBlinds1 As PictureBox
 End Class

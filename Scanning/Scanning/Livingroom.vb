@@ -257,11 +257,10 @@ Public Class Livingroom
     Public Sub LivingroomWindowsOpen()
         WindowMenu.windowControl.Image = My.Resources.WindowOpen
         WindowMenu.windowControl.Tag = "open"
-        For i = 0 To shutters.Length - 1
 
-            shutters(i).Show()
+        livingroomShutters1.Show()
+        livingroomShutters2.Show()
 
-        Next
         MyParent.LivingroomWindow1Shutters.Show()
         MyParent.LivingroomWindow2Shutters.Show()
     End Sub
@@ -270,11 +269,10 @@ Public Class Livingroom
     Public Sub LivingroomWindowsClose()
         WindowMenu.windowControl.Image = My.Resources.WindowClosed
         WindowMenu.windowControl.Tag = "closed"
-        For i = 0 To shutters.Length - 1
 
-            shutters(i).Hide()
+        livingroomShutters1.Hide()
+        livingroomShutters2.Hide()
 
-        Next
         MyParent.LivingroomWindow1Shutters.Hide()
         MyParent.LivingroomWindow2Shutters.Hide()
     End Sub
@@ -283,12 +281,25 @@ Public Class Livingroom
     Public Sub LivingroomBlindsOpen()
         WindowMenu.blindControl.Image = My.Resources.BlindsOpen
         WindowMenu.blindControl.Tag = "open"
+
+        livingroomBlinds1.Hide()
+        livingroomBlinds2.Hide()
+
+        MyParent.livingroomWindow1Blinds.Hide()
+        MyParent.livingroomWindow2Blinds.Hide()
+
     End Sub
 
 
     Public Sub LivingroomBlindsClose()
         WindowMenu.blindControl.Image = My.Resources.BlindsClosed
         WindowMenu.blindControl.Tag = "closed"
+
+        livingroomBlinds1.Show()
+        livingroomBlinds2.Show()
+
+        MyParent.livingroomWindow1Blinds.Show()
+        MyParent.livingroomWindow2Blinds.Show()
     End Sub
 
     Public Sub LivingroomLightsOn()

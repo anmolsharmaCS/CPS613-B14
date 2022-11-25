@@ -3,7 +3,6 @@
 Public Class Bedroom
     Private Options(3) As SubOptions
     Private Windows(1) As SubOptions
-    Public shutters(1) As PictureBox
     Private MyParent As UserApartment
 
     Public Sub New(parentForm As UserApartment)
@@ -25,9 +24,6 @@ Public Class Bedroom
         For i = 0 To 1
             Windows(i).Initialize()
         Next
-
-        shutters(0) = bedroomShutters1
-        shutters(1) = bedroomShutters2
 
         MyParent = parentForm
 
@@ -239,6 +235,7 @@ Public Class Bedroom
         End If
     End Sub
 
+#End Region
 
 #Region "Environment"
 
@@ -246,9 +243,10 @@ Public Class Bedroom
 
         WindowMenu.windowControl.Image = My.Resources.WindowOpen
         WindowMenu.windowControl.Tag = "open"
-        For i = 0 To shutters.Length - 1
-            shutters(i).Show()
-        Next
+
+        bedroomShutters1.Show()
+        bedroomShutters2.Show()
+
         MyParent.BedroomWindow1Shutters.Show()
         MyParent.BedroomWindow2Shutters.Show()
 
@@ -259,9 +257,10 @@ Public Class Bedroom
 
         WindowMenu.windowControl.Image = My.Resources.WindowClosed
         WindowMenu.windowControl.Tag = "closed"
-        For i = 0 To shutters.Length - 1
-            shutters(i).Hide()
-        Next
+
+        bedroomShutters1.Hide()
+        bedroomShutters2.Hide()
+
         MyParent.BedroomWindow1Shutters.Hide()
         MyParent.BedroomWindow2Shutters.Hide()
     End Sub
@@ -271,6 +270,12 @@ Public Class Bedroom
         WindowMenu.blindControl.Image = My.Resources.BlindsOpen
         WindowMenu.blindControl.Tag = "open"
 
+        bedroomBlinds1.Hide()
+        bedroomBlinds2.Hide()
+
+        MyParent.bedroomWindow1Blinds.Hide()
+        MyParent.bedroomWindow2Blinds.Hide()
+
     End Sub
 
 
@@ -278,6 +283,12 @@ Public Class Bedroom
 
         WindowMenu.blindControl.Image = My.Resources.BlindsClosed
         WindowMenu.blindControl.Tag = "closed"
+
+        bedroomBlinds1.Show()
+        bedroomBlinds2.Show()
+
+        MyParent.bedroomWindow1Blinds.Show()
+        MyParent.bedroomWindow2Blinds.Show()
 
     End Sub
 
@@ -329,6 +340,5 @@ Public Class Bedroom
     Private Sub Bedroom_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         MyParent.ResumeScanning()
     End Sub
-#End Region
 
 End Class
