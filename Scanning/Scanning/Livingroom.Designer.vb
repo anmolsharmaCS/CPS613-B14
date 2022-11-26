@@ -37,6 +37,8 @@ Partial Class Livingroom
         Me.livingroomBlinds2 = New System.Windows.Forms.PictureBox()
         Me.livingroomBlinds1 = New System.Windows.Forms.PictureBox()
         Me.exitWindowSelection = New Scanning.SubOptions()
+        Me.vaccuumButton = New Scanning.SubOptions()
+        Me.vaccuumOption = New Scanning.SubOptions()
         CType(Me.livingroomBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.livingroomShutters2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.livingroomShutters1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -47,6 +49,8 @@ Partial Class Livingroom
         CType(Me.livingroomBlinds2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.livingroomBlinds1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.exitWindowSelection, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.vaccuumButton, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.vaccuumOption, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'livingroomBackground
@@ -88,9 +92,9 @@ Partial Class Livingroom
         '
         'MainTaskBar
         '
-        Me.MainTaskBar.Location = New System.Drawing.Point(230, 571)
+        Me.MainTaskBar.Location = New System.Drawing.Point(75, 572)
         Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(504, 132)
+        Me.MainTaskBar.Size = New System.Drawing.Size(649, 132)
         Me.MainTaskBar.TabIndex = 73
         '
         'LivingroomDoor
@@ -191,11 +195,34 @@ Partial Class Livingroom
         Me.exitWindowSelection.TabStop = False
         Me.exitWindowSelection.Visible = False
         '
+        'vaccuumButton
+        '
+        Me.vaccuumButton.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.vaccuumButton.Image = Global.Scanning.My.Resources.Resources.roomba
+        Me.vaccuumButton.Location = New System.Drawing.Point(745, 584)
+        Me.vaccuumButton.Name = "vaccuumButton"
+        Me.vaccuumButton.Size = New System.Drawing.Size(112, 100)
+        Me.vaccuumButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.vaccuumButton.TabIndex = 81
+        Me.vaccuumButton.TabStop = False
+        '
+        'vaccuumOption
+        '
+        Me.vaccuumOption.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.vaccuumOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.vaccuumOption.Location = New System.Drawing.Point(730, 571)
+        Me.vaccuumOption.Name = "vaccuumOption"
+        Me.vaccuumOption.Size = New System.Drawing.Size(145, 131)
+        Me.vaccuumOption.TabIndex = 80
+        Me.vaccuumOption.TabStop = False
+        '
         'Livingroom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.vaccuumButton)
+        Me.Controls.Add(Me.vaccuumOption)
         Me.Controls.Add(Me.exitWindowSelection)
         Me.Controls.Add(Me.livingroomBlinds1)
         Me.Controls.Add(Me.livingroomBlinds2)
@@ -223,6 +250,8 @@ Partial Class Livingroom
         CType(Me.livingroomBlinds2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.livingroomBlinds1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.exitWindowSelection, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.vaccuumButton, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.vaccuumOption, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -241,4 +270,6 @@ Partial Class Livingroom
     Friend WithEvents livingroomBlinds2 As PictureBox
     Friend WithEvents livingroomBlinds1 As PictureBox
     Friend WithEvents exitWindowSelection As SubOptions
+    Friend WithEvents vaccuumButton As SubOptions
+    Friend WithEvents vaccuumOption As SubOptions
 End Class

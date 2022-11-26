@@ -257,7 +257,7 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="P:Scanning.My.Resources.Resources.navigation">
+<member name="P:Scanning.My.Resources.Resources.navigationWheelchair">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -348,6 +348,16 @@ Scanning
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.rewind">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.roomba">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.schedule">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

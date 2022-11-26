@@ -532,9 +532,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property navigation() As System.Drawing.Bitmap
+        Friend ReadOnly Property navigationWheelchair() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("navigation", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("navigationWheelchair", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -715,6 +715,26 @@ Namespace My.Resources
         Friend ReadOnly Property rewind() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("rewind", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property roomba() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("roomba", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property schedule() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("schedule", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

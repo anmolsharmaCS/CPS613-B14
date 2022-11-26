@@ -103,9 +103,9 @@ Partial Class Entertainment
         '
         'MainTaskBar
         '
-        Me.MainTaskBar.Location = New System.Drawing.Point(161, 556)
+        Me.MainTaskBar.Location = New System.Drawing.Point(189, 545)
         Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(677, 132)
+        Me.MainTaskBar.Size = New System.Drawing.Size(649, 132)
         Me.MainTaskBar.TabIndex = 19
         '
         'Favourite

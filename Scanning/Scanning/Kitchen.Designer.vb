@@ -29,9 +29,13 @@ Partial Class Kitchen
         Me.kitchenDoor = New Scanning.SubOptions()
         Me.MainTaskBar = New Scanning.MainTaskBar()
         Me.kitchenEnvironmentMenu = New Scanning.EnvironmentMenu()
+        Me.vaccuumButton = New Scanning.SubOptions()
+        Me.vaccuumOption = New Scanning.SubOptions()
         CType(Me.kitchenbackground, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cooking, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.kitchenDoor, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.vaccuumButton, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.vaccuumOption, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'kitchenbackground
@@ -74,9 +78,9 @@ Partial Class Kitchen
         '
         'MainTaskBar
         '
-        Me.MainTaskBar.Location = New System.Drawing.Point(266, 532)
+        Me.MainTaskBar.Location = New System.Drawing.Point(103, 532)
         Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(503, 132)
+        Me.MainTaskBar.Size = New System.Drawing.Size(650, 132)
         Me.MainTaskBar.TabIndex = 2
         '
         'kitchenEnvironmentMenu
@@ -86,11 +90,34 @@ Partial Class Kitchen
         Me.kitchenEnvironmentMenu.Size = New System.Drawing.Size(255, 513)
         Me.kitchenEnvironmentMenu.TabIndex = 62
         '
+        'vaccuumButton
+        '
+        Me.vaccuumButton.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.vaccuumButton.Image = Global.Scanning.My.Resources.Resources.roomba
+        Me.vaccuumButton.Location = New System.Drawing.Point(784, 545)
+        Me.vaccuumButton.Name = "vaccuumButton"
+        Me.vaccuumButton.Size = New System.Drawing.Size(112, 100)
+        Me.vaccuumButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.vaccuumButton.TabIndex = 75
+        Me.vaccuumButton.TabStop = False
+        '
+        'vaccuumOption
+        '
+        Me.vaccuumOption.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.vaccuumOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.vaccuumOption.Location = New System.Drawing.Point(769, 532)
+        Me.vaccuumOption.Name = "vaccuumOption"
+        Me.vaccuumOption.Size = New System.Drawing.Size(145, 131)
+        Me.vaccuumOption.TabIndex = 74
+        Me.vaccuumOption.TabStop = False
+        '
         'Kitchen
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.vaccuumButton)
+        Me.Controls.Add(Me.vaccuumOption)
         Me.Controls.Add(Me.kitchenEnvironmentMenu)
         Me.Controls.Add(Me.cooking)
         Me.Controls.Add(Me.kitchenDoor)
@@ -103,6 +130,8 @@ Partial Class Kitchen
         CType(Me.kitchenbackground, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cooking, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.kitchenDoor, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.vaccuumButton, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.vaccuumOption, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -113,4 +142,6 @@ Partial Class Kitchen
     Friend WithEvents cooking As SubOptions
     Friend WithEvents ScanningTimer As Timer
     Friend WithEvents kitchenEnvironmentMenu As EnvironmentMenu
+    Friend WithEvents vaccuumButton As SubOptions
+    Friend WithEvents vaccuumOption As SubOptions
 End Class

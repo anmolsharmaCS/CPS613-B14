@@ -1,7 +1,7 @@
 ﻿Imports System.ComponentModel
 
 Public Class Bedroom
-    Private Options(3) As SubOptions
+    Private Options(4) As SubOptions
     Private Windows(2) As SubOptions
     Private MyParent As UserApartment
 
@@ -13,8 +13,9 @@ Public Class Bedroom
         Options(1) = Bed
         Options(2) = BedroomWindow1
         Options(3) = bedroomEnvironmentMenu.envMenuBackground
+        Options(4) = vaccuumOption
 
-        For i = 0 To 3
+        For i = 0 To 4
             Options(i).Initialize()
         Next
 
@@ -75,7 +76,7 @@ Public Class Bedroom
     Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles ScanningTimer.Tick
         If scanninglevel = 0 Then
             Options(focusIsOn).LoseFocus()
-            focusIsOn = (focusIsOn + 1) Mod 4
+            focusIsOn = (focusIsOn + 1) Mod 5
             Options(focusIsOn).ReceiveFocus()
         ElseIf scanninglevel = 1 Then
             Options(focusIsOn).InnerScanningNext()

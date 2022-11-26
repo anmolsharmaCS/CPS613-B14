@@ -24,27 +24,31 @@ Partial Class UserApartment
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.EnvironmentMenu = New Scanning.EnvironmentMenu()
+        Me.WindowMenu = New Scanning.WindowMenu()
+        Me.MainTaskBar = New Scanning.MainTaskBar()
+        Me.vaccuumOption = New Scanning.SubOptions()
+        Me.exitRooms = New Scanning.SubOptions()
+        Me.livingroomFan = New System.Windows.Forms.PictureBox()
+        Me.livingroomLight = New System.Windows.Forms.PictureBox()
+        Me.livingroomWindow1Blinds = New System.Windows.Forms.PictureBox()
+        Me.bedroomWindow1Blinds = New System.Windows.Forms.PictureBox()
+        Me.bedroomWindow2Blinds = New System.Windows.Forms.PictureBox()
+        Me.livingroomWindow2Blinds = New System.Windows.Forms.PictureBox()
+        Me.bedroomHumidity = New System.Windows.Forms.PictureBox()
+        Me.kitchenHumidity = New System.Windows.Forms.PictureBox()
+        Me.bathroomHUmidity = New System.Windows.Forms.PictureBox()
+        Me.livingroomHumidity = New System.Windows.Forms.PictureBox()
         Me.LivingroomWindow2Shutters = New System.Windows.Forms.PictureBox()
         Me.BedroomWindow1Shutters = New System.Windows.Forms.PictureBox()
         Me.BedroomWindow2Shutters = New System.Windows.Forms.PictureBox()
         Me.LivingroomWindow1Shutters = New System.Windows.Forms.PictureBox()
-        Me.livingroomFan = New System.Windows.Forms.PictureBox()
         Me.kitchenFan = New System.Windows.Forms.PictureBox()
         Me.bathroomFan = New System.Windows.Forms.PictureBox()
         Me.bedroomFan = New System.Windows.Forms.PictureBox()
         Me.bathroomLight = New System.Windows.Forms.PictureBox()
         Me.bedroomLight = New System.Windows.Forms.PictureBox()
         Me.kitchenLight = New System.Windows.Forms.PictureBox()
-        Me.livingroomLight = New System.Windows.Forms.PictureBox()
-        Me.apartment = New System.Windows.Forms.PictureBox()
-        Me.livingroomHumidity = New System.Windows.Forms.PictureBox()
-        Me.bathroomHUmidity = New System.Windows.Forms.PictureBox()
-        Me.kitchenHumidity = New System.Windows.Forms.PictureBox()
-        Me.bedroomHumidity = New System.Windows.Forms.PictureBox()
-        Me.EnvironmentMenu = New Scanning.EnvironmentMenu()
-        Me.WindowMenu = New Scanning.WindowMenu()
-        Me.exitRooms = New Scanning.SubOptions()
-        Me.MainTaskBar = New Scanning.MainTaskBar()
         Me.LivingroomDoor = New Scanning.SubOptions()
         Me.BathroomDoor = New Scanning.SubOptions()
         Me.KitchenDoor = New Scanning.SubOptions()
@@ -58,28 +62,30 @@ Partial Class UserApartment
         Me.Bedroom = New Scanning.SubOptions()
         Me.LivingRoom = New Scanning.SubOptions()
         Me.Kitchen = New Scanning.SubOptions()
-        Me.livingroomWindow2Blinds = New System.Windows.Forms.PictureBox()
-        Me.bedroomWindow2Blinds = New System.Windows.Forms.PictureBox()
-        Me.bedroomWindow1Blinds = New System.Windows.Forms.PictureBox()
-        Me.livingroomWindow1Blinds = New System.Windows.Forms.PictureBox()
+        Me.apartment = New System.Windows.Forms.PictureBox()
+        Me.vaccuumButton = New Scanning.SubOptions()
+        CType(Me.vaccuumOption, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.exitRooms, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomFan, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomLight, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomWindow1Blinds, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bedroomWindow1Blinds, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bedroomWindow2Blinds, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomWindow2Blinds, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bedroomHumidity, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.kitchenHumidity, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bathroomHUmidity, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomHumidity, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingroomWindow2Shutters, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow1Shutters, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow2Shutters, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingroomWindow1Shutters, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.livingroomFan, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.kitchenFan, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bathroomFan, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bedroomFan, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bathroomLight, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bedroomLight, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.kitchenLight, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.livingroomLight, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.apartment, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.livingroomHumidity, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bathroomHUmidity, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.kitchenHumidity, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bedroomHumidity, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.exitRooms, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BathroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.KitchenDoor, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,15 +99,179 @@ Partial Class UserApartment
         CType(Me.Bedroom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingRoom, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Kitchen, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.livingroomWindow2Blinds, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bedroomWindow2Blinds, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bedroomWindow1Blinds, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.livingroomWindow1Blinds, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.apartment, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.vaccuumButton, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ScanningTimer
         '
         Me.ScanningTimer.Interval = 1000
+        '
+        'EnvironmentMenu
+        '
+        Me.EnvironmentMenu.Location = New System.Drawing.Point(757, 37)
+        Me.EnvironmentMenu.Name = "EnvironmentMenu"
+        Me.EnvironmentMenu.Size = New System.Drawing.Size(276, 513)
+        Me.EnvironmentMenu.TabIndex = 67
+        '
+        'WindowMenu
+        '
+        Me.WindowMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.WindowMenu.Location = New System.Drawing.Point(111, 192)
+        Me.WindowMenu.Margin = New System.Windows.Forms.Padding(4)
+        Me.WindowMenu.Name = "WindowMenu"
+        Me.WindowMenu.Size = New System.Drawing.Size(540, 183)
+        Me.WindowMenu.TabIndex = 60
+        Me.WindowMenu.Visible = False
+        '
+        'MainTaskBar
+        '
+        Me.MainTaskBar.Location = New System.Drawing.Point(102, 555)
+        Me.MainTaskBar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MainTaskBar.Name = "MainTaskBar"
+        Me.MainTaskBar.Size = New System.Drawing.Size(648, 132)
+        Me.MainTaskBar.TabIndex = 35
+        '
+        'vaccuumOption
+        '
+        Me.vaccuumOption.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.vaccuumOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.vaccuumOption.Location = New System.Drawing.Point(757, 556)
+        Me.vaccuumOption.Name = "vaccuumOption"
+        Me.vaccuumOption.Size = New System.Drawing.Size(145, 131)
+        Me.vaccuumOption.TabIndex = 72
+        Me.vaccuumOption.TabStop = False
+        '
+        'exitRooms
+        '
+        Me.exitRooms.BackColor = System.Drawing.Color.Red
+        Me.exitRooms.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.exitRooms.Image = Global.Scanning.My.Resources.Resources._exit
+        Me.exitRooms.Location = New System.Drawing.Point(687, 55)
+        Me.exitRooms.Name = "exitRooms"
+        Me.exitRooms.Size = New System.Drawing.Size(51, 45)
+        Me.exitRooms.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.exitRooms.TabIndex = 59
+        Me.exitRooms.TabStop = False
+        Me.exitRooms.Visible = False
+        '
+        'livingroomFan
+        '
+        Me.livingroomFan.BackColor = System.Drawing.Color.Transparent
+        Me.livingroomFan.Image = Global.Scanning.My.Resources.Resources.fanOff
+        Me.livingroomFan.Location = New System.Drawing.Point(2, 57)
+        Me.livingroomFan.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.livingroomFan.Name = "livingroomFan"
+        Me.livingroomFan.Size = New System.Drawing.Size(55, 41)
+        Me.livingroomFan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomFan.TabIndex = 43
+        Me.livingroomFan.TabStop = False
+        '
+        'livingroomLight
+        '
+        Me.livingroomLight.BackColor = System.Drawing.Color.Transparent
+        Me.livingroomLight.Image = Global.Scanning.My.Resources.Resources.bulbUnlit
+        Me.livingroomLight.Location = New System.Drawing.Point(2, 12)
+        Me.livingroomLight.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.livingroomLight.Name = "livingroomLight"
+        Me.livingroomLight.Size = New System.Drawing.Size(55, 41)
+        Me.livingroomLight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomLight.TabIndex = 36
+        Me.livingroomLight.TabStop = False
+        '
+        'livingroomWindow1Blinds
+        '
+        Me.livingroomWindow1Blinds.Image = Global.Scanning.My.Resources.Resources.blinds
+        Me.livingroomWindow1Blinds.Location = New System.Drawing.Point(31, 46)
+        Me.livingroomWindow1Blinds.Name = "livingroomWindow1Blinds"
+        Me.livingroomWindow1Blinds.Size = New System.Drawing.Size(98, 31)
+        Me.livingroomWindow1Blinds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomWindow1Blinds.TabIndex = 71
+        Me.livingroomWindow1Blinds.TabStop = False
+        Me.livingroomWindow1Blinds.Visible = False
+        '
+        'bedroomWindow1Blinds
+        '
+        Me.bedroomWindow1Blinds.Image = Global.Scanning.My.Resources.Resources.blinds
+        Me.bedroomWindow1Blinds.Location = New System.Drawing.Point(364, 46)
+        Me.bedroomWindow1Blinds.Name = "bedroomWindow1Blinds"
+        Me.bedroomWindow1Blinds.Size = New System.Drawing.Size(98, 31)
+        Me.bedroomWindow1Blinds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.bedroomWindow1Blinds.TabIndex = 70
+        Me.bedroomWindow1Blinds.TabStop = False
+        Me.bedroomWindow1Blinds.Tag = ""
+        Me.bedroomWindow1Blinds.Visible = False
+        '
+        'bedroomWindow2Blinds
+        '
+        Me.bedroomWindow2Blinds.Image = Global.Scanning.My.Resources.Resources.blinds
+        Me.bedroomWindow2Blinds.Location = New System.Drawing.Point(604, 46)
+        Me.bedroomWindow2Blinds.Name = "bedroomWindow2Blinds"
+        Me.bedroomWindow2Blinds.Size = New System.Drawing.Size(98, 31)
+        Me.bedroomWindow2Blinds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.bedroomWindow2Blinds.TabIndex = 69
+        Me.bedroomWindow2Blinds.TabStop = False
+        Me.bedroomWindow2Blinds.Tag = ""
+        Me.bedroomWindow2Blinds.Visible = False
+        '
+        'livingroomWindow2Blinds
+        '
+        Me.livingroomWindow2Blinds.Image = Global.Scanning.My.Resources.Resources.blinds
+        Me.livingroomWindow2Blinds.Location = New System.Drawing.Point(192, 46)
+        Me.livingroomWindow2Blinds.Name = "livingroomWindow2Blinds"
+        Me.livingroomWindow2Blinds.Size = New System.Drawing.Size(98, 31)
+        Me.livingroomWindow2Blinds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomWindow2Blinds.TabIndex = 68
+        Me.livingroomWindow2Blinds.TabStop = False
+        Me.livingroomWindow2Blinds.Visible = False
+        '
+        'bedroomHumidity
+        '
+        Me.bedroomHumidity.BackColor = System.Drawing.Color.Transparent
+        Me.bedroomHumidity.Image = Global.Scanning.My.Resources.Resources.humidity
+        Me.bedroomHumidity.Location = New System.Drawing.Point(2, 102)
+        Me.bedroomHumidity.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.bedroomHumidity.Name = "bedroomHumidity"
+        Me.bedroomHumidity.Size = New System.Drawing.Size(55, 41)
+        Me.bedroomHumidity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.bedroomHumidity.TabIndex = 65
+        Me.bedroomHumidity.TabStop = False
+        '
+        'kitchenHumidity
+        '
+        Me.kitchenHumidity.BackColor = System.Drawing.Color.Transparent
+        Me.kitchenHumidity.Image = Global.Scanning.My.Resources.Resources.humidity
+        Me.kitchenHumidity.Location = New System.Drawing.Point(2, 102)
+        Me.kitchenHumidity.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.kitchenHumidity.Name = "kitchenHumidity"
+        Me.kitchenHumidity.Size = New System.Drawing.Size(55, 41)
+        Me.kitchenHumidity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.kitchenHumidity.TabIndex = 64
+        Me.kitchenHumidity.TabStop = False
+        '
+        'bathroomHUmidity
+        '
+        Me.bathroomHUmidity.BackColor = System.Drawing.Color.Transparent
+        Me.bathroomHUmidity.Image = Global.Scanning.My.Resources.Resources.humidity
+        Me.bathroomHUmidity.Location = New System.Drawing.Point(2, 102)
+        Me.bathroomHUmidity.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.bathroomHUmidity.Name = "bathroomHUmidity"
+        Me.bathroomHUmidity.Size = New System.Drawing.Size(55, 41)
+        Me.bathroomHUmidity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.bathroomHUmidity.TabIndex = 63
+        Me.bathroomHUmidity.TabStop = False
+        '
+        'livingroomHumidity
+        '
+        Me.livingroomHumidity.BackColor = System.Drawing.Color.Transparent
+        Me.livingroomHumidity.Image = Global.Scanning.My.Resources.Resources.humidity
+        Me.livingroomHumidity.Location = New System.Drawing.Point(2, 102)
+        Me.livingroomHumidity.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.livingroomHumidity.Name = "livingroomHumidity"
+        Me.livingroomHumidity.Size = New System.Drawing.Size(55, 41)
+        Me.livingroomHumidity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomHumidity.TabIndex = 62
+        Me.livingroomHumidity.TabStop = False
         '
         'LivingroomWindow2Shutters
         '
@@ -144,18 +314,6 @@ Partial Class UserApartment
         Me.LivingroomWindow1Shutters.TabIndex = 51
         Me.LivingroomWindow1Shutters.TabStop = False
         Me.LivingroomWindow1Shutters.Visible = False
-        '
-        'livingroomFan
-        '
-        Me.livingroomFan.BackColor = System.Drawing.Color.Transparent
-        Me.livingroomFan.Image = Global.Scanning.My.Resources.Resources.fanOff
-        Me.livingroomFan.Location = New System.Drawing.Point(2, 57)
-        Me.livingroomFan.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.livingroomFan.Name = "livingroomFan"
-        Me.livingroomFan.Size = New System.Drawing.Size(55, 41)
-        Me.livingroomFan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.livingroomFan.TabIndex = 43
-        Me.livingroomFan.TabStop = False
         '
         'kitchenFan
         '
@@ -228,115 +386,6 @@ Partial Class UserApartment
         Me.kitchenLight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.kitchenLight.TabIndex = 37
         Me.kitchenLight.TabStop = False
-        '
-        'livingroomLight
-        '
-        Me.livingroomLight.BackColor = System.Drawing.Color.Transparent
-        Me.livingroomLight.Image = Global.Scanning.My.Resources.Resources.bulbUnlit
-        Me.livingroomLight.Location = New System.Drawing.Point(2, 12)
-        Me.livingroomLight.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.livingroomLight.Name = "livingroomLight"
-        Me.livingroomLight.Size = New System.Drawing.Size(55, 41)
-        Me.livingroomLight.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.livingroomLight.TabIndex = 36
-        Me.livingroomLight.TabStop = False
-        '
-        'apartment
-        '
-        Me.apartment.BackColor = System.Drawing.Color.SandyBrown
-        Me.apartment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.apartment.Location = New System.Drawing.Point(12, 37)
-        Me.apartment.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.apartment.Name = "apartment"
-        Me.apartment.Size = New System.Drawing.Size(738, 514)
-        Me.apartment.TabIndex = 5
-        Me.apartment.TabStop = False
-        '
-        'livingroomHumidity
-        '
-        Me.livingroomHumidity.BackColor = System.Drawing.Color.Transparent
-        Me.livingroomHumidity.Image = Global.Scanning.My.Resources.Resources.humidity
-        Me.livingroomHumidity.Location = New System.Drawing.Point(2, 102)
-        Me.livingroomHumidity.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.livingroomHumidity.Name = "livingroomHumidity"
-        Me.livingroomHumidity.Size = New System.Drawing.Size(55, 41)
-        Me.livingroomHumidity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.livingroomHumidity.TabIndex = 62
-        Me.livingroomHumidity.TabStop = False
-        '
-        'bathroomHUmidity
-        '
-        Me.bathroomHUmidity.BackColor = System.Drawing.Color.Transparent
-        Me.bathroomHUmidity.Image = Global.Scanning.My.Resources.Resources.humidity
-        Me.bathroomHUmidity.Location = New System.Drawing.Point(2, 102)
-        Me.bathroomHUmidity.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.bathroomHUmidity.Name = "bathroomHUmidity"
-        Me.bathroomHUmidity.Size = New System.Drawing.Size(55, 41)
-        Me.bathroomHUmidity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.bathroomHUmidity.TabIndex = 63
-        Me.bathroomHUmidity.TabStop = False
-        '
-        'kitchenHumidity
-        '
-        Me.kitchenHumidity.BackColor = System.Drawing.Color.Transparent
-        Me.kitchenHumidity.Image = Global.Scanning.My.Resources.Resources.humidity
-        Me.kitchenHumidity.Location = New System.Drawing.Point(2, 102)
-        Me.kitchenHumidity.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.kitchenHumidity.Name = "kitchenHumidity"
-        Me.kitchenHumidity.Size = New System.Drawing.Size(55, 41)
-        Me.kitchenHumidity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.kitchenHumidity.TabIndex = 64
-        Me.kitchenHumidity.TabStop = False
-        '
-        'bedroomHumidity
-        '
-        Me.bedroomHumidity.BackColor = System.Drawing.Color.Transparent
-        Me.bedroomHumidity.Image = Global.Scanning.My.Resources.Resources.humidity
-        Me.bedroomHumidity.Location = New System.Drawing.Point(2, 102)
-        Me.bedroomHumidity.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.bedroomHumidity.Name = "bedroomHumidity"
-        Me.bedroomHumidity.Size = New System.Drawing.Size(55, 41)
-        Me.bedroomHumidity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.bedroomHumidity.TabIndex = 65
-        Me.bedroomHumidity.TabStop = False
-        '
-        'EnvironmentMenu
-        '
-        Me.EnvironmentMenu.Location = New System.Drawing.Point(757, 37)
-        Me.EnvironmentMenu.Name = "EnvironmentMenu"
-        Me.EnvironmentMenu.Size = New System.Drawing.Size(276, 513)
-        Me.EnvironmentMenu.TabIndex = 67
-        '
-        'WindowMenu
-        '
-        Me.WindowMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.WindowMenu.Location = New System.Drawing.Point(111, 192)
-        Me.WindowMenu.Margin = New System.Windows.Forms.Padding(4)
-        Me.WindowMenu.Name = "WindowMenu"
-        Me.WindowMenu.Size = New System.Drawing.Size(540, 183)
-        Me.WindowMenu.TabIndex = 60
-        Me.WindowMenu.Visible = False
-        '
-        'exitRooms
-        '
-        Me.exitRooms.BackColor = System.Drawing.Color.Red
-        Me.exitRooms.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.exitRooms.Image = Global.Scanning.My.Resources.Resources._exit
-        Me.exitRooms.Location = New System.Drawing.Point(687, 55)
-        Me.exitRooms.Name = "exitRooms"
-        Me.exitRooms.Size = New System.Drawing.Size(51, 45)
-        Me.exitRooms.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.exitRooms.TabIndex = 59
-        Me.exitRooms.TabStop = False
-        Me.exitRooms.Visible = False
-        '
-        'MainTaskBar
-        '
-        Me.MainTaskBar.Location = New System.Drawing.Point(252, 555)
-        Me.MainTaskBar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(499, 132)
-        Me.MainTaskBar.TabIndex = 35
         '
         'LivingroomDoor
         '
@@ -497,57 +546,35 @@ Partial Class UserApartment
         Me.Kitchen.TabStop = False
         Me.Kitchen.Tag = "0"
         '
-        'livingroomWindow2Blinds
+        'apartment
         '
-        Me.livingroomWindow2Blinds.Image = Global.Scanning.My.Resources.Resources.blinds
-        Me.livingroomWindow2Blinds.Location = New System.Drawing.Point(192, 46)
-        Me.livingroomWindow2Blinds.Name = "livingroomWindow2Blinds"
-        Me.livingroomWindow2Blinds.Size = New System.Drawing.Size(98, 31)
-        Me.livingroomWindow2Blinds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.livingroomWindow2Blinds.TabIndex = 68
-        Me.livingroomWindow2Blinds.TabStop = False
-        Me.livingroomWindow2Blinds.Visible = False
+        Me.apartment.BackColor = System.Drawing.Color.SandyBrown
+        Me.apartment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.apartment.Location = New System.Drawing.Point(12, 37)
+        Me.apartment.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.apartment.Name = "apartment"
+        Me.apartment.Size = New System.Drawing.Size(738, 514)
+        Me.apartment.TabIndex = 5
+        Me.apartment.TabStop = False
         '
-        'bedroomWindow2Blinds
+        'vaccuumButton
         '
-        Me.bedroomWindow2Blinds.Image = Global.Scanning.My.Resources.Resources.blinds
-        Me.bedroomWindow2Blinds.Location = New System.Drawing.Point(604, 46)
-        Me.bedroomWindow2Blinds.Name = "bedroomWindow2Blinds"
-        Me.bedroomWindow2Blinds.Size = New System.Drawing.Size(98, 31)
-        Me.bedroomWindow2Blinds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.bedroomWindow2Blinds.TabIndex = 69
-        Me.bedroomWindow2Blinds.TabStop = False
-        Me.bedroomWindow2Blinds.Tag = ""
-        Me.bedroomWindow2Blinds.Visible = False
-        '
-        'bedroomWindow1Blinds
-        '
-        Me.bedroomWindow1Blinds.Image = Global.Scanning.My.Resources.Resources.blinds
-        Me.bedroomWindow1Blinds.Location = New System.Drawing.Point(364, 46)
-        Me.bedroomWindow1Blinds.Name = "bedroomWindow1Blinds"
-        Me.bedroomWindow1Blinds.Size = New System.Drawing.Size(98, 31)
-        Me.bedroomWindow1Blinds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.bedroomWindow1Blinds.TabIndex = 70
-        Me.bedroomWindow1Blinds.TabStop = False
-        Me.bedroomWindow1Blinds.Tag = ""
-        Me.bedroomWindow1Blinds.Visible = False
-        '
-        'livingroomWindow1Blinds
-        '
-        Me.livingroomWindow1Blinds.Image = Global.Scanning.My.Resources.Resources.blinds
-        Me.livingroomWindow1Blinds.Location = New System.Drawing.Point(31, 46)
-        Me.livingroomWindow1Blinds.Name = "livingroomWindow1Blinds"
-        Me.livingroomWindow1Blinds.Size = New System.Drawing.Size(98, 31)
-        Me.livingroomWindow1Blinds.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.livingroomWindow1Blinds.TabIndex = 71
-        Me.livingroomWindow1Blinds.TabStop = False
-        Me.livingroomWindow1Blinds.Visible = False
+        Me.vaccuumButton.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.vaccuumButton.Image = Global.Scanning.My.Resources.Resources.roomba
+        Me.vaccuumButton.Location = New System.Drawing.Point(772, 569)
+        Me.vaccuumButton.Name = "vaccuumButton"
+        Me.vaccuumButton.Size = New System.Drawing.Size(112, 100)
+        Me.vaccuumButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.vaccuumButton.TabIndex = 73
+        Me.vaccuumButton.TabStop = False
         '
         'UserApartment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.vaccuumButton)
+        Me.Controls.Add(Me.vaccuumOption)
         Me.Controls.Add(Me.exitRooms)
         Me.Controls.Add(Me.livingroomFan)
         Me.Controls.Add(Me.livingroomLight)
@@ -591,24 +618,28 @@ Partial Class UserApartment
         Me.Name = "UserApartment"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "UserApartment"
+        CType(Me.vaccuumOption, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.exitRooms, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomFan, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomLight, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomWindow1Blinds, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bedroomWindow1Blinds, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bedroomWindow2Blinds, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomWindow2Blinds, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bedroomHumidity, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.kitchenHumidity, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bathroomHUmidity, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomHumidity, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingroomWindow2Shutters, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomWindow1Shutters, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomWindow2Shutters, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingroomWindow1Shutters, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.livingroomFan, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.kitchenFan, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bathroomFan, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bedroomFan, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bathroomLight, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bedroomLight, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.kitchenLight, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.livingroomLight, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.apartment, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.livingroomHumidity, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bathroomHUmidity, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.kitchenHumidity, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bedroomHumidity, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.exitRooms, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BathroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.KitchenDoor, System.ComponentModel.ISupportInitialize).EndInit()
@@ -622,10 +653,8 @@ Partial Class UserApartment
         CType(Me.Bedroom, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingRoom, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Kitchen, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.livingroomWindow2Blinds, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bedroomWindow2Blinds, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bedroomWindow1Blinds, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.livingroomWindow1Blinds, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.apartment, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.vaccuumButton, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -668,4 +697,6 @@ Partial Class UserApartment
     Friend WithEvents bedroomWindow2Blinds As PictureBox
     Friend WithEvents bedroomWindow1Blinds As PictureBox
     Friend WithEvents livingroomWindow1Blinds As PictureBox
+    Friend WithEvents vaccuumOption As SubOptions
+    Friend WithEvents vaccuumButton As SubOptions
 End Class

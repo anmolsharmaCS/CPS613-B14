@@ -2,7 +2,7 @@
 
 Public Class MainTaskBar
 
-    Private TaskBarOptions(4) As SubOptions
+    Private TaskBarOptions(5) As SubOptions
     Public Sub New()
 
         ' This call is required by the designer.
@@ -12,7 +12,8 @@ Public Class MainTaskBar
         TaskBarOptions(1) = Assistance
         TaskBarOptions(2) = Communicate
         TaskBarOptions(3) = Navigate
-        TaskBarOptions(4) = exitTaskBar
+        TaskBarOptions(4) = Schedule
+        TaskBarOptions(5) = exitTaskBar
         ' Add any initialization after the InitializeComponent() call.
 
         exitTaskBar.SetOriginalColor(Color.Red)

@@ -250,9 +250,6 @@
   <data name="bed2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bed2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="navigation" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>navigation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="shuffleActivated" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>shuffleActivated.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -387,5 +384,14 @@
   </data>
   <data name="fanMedium" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>fanMedium.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="navigationWheelchair" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>navigationWheelchair.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="roomba" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>roomba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="schedule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>schedule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

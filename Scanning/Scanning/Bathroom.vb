@@ -2,7 +2,7 @@
 
 Public Class Bathroom
 
-    Private Options(2) As SubOptions
+    Private Options(3) As SubOptions
 
     Private MyParent As UserApartment
 
@@ -14,9 +14,10 @@ Public Class Bathroom
         ' Add any initialization after the InitializeComponent() call.
         Options(0) = flushToilet
         Options(1) = bathroomEnvironmentMenu.envMenuBackground
-        Options(2) = bathroomMainTaskBar.MenuBarOption
+        Options(2) = vaccuumOption
+        Options(3) = bathroomMainTaskBar.MenuBarOption
 
-        For i = 0 To 2
+        For i = 0 To 3
             Options(i).Initialize()
         Next
 
@@ -69,7 +70,7 @@ Public Class Bathroom
     Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles ScanningTImer.Tick
         If scanninglevel = 0 Then
             Options(focusIsOn).LoseFocus()
-            focusIsOn = (focusIsOn + 1) Mod 3
+            focusIsOn = (focusIsOn + 1) Mod 4
             Options(focusIsOn).ReceiveFocus()
         ElseIf scanninglevel = 1 Then
             Options(focusIsOn).InnerScanningNext()
@@ -94,7 +95,7 @@ Public Class Bathroom
                 bathroomEnvironmentMenu.envMenuBackground.LoseFocus()
                 Options(focusIsOn).StartInnerScanning(bathroomEnvironmentMenu.GetTaskBarOptions)
 
-            ElseIf focusIsOn = 2 Then
+            ElseIf focusIsOn = 3 Then
 
                 scanninglevel = 1
                 bathroomMainTaskBar.exitTaskBar.Show()

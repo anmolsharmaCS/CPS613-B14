@@ -59,10 +59,10 @@ Partial Class FriendApartment
         '
         'MainTaskBar
         '
-        Me.MainTaskBar.Location = New System.Drawing.Point(252, 559)
+        Me.MainTaskBar.Location = New System.Drawing.Point(101, 561)
         Me.MainTaskBar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(499, 132)
+        Me.MainTaskBar.Size = New System.Drawing.Size(650, 132)
         Me.MainTaskBar.TabIndex = 86
         '
         'exitRooms

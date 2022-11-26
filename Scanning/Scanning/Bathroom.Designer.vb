@@ -29,9 +29,13 @@ Partial Class Bathroom
         Me.flushToilet = New Scanning.SubOptions()
         Me.bathroomMainTaskBar = New Scanning.MainTaskBar()
         Me.bathroomEnvironmentMenu = New Scanning.EnvironmentMenu()
+        Me.vaccuumButton = New Scanning.SubOptions()
+        Me.vaccuumOption = New Scanning.SubOptions()
         CType(Me.bathroomBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bathroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.flushToilet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.vaccuumButton, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.vaccuumOption, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'bathroomBackground
@@ -75,9 +79,9 @@ Partial Class Bathroom
         '
         'bathroomMainTaskBar
         '
-        Me.bathroomMainTaskBar.Location = New System.Drawing.Point(279, 531)
+        Me.bathroomMainTaskBar.Location = New System.Drawing.Point(121, 532)
         Me.bathroomMainTaskBar.Name = "bathroomMainTaskBar"
-        Me.bathroomMainTaskBar.Size = New System.Drawing.Size(501, 132)
+        Me.bathroomMainTaskBar.Size = New System.Drawing.Size(649, 132)
         Me.bathroomMainTaskBar.TabIndex = 2
         '
         'bathroomEnvironmentMenu
@@ -87,11 +91,34 @@ Partial Class Bathroom
         Me.bathroomEnvironmentMenu.Size = New System.Drawing.Size(255, 513)
         Me.bathroomEnvironmentMenu.TabIndex = 66
         '
+        'vaccuumButton
+        '
+        Me.vaccuumButton.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.vaccuumButton.Image = Global.Scanning.My.Resources.Resources.roomba
+        Me.vaccuumButton.Location = New System.Drawing.Point(791, 544)
+        Me.vaccuumButton.Name = "vaccuumButton"
+        Me.vaccuumButton.Size = New System.Drawing.Size(112, 100)
+        Me.vaccuumButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.vaccuumButton.TabIndex = 75
+        Me.vaccuumButton.TabStop = False
+        '
+        'vaccuumOption
+        '
+        Me.vaccuumOption.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.vaccuumOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.vaccuumOption.Location = New System.Drawing.Point(776, 531)
+        Me.vaccuumOption.Name = "vaccuumOption"
+        Me.vaccuumOption.Size = New System.Drawing.Size(145, 131)
+        Me.vaccuumOption.TabIndex = 74
+        Me.vaccuumOption.TabStop = False
+        '
         'Bathroom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.vaccuumButton)
+        Me.Controls.Add(Me.vaccuumOption)
         Me.Controls.Add(Me.bathroomEnvironmentMenu)
         Me.Controls.Add(Me.bathroomDoor)
         Me.Controls.Add(Me.flushToilet)
@@ -104,6 +131,8 @@ Partial Class Bathroom
         CType(Me.bathroomBackground, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bathroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.flushToilet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.vaccuumButton, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.vaccuumOption, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -114,4 +143,6 @@ Partial Class Bathroom
     Friend WithEvents bathroomDoor As SubOptions
     Friend WithEvents ScanningTImer As Timer
     Friend WithEvents bathroomEnvironmentMenu As EnvironmentMenu
+    Friend WithEvents vaccuumButton As SubOptions
+    Friend WithEvents vaccuumOption As SubOptions
 End Class

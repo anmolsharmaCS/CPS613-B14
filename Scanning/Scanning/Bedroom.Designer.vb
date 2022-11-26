@@ -25,28 +25,32 @@ Partial Class Bedroom
         Me.components = New System.ComponentModel.Container()
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
         Me.MainTaskBar = New Scanning.MainTaskBar()
+        Me.WindowMenu = New Scanning.WindowMenu()
+        Me.bedroomEnvironmentMenu = New Scanning.EnvironmentMenu()
+        Me.exitWindowSelection = New Scanning.SubOptions()
+        Me.bedroomBlinds2 = New System.Windows.Forms.PictureBox()
+        Me.bedroomBlinds1 = New System.Windows.Forms.PictureBox()
+        Me.bedroomShutters2 = New System.Windows.Forms.PictureBox()
+        Me.bedroomShutters1 = New System.Windows.Forms.PictureBox()
         Me.Bed = New Scanning.SubOptions()
         Me.BedroomWindow2 = New Scanning.SubOptions()
         Me.BedroomWindow1 = New Scanning.SubOptions()
         Me.BedroomDoor = New Scanning.SubOptions()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.bedroomShutters1 = New System.Windows.Forms.PictureBox()
-        Me.bedroomShutters2 = New System.Windows.Forms.PictureBox()
-        Me.WindowMenu = New Scanning.WindowMenu()
-        Me.bedroomEnvironmentMenu = New Scanning.EnvironmentMenu()
-        Me.bedroomBlinds1 = New System.Windows.Forms.PictureBox()
-        Me.bedroomBlinds2 = New System.Windows.Forms.PictureBox()
-        Me.exitWindowSelection = New Scanning.SubOptions()
+        Me.vaccuumButton = New Scanning.SubOptions()
+        Me.vaccuumOption = New Scanning.SubOptions()
+        CType(Me.exitWindowSelection, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bedroomBlinds2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bedroomBlinds1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bedroomShutters2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.bedroomShutters1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bed, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomWindow1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BedroomDoor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bedroomShutters1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bedroomShutters2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bedroomBlinds1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.bedroomBlinds2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.exitWindowSelection, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.vaccuumButton, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.vaccuumOption, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ScanningTimer
@@ -55,10 +59,82 @@ Partial Class Bedroom
         '
         'MainTaskBar
         '
-        Me.MainTaskBar.Location = New System.Drawing.Point(268, 554)
+        Me.MainTaskBar.Location = New System.Drawing.Point(122, 554)
         Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(503, 132)
+        Me.MainTaskBar.Size = New System.Drawing.Size(648, 132)
         Me.MainTaskBar.TabIndex = 54
+        '
+        'WindowMenu
+        '
+        Me.WindowMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.WindowMenu.Location = New System.Drawing.Point(128, 201)
+        Me.WindowMenu.Margin = New System.Windows.Forms.Padding(4)
+        Me.WindowMenu.Name = "WindowMenu"
+        Me.WindowMenu.Size = New System.Drawing.Size(540, 183)
+        Me.WindowMenu.TabIndex = 71
+        Me.WindowMenu.Visible = False
+        '
+        'bedroomEnvironmentMenu
+        '
+        Me.bedroomEnvironmentMenu.Location = New System.Drawing.Point(777, 43)
+        Me.bedroomEnvironmentMenu.Name = "bedroomEnvironmentMenu"
+        Me.bedroomEnvironmentMenu.Size = New System.Drawing.Size(255, 513)
+        Me.bedroomEnvironmentMenu.TabIndex = 73
+        '
+        'exitWindowSelection
+        '
+        Me.exitWindowSelection.BackColor = System.Drawing.Color.Red
+        Me.exitWindowSelection.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.exitWindowSelection.Image = Global.Scanning.My.Resources.Resources._exit
+        Me.exitWindowSelection.Location = New System.Drawing.Point(699, 25)
+        Me.exitWindowSelection.Name = "exitWindowSelection"
+        Me.exitWindowSelection.Size = New System.Drawing.Size(45, 45)
+        Me.exitWindowSelection.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.exitWindowSelection.TabIndex = 80
+        Me.exitWindowSelection.TabStop = False
+        Me.exitWindowSelection.Visible = False
+        '
+        'bedroomBlinds2
+        '
+        Me.bedroomBlinds2.Image = Global.Scanning.My.Resources.Resources.blinds
+        Me.bedroomBlinds2.Location = New System.Drawing.Point(495, 52)
+        Me.bedroomBlinds2.Name = "bedroomBlinds2"
+        Me.bedroomBlinds2.Size = New System.Drawing.Size(146, 39)
+        Me.bedroomBlinds2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.bedroomBlinds2.TabIndex = 76
+        Me.bedroomBlinds2.TabStop = False
+        Me.bedroomBlinds2.Visible = False
+        '
+        'bedroomBlinds1
+        '
+        Me.bedroomBlinds1.Image = Global.Scanning.My.Resources.Resources.blinds
+        Me.bedroomBlinds1.Location = New System.Drawing.Point(131, 52)
+        Me.bedroomBlinds1.Name = "bedroomBlinds1"
+        Me.bedroomBlinds1.Size = New System.Drawing.Size(146, 39)
+        Me.bedroomBlinds1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.bedroomBlinds1.TabIndex = 75
+        Me.bedroomBlinds1.TabStop = False
+        Me.bedroomBlinds1.Visible = False
+        '
+        'bedroomShutters2
+        '
+        Me.bedroomShutters2.Image = Global.Scanning.My.Resources.Resources.openwindow
+        Me.bedroomShutters2.Location = New System.Drawing.Point(459, 9)
+        Me.bedroomShutters2.Name = "bedroomShutters2"
+        Me.bedroomShutters2.Size = New System.Drawing.Size(209, 28)
+        Me.bedroomShutters2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.bedroomShutters2.TabIndex = 70
+        Me.bedroomShutters2.TabStop = False
+        '
+        'bedroomShutters1
+        '
+        Me.bedroomShutters1.Image = Global.Scanning.My.Resources.Resources.openwindow
+        Me.bedroomShutters1.Location = New System.Drawing.Point(93, 9)
+        Me.bedroomShutters1.Name = "bedroomShutters1"
+        Me.bedroomShutters1.Size = New System.Drawing.Size(214, 28)
+        Me.bedroomShutters1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.bedroomShutters1.TabIndex = 69
+        Me.bedroomShutters1.TabStop = False
         '
         'Bed
         '
@@ -119,83 +195,34 @@ Partial Class Bedroom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'bedroomShutters1
+        'vaccuumButton
         '
-        Me.bedroomShutters1.Image = Global.Scanning.My.Resources.Resources.openwindow
-        Me.bedroomShutters1.Location = New System.Drawing.Point(93, 9)
-        Me.bedroomShutters1.Name = "bedroomShutters1"
-        Me.bedroomShutters1.Size = New System.Drawing.Size(214, 28)
-        Me.bedroomShutters1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.bedroomShutters1.TabIndex = 69
-        Me.bedroomShutters1.TabStop = False
+        Me.vaccuumButton.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.vaccuumButton.Image = Global.Scanning.My.Resources.Resources.roomba
+        Me.vaccuumButton.Location = New System.Drawing.Point(791, 568)
+        Me.vaccuumButton.Name = "vaccuumButton"
+        Me.vaccuumButton.Size = New System.Drawing.Size(112, 100)
+        Me.vaccuumButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.vaccuumButton.TabIndex = 82
+        Me.vaccuumButton.TabStop = False
         '
-        'bedroomShutters2
+        'vaccuumOption
         '
-        Me.bedroomShutters2.Image = Global.Scanning.My.Resources.Resources.openwindow
-        Me.bedroomShutters2.Location = New System.Drawing.Point(459, 9)
-        Me.bedroomShutters2.Name = "bedroomShutters2"
-        Me.bedroomShutters2.Size = New System.Drawing.Size(209, 28)
-        Me.bedroomShutters2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.bedroomShutters2.TabIndex = 70
-        Me.bedroomShutters2.TabStop = False
-        '
-        'WindowMenu
-        '
-        Me.WindowMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.WindowMenu.Location = New System.Drawing.Point(128, 201)
-        Me.WindowMenu.Margin = New System.Windows.Forms.Padding(4)
-        Me.WindowMenu.Name = "WindowMenu"
-        Me.WindowMenu.Size = New System.Drawing.Size(540, 183)
-        Me.WindowMenu.TabIndex = 71
-        Me.WindowMenu.Visible = False
-        '
-        'bedroomEnvironmentMenu
-        '
-        Me.bedroomEnvironmentMenu.Location = New System.Drawing.Point(777, 43)
-        Me.bedroomEnvironmentMenu.Name = "bedroomEnvironmentMenu"
-        Me.bedroomEnvironmentMenu.Size = New System.Drawing.Size(255, 513)
-        Me.bedroomEnvironmentMenu.TabIndex = 73
-        '
-        'bedroomBlinds1
-        '
-        Me.bedroomBlinds1.Image = Global.Scanning.My.Resources.Resources.blinds
-        Me.bedroomBlinds1.Location = New System.Drawing.Point(131, 52)
-        Me.bedroomBlinds1.Name = "bedroomBlinds1"
-        Me.bedroomBlinds1.Size = New System.Drawing.Size(146, 39)
-        Me.bedroomBlinds1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.bedroomBlinds1.TabIndex = 75
-        Me.bedroomBlinds1.TabStop = False
-        Me.bedroomBlinds1.Visible = False
-        '
-        'bedroomBlinds2
-        '
-        Me.bedroomBlinds2.Image = Global.Scanning.My.Resources.Resources.blinds
-        Me.bedroomBlinds2.Location = New System.Drawing.Point(495, 52)
-        Me.bedroomBlinds2.Name = "bedroomBlinds2"
-        Me.bedroomBlinds2.Size = New System.Drawing.Size(146, 39)
-        Me.bedroomBlinds2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.bedroomBlinds2.TabIndex = 76
-        Me.bedroomBlinds2.TabStop = False
-        Me.bedroomBlinds2.Visible = False
-        '
-        'exitWindowSelection
-        '
-        Me.exitWindowSelection.BackColor = System.Drawing.Color.Red
-        Me.exitWindowSelection.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.exitWindowSelection.Image = Global.Scanning.My.Resources.Resources._exit
-        Me.exitWindowSelection.Location = New System.Drawing.Point(699, 25)
-        Me.exitWindowSelection.Name = "exitWindowSelection"
-        Me.exitWindowSelection.Size = New System.Drawing.Size(45, 45)
-        Me.exitWindowSelection.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.exitWindowSelection.TabIndex = 80
-        Me.exitWindowSelection.TabStop = False
-        Me.exitWindowSelection.Visible = False
+        Me.vaccuumOption.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.vaccuumOption.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.vaccuumOption.Location = New System.Drawing.Point(776, 555)
+        Me.vaccuumOption.Name = "vaccuumOption"
+        Me.vaccuumOption.Size = New System.Drawing.Size(145, 131)
+        Me.vaccuumOption.TabIndex = 81
+        Me.vaccuumOption.TabStop = False
         '
         'Bedroom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.vaccuumButton)
+        Me.Controls.Add(Me.vaccuumOption)
         Me.Controls.Add(Me.exitWindowSelection)
         Me.Controls.Add(Me.bedroomBlinds2)
         Me.Controls.Add(Me.bedroomBlinds1)
@@ -214,16 +241,18 @@ Partial Class Bedroom
         Me.Name = "Bedroom"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Bedroom"
+        CType(Me.exitWindowSelection, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bedroomBlinds2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bedroomBlinds1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bedroomShutters2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.bedroomShutters1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Bed, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomWindow2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomWindow1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BedroomDoor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bedroomShutters1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bedroomShutters2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bedroomBlinds1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.bedroomBlinds2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.exitWindowSelection, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.vaccuumButton, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.vaccuumOption, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -242,4 +271,6 @@ Partial Class Bedroom
     Friend WithEvents bedroomBlinds1 As PictureBox
     Friend WithEvents bedroomBlinds2 As PictureBox
     Friend WithEvents exitWindowSelection As SubOptions
+    Friend WithEvents vaccuumButton As SubOptions
+    Friend WithEvents vaccuumOption As SubOptions
 End Class

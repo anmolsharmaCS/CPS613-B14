@@ -138,9 +138,9 @@ Partial Class FloorHallways
         '
         'MainTaskBar
         '
-        Me.MainTaskBar.Location = New System.Drawing.Point(249, 435)
+        Me.MainTaskBar.Location = New System.Drawing.Point(103, 435)
         Me.MainTaskBar.Name = "MainTaskBar"
-        Me.MainTaskBar.Size = New System.Drawing.Size(501, 132)
+        Me.MainTaskBar.Size = New System.Drawing.Size(647, 132)
         Me.MainTaskBar.TabIndex = 47
         '
         'exitDoorbell

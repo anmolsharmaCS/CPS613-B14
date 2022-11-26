@@ -25,8 +25,9 @@ Public Class UserApartment
         TopOptions(1) = LivingRoom
         TopOptions(2) = LivingroomWindow1
         TopOptions(3) = EnvironmentMenu.envMenuBackground
+        TopOptions(4) = vaccuumOption
 
-        For i = 0 To 3
+        For i = 0 To 4
             TopOptions(i).Initialize()
         Next
 
@@ -117,7 +118,7 @@ Public Class UserApartment
     Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles ScanningTimer.Tick
         If scanninglevel = 0 Then
             TopOptions(focusIsOn).LoseFocus()
-            focusIsOn = (focusIsOn + 1) Mod 4
+            focusIsOn = (focusIsOn + 1) Mod 5
             TopOptions(focusIsOn).ReceiveFocus()
         ElseIf scanninglevel = 1 Then
             TopOptions(focusIsOn).InnerScanningNext()
@@ -135,25 +136,28 @@ Public Class UserApartment
 
         If scanninglevel = 0 Then
 
-            scanninglevel = 1
             If focusIsOn = 0 Then
 
+                scanninglevel = 1
                 MainTaskBar.exitTaskBar.Show()
                 MainTaskBar.MenuBarOption.LoseFocus()
                 TopOptions(focusIsOn).StartInnerScanning(MainTaskBar.GetTaskBarOptions())
 
             ElseIf focusIsOn = 1 Then
 
+                scanninglevel = 1
                 exitRooms.Show()
                 TopOptions(focusIsOn).StartInnerScanning(Rooms)
 
             ElseIf focusIsOn = 2 Then
 
+                scanninglevel = 1
                 Me.WindowMenu.Visible = True
                 TopOptions(focusIsOn).StartInnerScanning(WindowMenu.GetTaskBarOptions())
 
             ElseIf focusIsOn = 3 Then
 
+                scanninglevel = 1
                 EnvironmentMenu.exitEnvMenu.Show()
                 EnvironmentMenu.envMenuBackground.LoseFocus()
                 TopOptions(focusIsOn).StartInnerScanning(EnvironmentMenu.GetTaskBarOptions)
