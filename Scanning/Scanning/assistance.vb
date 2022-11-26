@@ -2,7 +2,7 @@
 Imports System.Reflection.Emit
 Imports System.Threading
 Public Class Assistance
-    Private Options(8) As SubOptions
+    Private Options(7) As SubOptions
 
     Private MyParentHall As FloorHallways
     Private MyParentApartment As UserApartment
@@ -21,14 +21,14 @@ Public Class Assistance
         Options(0) = MakeCall
         Options(1) = MakeUrgentCall
         Options(2) = CloseWindow
-        Options(3) = TransferHelp
-        Options(4) = BathroomHelp
-        Options(5) = BedroomHelp
-        Options(6) = ReturnToUrgency
-        Options(7) = CancelCall
-        Options(8) = CallAgain
+        'Options(3) = TransferHelp
+        Options(3) = BathroomHelp
+        Options(4) = BedroomHelp
+        Options(5) = ReturnToUrgency
+        Options(6) = CancelCall
+        Options(7) = CallAgain
 
-        For i = 0 To 8
+        For i = 0 To 7
             Options(i).Initialize()
         Next
 
@@ -130,12 +130,12 @@ Public Class Assistance
 
     Private Sub ReasonMenu_Active()
         ReasonMenu.BackColor = SystemColors.GradientActiveCaption
-        TransferHelp.BackColor = SystemColors.Control
+        'TransferHelp.BackColor = SystemColors.Control
         BathroomHelp.BackColor = SystemColors.Control
         BedroomHelp.BackColor = SystemColors.Control
         ReturnToUrgency.BackColor = SystemColors.Control
 
-        TransferHelp.SetOriginalColor(SystemColors.Control)
+        'TransferHelp.SetOriginalColor(SystemColors.Control)
         BathroomHelp.SetOriginalColor(SystemColors.Control)
         BedroomHelp.SetOriginalColor(SystemColors.Control)
         ReturnToUrgency.SetOriginalColor(SystemColors.Control)
@@ -143,12 +143,12 @@ Public Class Assistance
 
     Private Sub ReasonMenu_Inactive()
         ReasonMenu.BackColor = SystemColors.ControlDarkDark
-        TransferHelp.BackColor = SystemColors.ButtonShadow
+        'TransferHelp.BackColor = SystemColors.ButtonShadow
         BathroomHelp.BackColor = SystemColors.ButtonShadow
         BedroomHelp.BackColor = SystemColors.ButtonShadow
         ReturnToUrgency.BackColor = SystemColors.ButtonShadow
 
-        TransferHelp.SetOriginalColor(SystemColors.ButtonShadow)
+        'TransferHelp.SetOriginalColor(SystemColors.ButtonShadow)
         BathroomHelp.SetOriginalColor(SystemColors.ButtonShadow)
         BedroomHelp.SetOriginalColor(SystemColors.ButtonShadow)
         ReturnToUrgency.SetOriginalColor(SystemColors.ButtonShadow)
@@ -191,26 +191,26 @@ Public Class Assistance
             End If
         ElseIf scanninglevel = 1 Then
             scanninglevel = 2
-            If focusIsOn = 3 Or focusIsOn = 4 Or focusIsOn = 5 Then
+            If focusIsOn = 3 Or focusIsOn = 4 Then
                 CallMenu_Active()
-                focusIsOn = 6
+                focusIsOn = 5
                 TimerStart()
-            ElseIf focusIsOn = 6 Then
+            ElseIf focusIsOn = 5 Then
                 Options(topSelection).LoseFocus()
                 ReasonMenu_Inactive()
-                focusIsOn = 8
+                focusIsOn = 7
                 scanninglevel = 0
             End If
         ElseIf scanninglevel = 2 Then
-            If focusIsOn = 7 Then
+            If focusIsOn = 6 Then
                 Timer1.Enabled = False
                 TimerLabel.Hide()
                 scanninglevel = 0
-                focusIsOn = 8
+                focusIsOn = 7
                 Options(topSelection).LoseFocus()
                 ReasonMenu_Inactive()
                 CallMenu_Inactive()
-            ElseIf focusIsOn = 8 Then
+            ElseIf focusIsOn = 7 Then
                 CallAgain.BackColor = SystemColors.ButtonShadow
                 TimerStart()
             End If
@@ -241,26 +241,42 @@ Public Class Assistance
         Timer1.Enabled = True
         TimerLabel.Show()
         Dim ThisMoment As Date = Now
-        TimerLabel.Text = "1 min"
-
+        TimerLabel.Text = 11
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
-        Timer1Seconds = Timer1Seconds + 1
+        Timer1.Start()
+        Timer1.Interval = 1000
 
-        If Timer1Seconds Mod 2 = 0 Then
-            TimerLabel.ForeColor = Color.Black
+        If TimerLabel.Text = "0" Then
+            TimerLabel.Text = "0  min"
+            Timer1.Enabled = False
+            Label1.Visible = False
+            CallAgain.BackColor = SystemColors.Control
         Else
             TimerLabel.ForeColor = Color.Blue
+            TimerLabel.Text = Val(TimerLabel.Text) - 1
+            Label1.Visible = True
+            Label1.ForeColor = Color.Blue
         End If
 
-        If Timer1Seconds = 60 Then
-            CallAgain.BackColor = SystemColors.Control
-            TimerLabel.Text = "0  min"
-        End If
+
+        Timer1Seconds = Timer1Seconds + 1
+
+        ' If Timer1Seconds Mod 2 = 0 Then
+        'TimerLabel.ForeColor = Color.Black
+        ' Else
+        'TimerLabel.ForeColor = Color.Blue
+        '  End If
+
+        ' If Timer1Seconds = 60 Then
+        'CallAgain.BackColor = SystemColors.Control
+        'TimerLabel.Text = "0  min"
+        'End If
 
     End Sub
+
 
 #End Region
 
