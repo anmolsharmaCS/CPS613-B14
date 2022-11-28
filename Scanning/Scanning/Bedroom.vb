@@ -455,7 +455,7 @@ Public Class Bedroom
 
     Public Sub BedroomBlindsSlightlyOpen()
 
-        WindowMenu.blindControl.Image = My.Resources.BlindsSlightlyOpen
+        WindowMenu.blindControl.Image = My.Resources.BlindsHalfOpen
         WindowMenu.blindControl.Tag = "slightly_open"
 
         If ScanningTimer.Enabled Then

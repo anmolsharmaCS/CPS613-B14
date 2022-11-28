@@ -331,6 +331,9 @@ Public Class Livingroom
             livingroomShutters1.Hide()
             livingroomShutters2.Hide()
 
+            MyParent.LivingroomWindow1Half.Show()
+            MyParent.LivingroomWindow2Half.Show()
+
             MyParent.LivingroomWindow1Shutters.Hide()
             MyParent.LivingroomWindow2Shutters.Hide()
 
@@ -338,11 +341,13 @@ Public Class Livingroom
 
             If LivingroomWindow1.BackColor = Color.LemonChiffon Then
                 livingroomShutters1.Hide()
+                MyParent.LivingroomWindow1Half.Show()
                 MyParent.LivingroomWindow1Shutters.Hide()
             End If
 
             If LivingroomWindow2.BackColor = Color.LemonChiffon Then
                 livingroomShutters2.Hide()
+                MyParent.LivingroomWindow2Half.Show()
                 MyParent.LivingroomWindow2Shutters.Hide()
             End If
 
@@ -359,19 +364,24 @@ Public Class Livingroom
             livingroomShutters1.Hide()
             livingroomShutters2.Hide()
 
-            MyParent.LivingroomWindow1Shutters.Hide()
-            MyParent.LivingroomWindow2Shutters.Hide()
+            MyParent.LivingroomWindow1Slightly.Show()
+            MyParent.LivingroomWindow2Slightly.Show()
+
+            MyParent.LivingroomWindow1Half.Hide()
+            MyParent.LivingroomWindow2Half.Hide()
 
         Else
 
             If LivingroomWindow1.BackColor = Color.LemonChiffon Then
                 livingroomShutters1.Hide()
-                MyParent.LivingroomWindow1Shutters.Hide()
+                MyParent.LivingroomWindow1Slightly.Show()
+                MyParent.LivingroomWindow1Half.Hide()
             End If
 
             If LivingroomWindow2.BackColor = Color.LemonChiffon Then
                 livingroomShutters2.Hide()
-                MyParent.LivingroomWindow2Shutters.Hide()
+                MyParent.LivingroomWindow2Slightly.Show()
+                MyParent.LivingroomWindow2Half.Hide()
             End If
 
         End If
@@ -386,19 +396,19 @@ Public Class Livingroom
             livingroomShutters1.Hide()
             livingroomShutters2.Hide()
 
-            MyParent.LivingroomWindow2Shutters.Hide()
-            MyParent.LivingroomWindow1Shutters.Hide()
+            MyParent.LivingroomWindow2Slightly.Hide()
+            MyParent.LivingroomWindow1Slightly.Hide()
 
         Else
 
             If LivingroomWindow1.BackColor = Color.LemonChiffon Then
                 livingroomShutters1.Hide()
-                MyParent.LivingroomWindow1Shutters.Hide()
+                MyParent.LivingroomWindow1Slightly.Hide()
             End If
 
             If LivingroomWindow2.BackColor = Color.LemonChiffon Then
                 livingroomShutters2.Hide()
-                MyParent.LivingroomWindow2Shutters.Hide()
+                MyParent.LivingroomWindow2Slightly.Hide()
             End If
 
         End If
@@ -465,7 +475,7 @@ Public Class Livingroom
 
     Public Sub LivingroomBlindsSlightlyOpen()
 
-        WindowMenu.blindControl.Image = My.Resources.BlindsSlightlyOpen
+        WindowMenu.blindControl.Image = My.Resources.BlindsHalfOpen
         WindowMenu.blindControl.Tag = "slightly_open"
 
         If ScanningTimer.Enabled Then

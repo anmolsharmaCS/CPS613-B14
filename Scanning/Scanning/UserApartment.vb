@@ -337,7 +337,7 @@ Public Class UserApartment
 
         ElseIf WindowMenu.blindControl.Tag = "half_open" Then
 
-            WindowMenu.blindControl.Image = My.Resources.BlindsSlightlyOpen
+            WindowMenu.blindControl.Image = My.Resources.BlindsHalfOpen
             WindowMenu.blindControl.Tag = "slightly_open"
             bedroomForm.BedroomBlindsSlightlyOpen()
             livingroomForm.LivingroomBlindsSlightlyOpen()
@@ -480,6 +480,7 @@ Public Class UserApartment
     Private Sub UserApartment_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         MyParent.ResumeScanning()
     End Sub
+
 #End Region
 
 End Class

@@ -136,12 +136,6 @@
   <data name="live" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>live.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buildingButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>buildingButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="apartmentButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>apartmentButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="toilet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>toilet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -189,9 +183,6 @@
   </data>
   <data name="skipBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>skipBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_call" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>call.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shuffle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>shuffle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -395,9 +386,6 @@
     <value>schedule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BlindsHalfOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BlindsHalfOpen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BlindsSlightlyOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BlindsSlightlyOpen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WindowHalfOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -405,5 +393,20 @@
   </data>
   <data name="WindowSlightlyOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WindowSlightlyOpen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blindsClosedApt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>blindsClosedApt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="openSlatsApt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>openSlatsApt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="openwindowhalf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>openwindowhalf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="openwindowslightly" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>openwindowslightly.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_call" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>call.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

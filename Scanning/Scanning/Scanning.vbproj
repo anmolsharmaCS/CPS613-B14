@@ -665,6 +665,27 @@
   <ItemGroup>
     <None Include="Resources\WindowSlightlyOpen.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\blindsSlightly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\blindsClosed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\blindsClosedOpenSlatsApt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\blindsClosedApt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\openSlatsApt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\openwindowslightly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\openwindowhalf.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
