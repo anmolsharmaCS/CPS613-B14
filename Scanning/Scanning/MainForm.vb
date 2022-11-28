@@ -1,6 +1,7 @@
 ﻿Public Class MainForm
 
     Private Options(4) As SubOptions
+
     Private TestingMenu As DeveloperConsole
 
     Public Sub New()

@@ -58,7 +58,8 @@ Public Class FloorHallways
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Me.StartScanning()
+
+        StartScanning()
     End Sub
 
 #Region "Timer Properties and methods"
