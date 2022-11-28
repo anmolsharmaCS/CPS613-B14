@@ -153,10 +153,6 @@ Public Class FloorHallways
                     MainTaskBar.exitTaskBar.Hide()
                     MainTaskBar.PreviousScreen.LoseFocus()
                     Close()
-                ElseIf exitApartments.BackColor = Color.LemonChiffon Then
-                    Apartment01.StopInnerScanning()
-                    scanninglevel = 0
-                    exitApartments.Hide()
 
                 End If
             Else
@@ -166,6 +162,10 @@ Public Class FloorHallways
                     exitApartments.Hide()
                     Apartment.Show()
                     Apartment.StartScanning()
+                ElseIf exitApartments.BackColor = Color.LemonChiffon Then
+                    Apartment01.StopInnerScanning()
+                    scanninglevel = 0
+                    exitApartments.Hide()
                 Else
                     scanninglevel = 2
                     exitDoorbell.Show()

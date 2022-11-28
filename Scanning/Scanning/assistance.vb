@@ -21,7 +21,6 @@ Public Class Assistance
         Options(0) = MakeCall
         Options(1) = MakeUrgentCall
         Options(2) = CloseWindow
-        'Options(3) = TransferHelp
         Options(3) = BathroomHelp
         Options(4) = BedroomHelp
         Options(5) = ReturnToUrgency
@@ -109,15 +108,15 @@ Public Class Assistance
             Options(focusIsOn).ReceiveFocus()
         ElseIf scanninglevel = 1 Then
             Options(focusIsOn).LoseFocus()
-            focusIsOn = ((focusIsOn - 2) Mod 4) + 3
+            focusIsOn = ((focusIsOn - 2) Mod 3) + 3
             Options(focusIsOn).ReceiveFocus()
         ElseIf scanninglevel = 2 Then
             If Timer1Seconds < 60 Then
-                focusIsOn = 7
+                focusIsOn = 6
                 Options(focusIsOn).ReceiveFocus()
             Else
                 Options(focusIsOn).LoseFocus()
-                focusIsOn = ((focusIsOn - 6) Mod 2) + 7
+                focusIsOn = ((focusIsOn - 5) Mod 2) + 6
                 Options(focusIsOn).ReceiveFocus()
             End If
         End If
@@ -205,6 +204,7 @@ Public Class Assistance
             If focusIsOn = 6 Then
                 Timer1.Enabled = False
                 TimerLabel.Hide()
+                Label1.Hide()
                 scanninglevel = 0
                 focusIsOn = 7
                 Options(topSelection).LoseFocus()
@@ -240,6 +240,7 @@ Public Class Assistance
         Timer1Seconds = 0
         Timer1.Enabled = True
         TimerLabel.Show()
+        Label1.Show()
         Dim ThisMoment As Date = Now
         TimerLabel.Text = 60
     End Sub
