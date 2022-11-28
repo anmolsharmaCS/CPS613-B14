@@ -87,6 +87,11 @@ Scanning
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Scanning.My.Resources.Resources.BlindsClosedOpenSlats">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Scanning.My.Resources.Resources.BlindsHalfOpen">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -148,6 +153,11 @@ Scanning
 </summary>
 </member>
 <member name="P:Scanning.My.Resources.Resources.downarrow">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Scanning.My.Resources.Resources.elevator">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

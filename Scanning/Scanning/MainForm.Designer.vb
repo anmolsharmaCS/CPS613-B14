@@ -24,11 +24,24 @@ Partial Class MainForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.ScanningTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.elevatorFloor3 = New System.Windows.Forms.PictureBox()
+        Me.elevatorFloor4 = New System.Windows.Forms.PictureBox()
+        Me.elevatorFloor2 = New System.Windows.Forms.PictureBox()
+        Me.window3 = New System.Windows.Forms.PictureBox()
+        Me.window4 = New System.Windows.Forms.PictureBox()
+        Me.window5 = New System.Windows.Forms.PictureBox()
+        Me.window9 = New System.Windows.Forms.PictureBox()
+        Me.window10 = New System.Windows.Forms.PictureBox()
+        Me.window11 = New System.Windows.Forms.PictureBox()
+        Me.window2 = New System.Windows.Forms.PictureBox()
+        Me.window6 = New System.Windows.Forms.PictureBox()
+        Me.window7 = New System.Windows.Forms.PictureBox()
+        Me.window8 = New System.Windows.Forms.PictureBox()
         Me.window1 = New System.Windows.Forms.PictureBox()
         Me.DoorSeparatorDecoration = New System.Windows.Forms.PictureBox()
+        Me.MainEntrance = New Scanning.SubOptions()
         Me.building = New System.Windows.Forms.PictureBox()
-        Me.elevatorCrack = New System.Windows.Forms.PictureBox()
-        Me.elevator = New System.Windows.Forms.PictureBox()
+        Me.elevatorFloor1 = New System.Windows.Forms.PictureBox()
         Me.elevatorShaft = New System.Windows.Forms.PictureBox()
         Me.aptNum202 = New System.Windows.Forms.PictureBox()
         Me.door202 = New System.Windows.Forms.PictureBox()
@@ -67,30 +80,32 @@ Partial Class MainForm
         Me.floor2floor = New System.Windows.Forms.PictureBox()
         Me.floor1floor = New System.Windows.Forms.PictureBox()
         Me.floor4floor = New System.Windows.Forms.PictureBox()
-        Me.FoundationDecoration = New System.Windows.Forms.PictureBox()
-        Me.WalkwayDecoration = New System.Windows.Forms.PictureBox()
-        Me.GrassDecoration = New System.Windows.Forms.PictureBox()
-        Me.SkyDecoration = New System.Windows.Forms.PictureBox()
-        Me.window8 = New System.Windows.Forms.PictureBox()
-        Me.window6 = New System.Windows.Forms.PictureBox()
-        Me.window2 = New System.Windows.Forms.PictureBox()
-        Me.window7 = New System.Windows.Forms.PictureBox()
-        Me.window11 = New System.Windows.Forms.PictureBox()
-        Me.window10 = New System.Windows.Forms.PictureBox()
-        Me.window9 = New System.Windows.Forms.PictureBox()
-        Me.window5 = New System.Windows.Forms.PictureBox()
-        Me.window4 = New System.Windows.Forms.PictureBox()
-        Me.window3 = New System.Windows.Forms.PictureBox()
-        Me.MainEntrance = New Scanning.SubOptions()
         Me.Floor4 = New Scanning.SubOptions()
         Me.Floor3 = New Scanning.SubOptions()
         Me.Floor2 = New Scanning.SubOptions()
         Me.Floor1 = New Scanning.SubOptions()
+        Me.FoundationDecoration = New System.Windows.Forms.PictureBox()
+        Me.WalkwayDecoration = New System.Windows.Forms.PictureBox()
+        Me.GrassDecoration = New System.Windows.Forms.PictureBox()
+        Me.SkyDecoration = New System.Windows.Forms.PictureBox()
+        CType(Me.elevatorFloor3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.elevatorFloor4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.elevatorFloor2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.window3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.window4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.window5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.window9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.window10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.window11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.window2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.window6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.window7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.window8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.window1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DoorSeparatorDecoration, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MainEntrance, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.building, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.elevatorCrack, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.elevator, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.elevatorFloor1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.elevatorShaft, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.aptNum202, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.door202, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -129,30 +144,168 @@ Partial Class MainForm
         CType(Me.floor2floor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.floor1floor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.floor4floor, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FoundationDecoration, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.WalkwayDecoration, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.GrassDecoration, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SkyDecoration, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.window8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.window6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.window2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.window7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.window11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.window10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.window9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.window5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.window4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.window3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MainEntrance, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Floor4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Floor3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Floor2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Floor1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FoundationDecoration, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.WalkwayDecoration, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GrassDecoration, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SkyDecoration, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ScanningTimer
         '
         Me.ScanningTimer.Interval = 1000
+        '
+        'elevatorFloor3
+        '
+        Me.elevatorFloor3.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.elevatorFloor3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.elevatorFloor3.Image = Global.Scanning.My.Resources.Resources.elevator
+        Me.elevatorFloor3.Location = New System.Drawing.Point(183, 180)
+        Me.elevatorFloor3.Name = "elevatorFloor3"
+        Me.elevatorFloor3.Size = New System.Drawing.Size(128, 143)
+        Me.elevatorFloor3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.elevatorFloor3.TabIndex = 77
+        Me.elevatorFloor3.TabStop = False
+        Me.elevatorFloor3.Visible = False
+        '
+        'elevatorFloor4
+        '
+        Me.elevatorFloor4.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.elevatorFloor4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.elevatorFloor4.Image = Global.Scanning.My.Resources.Resources.elevator
+        Me.elevatorFloor4.Location = New System.Drawing.Point(183, 22)
+        Me.elevatorFloor4.Name = "elevatorFloor4"
+        Me.elevatorFloor4.Size = New System.Drawing.Size(128, 143)
+        Me.elevatorFloor4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.elevatorFloor4.TabIndex = 76
+        Me.elevatorFloor4.TabStop = False
+        Me.elevatorFloor4.Visible = False
+        '
+        'elevatorFloor2
+        '
+        Me.elevatorFloor2.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.elevatorFloor2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.elevatorFloor2.Image = Global.Scanning.My.Resources.Resources.elevator
+        Me.elevatorFloor2.Location = New System.Drawing.Point(183, 337)
+        Me.elevatorFloor2.Name = "elevatorFloor2"
+        Me.elevatorFloor2.Size = New System.Drawing.Size(128, 143)
+        Me.elevatorFloor2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.elevatorFloor2.TabIndex = 75
+        Me.elevatorFloor2.TabStop = False
+        Me.elevatorFloor2.Visible = False
+        '
+        'window3
+        '
+        Me.window3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.window3.Image = Global.Scanning.My.Resources.Resources.windowPic
+        Me.window3.Location = New System.Drawing.Point(982, 33)
+        Me.window3.Name = "window3"
+        Me.window3.Size = New System.Drawing.Size(150, 95)
+        Me.window3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.window3.TabIndex = 74
+        Me.window3.TabStop = False
+        '
+        'window4
+        '
+        Me.window4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.window4.Image = Global.Scanning.My.Resources.Resources.windowPic
+        Me.window4.Location = New System.Drawing.Point(215, 201)
+        Me.window4.Name = "window4"
+        Me.window4.Size = New System.Drawing.Size(150, 95)
+        Me.window4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.window4.TabIndex = 73
+        Me.window4.TabStop = False
+        '
+        'window5
+        '
+        Me.window5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.window5.Image = Global.Scanning.My.Resources.Resources.windowPic
+        Me.window5.Location = New System.Drawing.Point(597, 201)
+        Me.window5.Name = "window5"
+        Me.window5.Size = New System.Drawing.Size(150, 95)
+        Me.window5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.window5.TabIndex = 72
+        Me.window5.TabStop = False
+        '
+        'window9
+        '
+        Me.window9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.window9.Image = Global.Scanning.My.Resources.Resources.windowPic
+        Me.window9.Location = New System.Drawing.Point(982, 358)
+        Me.window9.Name = "window9"
+        Me.window9.Size = New System.Drawing.Size(150, 95)
+        Me.window9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.window9.TabIndex = 71
+        Me.window9.TabStop = False
+        '
+        'window10
+        '
+        Me.window10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.window10.Image = Global.Scanning.My.Resources.Resources.windowPic
+        Me.window10.Location = New System.Drawing.Point(215, 517)
+        Me.window10.Name = "window10"
+        Me.window10.Size = New System.Drawing.Size(150, 95)
+        Me.window10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.window10.TabIndex = 70
+        Me.window10.TabStop = False
+        '
+        'window11
+        '
+        Me.window11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.window11.Image = Global.Scanning.My.Resources.Resources.windowPic
+        Me.window11.Location = New System.Drawing.Point(982, 517)
+        Me.window11.Name = "window11"
+        Me.window11.Size = New System.Drawing.Size(150, 95)
+        Me.window11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.window11.TabIndex = 69
+        Me.window11.TabStop = False
+        '
+        'window2
+        '
+        Me.window2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.window2.Image = Global.Scanning.My.Resources.Resources.windowPic
+        Me.window2.Location = New System.Drawing.Point(597, 33)
+        Me.window2.Name = "window2"
+        Me.window2.Size = New System.Drawing.Size(150, 95)
+        Me.window2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.window2.TabIndex = 68
+        Me.window2.TabStop = False
+        '
+        'window6
+        '
+        Me.window6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.window6.Image = Global.Scanning.My.Resources.Resources.windowPic
+        Me.window6.Location = New System.Drawing.Point(982, 201)
+        Me.window6.Name = "window6"
+        Me.window6.Size = New System.Drawing.Size(150, 95)
+        Me.window6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.window6.TabIndex = 67
+        Me.window6.TabStop = False
+        '
+        'window7
+        '
+        Me.window7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.window7.Image = Global.Scanning.My.Resources.Resources.windowPic
+        Me.window7.Location = New System.Drawing.Point(215, 358)
+        Me.window7.Name = "window7"
+        Me.window7.Size = New System.Drawing.Size(150, 95)
+        Me.window7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.window7.TabIndex = 66
+        Me.window7.TabStop = False
+        '
+        'window8
+        '
+        Me.window8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.window8.Image = Global.Scanning.My.Resources.Resources.windowPic
+        Me.window8.Location = New System.Drawing.Point(597, 358)
+        Me.window8.Name = "window8"
+        Me.window8.Size = New System.Drawing.Size(150, 95)
+        Me.window8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.window8.TabIndex = 65
+        Me.window8.TabStop = False
         '
         'window1
         '
@@ -175,6 +328,17 @@ Partial Class MainForm
         Me.DoorSeparatorDecoration.TabIndex = 9
         Me.DoorSeparatorDecoration.TabStop = False
         '
+        'MainEntrance
+        '
+        Me.MainEntrance.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.MainEntrance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.MainEntrance.Location = New System.Drawing.Point(594, 515)
+        Me.MainEntrance.Margin = New System.Windows.Forms.Padding(4)
+        Me.MainEntrance.Name = "MainEntrance"
+        Me.MainEntrance.Size = New System.Drawing.Size(157, 132)
+        Me.MainEntrance.TabIndex = 8
+        Me.MainEntrance.TabStop = False
+        '
         'building
         '
         Me.building.BackColor = System.Drawing.Color.Gray
@@ -185,25 +349,17 @@ Partial Class MainForm
         Me.building.TabIndex = 18
         Me.building.TabStop = False
         '
-        'elevatorCrack
+        'elevatorFloor1
         '
-        Me.elevatorCrack.BackColor = System.Drawing.Color.Black
-        Me.elevatorCrack.Location = New System.Drawing.Point(249, 487)
-        Me.elevatorCrack.Margin = New System.Windows.Forms.Padding(4)
-        Me.elevatorCrack.Name = "elevatorCrack"
-        Me.elevatorCrack.Size = New System.Drawing.Size(1, 143)
-        Me.elevatorCrack.TabIndex = 25
-        Me.elevatorCrack.TabStop = False
-        '
-        'elevator
-        '
-        Me.elevator.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.elevator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.elevator.Location = New System.Drawing.Point(183, 487)
-        Me.elevator.Name = "elevator"
-        Me.elevator.Size = New System.Drawing.Size(128, 143)
-        Me.elevator.TabIndex = 24
-        Me.elevator.TabStop = False
+        Me.elevatorFloor1.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.elevatorFloor1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.elevatorFloor1.Image = Global.Scanning.My.Resources.Resources.elevator
+        Me.elevatorFloor1.Location = New System.Drawing.Point(183, 487)
+        Me.elevatorFloor1.Name = "elevatorFloor1"
+        Me.elevatorFloor1.Size = New System.Drawing.Size(128, 143)
+        Me.elevatorFloor1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.elevatorFloor1.TabIndex = 24
+        Me.elevatorFloor1.TabStop = False
         '
         'elevatorShaft
         '
@@ -585,168 +741,6 @@ Partial Class MainForm
         Me.floor4floor.TabIndex = 19
         Me.floor4floor.TabStop = False
         '
-        'FoundationDecoration
-        '
-        Me.FoundationDecoration.BackColor = System.Drawing.Color.LightGray
-        Me.FoundationDecoration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.FoundationDecoration.Location = New System.Drawing.Point(144, 437)
-        Me.FoundationDecoration.Margin = New System.Windows.Forms.Padding(4)
-        Me.FoundationDecoration.Name = "FoundationDecoration"
-        Me.FoundationDecoration.Size = New System.Drawing.Size(1056, 246)
-        Me.FoundationDecoration.TabIndex = 4
-        Me.FoundationDecoration.TabStop = False
-        '
-        'WalkwayDecoration
-        '
-        Me.WalkwayDecoration.BackColor = System.Drawing.Color.LightGray
-        Me.WalkwayDecoration.Location = New System.Drawing.Point(515, 676)
-        Me.WalkwayDecoration.Margin = New System.Windows.Forms.Padding(4)
-        Me.WalkwayDecoration.Name = "WalkwayDecoration"
-        Me.WalkwayDecoration.Size = New System.Drawing.Size(316, 234)
-        Me.WalkwayDecoration.TabIndex = 5
-        Me.WalkwayDecoration.TabStop = False
-        '
-        'GrassDecoration
-        '
-        Me.GrassDecoration.BackColor = System.Drawing.Color.DarkOliveGreen
-        Me.GrassDecoration.Location = New System.Drawing.Point(-17, 391)
-        Me.GrassDecoration.Margin = New System.Windows.Forms.Padding(4)
-        Me.GrassDecoration.Name = "GrassDecoration"
-        Me.GrassDecoration.Size = New System.Drawing.Size(1377, 518)
-        Me.GrassDecoration.TabIndex = 6
-        Me.GrassDecoration.TabStop = False
-        '
-        'SkyDecoration
-        '
-        Me.SkyDecoration.BackColor = System.Drawing.Color.PaleTurquoise
-        Me.SkyDecoration.Location = New System.Drawing.Point(-17, -20)
-        Me.SkyDecoration.Margin = New System.Windows.Forms.Padding(4)
-        Me.SkyDecoration.Name = "SkyDecoration"
-        Me.SkyDecoration.Size = New System.Drawing.Size(1377, 431)
-        Me.SkyDecoration.TabIndex = 7
-        Me.SkyDecoration.TabStop = False
-        '
-        'window8
-        '
-        Me.window8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.window8.Image = Global.Scanning.My.Resources.Resources.windowPic
-        Me.window8.Location = New System.Drawing.Point(597, 358)
-        Me.window8.Name = "window8"
-        Me.window8.Size = New System.Drawing.Size(150, 95)
-        Me.window8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.window8.TabIndex = 65
-        Me.window8.TabStop = False
-        '
-        'window6
-        '
-        Me.window6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.window6.Image = Global.Scanning.My.Resources.Resources.windowPic
-        Me.window6.Location = New System.Drawing.Point(982, 201)
-        Me.window6.Name = "window6"
-        Me.window6.Size = New System.Drawing.Size(150, 95)
-        Me.window6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.window6.TabIndex = 67
-        Me.window6.TabStop = False
-        '
-        'window2
-        '
-        Me.window2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.window2.Image = Global.Scanning.My.Resources.Resources.windowPic
-        Me.window2.Location = New System.Drawing.Point(597, 33)
-        Me.window2.Name = "window2"
-        Me.window2.Size = New System.Drawing.Size(150, 95)
-        Me.window2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.window2.TabIndex = 68
-        Me.window2.TabStop = False
-        '
-        'window7
-        '
-        Me.window7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.window7.Image = Global.Scanning.My.Resources.Resources.windowPic
-        Me.window7.Location = New System.Drawing.Point(215, 358)
-        Me.window7.Name = "window7"
-        Me.window7.Size = New System.Drawing.Size(150, 95)
-        Me.window7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.window7.TabIndex = 66
-        Me.window7.TabStop = False
-        '
-        'window11
-        '
-        Me.window11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.window11.Image = Global.Scanning.My.Resources.Resources.windowPic
-        Me.window11.Location = New System.Drawing.Point(982, 517)
-        Me.window11.Name = "window11"
-        Me.window11.Size = New System.Drawing.Size(150, 95)
-        Me.window11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.window11.TabIndex = 69
-        Me.window11.TabStop = False
-        '
-        'window10
-        '
-        Me.window10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.window10.Image = Global.Scanning.My.Resources.Resources.windowPic
-        Me.window10.Location = New System.Drawing.Point(215, 517)
-        Me.window10.Name = "window10"
-        Me.window10.Size = New System.Drawing.Size(150, 95)
-        Me.window10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.window10.TabIndex = 70
-        Me.window10.TabStop = False
-        '
-        'window9
-        '
-        Me.window9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.window9.Image = Global.Scanning.My.Resources.Resources.windowPic
-        Me.window9.Location = New System.Drawing.Point(982, 358)
-        Me.window9.Name = "window9"
-        Me.window9.Size = New System.Drawing.Size(150, 95)
-        Me.window9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.window9.TabIndex = 71
-        Me.window9.TabStop = False
-        '
-        'window5
-        '
-        Me.window5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.window5.Image = Global.Scanning.My.Resources.Resources.windowPic
-        Me.window5.Location = New System.Drawing.Point(597, 201)
-        Me.window5.Name = "window5"
-        Me.window5.Size = New System.Drawing.Size(150, 95)
-        Me.window5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.window5.TabIndex = 72
-        Me.window5.TabStop = False
-        '
-        'window4
-        '
-        Me.window4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.window4.Image = Global.Scanning.My.Resources.Resources.windowPic
-        Me.window4.Location = New System.Drawing.Point(215, 201)
-        Me.window4.Name = "window4"
-        Me.window4.Size = New System.Drawing.Size(150, 95)
-        Me.window4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.window4.TabIndex = 73
-        Me.window4.TabStop = False
-        '
-        'window3
-        '
-        Me.window3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.window3.Image = Global.Scanning.My.Resources.Resources.windowPic
-        Me.window3.Location = New System.Drawing.Point(982, 33)
-        Me.window3.Name = "window3"
-        Me.window3.Size = New System.Drawing.Size(150, 95)
-        Me.window3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.window3.TabIndex = 74
-        Me.window3.TabStop = False
-        '
-        'MainEntrance
-        '
-        Me.MainEntrance.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.MainEntrance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.MainEntrance.Location = New System.Drawing.Point(594, 515)
-        Me.MainEntrance.Margin = New System.Windows.Forms.Padding(4)
-        Me.MainEntrance.Name = "MainEntrance"
-        Me.MainEntrance.Size = New System.Drawing.Size(157, 132)
-        Me.MainEntrance.TabIndex = 8
-        Me.MainEntrance.TabStop = False
-        '
         'Floor4
         '
         Me.Floor4.BackColor = System.Drawing.Color.DarkKhaki
@@ -791,11 +785,55 @@ Partial Class MainForm
         Me.Floor1.TabIndex = 0
         Me.Floor1.TabStop = False
         '
+        'FoundationDecoration
+        '
+        Me.FoundationDecoration.BackColor = System.Drawing.Color.LightGray
+        Me.FoundationDecoration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.FoundationDecoration.Location = New System.Drawing.Point(144, 437)
+        Me.FoundationDecoration.Margin = New System.Windows.Forms.Padding(4)
+        Me.FoundationDecoration.Name = "FoundationDecoration"
+        Me.FoundationDecoration.Size = New System.Drawing.Size(1056, 246)
+        Me.FoundationDecoration.TabIndex = 4
+        Me.FoundationDecoration.TabStop = False
+        '
+        'WalkwayDecoration
+        '
+        Me.WalkwayDecoration.BackColor = System.Drawing.Color.LightGray
+        Me.WalkwayDecoration.Location = New System.Drawing.Point(515, 676)
+        Me.WalkwayDecoration.Margin = New System.Windows.Forms.Padding(4)
+        Me.WalkwayDecoration.Name = "WalkwayDecoration"
+        Me.WalkwayDecoration.Size = New System.Drawing.Size(316, 234)
+        Me.WalkwayDecoration.TabIndex = 5
+        Me.WalkwayDecoration.TabStop = False
+        '
+        'GrassDecoration
+        '
+        Me.GrassDecoration.BackColor = System.Drawing.Color.DarkOliveGreen
+        Me.GrassDecoration.Location = New System.Drawing.Point(-17, 391)
+        Me.GrassDecoration.Margin = New System.Windows.Forms.Padding(4)
+        Me.GrassDecoration.Name = "GrassDecoration"
+        Me.GrassDecoration.Size = New System.Drawing.Size(1377, 518)
+        Me.GrassDecoration.TabIndex = 6
+        Me.GrassDecoration.TabStop = False
+        '
+        'SkyDecoration
+        '
+        Me.SkyDecoration.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.SkyDecoration.Location = New System.Drawing.Point(-17, -8)
+        Me.SkyDecoration.Margin = New System.Windows.Forms.Padding(4)
+        Me.SkyDecoration.Name = "SkyDecoration"
+        Me.SkyDecoration.Size = New System.Drawing.Size(1377, 431)
+        Me.SkyDecoration.TabIndex = 7
+        Me.SkyDecoration.TabStop = False
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.elevatorFloor3)
+        Me.Controls.Add(Me.elevatorFloor4)
+        Me.Controls.Add(Me.elevatorFloor2)
         Me.Controls.Add(Me.window3)
         Me.Controls.Add(Me.window4)
         Me.Controls.Add(Me.window5)
@@ -810,8 +848,7 @@ Partial Class MainForm
         Me.Controls.Add(Me.DoorSeparatorDecoration)
         Me.Controls.Add(Me.MainEntrance)
         Me.Controls.Add(Me.building)
-        Me.Controls.Add(Me.elevatorCrack)
-        Me.Controls.Add(Me.elevator)
+        Me.Controls.Add(Me.elevatorFloor1)
         Me.Controls.Add(Me.elevatorShaft)
         Me.Controls.Add(Me.aptNum202)
         Me.Controls.Add(Me.door202)
@@ -863,11 +900,24 @@ Partial Class MainForm
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CPS613 Scanning Example"
+        CType(Me.elevatorFloor3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.elevatorFloor4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.elevatorFloor2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.window3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.window4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.window5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.window9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.window10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.window11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.window2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.window6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.window7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.window8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.window1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DoorSeparatorDecoration, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MainEntrance, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.building, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.elevatorCrack, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.elevator, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.elevatorFloor1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.elevatorShaft, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.aptNum202, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.door202, System.ComponentModel.ISupportInitialize).EndInit()
@@ -906,25 +956,14 @@ Partial Class MainForm
         CType(Me.floor2floor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.floor1floor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.floor4floor, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FoundationDecoration, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.WalkwayDecoration, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.GrassDecoration, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SkyDecoration, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.window8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.window6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.window2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.window7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.window11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.window10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.window9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.window5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.window4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.window3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MainEntrance, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Floor4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Floor3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Floor2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Floor1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FoundationDecoration, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.WalkwayDecoration, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GrassDecoration, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SkyDecoration, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -945,7 +984,6 @@ Partial Class MainForm
     Friend WithEvents floor1floor As PictureBox
     Friend WithEvents floor2floor As PictureBox
     Friend WithEvents floor3floor As PictureBox
-    Friend WithEvents elevatorCrack As PictureBox
     Friend WithEvents door401 As PictureBox
     Friend WithEvents door202 As PictureBox
     Friend WithEvents door203 As PictureBox
@@ -991,5 +1029,8 @@ Partial Class MainForm
     Friend WithEvents window5 As PictureBox
     Friend WithEvents window4 As PictureBox
     Friend WithEvents window3 As PictureBox
-    Friend WithEvents elevator As PictureBox
+    Friend WithEvents elevatorFloor1 As PictureBox
+    Friend WithEvents elevatorFloor2 As PictureBox
+    Friend WithEvents elevatorFloor4 As PictureBox
+    Friend WithEvents elevatorFloor3 As PictureBox
 End Class

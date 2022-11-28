@@ -193,6 +193,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property BlindsClosedOpenSlats() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("BlindsClosedOpenSlats", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property BlindsHalfOpen() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("BlindsHalfOpen", resourceCulture)
@@ -315,6 +325,16 @@ Namespace My.Resources
         Friend ReadOnly Property downarrow() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("downarrow", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property elevator() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("elevator", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

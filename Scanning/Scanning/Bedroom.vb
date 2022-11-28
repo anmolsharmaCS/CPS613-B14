@@ -264,13 +264,13 @@ Public Class Bedroom
 
                 ElseIf WindowMenu.blindControl.Tag = "half_open" Then
 
-                    BedroomBlindsSlightlyOpen()
-
-                ElseIf WindowMenu.blindControl.Tag = "slightly_open" Then
-
                     BedroomBlindsClose()
 
                 ElseIf WindowMenu.blindControl.Tag = "closed" Then
+
+                    BedroomBlindsOpenSlats()
+
+                ElseIf WindowMenu.blindControl.Tag = "open_slats" Then
 
                     BedroomBlindsOpen()
 
@@ -321,19 +321,29 @@ Public Class Bedroom
             bedroomShutters1.Hide()
             bedroomShutters2.Hide()
 
+            bedroomWindow1Half.Show()
+            bedroomWindow2Half.Show()
+
             MyParent.BedroomWindow1Shutters.Hide()
             MyParent.BedroomWindow2Shutters.Hide()
+
+            MyParent.BedroomWindow1Half.Show()
+            MyParent.BedroomWindow2Half.Show()
 
         Else
 
             If BedroomWindow1.BackColor = Color.LemonChiffon Then
                 bedroomShutters1.Hide()
+                bedroomWindow1Half.Show()
+                MyParent.BedroomWindow1Half.Show()
                 MyParent.BedroomWindow1Shutters.Hide()
             End If
 
             If BedroomWindow2.BackColor = Color.LemonChiffon Then
                 bedroomShutters2.Hide()
+                bedroomWindow2Half.Show()
                 MyParent.BedroomWindow2Shutters.Hide()
+                MyParent.BedroomWindow2Half.Show()
             End If
 
         End If
@@ -346,22 +356,32 @@ Public Class Bedroom
         WindowMenu.windowControl.Tag = "slightly_open"
 
         If ScanningTimer.Enabled = False Then
-            bedroomShutters1.Hide()
-            bedroomShutters2.Hide()
+            bedroomWindow1Half.Hide()
+            bedroomWindow2Half.Hide()
 
-            MyParent.BedroomWindow1Shutters.Hide()
-            MyParent.BedroomWindow2Shutters.Hide()
+            bedroomWindow1Slightly.Show()
+            bedroomWindow2Slightly.Show()
+
+            MyParent.BedroomWindow1Half.Hide()
+            MyParent.BedroomWindow2Half.Hide()
+
+            MyParent.BedroomWindow1Slightly.Show()
+            MyParent.BedroomWindow2Slightly.Show()
 
         Else
 
             If BedroomWindow1.BackColor = Color.LemonChiffon Then
-                bedroomShutters1.Hide()
-                MyParent.BedroomWindow1Shutters.Hide()
+                bedroomWindow1Half.Hide()
+                bedroomWindow1Slightly.Show()
+                MyParent.BedroomWindow1Slightly.Show()
+                MyParent.BedroomWindow1Half.Hide()
             End If
 
             If BedroomWindow2.BackColor = Color.LemonChiffon Then
-                bedroomShutters2.Hide()
-                MyParent.BedroomWindow2Shutters.Hide()
+                bedroomWindow2Half.Hide()
+                bedroomWindow2Slightly.Show()
+                MyParent.BedroomWindow2Half.Hide()
+                MyParent.BedroomWindow2Slightly.Show()
             End If
 
         End If
@@ -373,22 +393,22 @@ Public Class Bedroom
         WindowMenu.windowControl.Tag = "closed"
 
         If ScanningTimer.Enabled = False Then
-            bedroomShutters1.Hide()
-            bedroomShutters2.Hide()
+            bedroomWindow1Slightly.Hide()
+            bedroomWindow2Slightly.Hide()
 
-            MyParent.BedroomWindow1Shutters.Hide()
-            MyParent.BedroomWindow2Shutters.Hide()
+            MyParent.BedroomWindow1Slightly.Hide()
+            MyParent.BedroomWindow2Slightly.Hide()
 
         Else
 
             If BedroomWindow1.BackColor = Color.LemonChiffon Then
-                bedroomShutters1.Hide()
-                MyParent.BedroomWindow1Shutters.Hide()
+                bedroomWindow1Slightly.Hide()
+                MyParent.BedroomWindow1Slightly.Hide()
             End If
 
             If BedroomWindow2.BackColor = Color.LemonChiffon Then
-                bedroomShutters2.Hide()
-                MyParent.BedroomWindow2Shutters.Hide()
+                bedroomWindow2Slightly.Hide()
+                MyParent.BedroomWindow2Slightly.Hide()
             End If
 
         End If
@@ -403,22 +423,22 @@ Public Class Bedroom
         If ScanningTimer.Enabled Then
 
             If BedroomWindow1.BackColor = Color.LemonChiffon Then
-                bedroomBlinds1.Hide()
-                MyParent.bedroomWindow1Blinds.Hide()
+                bedroomBlinds1OpenSlats.Hide()
+                MyParent.bedroomWindow1OpenSlats.Hide()
             End If
 
             If BedroomWindow2.BackColor = Color.LemonChiffon Then
-                bedroomBlinds2.Hide()
-                MyParent.bedroomWindow2Blinds.Hide()
+                bedroomBlinds2OpenSlats.Hide()
+                MyParent.bedroomWindow2OpenSlats.Hide()
             End If
 
         Else
 
-            bedroomBlinds1.Hide()
-            MyParent.bedroomWindow1Blinds.Hide()
+            bedroomBlinds1OpenSlats.Hide()
+            MyParent.bedroomWindow1OpenSlats.Hide()
 
-            bedroomBlinds2.Hide()
-            MyParent.bedroomWindow2Blinds.Hide()
+            bedroomBlinds2OpenSlats.Hide()
+            MyParent.bedroomWindow2OpenSlats.Hide()
 
         End If
 
@@ -432,51 +452,22 @@ Public Class Bedroom
         If ScanningTimer.Enabled Then
 
             If BedroomWindow1.BackColor = Color.LemonChiffon Then
-                bedroomBlinds1.Show()
-                MyParent.bedroomWindow1Blinds.Show()
+                bedroomBlinds1Half.Show()
+                MyParent.bedroomWindow1BlindsHalf.Show()
             End If
 
             If BedroomWindow2.BackColor = Color.LemonChiffon Then
-                bedroomBlinds2.Show()
-                MyParent.bedroomWindow2Blinds.Show()
+                bedroomBlinds2Half.Show()
+                MyParent.bedroomWindow2BlindsHalf.Show()
             End If
 
         Else
 
-            bedroomBlinds1.Show()
-            MyParent.bedroomWindow1Blinds.Show()
+            bedroomBlinds1Half.Show()
+            MyParent.bedroomWindow1BlindsHalf.Show()
 
-            bedroomBlinds2.Show()
-            MyParent.bedroomWindow2Blinds.Show()
-
-        End If
-
-    End Sub
-
-    Public Sub BedroomBlindsSlightlyOpen()
-
-        WindowMenu.blindControl.Image = My.Resources.BlindsHalfOpen
-        WindowMenu.blindControl.Tag = "slightly_open"
-
-        If ScanningTimer.Enabled Then
-
-            If BedroomWindow1.BackColor = Color.LemonChiffon Then
-                bedroomBlinds1.Show()
-                MyParent.bedroomWindow1Blinds.Show()
-            End If
-
-            If BedroomWindow2.BackColor = Color.LemonChiffon Then
-                bedroomBlinds2.Show()
-                MyParent.bedroomWindow2Blinds.Show()
-            End If
-
-        Else
-
-            bedroomBlinds1.Show()
-            MyParent.bedroomWindow1Blinds.Show()
-
-            bedroomBlinds2.Show()
-            MyParent.bedroomWindow2Blinds.Show()
+            bedroomBlinds2Half.Show()
+            MyParent.bedroomWindow2BlindsHalf.Show()
 
         End If
 
@@ -490,21 +481,66 @@ Public Class Bedroom
 
             If BedroomWindow1.BackColor = Color.LemonChiffon Then
                 bedroomBlinds1.Show()
+                bedroomBlinds1Half.Hide()
                 MyParent.bedroomWindow1Blinds.Show()
+                MyParent.bedroomWindow1BlindsHalf.Hide()
             End If
 
             If BedroomWindow2.BackColor = Color.LemonChiffon Then
                 bedroomBlinds2.Show()
+                bedroomBlinds2Half.Hide()
                 MyParent.bedroomWindow2Blinds.Show()
+                MyParent.bedroomWindow2BlindsHalf.Hide()
             End If
 
         Else
 
             bedroomBlinds1.Show()
+            bedroomBlinds1Half.Hide()
             MyParent.bedroomWindow1Blinds.Show()
+            MyParent.bedroomWindow1BlindsHalf.Hide()
 
             bedroomBlinds2.Show()
+            bedroomBlinds2Half.Hide()
             MyParent.bedroomWindow2Blinds.Show()
+            MyParent.bedroomWindow2BlindsHalf.Hide()
+
+        End If
+
+    End Sub
+
+    Public Sub BedroomBlindsOpenSlats()
+
+        WindowMenu.blindControl.Image = My.Resources.BlindsClosedOpenSlats
+        WindowMenu.blindControl.Tag = "open_slats"
+
+        If ScanningTimer.Enabled Then
+
+            If BedroomWindow1.BackColor = Color.LemonChiffon Then
+                bedroomBlinds1OpenSlats.Show()
+                bedroomBlinds1.Hide()
+                MyParent.bedroomWindow1OpenSlats.Show()
+                MyParent.bedroomWindow1Blinds.Hide()
+            End If
+
+            If BedroomWindow2.BackColor = Color.LemonChiffon Then
+                bedroomBlinds2OpenSlats.Show()
+                bedroomBlinds2.Hide()
+                MyParent.bedroomWindow2OpenSlats.Show()
+                MyParent.bedroomWindow2Blinds.Hide()
+            End If
+
+        Else
+
+            bedroomBlinds1OpenSlats.Show()
+            bedroomBlinds1.Hide()
+            MyParent.bedroomWindow1OpenSlats.Show()
+            MyParent.bedroomWindow1Blinds.Hide()
+
+            bedroomBlinds2OpenSlats.Show()
+            bedroomBlinds2.Hide()
+            MyParent.bedroomWindow2OpenSlats.Show()
+            MyParent.bedroomWindow2Blinds.Hide()
 
         End If
 

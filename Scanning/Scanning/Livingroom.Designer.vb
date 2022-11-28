@@ -34,11 +34,19 @@ Partial Class Livingroom
         Me.entSystem = New Scanning.SubOptions()
         Me.WindowMenu = New Scanning.WindowMenu()
         Me.livingroomEnvironmentMenu = New Scanning.EnvironmentMenu()
-        Me.livingroomBlinds2 = New System.Windows.Forms.PictureBox()
-        Me.livingroomBlinds1 = New System.Windows.Forms.PictureBox()
+        Me.livingroomBlinds2Half = New System.Windows.Forms.PictureBox()
+        Me.livingroomBlinds1Half = New System.Windows.Forms.PictureBox()
         Me.exitWindowSelection = New Scanning.SubOptions()
         Me.vaccuumButton = New Scanning.SubOptions()
         Me.vaccuumOption = New Scanning.SubOptions()
+        Me.livingroomBlinds1Closed = New System.Windows.Forms.PictureBox()
+        Me.livingroomBlinds1OpenSlats = New System.Windows.Forms.PictureBox()
+        Me.livingroomBlinds2Closed = New System.Windows.Forms.PictureBox()
+        Me.livingroomBlinds2OpenSlats = New System.Windows.Forms.PictureBox()
+        Me.livingroomWindow1Half = New System.Windows.Forms.PictureBox()
+        Me.livingroomWindow2Half = New System.Windows.Forms.PictureBox()
+        Me.livingroomWindow1Slightly = New System.Windows.Forms.PictureBox()
+        Me.livingroomWindow2Slightly = New System.Windows.Forms.PictureBox()
         CType(Me.livingroomBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.livingroomShutters2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.livingroomShutters1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,11 +54,19 @@ Partial Class Livingroom
         CType(Me.LivingroomWindow2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LivingroomWindow1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.entSystem, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.livingroomBlinds2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.livingroomBlinds1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomBlinds2Half, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomBlinds1Half, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.exitWindowSelection, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.vaccuumButton, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.vaccuumOption, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomBlinds1Closed, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomBlinds1OpenSlats, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomBlinds2Closed, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomBlinds2OpenSlats, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomWindow1Half, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomWindow2Half, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomWindow1Slightly, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.livingroomWindow2Slightly, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'livingroomBackground
@@ -160,27 +176,27 @@ Partial Class Livingroom
         Me.livingroomEnvironmentMenu.Size = New System.Drawing.Size(255, 513)
         Me.livingroomEnvironmentMenu.TabIndex = 76
         '
-        'livingroomBlinds2
+        'livingroomBlinds2Half
         '
-        Me.livingroomBlinds2.Image = Global.Scanning.My.Resources.Resources.blinds
-        Me.livingroomBlinds2.Location = New System.Drawing.Point(435, 61)
-        Me.livingroomBlinds2.Name = "livingroomBlinds2"
-        Me.livingroomBlinds2.Size = New System.Drawing.Size(178, 52)
-        Me.livingroomBlinds2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.livingroomBlinds2.TabIndex = 77
-        Me.livingroomBlinds2.TabStop = False
-        Me.livingroomBlinds2.Visible = False
+        Me.livingroomBlinds2Half.Image = Global.Scanning.My.Resources.Resources.blinds
+        Me.livingroomBlinds2Half.Location = New System.Drawing.Point(435, 61)
+        Me.livingroomBlinds2Half.Name = "livingroomBlinds2Half"
+        Me.livingroomBlinds2Half.Size = New System.Drawing.Size(178, 52)
+        Me.livingroomBlinds2Half.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomBlinds2Half.TabIndex = 77
+        Me.livingroomBlinds2Half.TabStop = False
+        Me.livingroomBlinds2Half.Visible = False
         '
-        'livingroomBlinds1
+        'livingroomBlinds1Half
         '
-        Me.livingroomBlinds1.Image = Global.Scanning.My.Resources.Resources.blinds
-        Me.livingroomBlinds1.Location = New System.Drawing.Point(88, 61)
-        Me.livingroomBlinds1.Name = "livingroomBlinds1"
-        Me.livingroomBlinds1.Size = New System.Drawing.Size(178, 52)
-        Me.livingroomBlinds1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.livingroomBlinds1.TabIndex = 78
-        Me.livingroomBlinds1.TabStop = False
-        Me.livingroomBlinds1.Visible = False
+        Me.livingroomBlinds1Half.Image = Global.Scanning.My.Resources.Resources.blinds
+        Me.livingroomBlinds1Half.Location = New System.Drawing.Point(88, 61)
+        Me.livingroomBlinds1Half.Name = "livingroomBlinds1Half"
+        Me.livingroomBlinds1Half.Size = New System.Drawing.Size(178, 52)
+        Me.livingroomBlinds1Half.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomBlinds1Half.TabIndex = 78
+        Me.livingroomBlinds1Half.TabStop = False
+        Me.livingroomBlinds1Half.Visible = False
         '
         'exitWindowSelection
         '
@@ -216,16 +232,114 @@ Partial Class Livingroom
         Me.vaccuumOption.TabIndex = 80
         Me.vaccuumOption.TabStop = False
         '
+        'livingroomBlinds1Closed
+        '
+        Me.livingroomBlinds1Closed.Image = Global.Scanning.My.Resources.Resources.blindsClosedApt
+        Me.livingroomBlinds1Closed.Location = New System.Drawing.Point(88, 61)
+        Me.livingroomBlinds1Closed.Name = "livingroomBlinds1Closed"
+        Me.livingroomBlinds1Closed.Size = New System.Drawing.Size(178, 99)
+        Me.livingroomBlinds1Closed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomBlinds1Closed.TabIndex = 82
+        Me.livingroomBlinds1Closed.TabStop = False
+        Me.livingroomBlinds1Closed.Visible = False
+        '
+        'livingroomBlinds1OpenSlats
+        '
+        Me.livingroomBlinds1OpenSlats.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.livingroomBlinds1OpenSlats.Image = Global.Scanning.My.Resources.Resources.openSlatsApt
+        Me.livingroomBlinds1OpenSlats.Location = New System.Drawing.Point(88, 61)
+        Me.livingroomBlinds1OpenSlats.Name = "livingroomBlinds1OpenSlats"
+        Me.livingroomBlinds1OpenSlats.Size = New System.Drawing.Size(178, 99)
+        Me.livingroomBlinds1OpenSlats.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomBlinds1OpenSlats.TabIndex = 83
+        Me.livingroomBlinds1OpenSlats.TabStop = False
+        Me.livingroomBlinds1OpenSlats.Visible = False
+        '
+        'livingroomBlinds2Closed
+        '
+        Me.livingroomBlinds2Closed.Image = Global.Scanning.My.Resources.Resources.blindsClosedApt
+        Me.livingroomBlinds2Closed.Location = New System.Drawing.Point(435, 61)
+        Me.livingroomBlinds2Closed.Name = "livingroomBlinds2Closed"
+        Me.livingroomBlinds2Closed.Size = New System.Drawing.Size(178, 99)
+        Me.livingroomBlinds2Closed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomBlinds2Closed.TabIndex = 85
+        Me.livingroomBlinds2Closed.TabStop = False
+        Me.livingroomBlinds2Closed.Visible = False
+        '
+        'livingroomBlinds2OpenSlats
+        '
+        Me.livingroomBlinds2OpenSlats.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.livingroomBlinds2OpenSlats.Image = Global.Scanning.My.Resources.Resources.openSlatsApt
+        Me.livingroomBlinds2OpenSlats.Location = New System.Drawing.Point(435, 61)
+        Me.livingroomBlinds2OpenSlats.Name = "livingroomBlinds2OpenSlats"
+        Me.livingroomBlinds2OpenSlats.Size = New System.Drawing.Size(178, 99)
+        Me.livingroomBlinds2OpenSlats.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomBlinds2OpenSlats.TabIndex = 86
+        Me.livingroomBlinds2OpenSlats.TabStop = False
+        Me.livingroomBlinds2OpenSlats.Visible = False
+        '
+        'livingroomWindow1Half
+        '
+        Me.livingroomWindow1Half.Image = Global.Scanning.My.Resources.Resources.openwindowhalf
+        Me.livingroomWindow1Half.Location = New System.Drawing.Point(67, -46)
+        Me.livingroomWindow1Half.Name = "livingroomWindow1Half"
+        Me.livingroomWindow1Half.Size = New System.Drawing.Size(214, 94)
+        Me.livingroomWindow1Half.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomWindow1Half.TabIndex = 87
+        Me.livingroomWindow1Half.TabStop = False
+        Me.livingroomWindow1Half.Visible = False
+        '
+        'livingroomWindow2Half
+        '
+        Me.livingroomWindow2Half.Image = Global.Scanning.My.Resources.Resources.openwindowhalf
+        Me.livingroomWindow2Half.Location = New System.Drawing.Point(412, -46)
+        Me.livingroomWindow2Half.Name = "livingroomWindow2Half"
+        Me.livingroomWindow2Half.Size = New System.Drawing.Size(214, 94)
+        Me.livingroomWindow2Half.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomWindow2Half.TabIndex = 88
+        Me.livingroomWindow2Half.TabStop = False
+        Me.livingroomWindow2Half.Visible = False
+        '
+        'livingroomWindow1Slightly
+        '
+        Me.livingroomWindow1Slightly.Image = Global.Scanning.My.Resources.Resources.openwindowslightly
+        Me.livingroomWindow1Slightly.Location = New System.Drawing.Point(67, -46)
+        Me.livingroomWindow1Slightly.Name = "livingroomWindow1Slightly"
+        Me.livingroomWindow1Slightly.Size = New System.Drawing.Size(214, 94)
+        Me.livingroomWindow1Slightly.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomWindow1Slightly.TabIndex = 89
+        Me.livingroomWindow1Slightly.TabStop = False
+        Me.livingroomWindow1Slightly.Visible = False
+        '
+        'livingroomWindow2Slightly
+        '
+        Me.livingroomWindow2Slightly.Image = Global.Scanning.My.Resources.Resources.openwindowslightly
+        Me.livingroomWindow2Slightly.Location = New System.Drawing.Point(412, -46)
+        Me.livingroomWindow2Slightly.Name = "livingroomWindow2Slightly"
+        Me.livingroomWindow2Slightly.Size = New System.Drawing.Size(214, 94)
+        Me.livingroomWindow2Slightly.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.livingroomWindow2Slightly.TabIndex = 90
+        Me.livingroomWindow2Slightly.TabStop = False
+        Me.livingroomWindow2Slightly.Visible = False
+        '
         'Livingroom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1344, 897)
+        Me.Controls.Add(Me.livingroomWindow2Slightly)
+        Me.Controls.Add(Me.livingroomWindow1Slightly)
+        Me.Controls.Add(Me.livingroomWindow2Half)
+        Me.Controls.Add(Me.livingroomWindow1Half)
+        Me.Controls.Add(Me.livingroomBlinds2OpenSlats)
+        Me.Controls.Add(Me.livingroomBlinds2Closed)
+        Me.Controls.Add(Me.livingroomBlinds1OpenSlats)
+        Me.Controls.Add(Me.livingroomBlinds1Closed)
         Me.Controls.Add(Me.vaccuumButton)
         Me.Controls.Add(Me.vaccuumOption)
         Me.Controls.Add(Me.exitWindowSelection)
-        Me.Controls.Add(Me.livingroomBlinds1)
-        Me.Controls.Add(Me.livingroomBlinds2)
+        Me.Controls.Add(Me.livingroomBlinds1Half)
+        Me.Controls.Add(Me.livingroomBlinds2Half)
         Me.Controls.Add(Me.livingroomEnvironmentMenu)
         Me.Controls.Add(Me.WindowMenu)
         Me.Controls.Add(Me.MainTaskBar)
@@ -247,11 +361,19 @@ Partial Class Livingroom
         CType(Me.LivingroomWindow2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LivingroomWindow1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.entSystem, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.livingroomBlinds2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.livingroomBlinds1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomBlinds2Half, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomBlinds1Half, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.exitWindowSelection, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.vaccuumButton, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.vaccuumOption, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomBlinds1Closed, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomBlinds1OpenSlats, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomBlinds2Closed, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomBlinds2OpenSlats, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomWindow1Half, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomWindow2Half, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomWindow1Slightly, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.livingroomWindow2Slightly, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -267,9 +389,17 @@ Partial Class Livingroom
     Friend WithEvents MainTaskBar As MainTaskBar
     Friend WithEvents WindowMenu As WindowMenu
     Friend WithEvents livingroomEnvironmentMenu As EnvironmentMenu
-    Friend WithEvents livingroomBlinds2 As PictureBox
-    Friend WithEvents livingroomBlinds1 As PictureBox
+    Friend WithEvents livingroomBlinds2Half As PictureBox
+    Friend WithEvents livingroomBlinds1Half As PictureBox
     Friend WithEvents exitWindowSelection As SubOptions
     Friend WithEvents vaccuumButton As SubOptions
     Friend WithEvents vaccuumOption As SubOptions
+    Friend WithEvents livingroomBlinds1Closed As PictureBox
+    Friend WithEvents livingroomBlinds1OpenSlats As PictureBox
+    Friend WithEvents livingroomBlinds2Closed As PictureBox
+    Friend WithEvents livingroomBlinds2OpenSlats As PictureBox
+    Friend WithEvents livingroomWindow1Half As PictureBox
+    Friend WithEvents livingroomWindow2Half As PictureBox
+    Friend WithEvents livingroomWindow1Slightly As PictureBox
+    Friend WithEvents livingroomWindow2Slightly As PictureBox
 End Class

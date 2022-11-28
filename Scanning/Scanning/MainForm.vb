@@ -85,17 +85,17 @@
             Me.focusIsOn = (Me.focusIsOn + 1) Mod 5
             Me.Options(Me.focusIsOn).ReceiveFocus()
             If focusIsOn = 0 Or focusIsOn = 1 Then
-                elevator.Top = 487
-                elevatorCrack.Top = 487
+                elevatorFloor4.Hide()
+                elevatorFloor1.Show()
             ElseIf focusIsOn = 2 Then
-                elevator.Top = 337
-                elevatorCrack.Top = 337
+                elevatorFloor1.Hide()
+                elevatorFloor2.Show()
             ElseIf focusIsOn = 3 Then
-                elevator.Top = 180
-                elevatorCrack.Top = 180
+                elevatorFloor2.Hide()
+                elevatorFloor3.Show()
             ElseIf focusIsOn = 4 Then
-                elevator.Top = 22
-                elevatorCrack.Top = 22
+                elevatorFloor3.Hide()
+                elevatorFloor4.Show()
             End If
         Else
             Me.Options(Me.focusIsOn).InnerScanningNext()
@@ -141,8 +141,10 @@
                 window9.Show()
                 window10.Show()
                 window11.Show()
-                elevator.Top = 487
-                elevatorCrack.Top = 487
+                elevatorFloor1.Show()
+                elevatorFloor2.Hide()
+                elevatorFloor3.Hide()
+                elevatorFloor4.Hide()
             Else
                 Options(focusIsOn).LoseFocus()
                 StopScanning()
@@ -151,6 +153,7 @@
             End If
         End If
     End Sub
+
 #End Region
 End Class
 

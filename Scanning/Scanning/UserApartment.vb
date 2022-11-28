@@ -337,19 +337,19 @@ Public Class UserApartment
 
         ElseIf WindowMenu.blindControl.Tag = "half_open" Then
 
-            WindowMenu.blindControl.Image = My.Resources.BlindsHalfOpen
-            WindowMenu.blindControl.Tag = "slightly_open"
-            bedroomForm.BedroomBlindsSlightlyOpen()
-            livingroomForm.LivingroomBlindsSlightlyOpen()
-
-        ElseIf WindowMenu.blindControl.Tag = "slightly_open" Then
-
             WindowMenu.blindControl.Image = My.Resources.BlindsClosed
             WindowMenu.blindControl.Tag = "closed"
             bedroomForm.BedroomBlindsClose()
             livingroomForm.LivingroomBlindsClose()
 
         ElseIf WindowMenu.blindControl.Tag = "closed" Then
+
+            WindowMenu.blindControl.Image = My.Resources.BlindsClosed
+            WindowMenu.blindControl.Tag = "open_slats"
+            bedroomForm.BedroomBlindsOpenSlats()
+            livingroomForm.LivingroomBlindsOpenSlats()
+
+        ElseIf WindowMenu.blindControl.Tag = "open_slats" Then
 
             WindowMenu.blindControl.Image = My.Resources.BlindsOpen
             WindowMenu.blindControl.Tag = "open"

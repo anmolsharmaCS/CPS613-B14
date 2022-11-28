@@ -136,36 +136,41 @@ Public Class FloorHallways
 
             End If
         ElseIf scanninglevel = 1 Then
-            If MainTaskBar.exitTaskBar.BackColor = Color.LemonChiffon Then
-                MainTaskBar.MenuBarOption.StopInnerScanning()
-                scanninglevel = 0
-                MainTaskBar.exitTaskBar.Hide()
-            ElseIf MainTaskBar.Assistance.BackColor = Color.LemonChiffon Then
-                Dim Assistance As New Assistance(Me)
-                StopScanning()
-                MainTaskBar.exitTaskBar.Hide()
-                MainTaskBar.MenuBarOption.StopInnerScanning()
-                Assistance.Show()
-            ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
-                StopScanning()
-                MainTaskBar.exitTaskBar.Hide()
-                MainTaskBar.PreviousScreen.LoseFocus()
-                Close()
-            ElseIf exitApartments.BackColor = Color.LemonChiffon Then
-                Apartment01.StopInnerScanning()
-                scanninglevel = 0
-                exitApartments.Hide()
-            ElseIf Apartment02.BackColor = Color.LemonChiffon And Label2.Text = "402" Then
-                Apartment02.LoseFocus()
-                StopScanning()
-                exitApartments.Hide()
-                Apartment.Show()
-                Apartment.StartScanning()
+            If focusIsOn = 0 Then
+                If MainTaskBar.exitTaskBar.BackColor = Color.LemonChiffon Then
+                    MainTaskBar.MenuBarOption.StopInnerScanning()
+                    scanninglevel = 0
+                    MainTaskBar.exitTaskBar.Hide()
+                ElseIf MainTaskBar.Assistance.BackColor = Color.LemonChiffon Then
+                    Dim Assistance As New Assistance(Me)
+                    StopScanning()
+                    MainTaskBar.exitTaskBar.Hide()
+                    MainTaskBar.MenuBarOption.StopInnerScanning()
+                    Assistance.Show()
+                ElseIf MainTaskBar.PreviousScreen.BackColor = Color.LemonChiffon Then
+                    StopScanning()
+                    MainTaskBar.exitTaskBar.Hide()
+                    MainTaskBar.PreviousScreen.LoseFocus()
+                    Close()
+                ElseIf exitApartments.BackColor = Color.LemonChiffon Then
+                    Apartment01.StopInnerScanning()
+                    scanninglevel = 0
+                    exitApartments.Hide()
+
+                End If
             Else
-                scanninglevel = 2
-                exitDoorbell.Show()
-                doorbellOption.Show()
-                doorbellOption.StartInnerScanning(doorBellOptions)
+                If Apartment02.BackColor = Color.LemonChiffon And Label2.Text = "402" Then
+                    Apartment02.LoseFocus()
+                    StopScanning()
+                    exitApartments.Hide()
+                    Apartment.Show()
+                    Apartment.StartScanning()
+                Else
+                    scanninglevel = 2
+                    exitDoorbell.Show()
+                    doorbellOption.Show()
+                    doorbellOption.StartInnerScanning(doorBellOptions)
+                End If
             End If
         ElseIf scanninglevel = 2 Then
             If exitDoorbell.BackColor = Color.LemonChiffon Then
