@@ -87,6 +87,18 @@
     <Compile Include="Bedroom.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DeveloperConsole.Designer.vb">
+      <DependentUpon>DeveloperConsole.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeveloperConsole.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoorbellMenu.Designer.vb">
+      <DependentUpon>DoorbellMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DoorbellMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Entertainment.Designer.vb">
       <DependentUpon>Entertainment.vb</DependentUpon>
     </Compile>
@@ -189,6 +201,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bedroom.resx">
       <DependentUpon>Bedroom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeveloperConsole.resx">
+      <DependentUpon>DeveloperConsole.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoorbellMenu.resx">
+      <DependentUpon>DoorbellMenu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Entertainment.resx">
       <DependentUpon>Entertainment.vb</DependentUpon>
@@ -685,6 +703,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\openwindowhalf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doorbell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenDoor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -195,3 +195,5 @@ C:\Users\03Adam03\Documents\CPS 613\Project Repo\CPS613-B14\Scanning\Scanning\ob
 C:\Users\03Adam03\Documents\CPS 613\Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.exe
 C:\Users\03Adam03\Documents\CPS 613\Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.xml
 C:\Users\03Adam03\Documents\CPS 613\Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.pdb
+C:\Users\03Adam03\Documents\CPS 613\Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.DeveloperConsole.resources
+C:\Users\03Adam03\Documents\CPS 613\Project Repo\CPS613-B14\Scanning\Scanning\obj\Debug\Scanning.DoorbellMenu.resources

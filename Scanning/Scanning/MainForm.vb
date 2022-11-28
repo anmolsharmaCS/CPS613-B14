@@ -1,6 +1,7 @@
 ﻿Public Class MainForm
 
     Private Options(4) As SubOptions
+    Private TestingMenu As DeveloperConsole
 
     Public Sub New()
 
@@ -22,6 +23,8 @@
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Me.TestingMenu = New DeveloperConsole()
+        Me.TestingMenu.Show()
         StartScanning()
     End Sub
 
