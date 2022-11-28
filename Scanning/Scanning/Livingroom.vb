@@ -249,6 +249,14 @@ Public Class Livingroom
 
                 If WindowMenu.windowControl.Tag = "open" Then
 
+                    LivingroomWindowsHalfOpen()
+
+                ElseIf WindowMenu.windowControl.Tag = "half_open" Then
+
+                    LivingroomWindowsSlightlyOpen()
+
+                ElseIf WindowMenu.windowControl.Tag = "slightly_open" Then
+
                     LivingroomWindowsClose()
 
                 ElseIf WindowMenu.windowControl.Tag = "closed" Then
@@ -260,6 +268,14 @@ Public Class Livingroom
             ElseIf Me.WindowMenu.blindControl.BackColor = Color.LemonChiffon Then
 
                 If WindowMenu.blindControl.Tag = "open" Then
+
+                    LivingroomBlindsHalfOpen()
+
+                ElseIf WindowMenu.blindControl.Tag = "half_open" Then
+
+                    LivingroomBlindsSlightlyOpen()
+
+                ElseIf WindowMenu.blindControl.Tag = "slightly_open" Then
 
                     LivingroomBlindsClose()
 
@@ -306,6 +322,61 @@ Public Class Livingroom
 
     End Sub
 
+    Public Sub LivingroomWindowsHalfOpen()
+
+        WindowMenu.windowControl.Image = My.Resources.WindowHalfOpen
+        WindowMenu.windowControl.Tag = "half_open"
+
+        If ScanningTimer.Enabled = False Then
+            livingroomShutters1.Hide()
+            livingroomShutters2.Hide()
+
+            MyParent.LivingroomWindow1Shutters.Hide()
+            MyParent.LivingroomWindow2Shutters.Hide()
+
+        Else
+
+            If LivingroomWindow1.BackColor = Color.LemonChiffon Then
+                livingroomShutters1.Hide()
+                MyParent.LivingroomWindow1Shutters.Hide()
+            End If
+
+            If LivingroomWindow2.BackColor = Color.LemonChiffon Then
+                livingroomShutters2.Hide()
+                MyParent.LivingroomWindow2Shutters.Hide()
+            End If
+
+        End If
+
+    End Sub
+
+    Public Sub LivingroomWindowsSlightlyOpen()
+
+        WindowMenu.windowControl.Image = My.Resources.WindowSlightlyOpen
+        WindowMenu.windowControl.Tag = "slightly_open"
+
+        If ScanningTimer.Enabled = False Then
+            livingroomShutters1.Hide()
+            livingroomShutters2.Hide()
+
+            MyParent.LivingroomWindow1Shutters.Hide()
+            MyParent.LivingroomWindow2Shutters.Hide()
+
+        Else
+
+            If LivingroomWindow1.BackColor = Color.LemonChiffon Then
+                livingroomShutters1.Hide()
+                MyParent.LivingroomWindow1Shutters.Hide()
+            End If
+
+            If LivingroomWindow2.BackColor = Color.LemonChiffon Then
+                livingroomShutters2.Hide()
+                MyParent.LivingroomWindow2Shutters.Hide()
+            End If
+
+        End If
+
+    End Sub
 
     Public Sub LivingroomWindowsClose()
         WindowMenu.windowControl.Image = My.Resources.WindowClosed
@@ -363,6 +434,63 @@ Public Class Livingroom
 
     End Sub
 
+    Public Sub LivingroomBlindsHalfOpen()
+
+        WindowMenu.blindControl.Image = My.Resources.BlindsHalfOpen
+        WindowMenu.blindControl.Tag = "half_open"
+
+        If ScanningTimer.Enabled Then
+
+            If LivingroomWindow1.BackColor = Color.LemonChiffon Then
+                livingroomBlinds1.Show()
+                MyParent.livingroomWindow1Blinds.Show()
+            End If
+
+            If LivingroomWindow2.BackColor = Color.LemonChiffon Then
+                livingroomBlinds2.Show()
+                MyParent.livingroomWindow2Blinds.Show()
+            End If
+
+        Else
+
+            livingroomBlinds1.Show()
+            MyParent.livingroomWindow1Blinds.Show()
+
+            livingroomBlinds2.Show()
+            MyParent.livingroomWindow2Blinds.Show()
+
+        End If
+
+    End Sub
+
+    Public Sub LivingroomBlindsSlightlyOpen()
+
+        WindowMenu.blindControl.Image = My.Resources.BlindsSlightlyOpen
+        WindowMenu.blindControl.Tag = "slightly_open"
+
+        If ScanningTimer.Enabled Then
+
+            If LivingroomWindow1.BackColor = Color.LemonChiffon Then
+                livingroomBlinds1.Show()
+                MyParent.livingroomWindow1Blinds.Show()
+            End If
+
+            If LivingroomWindow2.BackColor = Color.LemonChiffon Then
+                livingroomBlinds2.Show()
+                MyParent.livingroomWindow2Blinds.Show()
+            End If
+
+        Else
+
+            livingroomBlinds1.Show()
+            MyParent.livingroomWindow1Blinds.Show()
+
+            livingroomBlinds2.Show()
+            MyParent.livingroomWindow2Blinds.Show()
+
+        End If
+
+    End Sub
 
     Public Sub LivingroomBlindsClose()
         WindowMenu.blindControl.Image = My.Resources.BlindsClosed

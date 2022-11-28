@@ -394,4 +394,16 @@
   <data name="schedule" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>schedule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BlindsHalfOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BlindsHalfOpen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlindsSlightlyOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BlindsSlightlyOpen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WindowHalfOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WindowHalfOpen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WindowSlightlyOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WindowSlightlyOpen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -298,6 +298,20 @@ Public Class UserApartment
     Private Sub WindowChange()
         If WindowMenu.windowControl.Tag = "open" Then
 
+            WindowMenu.windowControl.Image = My.Resources.WindowHalfOpen
+            WindowMenu.windowControl.Tag = "half_open"
+            bedroomForm.BedroomWindowsHalfOpen()
+            livingroomForm.LivingroomWindowsHalfOpen()
+
+        ElseIf WindowMenu.windowControl.Tag = "half_open" Then
+
+            WindowMenu.windowControl.Image = My.Resources.WindowSlightlyOpen
+            WindowMenu.windowControl.Tag = "slightly_open"
+            bedroomForm.BedroomWindowsSlightlyOpen()
+            livingroomForm.LivingroomWindowsSlightlyOpen()
+
+        ElseIf WindowMenu.windowControl.Tag = "slightly_open" Then
+
             WindowMenu.windowControl.Image = My.Resources.WindowClosed
             WindowMenu.windowControl.Tag = "closed"
             bedroomForm.BedroomWindowsClose()
@@ -315,6 +329,20 @@ Public Class UserApartment
 
     Private Sub BlindsChange()
         If WindowMenu.blindControl.Tag = "open" Then
+
+            WindowMenu.blindControl.Image = My.Resources.BlindsHalfOpen
+            WindowMenu.blindControl.Tag = "half_open"
+            bedroomForm.BedroomBlindsHalfOpen()
+            livingroomForm.LivingroomBlindsHalfOpen()
+
+        ElseIf WindowMenu.blindControl.Tag = "half_open" Then
+
+            WindowMenu.blindControl.Image = My.Resources.BlindsSlightlyOpen
+            WindowMenu.blindControl.Tag = "slightly_open"
+            bedroomForm.BedroomBlindsSlightlyOpen()
+            livingroomForm.LivingroomBlindsSlightlyOpen()
+
+        ElseIf WindowMenu.blindControl.Tag = "slightly_open" Then
 
             WindowMenu.blindControl.Image = My.Resources.BlindsClosed
             WindowMenu.blindControl.Tag = "closed"
